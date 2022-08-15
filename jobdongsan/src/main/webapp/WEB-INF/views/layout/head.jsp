@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4e87e7d3c24777e4ac95590aa13c0f06&libraries=services"></script>
 		<script src="<c:url value='//dapi.kakao.com/v2/maps/sdk.js?appkey=4e87e7d3c24777e4ac95590aa13c0f06' />"></script>
 		<!-- common -->
+		<script src="<c:url value='https://cdn.jsdelivr.net/jquery/latest/jquery.min.js' />"></script>
 		<link rel="stylesheet" href="<c:url value='/css/common.css' />"/>
 		<script src="<c:url value='/js/common.js' />"></script>
-		<script src="<c:url value='https://cdn.jsdelivr.net/jquery/latest/jquery.min.js' />"></script>
+		

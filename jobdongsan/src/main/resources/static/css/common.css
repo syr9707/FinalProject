@@ -1,0 +1,168 @@
+*{margin: 0; padding: 0;}
+
+
+/************* top ********************************/
+
+/************* 로그인 *****************/
+
+.loginBox {
+    border-bottom: 1px solid #777777;
+}
+
+.login {
+    margin: 12px 0 12px 1480px;  
+}
+
+.login a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/************* 메인메뉴 ************************/
+
+.mainMenuBox {
+    background-color: #FFFACD;
+    height: 160px;
+}
+
+.mainMenu {
+    display: flex;
+    
+}
+
+/************* 로고 *****************/
+
+.logo {
+    position: relative;
+}
+
+.logo>img:first-child {
+    width: 75px;
+    position: absolute;
+    transform: rotate(-35deg);
+    left: 310px;
+    top: 30px;
+}
+
+.logo>img:nth-child(2) {
+    width: 200px;    
+    margin: 52px 0 0 342px;
+    position: relative;
+
+}
+
+/************* 메뉴 *****************/
+
+.mainMenu ul {
+    list-style: none;
+    display: flex;
+    margin: 54px 0 0 173px;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.mainMenu ul li {
+    display: flex;
+    align-items: center;
+}
+
+.mainMenu ul li img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.mainMenu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: 'CookieRun';
+}
+
+
+
+/************* bottom ********************************/
+
+footer {
+    border-top: 1px solid #777777;
+}
+
+/**************바텀 메뉴****************/
+
+.bottomMenu ul {
+    list-style: none;
+    display: flex;
+    margin-left: 300px;
+}
+
+.bottomMenu ul li {
+    width: 248px;
+    height: 40px;
+    margin: 20px 20px 0 0;
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+
+.bottomMenu ul li:not(:last-child)::after {
+    content: "";
+    border-right: 1px solid #343B3B;
+    position: absolute;
+    height: 40%;
+    top: 12px;
+    right: -12px;
+}
+
+.bottomMenu ul li a {
+    text-decoration: none;
+    color: #343B3B;
+    
+}
+
+/********************바텀 내용**********************/
+
+.bottomInfoBox {
+    display: flex;
+    width: 1300px;
+    justify-content: space-between;
+    margin: 23px 0 0 300px;
+}
+
+.bottomInfo {
+    margin-top: 27px;
+}
+
+.bottomInfo p {
+    height: 30px;
+    color: #343B3B;
+}
+
+.bottomLogoBox {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomLogoBox img {
+    width: 210px;
+}
+
+.bottomLogo {
+    width: 248px;
+    height: 85px;
+    margin-top: 27px;
+}
+
+.bottomLogo img:first-child {
+    width: 178px;
+    filter: brightness(0.7);
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.bottomLogo img:last-child {
+    width: 248px;
+    filter: invert(0.5);
+    display: block;
+}
