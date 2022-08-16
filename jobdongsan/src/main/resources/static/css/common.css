@@ -1,40 +1,58 @@
-*{margin: 0; padding: 0;}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
 
 
 /************* top ********************************/
 
+.top_box {
+	width: 1920px;
+}
+
 /************* 로그인 *****************/
 
-.loginBox {
+.login_box {
     border-bottom: 1px solid #777777;
 }
 
 .login {
-    margin: 12px 0 12px 1480px;  
+	width: 170px;
+	height: 25px;
+    margin: 12px 0 12px 1450px;  
+    display: flex;
+    justify-content: space-between;
 }
 
 .login a {
-    text-decoration: none;
     color: black;
+    font-size: 18px;
 }
 
 
-/************* 메인메뉴 ************************/
+/************* 메인메뉴 ****************/
 
-.mainMenuBox {
+.main_menu_box {
     background-color: #FFFACD;
     height: 160px;
 }
 
-.mainMenu {
+.main_menu {
     display: flex;
-    
 }
 
 /************* 로고 *****************/
 
 .logo {
     position: relative;
+    margin: 0;
 }
 
 .logo>img:first-child {
@@ -42,19 +60,19 @@
     position: absolute;
     transform: rotate(-35deg);
     left: 310px;
-    top: 30px;
+    top: 25px;
 }
 
 .logo>img:nth-child(2) {
     width: 200px;    
-    margin: 52px 0 0 342px;
+    margin: 52px 0 0 345px;
     position: relative;
 
 }
 
 /************* 메뉴 *****************/
 
-.mainMenu ul {
+.main_menu ul {
     list-style: none;
     display: flex;
     margin: 54px 0 0 173px;
@@ -62,17 +80,17 @@
     justify-content: space-between;
 }
 
-.mainMenu ul li {
+.main_menu ul li {
     display: flex;
     align-items: center;
 }
 
-.mainMenu ul li img {
+.main_menu ul li img {
     width: 50px;
     margin-right: 10px;
 }
 
-.mainMenu ul li a {
+.main_menu ul li a {
     text-decoration: none;
     color: black;
     font-size: 25px;
@@ -87,15 +105,19 @@ footer {
     border-top: 1px solid #777777;
 }
 
+.bottom_box {
+	width: 1950px;
+}
+
 /**************바텀 메뉴****************/
 
-.bottomMenu ul {
+.bottom_menu ul {
     list-style: none;
     display: flex;
     margin-left: 300px;
 }
 
-.bottomMenu ul li {
+.bottom_menu ul li {
     width: 248px;
     height: 40px;
     margin: 20px 20px 0 0;
@@ -104,7 +126,7 @@ footer {
     line-height: 40px;
 }
 
-.bottomMenu ul li:not(:last-child)::after {
+.bottom_menu ul li:not(:last-child)::after {
     content: "";
     border-right: 1px solid #343B3B;
     position: absolute;
@@ -113,7 +135,7 @@ footer {
     right: -12px;
 }
 
-.bottomMenu ul li a {
+.bottom_menu ul li a {
     text-decoration: none;
     color: #343B3B;
     
@@ -121,39 +143,39 @@ footer {
 
 /********************바텀 내용**********************/
 
-.bottomInfoBox {
+.bottom_info_box {
     display: flex;
     width: 1300px;
     justify-content: space-between;
     margin: 23px 0 0 300px;
 }
 
-.bottomInfo {
+.bottom_info {
     margin-top: 27px;
 }
 
-.bottomInfo p {
+.bottom_info p {
     height: 30px;
     color: #343B3B;
 }
 
-.bottomLogoBox {
+.bottom_logo_box {
     width: 500px;
     display: flex;
     justify-content: space-between;
 }
 
-.bottomLogoBox img {
+.bottom_logo_box img {
     width: 210px;
 }
 
-.bottomLogo {
+.bottom_logo {
     width: 248px;
     height: 85px;
     margin-top: 27px;
 }
 
-.bottomLogo img:first-child {
+.bottom_logo img:first-child {
     width: 178px;
     filter: brightness(0.7);
     display: block;
@@ -161,8 +183,43 @@ footer {
     margin-bottom: 15px;
 }
 
-.bottomLogo img:last-child {
+.bottom_logo img:last-child {
     width: 248px;
     filter: invert(0.5);
     display: block;
+}
+
+/******************* 탑버튼 ***********************/
+
+.btns {
+	width: 100px;
+
+	position: sticky;
+	margin-left: 90%;
+	margin-bottom: 2%;
+	bottom: 5%;
+	z-index: 10;
+	text-align: center;
+}
+
+.btns .btn_top_up {
+	width: 31px;
+}
+
+.btns p {
+	font-size: 25px;
+	color: #B76DCA;
+}
+
+.btns .btn_top {
+	width: 100px;
+	display: block;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.btns .chatbot {
+	width: 100px;
+	display: block;
+	margin: 0;
 }

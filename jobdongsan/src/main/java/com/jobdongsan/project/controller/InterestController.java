@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class JobdongsanController {
-	@RequestMapping("/login")
+public class InterestController {
+	@RequestMapping("/")
 	public String main() {
-		return "member/login";
+		return "interest/interest";
 	}
 }

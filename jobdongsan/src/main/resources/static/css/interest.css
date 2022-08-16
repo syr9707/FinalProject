@@ -1,0 +1,94 @@
+
+/***************** 뒷 배경 ***********************/
+
+.image_box {
+	position: relative;
+}
+
+.back_img1 {
+	width: 100%;
+    height: 430px;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -10;
+}
+
+.back_img2 {
+    width: 100%;
+    height: 880px;
+    background-image: url("../images/backImg2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -10;
+
+}
+
+/************* 섹션 박스 ********************/
+
+.section_wrap {
+    width: 1320px;
+    position: relative;
+    margin-top: -1310px;
+}
+
+.interest_title {  
+    width: 550px;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 90px;
+    margin-bottom: 145px;
+    text-align: center;
+    
+}
+
+.interest_title p {
+	font-family: 'CookieRun';
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.interest_text {   
+    width: 1200px;
+    height: 130px;
+    margin-bottom: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.interest_text p {
+	font-family: 'CookieRun';
+	font-size: 30px;
+}
+
+.interest_text span {
+	font-family: 'CookieRun';
+    font-size: 35px;
+    color: #FEC703;
+}
+
+.interest_man {
+    position: relative;
+    top: -212px;
+    left: -135px;
+}
+
+.view_box {
+    position: relative;
+    width: 1200px;
+    height: 750px;
+    background: #F8EFA6;
+    border-radius: 50px;
+    margin-top: -516px
+    
+}
+
+.inner_view_box {
+    position: relative;
+    top: 50px;
+    width: 1100px;
+    height: 650px;  
+    background: rgba(5, 68, 19, 0.43);
+    border-radius: 50px;
+}
