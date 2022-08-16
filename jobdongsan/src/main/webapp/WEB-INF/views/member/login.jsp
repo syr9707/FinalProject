@@ -25,7 +25,7 @@
 						<div class="input_pw">
 							<input type="password" class="login_input" id="pw" name="pw" placeholder="비밀번호">
 						</div>
-						<div class="login_continue gray"><span><i class="fa-regular fa-circle-check"></i></span><span>로그인 상태 유지</span></div>
+						<div class="login_continue gray"><span><i class="fa-regular fa-circle"></i></span><span>로그인 상태 유지</span></div>
 						<div class="login_error red">아이디와 비밀번호를 확인해 주세요.</div>
 						<div class="btn_login bold txt_20 bg_y">로그인</div>
 						<div class="login_sub">
