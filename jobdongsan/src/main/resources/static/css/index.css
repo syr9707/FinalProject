@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+/* CooKieRun font 임포트 */
+@import url('https://webfontworld.github.io/cookierun/CookieRun.css');
+
+* {
+    margin: 0 auto;
+    font-family: 'CookieRun';
+}
+
+.section_wrap {
+    width: 1903px;
+    height: 1770px;
+    margin-bottom: 90px;
+}
+
+.main_menu_dongsan {
+    height: 500px;
+    background-image: url("/images/main_background.png");
+    background-repeat: no-repeat;
+}
+
+#main_tree {
+    position: relative;
+    width: 1903px;
+    z-index: 2;
+}
+
+#main_house {
+    position: relative;
+    top: -500px;
+    width: 1903px;
+    z-index: 3;
+}
+
+#main_sun {
+    position: relative;
+    top: -960px;
+    left: 170px;
+    z-index: 4;
+}
+
+#main_bar {
+    position: relative;
+    top: -850px;
+    left: 920px;
+    z-index: 1;
+}
+
+#main_chocolate {
+    position: relative;
+    top: -730px;
+    left: 380px;
+    width: 90px;
+    z-index: 4;
+}
+
+#main_cupcake {
+    position: relative;
+    top: -700px;
+    left: 1100px;
+    width: 90px;
+    z-index: 4;
+}
+
+#main_donut {
+    position: relative;
+    top: -850px;
+    left: 280px;
+    width: 90px;
+    z-index: 4;
+}
+
+#main_gingerbread_main {
+    position: relative;
+    top: -700px;
+    left: 350px;
+    width: 120px;
+    z-index: 4;
+}
+
+#main_icecream {
+    position: relative;
+    top: -700px;
+    left: -390px;
+    width: 120px;
+    z-index: 4;
+}
+
+.main_menu_text {
+    height: 135px;
+    background-image: url("/images/main_second.png");
+    background-repeat: no-repeat;
+}
+
+#main_car {
+    position: relative;
+    top: 15px;
+    left: 470px;
+    width: 130px;
+    cursor: pointer;
+}
+
+.today_info {
+    display: flex;
+    height: 500px;
+    background-image: url("/images/main_today_background.png");
+    background-repeat: no-repeat;
+}
+
+#main_today_char {
+    position: relative;
+    top: 125px;
+    left: 75px;
+    width: 375px;
+    height: 300px;
+    margin: 0;
+}
+
+#main_today_cookie {
+    position: relative;
+    top: 400px;
+    left: -90px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    z-index: 0;
+}
+
+.today_job {
+    width: 560px;
+    height: 390px;
+    margin: 60px 60px auto 140px;
+}
+
+.today_job h3 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.today_job b {
+    color: #829BF2;
+}
+
+.today_job_wrap {
+    display: flex;
+    margin-top: 15px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.today_job_info {
+    width: 220px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #FFFACD;
+}
+
+.today_map {
+    width: 560px;
+    height: 390px;
+    margin-top: 60px;
+    z-index: 1;
+}
+
+.today_map h3 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.today_map b {
+    color: #96D480;
+}
+
+.today_map_wrap {
+    display: flex;
+    margin-top: 15px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.today_map_info {
+    width: 220px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #FFFACD;
+}
+
+.today_video {
+    height: 500px;
+    margin: 0;
+    background-image: url("/images/main_video_background.png");
+    background-repeat: no-repeat;
+}
+
+.today_video h3 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.today_video h3 b {
+    color: #FA6C6C;
+}
+
+.today_video_text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.today_video_text b {
+    font-size: 36px;
+}
+
+.today_video_text b:nth-child(1) {
+    color: #FFCD45;
+}
+
+.today_video_text b:nth-child(2) {
+    color: #4BC7FF;
+}
+
+.today_video_text b:nth-child(3) {
+    color: #FF889D;
+}
+
+.today_video_text b:nth-child(4) {
+    color: #8FAFFF;
+}
+
+.today_video_img {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#main_video1 {
+    position: relative;
+    margin-right: 200px;
+    z-index: 1;
+}
+
+#main_video2 {
+    position: relative;
+    z-index: 1;
+}
+
+#main_biscuit {
+    position: relative;
+    top: -380px;
+    left: 300px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+}
+
+#main_mould {
+    position: relative;
+    top: -360px;
+    left: 1450px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+}
+

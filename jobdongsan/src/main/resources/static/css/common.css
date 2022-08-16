@@ -1,3 +1,10 @@
+/* 공통 부분 */
+
+/* CooKieRun font */
+@import url('https://webfontworld.github.io/cookierun/CookieRun.css');
+
+/* @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 
 * {
     margin: 0 auto;
@@ -10,11 +17,46 @@
     outline: none;
 }
 
+.gray {
+    color: #777777;
+}
+
+.red {
+	color: #f33333;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.txt_14 {
+    font-size: 14px;
+}
+
+.txt_20 {
+    font-size: 20px;
+}
+
+.txt_30 {
+    font-size: 30px;
+}
+
+.txt_45 {
+    font-size: 30px;
+}
+
+.bg_y {
+    background-color: #FFFACD;
+}
 
 /************* top ********************************/
 
 .top_box {
-	width: 1920px;
+	width: 1903px;
 }
 
 /************* 로그인 *****************/
@@ -106,7 +148,7 @@ footer {
 }
 
 .bottom_box {
-	width: 1950px;
+	width: 1903px;
 }
 
 /**************바텀 메뉴****************/
