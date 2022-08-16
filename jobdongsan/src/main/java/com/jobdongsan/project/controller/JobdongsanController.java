@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class JobdongsanController {
 	@RequestMapping("/")
 	public String main() {
-		return "member/login";
+		return "member/logins";
 	}
 }
