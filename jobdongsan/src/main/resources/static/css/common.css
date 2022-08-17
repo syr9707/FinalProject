@@ -60,19 +60,24 @@
 /************* top ********************************/
 
 .top_box {
-	width: 1903px;
+
 }
 
 /************* 로그인 *****************/
 
-.login_box {
+.login_box_wrap {
     border-bottom: 1px solid #777777;
+}
+
+.login_box {
+    width: 1320px;
+    margin: 0 auto;
 }
 
 .login {
 	width: 170px;
 	height: 25px;
-    margin: 12px 0 12px 1450px;  
+    margin: 12px 0 12px auto;  
     display: flex;
     justify-content: space-between;
 }
@@ -85,9 +90,15 @@
 
 /************* 메인메뉴 ****************/
 
-.main_menu_box {
+.main_menu_wrap {
     background-color: #FFFACD;
     height: 160px;
+    
+}
+
+.main_menu_box {
+    width: 1320px;
+    margin: 0 auto;
 }
 
 .main_menu {
@@ -99,19 +110,20 @@
 .logo {
     position: relative;
     margin: 0;
+    cursor: pointer;
 }
 
 .logo>img:first-child {
     width: 75px;
     position: absolute;
     transform: rotate(-35deg);
-    left: 310px;
+    left: 10px;
     top: 25px;
 }
 
 .logo>img:nth-child(2) {
     width: 200px;    
-    margin: 52px 0 0 345px;
+    margin: 52px 0 0 45px;
     position: relative;
 
 }
@@ -152,7 +164,12 @@ footer {
 }
 
 .bottom_box {
-	width: 1903px;
+	width: 100%;
+}
+
+.bottom_wrap {
+    width: 1320px;
+    margin: 0 auto;
 }
 
 /**************바텀 메뉴****************/
@@ -160,7 +177,6 @@ footer {
 .bottom_menu ul {
     list-style: none;
     display: flex;
-    margin-left: 300px;
 }
 
 .bottom_menu ul li {
@@ -193,7 +209,7 @@ footer {
     display: flex;
     width: 1300px;
     justify-content: space-between;
-    margin: 23px 0 0 300px;
+    margin-top: 23px
 }
 
 .bottom_info {

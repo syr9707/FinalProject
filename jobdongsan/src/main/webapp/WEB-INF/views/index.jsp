@@ -18,15 +18,17 @@
 		<section class="section">
             <div class="section_wrap">
                 <div class="main_menu_dongsan">
-                    <img src="<c:url value='/images/main_tree.png' />" id="main_tree">
-                    <img src="<c:url value='/images/main_house.png' />" id="main_house">
-                    <img src="<c:url value='/images/main_sun.png' />" id="main_sun">
-                    <img src="<c:url value='/images/main_bar.png' />" id="main_bar">
-                    <img src="<c:url value='/images/main_chocolate.png' />" id="main_chocolate">
-                    <img src="<c:url value='/images/main_cupcake.png' />" id="main_cupcake">
-                    <img src="<c:url value='/images/main_donut.png' />" id="main_donut">
-                    <img src="<c:url value='/images/main_gingerbread_man.png' />" id="main_gingerbread_main">
-                    <img src="<c:url value='/images/main_icecream.png' />" id="main_icecream">
+                    <div class="dongsan_wrap">
+                        <img src="<c:url value='/images/main_tree.png' />" id="main_tree">
+                        <img src="<c:url value='/images/main_house.png' />" id="main_house">
+                        <img src="<c:url value='/images/main_sun.png' />" id="main_sun">
+                        <img src="<c:url value='/images/main_bar.png' />" id="main_bar">
+                        <img src="<c:url value='/images/main_chocolate.png' />" id="main_chocolate">
+                        <img src="<c:url value='/images/main_cupcake.png' />" id="main_cupcake">
+                        <img src="<c:url value='/images/main_donut.png' />" id="main_donut">
+                        <img src="<c:url value='/images/main_gingerbread_man.png' />" id="main_gingerbread_main">
+                        <img src="<c:url value='/images/main_icecream.png' />" id="main_icecream">
+                    </div>
                 </div>
                 <div class="main_menu_text">
                     <img src="<c:url value='/images/main_car.png' />" id="main_car">

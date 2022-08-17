@@ -1,5 +1,20 @@
 //**************top*****************/
 $(document).ready(function(){
+	// 로고 눌렀을 때 메인 페이지로 이동
+	$('.logo').click(function(){
+		$(location).attr('href', '/');
+	});
+
+    // 로고 호버했을 때 애니메이션
+    // $('.logo').hover(
+    //     function(){
+    //         $('.logo img:first-child').addClass('animate__animated animate__headShake');
+    //     },
+    //     function(){
+    //         $('.logo img:first-child').removeClass('animate__animated animate__headShake');
+    //     }
+    // );
+	
     // 흥미 냠냠 호버했을때 애니메이션
     $('.interest').hover(function(){
         $('li:first-child img').attr('src', "/images/ic_int2.png")

@@ -19,11 +19,9 @@ section {
 }
 
 .section_wrap {
+    width: 1043px;
     height: 620px;
     display: flex;
-    justify-content: space-between;
-    margin: 0 30px;
-    padding: 0 400px;
 }
 
 .login_id {

@@ -23,42 +23,52 @@ section {
 }
 
 .main_menu_dongsan {
+    /* width: 100%; */
     height: 500px;
     background-image: url("/images/main_background.png");
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dongsan_wrap {
+    width: 1580px;
+    height: 500px;
 }
 
 #main_tree {
     position: relative;
-    width: 1903px;
+    width: 100%;
+    height: 500px;
     z-index: 2;
+    object-fit: cover;
 }
 
 #main_house {
     position: relative;
-    top: -500px;
-    width: 1903px;
+    top: -504px;
+    width: 100%;
+    height: 500px;
     z-index: 3;
+    object-fit: cover;
 }
 
 #main_sun {
     position: relative;
     top: -960px;
-    left: 170px;
     z-index: 4;
 }
 
 #main_bar {
     position: relative;
     top: -850px;
-    left: 920px;
+    left: 750px;
     z-index: 1;
 }
 
 #main_chocolate {
     position: relative;
     top: -730px;
-    left: 380px;
+    left: 210px;
     width: 90px;
     z-index: 4;
 }
@@ -66,7 +76,7 @@ section {
 #main_cupcake {
     position: relative;
     top: -700px;
-    left: 1100px;
+    left: 970px;
     width: 90px;
     z-index: 4;
 }
@@ -74,7 +84,7 @@ section {
 #main_donut {
     position: relative;
     top: -850px;
-    left: 280px;
+    left: 110px;
     width: 90px;
     z-index: 4;
 }
@@ -82,7 +92,7 @@ section {
 #main_gingerbread_main {
     position: relative;
     top: -700px;
-    left: 350px;
+    left: 180px;
     width: 120px;
     z-index: 4;
 }
@@ -90,21 +100,23 @@ section {
 #main_icecream {
     position: relative;
     top: -700px;
-    left: -390px;
+    left: -550px;
     width: 120px;
     z-index: 4;
 }
 
 .main_menu_text {
+    width: 1320px;
     height: 135px;
     background-image: url("/images/main_second.png");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #main_car {
     position: relative;
     top: 15px;
-    left: 470px;
+    left: 170px;
     width: 130px;
     cursor: pointer;
 }
@@ -114,6 +126,7 @@ section {
     height: 500px;
     background-image: url("/images/main_today_background.png");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #main_today_char {
