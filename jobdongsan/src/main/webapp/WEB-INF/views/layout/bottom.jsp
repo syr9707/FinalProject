@@ -29,10 +29,10 @@
 	            </div>
 	            <div class="bottom_logo_box">
 	                <div class="bottom_logo">
-	                    <img src="<c:url value='images/logo_mul.png' />">
-	                    <img src="<c:url value='images/logo_krivet.png' />">
+	                    <img src="<c:url value='/images/logo_mul.png' />">
+	                    <img src="<c:url value='/images/logo_krivet.png' />">
 	                </div>
-	                <img src="<c:url value='images/logo_grayjob.png' />">
+	                <img src="<c:url value='/images/logo_grayjob.png' />">
 	            </div>
 	        </div>
         </div>
