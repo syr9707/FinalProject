@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	
+}
+
+.section {
+	font-family: 'CookieRun';
+}
+
+#wrap {
+	margin-left: 300px;
+    width:1320px;
+    /* border: blue 1px solid; */
+    /* display:flex;
+    flex-direction: column; */
+    /* font-family: 'CookieRun'; */
+}
+
+/* div 가이드 라인 */
+#wrap div {
+   /* border: red 1px solid; */
+}
+
+
+/* 다양한 직업 냠냠 */
+.job_head {
+	width: 400px;
+	height: 110px;
+	margin-top:90px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_headname {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 54px;
+}
+
+.job_doughnut {
+	width: 105px;
+	height: 110px;
+}
+
+
+/* 직업 이름 div */
+.job_mint {
+	width:1320px;
+	height:255px;
+	margin-top:55px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_mintdoughnut {
+	width: 280px;
+	height: 250px;
+	margin:0;
+	margin-top:25px;
+}
+
+.job_glass {
+	width: 80px;
+	height: 80px;
+	margin-left:40px;
+	margin-top:190px;
+}
+
+.job_title {
+	width: 680px;
+	height: 150px;
+	display:flex;
+    flex-direction: column;
+    margin-left:-30px;
+    margin-top:50px;
+}
+
+.job_name {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	margin-top:20px;
+}
+
+.job_title2 {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	color: #17CBC0;
+	margin-top:30px;
+}
+
+.job_good {
+	display:flex;
+    flex-direction: row;
+    margin-top:200px;
+}
+
+.job_star {
+	font-size: 2rem;
+	color:#17CBC0;
+}
+
+.job_star2 {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	margin-top:10px;
+}
+
+
+/* 직업 상세 설명 */
+.job_info {
+	width:1320px;
+	height:285px;
+	border: 2px solid #000000;
+	border-radius: 50px;
+	display:flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+.job_img {
+	width: 240px;
+	height: 240px;
+	margin-left:70px;
+	margin-top:20px;
+}
+
+.job_img img {
+	width: 240px;
+	height: 240px;
+}
+
+.job_info2 {
+    width:920px;
+    height:240px;
+    display:flex;
+    flex-direction: column;
+    margin-left:25px;
+    margin-top:20px;
+}
+
+.job_infotitle {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	color: #17CBC0;
+	margin-top:40px;
+}
+
+.job_infodetail {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	height:130px;
+	margin-top:25px;
+	line-height: 30px;
+}
+
+.job_infodetail li {
+	font-family: 'CookieRun';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+
+/* 어떻게 하면 될 수 있음? */
+.job_how {
+	width:1320px;
+	height:240px;
+	margin-top:50px;
+}
+
+.job_how2 {
+	display:flex;
+    flex-direction: row;
+    height:60px;
+    width:380px;
+    margin-left:0;
+}
+
+.job_howimg {
+	width: 68px;
+	height: 55px;
+}
+
+.job_howtitle {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	color: #17CBC0;
+	height: 28px;
+	margin-top:10px;
+}
+
+.job_howdetail {
+	height:120px;
+	width:1250px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	margin-top:30px;
+}
+
+.job_howdetail li {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+
+/* 3가지 필요한 요소 */
+.job_three {
+	width:1320px;
+	height:300px;
+	margin-top:50px;
+	border: 2px solid #000000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_needs {
+	width:33%;
+	height:80%;
+	margin-top:30px;
+	border-right: 1px solid #000000;
+	display:flex;
+    flex-direction: column;
+}
+
+.job_needstitle {
+	height:40px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	/* color: #17CBC0; */
+	margin-top:5px;
+}
+
+.job_needstitle b {
+	color: #17CBC0;
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.need_box {
+	display:flex;
+    flex-direction: row;
+    width:95%;
+    height:180px;
+    margin-top:5px;
+}
+
+.need_img {
+	width: 100px;
+	height: 100px;
+	margin-top:40px;
+}
+
+.need_info {
+	width:240px;
+	height:130px;
+	margin-top:25px;
+	text-align:center;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+
+.job_interests {
+	width:33%;
+	height:80%;
+	margin-top:30px;
+	border-right: 1px solid #000000;
+	display:flex;
+    flex-direction: column;
+}
+
+.job_intereststitle {
+	height:40px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	/* color: #17CBC0; */
+	margin-top:5px;
+}
+
+.job_intereststitle b {
+	color: #17CBC0;
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.interest_box {
+	display:flex;
+    flex-direction: row;
+    width:95%;
+    height:180px;
+    margin-top:5px;
+}
+
+.interest_img {
+	width: 100px;
+	height: 100px;
+	margin-top:40px;
+}
+
+.interest_info {
+	width:240px;
+	height:130px;
+	margin-top:25px;
+	text-align:center;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+
+.job_values {
+	width:33%;
+	height:80%;
+	margin-top:30px;
+	display:flex;
+    flex-direction: column;
+}
+
+.job_valuestitle {
+	height:40px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	/* color: #17CBC0; */
+	margin-top:5px;
+}
+
+.job_valuestitle b {
+	color: #17CBC0;
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.value_box {
+	display:flex;
+    flex-direction: row;
+    width:95%;
+    height:180px;
+    margin-top:5px;
+}
+
+.value_img {
+	width: 100px;
+	height: 100px;
+	margin-top:40px;
+}
+
+.value_info {
+	width:240px;
+	height:130px;
+	margin-top:25px;
+	text-align:center;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+
+
+/* 직업 질문 챗봇 */
+.job_chatbot {
+	width:1320px;
+	height:890px;
+	margin-top:120px;
+}
+
+.job_chatbot_title {
+	position:relative;
+	display:flex;
+    flex-direction: row;
+    width:550px;
+    height:122px;
+    right:40px;
+}
+
+.job_chat_img {
+	position:relative;
+	width:120px;
+	height:120px;
+	left:45px;
+	z-index:0;
+}
+
+.job_chat_title {
+	display:flex;
+    flex-direction: column;
+    width:435px;
+    height:80px;
+    margin-top:20px;
+}
+
+.job_chat_head {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 26px;
+	height:35px;
+}
+
+.job_chat_info {
+	position:relative;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 26px;
+	margin-top:10px;
+	color: #FFFFFF;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	height:30px;
+	z-index:1;
+}
+
+.job_chat_info b {
+	color: #17CBC0;
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.job_chat_box {
+	position:relative;
+	width:850px;
+	height:650px;
+	bottom:20px;
+}
+
+.job_chat_donut {
+	position:relative;
+	width:95px;
+	height:95px;
+	left:395px;
+	z-index:1;
+}
+
+.job_chat_detail {
+	position:relative;
+	width: 800px;
+	height: 600px;
+	background: rgba(23, 203, 192, 0.28);
+	border: 5px solid #17CBC0;
+	border-radius: 30px;
+	bottom:35px;
+	z-index:0;
+}
+
+.job_chat_btn {
+	position:relative;
+	display:flex;
+    flex-direction: row;
+	width:280px;
+	height:50px;
+	margin-top:45px;
+	right:10px;
+}
+
+.job_play_title {
+	position:relative;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	width:90px;
+	height:40px;
+	margin-top:10px;
+	left:10px;
+}
+
+.job_play {
+	width:40px;
+	height:40px;
+	margin-top:5px;
+}
+
+.job_play img {
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+
+.job_stop_title {
+	position:relative;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	width:70px;
+	height:40px;
+	margin-top:10px;
+	left:15px;
+}
+
+.job_stop {
+	width:40px;
+	height:40px;
+}
+
+.job_stop img {
+	width:53px;
+	height:53px;
+	cursor:pointer;
+}
+
+
+
+/* 목록보기 버튼 */
+.joblist_button {
+	width:360px;
+	height:70px;
+	margin-top:95px;
+	margin-bottom:90px;
+}
+
+#joblistBtn {
+	width: 360px;
+	height: 70px;
+	background: rgba(23, 203, 192, 0.28);
+	border-radius: 50px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	
+	border: rgba(23, 203, 192, 0.28);
+	
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
