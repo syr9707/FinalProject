@@ -3,7 +3,15 @@
 /* CooKieRun font 임포트 */
 @import url('https://webfontworld.github.io/cookierun/CookieRun.css');
 
-* {
+h3 {
+    font-family: 'CookieRun';
+}
+
+b {
+    font-family: 'CookieRun';
+}
+
+section {
     margin: 0 auto;
     font-family: 'CookieRun';
 }
@@ -140,6 +148,7 @@
 
 .today_job b {
     color: #829BF2;
+    font-size: 45px;
 }
 
 .today_job_wrap {
@@ -172,6 +181,7 @@
 
 .today_map b {
     color: #96D480;
+    font-size: 45px;
 }
 
 .today_map_wrap {
@@ -205,6 +215,7 @@
 
 .today_video h3 b {
     color: #FA6C6C;
+    font-size: 45px;
 }
 
 .today_video_text {

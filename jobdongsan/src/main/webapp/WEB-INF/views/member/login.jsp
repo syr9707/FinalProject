@@ -31,7 +31,7 @@
 						<div class="login_sub">
 							<a class="btn_login_sub" href="<c:url value='/find_id' />">아이디 찾기</a>
 							<a class="btn_login_sub" href="<c:url value='/find_pw' />">비밀번호 찾기</a>
-							<a class="btn_login_sub" href="<c:url value='/signup' />">회원가입</a>
+							<a class="btn_login_sub" href="<c:url value='/signup_terms' />">회원가입</a>
 						</div>
 					</div>
 					<div class="login_sns">

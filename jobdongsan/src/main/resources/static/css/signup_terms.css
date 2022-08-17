@@ -1,0 +1,119 @@
+section {
+    margin-top: 40px;
+}
+
+.section_wrap {
+    height: 1340px;
+    margin: 0 20px;
+    padding: 0 280px;
+}
+
+.section_wrap h3:nth-child(1) {
+    margin: 50px auto 69px;
+    text-align: center;
+}
+
+.terms_agree {
+    width: 800px;
+    height: 285px;
+    margin: 0 auto 30px;
+}
+
+.terms_check {
+    height: 25px;
+    margin: 0 0 10px;
+}
+
+.terms_check div:nth-child(1) {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    /* margin: 10px 5px 10px 10px; */
+    border: 1px solid #777777;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.terms_check div:nth-child(1) i {
+    padding: 3px 0 0;
+    font-size: 20px;
+}
+
+.terms_check div:nth-child(2) {
+    display: inline-block;
+    margin: 0 15px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+.terms_check div:nth-child(3) {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: top;
+    border: 1px solid #f33333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.terms_content {
+    height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #777777;
+    padding: 20px 20px 0;
+}
+
+.terms_all_check {
+    width: 800px;
+    height: 50px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+}
+
+.terms_all_check div:nth-child(1) {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.terms_all_check div:nth-child(1) i {
+    padding: 3px 0 0;
+    font-size: 20px;
+}
+
+.terms_all_check div:nth-child(2){
+    display: inline-block;
+    height: 25px;
+    margin-left: 15px;
+    vertical-align: top;
+    
+}
+
+.btn_agree {
+    display: flex;
+    width: 800px;
+    height: 50px;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.btn_agree div {
+    width: 390px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+.btn_agree div:nth-child(2) {
+    margin-left: 20px;
+    color: #ffffff;
+    background-color: #777777;
+}

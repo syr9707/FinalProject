@@ -7,7 +7,7 @@
 	            <div class="login">
 	                <c:if test="${empty sessionScope.sid }">
 						<a class="btn_account" href="<c:url value='/login' />">로그인</a>
-						<a class="btn_account" href="<c:url value='/signup' />">회원가입</a>
+						<a class="btn_account" href="<c:url value='/signup_terms' />">회원가입</a>
 					</c:if>
 					<c:if test="${not empty sessionScope.sid }">
 						<a class="btn_account" href="<c:url value='/logout' />">로그아웃</a>

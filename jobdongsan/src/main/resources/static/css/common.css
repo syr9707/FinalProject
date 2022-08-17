@@ -25,6 +25,10 @@
 	color: #f33333;
 }
 
+.white {
+    color: #ffffff;
+}
+
 .semibold {
     font-weight: 600;
 }
@@ -234,15 +238,24 @@ footer {
 /******************* 탑버튼 ***********************/
 
 .btns {
+	float: right;
 	width: 100px;
-
 	position: sticky;
-	margin-left: 90%;
-	margin-bottom: 2%;
-	bottom: 5%;
+	right: 70px;
+	bottom: 70px;
 	z-index: 10;
 	text-align: center;
+    cursor: pointer;
 }
+
+/* .btns {
+    float: right;
+    position: fixed;
+    width: 100px;
+    right: 70px;
+    bottom: 70px;
+    cursor: pointer;
+} */
 
 .btns .btn_top_up {
 	width: 31px;

@@ -14,38 +14,6 @@
     outline: none;
 }
 
-.gray {
-    color: #777777;
-}
-
-.red {
-	color: #f33333;
-}
-
-.semibold {
-    font-weight: 600;
-}
-
-.bold {
-    font-weight: 700;
-}
-
-.txt_14 {
-    font-size: 14px;
-}
-
-.txt_20 {
-    font-size: 20px;
-}
-
-.txt_30 {
-    font-size: 30px;
-}
-
-.bg_y {
-    background-color: #FFFACD;
-}
-
 section {
     margin-top: 40px;
 }

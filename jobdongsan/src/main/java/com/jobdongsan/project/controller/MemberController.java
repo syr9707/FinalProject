@@ -30,4 +30,9 @@ public class MemberController {
 		}
   		return result;
 	}
+	
+	@RequestMapping("/signup_terms")
+	public String signup_terms() {
+		return "member/signup_terms";
+	}
 }
