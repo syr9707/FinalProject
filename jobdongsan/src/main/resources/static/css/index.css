@@ -13,6 +13,9 @@ b {
 
 section {
     margin: 0 auto;
+}
+
+section div {
     font-family: 'CookieRun';
 }
 
