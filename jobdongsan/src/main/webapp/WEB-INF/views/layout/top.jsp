@@ -18,21 +18,21 @@
 	        <div class="main_menu_box">
 	            <nav class="main_menu">
 	                <div class="logo">
-	                    <img src="<c:url value='images/Logo_gingerbread-man.png' />">
-	                    <img src="<c:url value='images/logo_job.png' />">
+	                    <img src="<c:url value='/images/Logo_gingerbread-man.png' />">
+	                    <img src="<c:url value='/images/logo_job.png' />">
 	                </div>
 	                <ul>
 	                    <li>
-	                        <img src="images/ic_int.png" class="interest">
-	                        <a href="#" class="interest">흥미 냠냠</a>
+	                        <img src="/images/ic_int.png" class="interest">
+	                        <a href="/interest" class="interest">흥미 냠냠</a>
 	                    </li>
 	                    <li>
-	                        <img src="images/ic_job.png" class="job">
-	                        <a href="#" class="job">직업 냠냠</a>
+	                        <img src="/images/ic_job.png" class="job">
+	                        <a href="/job" class="job">직업 냠냠</a>
 	                    </li>
 	                    <li>
-	                        <img src="images/ic_map.png" class="experience">
-	                        <a href="#" class="experience">체험 냠냠</a>
+	                        <img src="/images/ic_map.png" class="experience">
+	                        <a href="/map" class="experience">체험 냠냠</a>
 	                    </li>
 	                </ul>
 	            </nav>
