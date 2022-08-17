@@ -3,7 +3,7 @@ section {
 }
 
 .section_wrap {
-    height: 1340px;
+    height: 1380px;
     margin: 0 20px;
     padding: 0 280px;
 }
@@ -15,7 +15,7 @@ section {
 
 .terms_agree {
     width: 800px;
-    height: 285px;
+    height: 300px;
     margin: 0 auto 30px;
 }
 
@@ -57,6 +57,11 @@ section {
     border: 1px solid #f33333;
     border-radius: 5px;
     text-align: center;
+}
+
+.terms_error {
+    display: none;
+    margin-bottom: 10px;
 }
 
 .terms_content {
@@ -110,6 +115,7 @@ section {
     height: 50px;
     line-height: 50px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn_agree div:nth-child(2) {

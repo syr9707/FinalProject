@@ -19,10 +19,11 @@
 				<h3 class="semibold txt_30">이용 약관</h3>
                 <div class="terms_agree">
 					<div class="terms_check">
-						<div><i class="fa-solid fa-check white"></i></div>
+						<div class="checkbox"><i class="fa-solid fa-check white"></i></div>
 						<div class="semibold">이용약관</div>
 						<div class="red">필수</div>
 					</div>
+					<div class="terms_error red">이용 약관에 동의해주세요.</div>
 					<div class="terms_content">
 							<b>제 1장 총칙</b><br>
 							<br>
@@ -218,10 +219,11 @@
 				</div>
 				<div class="terms_agree">
 					<div class="terms_check">
-						<div><i class="fa-solid fa-check white"></i></div>
+						<div class="checkbox"><i class="fa-solid fa-check white"></i></div>
 						<div class="semibold">개인정보 수집 및 이용</div>
 						<div class="red">필수</div>
 					</div>
+					<div class="terms_error red">개인정보 수집 및 이용에 동의해주세요.</div>
 					<div class="terms_content">
 						<b>1. 개인정보 수집 및 이용 목적</b><br>
 						- 서비스 이용에 따른 본인 식별, 가입의사 확인<br>
@@ -244,10 +246,11 @@
 				</div>
 				<div class="terms_agree">
 					<div class="terms_check">
-						<div><i class="fa-solid fa-check white"></i></div>
+						<div class="checkbox"><i class="fa-solid fa-check white"></i></div>
 						<div class="semibold">개인정보 수집 및 이용</div>
 						<div class="red">필수</div>
 					</div>
+					<div class="terms_error red">개인정보 수집 및 이용에 동의해주세요.</div>
 					<div class="terms_content">
 						(주)키득키득은 잡동산 회원 시스템 운영 등을 위해 아래와 같이 회원정보를 제공합니다.<br>
 						제공하는 개인정보는 개인정보처리방침에서 고지한 제3자 제공 범위 내에서 제공하며, 정보주체의 사전 동의 없이 범위를 초과하여 제3자에게 제공하지 않습니다.<br>
@@ -274,7 +277,7 @@
 					</div>
 				</div>
 				<div class="terms_all_check">
-					<div><i class="fa-solid fa-check white"></i></div>
+					<div class="allcheck"><i class="fa-solid fa-check white"></i></div>
 					<div class="semibold">약관에 모두 동의 합니다.</div>
 				</div>
 				<div class="btn_agree">
