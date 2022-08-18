@@ -43,13 +43,27 @@
 			<div class="contents_wrap">
 				<img src="<c:url value='images/cooking.png' />" class="cooking">
 				<img src="<c:url value='images/kitchen_table.png' />" class="kitchen_table">
-				<img src="<c:url value='images/chat.png' />" class="chat">
+				<div class="chat">
+					<img src="<c:url value='images/chat.png' />">
+					<p class="chat_title">자기이해</p>
+					<p class="chat_contents">1. 친구와 함께 운동하는 것을 좋아한다.</p>
+				</div>
 				<div class="back_arrow">
 					<img src="<c:url value='images/interest_arrow.png' />" class="interest_arrow">
 				</div>
-				<img src="<c:url value='images/plate.png' />" class="plate">
-				<img src="<c:url value='images/plate.png' />" class="plate">
-				<img src="<c:url value='images/plate.png' />" class="plate">
+				<div class="plate">
+					<img src="<c:url value='images/plate.png' />" class="plate_img">
+					<img src="<c:url value='images/flour.png' />" class="food">
+					<p>예</p>
+				</div>
+				<div class="plate">
+					<img src="<c:url value='images/plate.png' />" class="plate_img">
+					<p>보통</p>
+				</div>
+				<div class="plate">
+					<img src="<c:url value='images/plate.png' />" class="plate_img">
+					<p>아니오</p>
+				</div>
 			</div>
 		</section>
 	</body>

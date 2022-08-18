@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+section {
+	width: 1100px;
+    height: 650px;  
+    border-radius: 50px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.side_wrap {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 210px;
+	height: 650px;
+	margin: 0;
+	border-radius: 50px;
+	position: fixed;
+}
+
+.contents_wrap {
+	position: relative;
+	margin-left: 210px;
+	width: 890px;
+}
+
+/***************** 사이드 목록 버튼 **********************/
+
+ul li .test_side_menu {
+	width: 120px;
+	height: 120px;
+	background-color: white;
+	border-radius: 40px;
+	margin-top: 68px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+ul li .test_side_menu img {
+	width: 90px;
+	margin: 15px 0 0 15px;
+	opacity: 0.5;
+}
+
+ul li .side_menu_name {
+	position: relative;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	margin-top: -20px;
+	border-radius: 20px;
+	font-family: 'CookieRun';
+	font-size: 13px;
+	color: white;
+	text-align: center;
+	opacity: 0.5;
+
+}
+
+/***************** 컨텐츠 내용 **********************/
+
+.result_contents {
+	display: flex;
+
+}
+
+.table {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	top: 330px;
+}
+
+.contents_text {
+	margin-top: 50px;
+	margin-left: 100px;
+}
+
+.contents_text div,p,span {
+	font-family: 'CookieRun';
+}
+
+.char_title {
+	width: 280px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 15px;
+	background-color: #6B7D53;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+.char_name {
+	width: 350px;
+	height: 110px;
+	margin: 35px 0 30px 0;
+}
+
+.char_name p {
+	font-size: 40px;
+}
+
+.char_name span {
+	font-size: 80px;
+	color: #FB635F;
+}
+
+.char_explain {
+	font-size: 17px;
+	line-height: 30px;
+	font-family: "NanumSquareRound",sans-serif;
+}
+
+.result_contents .contents_char img {
+	width: 250px;
+	margin-top: 120px;
+}
+
+/**************** 캐릭터 유형 그래프 ********************/
+
+.result_graph_box {
+	display: flex;
+	margin-top: 50px;
+}
+
+.result_graph {
+	display: flex;
+	width: 575px;
+	height: 200px;
+}
+
+.char_graph {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 75px;
+}
+
+.char_graph div:nth-child(2) {
+	margin: 0;
+}
+
+.dde_graph {
+	height: 150px;
+	background-color: #FB635F;
+}
+
+.the_graph {
+	height: 100px;
+	background-color: #89F578;
+}
+
+.mje_graph {
+	height: 60px;
+	background-color: #E39233;
+}
+
+.cje_graph {
+	height: 100px;
+	background-color: #33A4E3;
+}
+
+.sse_graph {
+	height: 60px;
+	background-color: #F072F2;
+}
+
+.ssle_graph {
+	height: 80px;
+	background-color: #33E3CE;
+}
+
+.graph_name {
+	font-family: 'CookieRun';
+	font-size: 25px;
+	text-align: center;
+}
+
+.next_btn {
+	width: 200px;
+	height: 160px;
+	margin-top: 48px;
+	margin-left: 10px;
+}
+
+.next_btn p {
+	width: 178px;
+	height: 50px;
+	text-align: center;
+	margin-top: -120px;
+}
+
+

@@ -75,6 +75,31 @@ ul li .side_menu_name {
 	top: -24px;
 }
 
+.chat img {
+	width: 440px;
+}
+
+.chat p {
+	font-family: 'CookieRun';
+	text-align: center;
+}
+
+.chat .chat_title {
+	width: 170px;
+	height: 60px;
+	font-size: 35px;
+	margin-top: -350px;
+	margin-left: 140px;
+	
+}
+
+.chat .chat_contents {
+	width: 300px;
+	height: 100px;
+	font-size: 25px;
+	margin: 20px 0 0 70px;
+}
+
 .back_arrow {
 	position: absolute;
 	width: 90px;
@@ -83,6 +108,7 @@ ul li .side_menu_name {
 	background-color: #565656;
 	left: 765px;
 	top: 20px;
+	cursor: pointer;
 }
 
 .interest_arrow {
@@ -93,7 +119,27 @@ ul li .side_menu_name {
 .plate {
 	position: absolute;
 	width: 140px;
+	height: 140px;
 	cursor: pointer;
+}
+
+.plate .plate_img {
+	width: 140px;
+}
+
+.plate .food {
+	position: absolute;
+	width: 80px;
+	margin-left: -100px;
+	z-index: 1;
+}
+
+.plate p {
+	font-family: 'CookieRun';
+	font-size: 25px;
+	text-align: center;
+	margin-top: -90px;
+	z-index: 2;
 }
 
 .plate:nth-child(5) {

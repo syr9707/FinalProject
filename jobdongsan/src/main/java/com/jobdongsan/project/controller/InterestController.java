@@ -24,4 +24,9 @@ public class InterestController {
 	public String interest_test3() {
 		return "interest/interest_test3";
 	}
+	
+	@RequestMapping("/interest_result")
+	public String interest_result() {
+		return "interest/interest_result";
+	}
 }
