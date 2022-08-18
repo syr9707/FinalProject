@@ -35,4 +35,9 @@ public class MemberController {
 	public String signup_terms() {
 		return "member/signup_terms";
 	}
+	
+	@RequestMapping("/signup")
+	public String signup() {
+		return "member/signup";
+	}
 }
