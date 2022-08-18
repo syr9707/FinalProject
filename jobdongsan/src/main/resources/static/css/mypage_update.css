@@ -105,13 +105,32 @@ h3 {
     border: none;
 }
 
-.signup {
-    margin: 50px auto 90px;
+.btn_update {
+    display: flex;
+    margin: 50px auto 20px;
+}
+
+.update {
+    width: 190px;
+    margin: 0 20px 0 0;
     border: none;
+    border-radius: 5px;
+}
+
+.cancle {
+    width: 190px;
+    color: #ffffff;
+    background-color: #bbbbbb;
 }
 
 .error {
     display: none;
     margin-top: 10px;
     text-align: left;
+}
+
+.delete {
+    margin-bottom: 90px;
+    border: none;
+    color: #bbbbbb;
 }

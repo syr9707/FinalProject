@@ -1,0 +1,44 @@
+.section_wrap {
+    width: 1320px;
+    text-align: center;
+}
+
+.section div,
+.section p,
+.section h3,
+.section b {
+    font-family: 'CookieRun';
+}
+
+.my_jobdongsan h3 {
+    margin-top: 90px;
+    font-size: 40px;
+}
+
+.my_jobdongsan_contents {
+    display: flex;
+    width: 760px;
+    margin-top: 45px;
+}
+
+.my_jobdongsan_info {
+    display: flex;
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 80px;
+}
+
+.my_jobdongsan_info img {
+    width: 120px;
+    height: 120px;
+}
+
+.my_jobdongsan_btn {
+    width: 280px;
+}
+
+.my_jobdongsan_btn img:nth-child(1) {
+    margin: 45px auto 10px;
+}

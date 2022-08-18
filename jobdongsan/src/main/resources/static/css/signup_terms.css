@@ -1,5 +1,6 @@
 section {
     margin-top: 40px;
+    border-top: 1px solid #777777;
 }
 
 .section_wrap {
@@ -121,5 +122,5 @@ section {
 .btn_agree div:nth-child(2) {
     margin-left: 20px;
     color: #ffffff;
-    background-color: #777777;
+    background-color: #bbbbbb;
 }

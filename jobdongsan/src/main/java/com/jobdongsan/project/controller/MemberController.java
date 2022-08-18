@@ -40,4 +40,19 @@ public class MemberController {
 	public String signup() {
 		return "member/signup";
 	}
+	
+	@RequestMapping("/mypage")
+	public String mypage_index() {
+		return "member/mypage_index";
+	}
+	
+	@RequestMapping("/mypage_check")
+	public String mypage_check() {
+		return "member/mypage_check";
+	}
+	
+	@RequestMapping("/mypage_update")
+	public String mypage_update() {
+		return "member/mypage_update";
+	}
 }
