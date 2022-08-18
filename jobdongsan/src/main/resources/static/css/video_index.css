@@ -1,0 +1,775 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	
+}
+
+.section {
+	font-family: 'CookieRun';
+}
+
+#wrap {
+	position:relative;
+	/* margin-left: 300px; */
+    width:1320px;
+    /* border: blue 1px solid; */
+    /* display:flex;
+    flex-direction: column; */
+    /* font-family: 'CookieRun'; */
+    margin-top:-500px;
+}
+
+
+/* div 가이드 라인 */
+#wrap div {
+   /* border: red 1px solid; */
+}
+
+/* .job_background {
+	width:1903px;
+}
+
+.job_background img {
+	width:1903px;
+} */
+
+.job_background {
+	width: 100%;
+	height: 500px;
+	background-image: url("../images/background.png");
+}
+
+
+
+
+/* 영상 리스트 페이지 제목 : [어린이 직업 진로 동영상] */
+.video_head {
+	width:1320px;
+	height:55px;
+	margin-top:90px;
+}
+
+.video_headname {
+	width: 440px;
+	height: 55px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 54px;
+	
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+/* MBC 드림주니어-진로탐사대 (20개) */
+.video_dream_jinro {
+	width:1320px;
+	height:285px;
+	margin-top:175px;
+}
+
+.video_jinro_title {
+	display:flex;
+    flex-direction: row;
+    width: 495px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jinro_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jinro_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_jinro_name {
+	width: 300px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+.video_more_btn {
+	width: 110px;
+	height: 50px;
+	margin-left:15px;
+	color: #777777;
+}
+
+#videobtn1 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn1:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_jinro_cont {
+	width:1320px;
+	height:210px;
+	display:flex;
+    flex-direction: row;
+	margin-top:25px;
+}
+
+.video_test {
+	/* position:relative; */
+	width:300px;
+	height:200px;
+	margin-top:4px;
+	border-radius: 20px;
+}
+
+.video_test img {
+	width:300px;
+	height:200px;
+	border-radius: 20px;
+	border: 2px solid #9C9C9C;
+	cursor:pointer;
+}
+
+.video_test img:hover {
+	opacity:0.5;
+	border:5px solid #05B4FF;
+}
+
+/* .test2 {
+	position:relative;
+	width:100px;
+	height:100px;
+	right: -96px;
+    top: -155px;
+    opacity:0;
+}
+
+.test2:hover {
+	opacity:1;
+}
+
+.test {
+	position:relative;
+	width:300px;
+	height:200px;
+	border-radius: 20px;
+	border: 2px solid #9C9C9C;
+	cursor:pointer;
+}
+
+.test:hover {
+	opacity:0.5;
+	border:5px solid #05B4FF;
+}
+
+.video_test:hover {
+	opacity:0.5;
+	border:5px solid #05B4FF;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MBC 드림주니어-탐나는진로탐사대 (40개) */
+.video_dream_tam {
+	width:1320px;
+	height:285px;
+	margin-top:70px;
+}
+
+.video_tam_title {
+	display:flex;
+    flex-direction: row;
+    width: 575px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_tam_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_tam_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_tam_name {
+	width: 385px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+#videobtn2 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn2:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_tam_cont {
+	width:1320px;
+	height:210px;
+	margin-top:25px;
+	display:flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MBC 드림주니어 (86개) */
+.video_dream_jr {
+	width:1320px;
+	height:285px;
+	margin-top:70px;
+}
+
+.video_jr_title {
+	display:flex;
+    flex-direction: row;
+    width: 330px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jr_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jr_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_jr_name {
+	width: 140px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+#videobtn3 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn3:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_jr_cont {
+	width:1320px;
+	height:210px;
+	display:flex;
+    flex-direction: row;
+	margin-top:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 해양직업의 세계-꿈꾸는 장보고 (34개) */
+.video_jangbogo {
+	width:1320px;
+	height:285px;
+	margin-top:70px;
+}
+
+.video_jang_title {
+	display:flex;
+    flex-direction: row;
+    width: 600px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jang_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_jang_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_jang_name {
+	width: 405px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+#videobtn4 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn4:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_jang_cont {
+	width:1320px;
+	height:210px;
+	display:flex;
+    flex-direction: row;
+	margin-top:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미래직업가이드 (9개) */
+.video_mirae {
+	width:1320px;
+	height:285px;
+	margin-top:70px;
+}
+
+.video_mirae_title {
+	display:flex;
+    flex-direction: row;
+    width: 395px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_mirae_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_mirae_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_mirae_name {
+	width: 205px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+#videobtn5 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn5:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_mirae_cont {
+	width:1320px;
+	height:210px;
+	display:flex;
+    flex-direction: row;
+	margin-top:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 창의적 진로개발-지식채널e (52개) */
+.video_e {
+	width:1320px;
+	height:285px;
+	margin-top:70px;
+	margin-bottom:90px;
+}
+
+.video_e_title {
+	display:flex;
+    flex-direction: row;
+    width: 555px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_e_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.video_e_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.video_e_name {
+	width: 360px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+#videobtn6 {
+	width: 110px;
+	height: 50px;
+	
+	border: 1px solid #777777;
+	border-radius: 20px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 2px;
+	
+	color: #777777;
+	background-color: white;
+	
+	cursor:pointer;
+}
+
+#videobtn6:hover {
+	background-color:#D3F2FF;
+	border:1px solid #05B4FF;
+	color:black;
+}
+
+.video_e_cont {
+	width:1320px;
+	height:210px;
+	display:flex;
+    flex-direction: row;
+	margin-top:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
