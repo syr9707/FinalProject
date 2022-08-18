@@ -1,0 +1,117 @@
+section {
+    margin-top: 40px;
+    border-top: 1px solid #777777;
+}
+
+.section_wrap {
+    width: 400px;
+    text-align: center;
+}
+
+section p {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=text],
+input[type=password] {
+    padding-left: 10px;
+}
+
+select {
+    width: 120px;
+    height: 50px;
+    padding: 0 10px;
+    border-color: #bbbbbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h3 {
+    margin: 50px auto 80px;
+}
+
+.birth_input {
+    display: flex;
+}
+
+.birth_year {
+    width: 120px;
+    margin-left: 0;
+}
+
+.birth_date {
+    margin-right: 0;
+}
+
+.email_input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email_input input {
+    width: 120px;
+    height: 50px;
+}
+
+.email1 {
+    margin-left: 0;
+}
+
+.email2 {
+    margin: 0 10px 0 auto;
+}
+
+.email3 {
+    margin: 0 0 0 10px;
+}
+
+.email_auth {
+    margin-top: 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #bbbbbb;
+}
+
+.input_address div {
+    margin-bottom: 20px;
+}
+
+.input_address div:nth-child(2) {
+    display: flex;
+}
+
+.zipcode, .find_zipcode {
+    width: 190px;
+}
+
+.zipcode {
+    margin-left: 0;
+}
+
+.find_zipcode {
+    margin-right: 0;
+    border: none;
+}
+
+.signup {
+    margin: 30px auto 90px;
+    border: none;
+}
+
+.error {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+}
