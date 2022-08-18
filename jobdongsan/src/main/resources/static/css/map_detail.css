@@ -1,31 +1,29 @@
 @charset "UTF-8";
 
-* {
-	margin: 0 auto;
-	padding: 0;
+.section div {
 	font-family: 'CookieRun';
-	font-style: normal;
-	text-decoration: none;
-	list-style: none;
-	outline: none;
+	font-size: 17px;
 }
 
-section {
-	/* margin-top: 40px; */
-	
+h2 {
+	font-family: 'CookieRun';
 }
 
-.test {
-	/* width: 1080px; */
+h4 {
+	font-family: 'CookieRun';
+}
+
+strong {
+	font-family: 'CookieRun';
 }
 
 .section_wrap {
+	width: 1320px;
 	position: relative;
 	margin-top: -500px;
 }
 
 #background {
-	/* z-index: -1; */
 	width: 100%;
 	height: 500px;
 	background-image: url("../images/background.png");
@@ -35,10 +33,11 @@ section {
 	position: relative;
 	margin-left: 900px;
 	margin-top: -350px;
-	top:150px;
+	top: 150px;
 }
 
 #map_detail_title {
+	font-family: 'CookieRun';
 	display: flex;
 	align-items: center;
 	width: 400px;
@@ -101,8 +100,8 @@ section {
 	align-items: center;
 	width: 500px;
 	height: 100px;
-	margin-bottom: 20px;
-	margin-right: 330px
+	/* margin-bottom: 30px; */
+	margin-right: 150px;
 }
 
 #speech_bubble_box2 {
@@ -111,15 +110,18 @@ section {
 	align-items: center;
 	width: 500px;
 	height: 100px;
-	margin-bottom: 20px;
-	margin-left: 330px;
+	margin-bottom: 30px;
+	margin-left: 150px;
 }
 
 #speech_bubble {
 	border: 2px solid black;
-	border-style: dotted;
-	border-radius: 70px;
-	padding:30px 50px 30px 50px;
+	border-radius: 100px;
+	padding: 30px 50px 30px 50px;
+}
+
+#speech_bubble_char2 {
+	margin-left: 80px;
 }
 
 #map_experience_slide {

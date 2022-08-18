@@ -5,32 +5,31 @@
 <html>
 		<!-- head.jsp -->
 		<c:import url="/WEB-INF/views/layout/head.jsp" />
+		
+		<!-- 부트스트랩 -->
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>		
+		
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/map_detail.css'/>"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- js -->
 		<script src="<c:url value='/js/map_detail.js'/>"></script>
 		
-		<!-- 부트스트랩 -->
-		<!-- CSS only -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-		<!-- JavaScript Bundle with Popper -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-		
 	</head>
 	
 	<body>
 		<!-- top.jsp -->
-		<%-- <c:import url="/WEB-INF/views/layout/top.jsp" /> --%>
+		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		
 		<!-- section.jsp -->
 		<section class="section">
 		
 				<div id="background">
-				<%-- <img src="<c:url value='/images/background.png'/>"> --%>
 				</div>
 				
-			<div class="test">
 		
 				<div class="section_wrap">
 			
@@ -90,8 +89,8 @@
 				</div>
 				
 				<div id="speech_bubble_box1">
-				<div id="speech_bubble">이 곳에서는 어떤 체험을 할 수 있을까?</div>
-				<span id="speech_bubble_char">
+				<div id="speech_bubble">여기에서는 어떤 체험을 할 수 있을까?</div>
+				<span id="speech_bubble_char1">
 				<img src="<c:url value='/images/map_bubble_duck.png'/>">
 				</span>
 				</div>
@@ -125,7 +124,7 @@
 				
 														
 				<div id="speech_bubble_box2">
-				<span id="speech_bubble_char">
+				<span id="speech_bubble_char2">
 				<img src="<c:url value='/images/map_bubble_rabbit.png'/>">
 				</span>
 				<div id="speech_bubble">우와~ 어디에 있는 곳이지?</div>
@@ -135,12 +134,10 @@
 				
 				
 				</div> <!-- wrap 끝 -->
-								
-			</div>
 			
 		</section>
 		
 		<!-- bottom.jsp -->
-		<%-- <c:import url="/WEB-INF/views/layout/bottom.jsp" /> --%>
+		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
 </html>
