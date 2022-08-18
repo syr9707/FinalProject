@@ -22,6 +22,12 @@ public class JobController {
 		return "job/job_detail";
 	}
 	
+	// 화면 테스트 
+	@RequestMapping("/jobindex")
+	public String jobindex() {
+		return "job/job_index";
+	}
+	
 	
 	/*
 	 * // 직업 정보 상세 조회 : /job/detailJob
@@ -33,3 +39,6 @@ public class JobController {
 	 */
 
 }
+
+
+

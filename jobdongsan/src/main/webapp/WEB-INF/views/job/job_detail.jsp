@@ -8,6 +8,7 @@
 		<c:import url="/WEB-INF/views/layout/head.jsp" />
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/job_detail.css' />"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- js -->
 		<script src="<c:url value='/js/job_detail.js' />"></script>
 		</head>
@@ -16,6 +17,9 @@
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<!-- section.jsp -->
 		<section class="section">
+			<div class="job_background">
+				<%-- <img src="<c:url value='/images/background.png'/>"> --%>
+			</div>
 			<div id="wrap">
 				<div class="job_head">
 					<div class="job_headname">
@@ -55,10 +59,10 @@
 						</div>
 						<div class="job_infodetail">
 							<ul>
-								<li> 뉴스 및 기타 관련자료를 취재하고 이를 신문, 잡지, 전문서적에 싣는 일을 합니다.</li>
-								<li> 정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
-								<li> 정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
-								<li> 정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
+								<li> •  뉴스 및 기타 관련자료를 취재하고 이를 신문, 잡지, 전문서적에 싣는 일을 합니다.</li>
+								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
+								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
+								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
 							</ul>
 						</div>
 					</div>
@@ -74,9 +78,9 @@
 					</div>
 					<div class="job_howdetail">
 						<ul>
-							<li> 기자가 되려면 사회에서 일어나는 모든 현상에 관심을 가지고 깊이 있게 보는 안목이 필요합니다.</li>
-							<li> 학교나 지역에서 학생들이 만드는 신문이 있다면 참가하는 것이 좋습니다.</li>
-							<li> 취재는 어떻게 하는 것이고 글을 작성해서 편집하는 것까지 자연스럽게 과정을 익힐 수 있을 것입니다.</li>
+							<li> •  기자가 되려면 사회에서 일어나는 모든 현상에 관심을 가지고 깊이 있게 보는 안목이 필요합니다.</li>
+							<li> •  학교나 지역에서 학생들이 만드는 신문이 있다면 참가하는 것이 좋습니다.</li>
+							<li> •  취재는 어떻게 하는 것이고 글을 작성해서 편집하는 것까지 자연스럽게 과정을 익힐 수 있을 것입니다.</li>
 						</ul>
 					</div>
 				</div>
@@ -167,7 +171,8 @@
 					</div>
 				</div>
 				<div class="joblist_button">
-					<input type="button" id="joblistBtn" value="목록보기">
+					<!-- <input type="button" id="joblistBtn" value="목록보기"> -->
+					<button id="joblistBtn" onclick="location.href='<c:url value='/jobindex'/>'">목록보기</button >
 				</div>
 			</div>
 		</section>

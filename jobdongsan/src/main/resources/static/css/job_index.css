@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	
+}
+
+.section {
+	font-family: 'CookieRun';
+}
+
+#wrap {
+	position:relative;
+	/* margin-left: 300px; */
+    width:1320px;
+    /* border: blue 1px solid; */
+    /* display:flex;
+    flex-direction: column; */
+    /* font-family: 'CookieRun'; */
+    margin-top:-500px;
+}
+
+
+/* div 가이드 라인 */
+#wrap div {
+   /* border: red 1px solid; */
+}
+
+/* .job_background {
+	width:1903px;
+}
+
+.job_background img {
+	width:1903px;
+} */
+
+.job_background {
+	width: 100%;
+	height: 500px;
+	background-image: url("../images/background.png");
+}
+
+
+/* 다양한 직업 냠냠 */
+.job_head {
+	width: 400px;
+	height: 110px;
+	margin-top:90px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_headname {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 54px;
+}
+
+.job_doughnut {
+	width: 105px;
+	height: 110px;
+}
+
+.job_doughnut img {
+	width: 80px;
+}
+
+
+
+/* 직업 검색 div */
+.job_search {
+	width:1320px;
+	height:90px;
+	margin-top:110px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_searchbox {
+	width: 680px;
+	height: 90px;
+	
+	background: #FFFFFF;
+	border: 2px solid #CDCDCD;
+	border-radius: 50px;
+	margin-left:320px;
+}
+
+.job_searchtext {
+	width: 450px;
+	height: 50px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 26px;
+	
+	margin-top:20px;
+	margin-left:53px;
+	
+	border: 0;
+}
+
+.job_searchbtn {
+	position:relative;
+	width: 150px;
+	height: 90px;
+	
+	background: rgba(23, 203, 192, 0.28);
+	border-radius: 50px;
+	right:264px;
+	
+	cursor:pointer;
+}
+
+.job_searchimg {
+	width:50px;
+	height:50px;
+	margin-top:20px;
+}
+
+.job_searchimg img {
+	width:50px;
+	height:50px;
+}
+
+
+
+
+/* 가이드 멘트 도넛 */
+.job_pink {
+	width:1320px;
+	height:70px;
+	margin-top:65px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_pinktitle {
+	width: 500px;
+	height: 70px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 30px;
+	text-align:center;
+	margin-left:410px;
+}
+
+.job_pinktitle b {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 30px;
+	
+	color: #17CBC0;
+}
+
+.job_pinkdonut {
+	position:relative;
+	width: 295px;
+	height: 295px;
+	margin-left:115px;
+	margin-top:75px;
+	bottom:229px;
+	left:25px;
+}
+
+
+
+
+/* 직업 리스트 div */
+.job_list {
+	width:1320px;
+	/* height:1285px; */
+	margin-top:75px;
+	margin-bottom:90px;
+	
+	/* border: red 1px solid; */
+	
+}
+
+.nav-tabs .nav-link.active {
+	/* color: #495057; */
+	color: #17CBC0;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    width: 110px;
+    height:50px;
+    text-align: center;
+    margin:0;
+    
+    font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.nav-tabs .nav-link {
+	color: #495057;
+	background: rgba(23, 203, 192, 0.28);
+	width: 110px;
+	height:50px;
+    text-align: center;
+    margin:0;
+    
+    font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.job_test {
+	display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.job_cont1 {
+	display:flex;
+    flex-direction: column;
+	width:300px;
+	height:300px;
+	background: #FFFFFF;
+	border: 1px solid #B7B7B7;
+	border-radius: 10px;
+	text-align:center;
+	margin-top:40px;
+}
+
+.job_cont2 {
+	display:flex;
+    flex-direction: column;
+	width:300px;
+	height:300px;
+	background: #FFFFFF;
+	border: 0;
+	border-radius: 10px;
+	text-align:center;
+	margin-top:40px;
+}
+
+.job_detail_img {
+	width: 170px;
+	height: 170px;
+	margin-top:8px;
+}
+
+.job_detail_img img {
+	width: 170px;
+	height: 170px;
+}
+
+.job_detail_title {
+	width: 250px;
+	height: 40px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 26px;
+	margin-top:12px;
+}
+
+.job_detail_info {
+	width: 280px;
+	height: 60px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 26px;
+	margin-top:1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
