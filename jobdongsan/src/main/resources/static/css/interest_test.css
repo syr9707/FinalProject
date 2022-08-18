@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+section {
+	width: 1100px;
+    height: 650px;  
+    border-radius: 50px;
+    background-image: url("../images/kitchen.jpg");
+    background-size: 100% 100%;
+    border: 1px solid white;
+}
+
+.box_wrap {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/***************** 테스트 제목 **********************/
+
+.test_title {
+	width: 450px;
+	margin: 50px 0 0 100px;
+}
+
+.test_title span {
+	font-family: 'CookieRun';
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+
+.test_title span:first-child {
+	font-size: 50px;
+}
+
+.test_title span:last-child {
+	font-size: 60px;
+}
+
+.test_contents {
+	width: 340px;
+	height: 80px;
+	margin: 10px 0 0 100px;
+}
+
+.test_contents p {
+	font-family: 'CookieRun';
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-size: 25px;
+}
+
+/***************** 테스트 버튼 **********************/
+
+.test_btn {
+	margin: 60px 0 0 100px;
+	width: 300px;
+}
+
+.test_btn a {
+	color: black;
+	font-family: 'CookieRun';
+	font-size: 35px;
+}
+
+.test_btn div {
+	width: 300px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 40px;
+	text-align: center;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+.test_mem_start {
+	margin: 0;
+	background-color: #F8F8F8;
+
+}
+
+.test_not_mem_start {
+	margin-top: 20px;
+	background-color: #F8EFA6;
+}
+
+/*********************** 캐릭터 ***********************/
+
+.cooking {
+	position: relative;
+	left: 650px;
+	bottom: 160px;
+	cursor: pointer;
+}

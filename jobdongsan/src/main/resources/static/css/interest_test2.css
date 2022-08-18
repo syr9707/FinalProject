@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+section {
+	width: 1100px;
+    height: 650px;  
+    border-radius: 50px;
+    background-image: url("../images/kitchen.jpg");
+    background-size: 100% 100%;
+    border: 1px solid white;
+    display: flex;
+}
+
+.side_wrap {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 210px;
+	height: 650px;
+	margin: 0;
+	border-radius: 50px;
+	position: fixed;
+}
+
+.contents_wrap {
+	position: relative;
+	margin-left: 210px;
+	width: 890px;
+}
+
+/***************** 사이드 목록 버튼 **********************/
+
+.test_side_menu {
+	width: 120px;
+	height: 120px;
+	background-color: white;
+	border-radius: 40px;
+	margin-top: 68px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.test_side_menu img {
+	width: 90px;
+	margin: 15px 0 0 15px;
+	opacity: 0.5;
+}
+
+.side_menu_name {
+	position: relative;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	margin-top: -20px;
+	border-radius: 20px;
+	font-family: 'CookieRun';
+	font-size: 13px;
+	color: white;
+	text-align: center;
+	opacity: 0.5;
+
+}
+
+/***************** 컨텐츠 내용 **********************/
+
+.contents_wrap div,p,span {
+	font-family: 'CookieRun';
+	font-weight: bold;
+}
+
+.contents_wrap p,span {
+	cursor: pointer;
+}
+
+.contents_wrap .title,.contents {
+	text-shadow: 1px 1px 5px black;
+}
+
+.contents_wrap .title {
+	width: 464px;
+	height: 131px;
+	font-size: 80px;
+	margin: 20px 0 0 160px;
+	color: white;
+}
+
+.contents_wrap .contents {
+	width: 362px;
+	height: 72px;
+	font-size: 25px;
+	margin: 0 0 0 170px;
+	color: white;
+}
+
+.contents_wrap .contents_box {
+	width: 350px;
+	height: 200px;
+	font-size: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-left: 150px;
+	margin-top: -320px;
+}
+
+.chat_bubble {
+	width: 400px;
+	margin-left: 130px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.contents_wrap .contents_box p {
+	color: black;
+	font-size: 40px;
+	
+}
+
+.contents_wrap .contents_box span {
+	color: black;
+	font-size: 50px;
+}
+
+/*********************** 캐릭터 ***********************/
+
+.cooking {
+	position: absolute;
+	left: 500px;
+	top: 300px;
+	transform: rotate(-30deg);
+}
+
+/************** 토글 박스들 ******************/
+
+.three_point_thumbnail {
+	position: absolute;
+	width: 800px;
+	margin-left: 45px;
+	display: none;
+	
+}
+
+.three_point {
+	width: 256px;
+	height: 270px;
+	background-color: #FFFCDF;
+	border-radius: 50px;
+	box-shadow: 5px 5px 1px #B27E6D;
+	cursor: pointer;
+}
+
+.three_point_title {
+	color: #B27E6D;
+	width: 130px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #F8EFA6;
+	margin-top: 20px;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 35px;
+}
+
+.three_point_summary {
+	color: #B27E6D;
+	width: 200px;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.three_point_next {
+	color: #B27E6D;
+	width: 170px;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+	border-top: 2px solid #F8EFA6;
+}
+
+.right-arrow {
+	position: relative;
+	width: 30px;
+	top: 7px;
+	transform: rotate(55deg);
+}
+
+/************** 토글 박스 내용들 ******************/
+
+.three_point_contents {
+	position: absolute;
+	width: 750px;
+	height: 500px;
+	background-color: #FFFCDF;
+	top: 50px;
+	left: 70px;
+	border-radius: 50px;
+	box-shadow: 10px 10px 1px #7e5243;
+	display: none;
+}
+
+.back_arrow {
+	position:absolute;
+	width: 80px;
+	height: 80px;
+	background-color: #7e5243;
+	border-radius: 30px;
+	background: radial-gradient(#c59e92, #ac7664 , #7e5243);
+	top: 210px;
+	left: -45px;
+	cursor: pointer;
+}
+
+.back_arrow img {
+	width: 50px;
+	margin: 15px;
+}
+
+.next_arrow {
+	position:absolute;
+	width: 80px;
+	height: 80px;
+	background-color: #7e5243;	
+	border-radius: 30px;
+	background: radial-gradient(#c59e92, #ac7664 , #7e5243);
+	top: 210px;
+	left: 715px;
+	cursor: pointer;
+}
+
+.next_arrow img {
+	width: 50px;
+	margin: 15px;
+	transform: rotate(180deg);
+}
+
+.three_point_contents_box .contents_title  {
+	color: #B27E6D;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 26px;
+	background-color: #F8EFA6;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 25px;
+}
+
+.contents_paragh {
+	width: 650px;
+	
+}
+
+.contents_paragh th {
+	color: #B27E6D;
+	font-size: 30px;
+	height: 80px;
+	font-family: 'CookieRun';
+	
+}
+
+.contents_paragh td {
+	border-bottom: 2px solid #F8EFA6;
+	height: 30px;
+	text-align: center;
+	font-family: 'CookieRun';
+	font-size: 19px;
+}

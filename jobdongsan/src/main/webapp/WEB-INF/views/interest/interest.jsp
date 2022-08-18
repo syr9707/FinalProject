@@ -8,7 +8,7 @@
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/interest.css' />"/>
 		<!-- js -->
-		<script src="<c:url value='/js/interest.js' />"></script>
+		<%-- <script src="<c:url value='/js/interest.js' />"></script> --%>
 	</head>
 	<body>
 		<!-- top.jsp -->
@@ -28,9 +28,7 @@
 	            </div>
 	            <img src="images/interest_man.png" class="interest_man">
 	            <div class="view_box">
-	                <div class="inner_view_box">
-	    				
-	                </div>
+	                <iframe class="inner_view_box" scrolling="no" src="<c:url value='/interest_test' />"></iframe>
 	            </div>
 	        </div>
 	    </section>

@@ -15,7 +15,7 @@
 }
 
 .back_img2 {
-    width: 100%;
+    width: 1903px;
     height: 880px;
     background-image: url("../images/backImg2.png");
     background-repeat: no-repeat;
@@ -30,6 +30,7 @@
     width: 1320px;
     position: relative;
     margin-top: -1310px;
+    margin-bottom: 150px;
 }
 
 .interest_title {  
@@ -80,15 +81,18 @@
     height: 750px;
     background: #F8EFA6;
     border-radius: 50px;
-    margin-top: -516px
-    
+    margin-top: -516px;
+    background: radial-gradient(ellipse, #F8EFA6 500px, #FEC703 , #9F8730);
+    box-shadow: 10px 10px 30px #777777;
 }
 
 .inner_view_box {
     position: relative;
     top: 50px;
+    left: 50px;
+    background-color: white;
     width: 1100px;
     height: 650px;  
-    background: rgba(5, 68, 19, 0.43);
     border-radius: 50px;
+
 }
