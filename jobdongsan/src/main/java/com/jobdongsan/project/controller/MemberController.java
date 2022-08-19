@@ -37,6 +37,16 @@ public class MemberController {
 		return "index";
 	}
 	
+	@RequestMapping("/find_id")
+	public String find_id() {
+		return "member/find_id";
+	}
+	
+	@RequestMapping("/find_pw")
+	public String find_pw() {
+		return "member/find_pw";
+	}
+	
 	@RequestMapping("/signup_terms")
 	public String signup_terms() {
 		return "member/signup_terms";
@@ -50,6 +60,11 @@ public class MemberController {
 	@RequestMapping("/mypage")
 	public String mypage_index() {
 		return "member/mypage_index";
+	}
+	
+	@RequestMapping("/mypage_detail")
+	public String mypage_detail() {
+		return "member/mypage_detail";
 	}
 	
 	@RequestMapping("/mypage_check")
