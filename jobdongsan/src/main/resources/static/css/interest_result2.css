@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+section {
+	position: relative;
+	width: 1100px;
+    height: 650px;  
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+/***************** 컨텐츠 내용 **********************/
+
+/********** 프로필 박스 ************/
+.char_profile_box {
+	width: 910px;
+	height: 150px;
+	display: flex;
+	margin: 50px 0 0 95px;
+}
+
+.char_profile {
+	width: 110px;
+	height: 150px;
+	cursor: pointer;
+}
+
+.char_name {
+	font-family: 'CookieRun';
+	font-size: 25px;
+	text-align: center;
+}
+
+.box_line {
+	width: 950px;
+	height: 35px;
+	margin-top: 5px;
+	border-bottom: 1px solid;
+}
+
+
+/********** 설명 박스 ************/
+.char_explain_box {
+	width: 800px;
+	height: 355px;
+	display: flex;
+	margin-top: 30px;
+	margin-left: 70px;
+	flex-direction: row;
+}
+
+.char_explain_box div,p,span {
+	font-family: 'CookieRun';
+}
+
+.char_explain {
+	width: 280px;
+	margin: 0;
+}
+
+.char_explain_title {
+	width: 150px;
+	height: 80px;
+	margin: 0;
+	font-size: 48px;
+	color: #656565;
+}
+
+.char_explain_text {
+	width: 280px;
+	line-height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 17px;
+}
+
+
+/********** 대표 직업 박스 ************/
+
+.char_job_box {
+	width: 480px;
+	margin-left: 40px;
+}
+
+.char_job_box p {
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+}
+
+.char_job_box span {
+	color: #FB635F;
+}
+
+.char_job {
+	height: 150px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.char_job:nth-child(2) {
+	margin: 10px 0 13px 0;
+}
+
+.job_kind {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #B7B7B7;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.job_kind img {
+	width: 85px;
+	margin: 20px 0 0 32px;
+}
+
+.job_kind p {
+	width: 113px;
+	height: 20px;
+	font-family: 'CookieRun';
+	font-size: 17px;
+	margin: 5px 0 0 19px;
+	text-align: center;
+}
+
+/*********** 다음 버튼 ************/
+.next_btn {
+	position: absolute;
+	width: 200px;
+	height: 160px;
+	top: 488px;
+	left: 900px;
+	cursor: pointer;
+}
+
+.next_btn p {
+	font-family: 'CookieRun';
+	width: 178px;
+	height: 30px;
+	text-align: center;
+	margin-top: -110px;
+	margin-left: 2px;
+}
+
+.next_btn span {
+	font-family: 'CookieRun';
+	color: #FB635F;
+}
+
+
+
+

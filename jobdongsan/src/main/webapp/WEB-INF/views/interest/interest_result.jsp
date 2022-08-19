@@ -66,6 +66,7 @@
 						<div class="char_graph">
 							<div class="graph_name">뚝딱이</div>
 							<div class="dde_graph"></div>
+							<img src="<c:url value='images/interest_star.png' />">
 						</div>
 						<div class="char_graph">
 							<div class="graph_name">탐험이</div>

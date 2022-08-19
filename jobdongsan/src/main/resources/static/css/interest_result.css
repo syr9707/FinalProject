@@ -4,7 +4,7 @@ section {
 	width: 1100px;
     height: 650px;  
     border-radius: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
 }
 
@@ -122,7 +122,7 @@ ul li .side_menu_name {
 
 .result_graph_box {
 	display: flex;
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 .result_graph {
@@ -135,10 +135,17 @@ ul li .side_menu_name {
 	display: flex;
 	flex-direction: column-reverse;
 	width: 75px;
+	position: relative;
 }
 
 .char_graph div:nth-child(2) {
 	margin: 0;
+}
+
+.char_graph img {
+	position: absolute;
+	width: 75px;
+	top: -20px;
 }
 
 .dde_graph {
@@ -175,13 +182,15 @@ ul li .side_menu_name {
 	font-family: 'CookieRun';
 	font-size: 25px;
 	text-align: center;
+	height: 30px;
 }
 
 .next_btn {
 	width: 200px;
 	height: 160px;
-	margin-top: 48px;
+	margin-top: 58px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .next_btn p {
@@ -189,6 +198,13 @@ ul li .side_menu_name {
 	height: 50px;
 	text-align: center;
 	margin-top: -120px;
+	margin-left: 2px;
 }
+
+.next_btn span {
+	color: #FB635F;
+}
+
+
 
 

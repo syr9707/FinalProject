@@ -124,21 +124,26 @@ ul li .side_menu_name {
 }
 
 .plate .plate_img {
+	position: absolute;
 	width: 140px;
 }
 
 .plate .food {
 	position: absolute;
 	width: 80px;
-	margin-left: -100px;
+	margin: 30px;
+	display: none;
 	z-index: 1;
 }
 
 .plate p {
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	line-height: 140px;
 	font-family: 'CookieRun';
 	font-size: 25px;
 	text-align: center;
-	margin-top: -90px;
 	z-index: 2;
 }
 

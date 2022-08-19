@@ -29,4 +29,14 @@ public class InterestController {
 	public String interest_result() {
 		return "interest/interest_result";
 	}
+	
+	@RequestMapping("/interest_result2")
+	public String interest_result2() {
+		return "interest/interest_result2";
+	}
+	
+	@RequestMapping("/interest_my_promise")
+	public String my_promise() {
+		return "interest/interest_my_promise";
+	}
 }

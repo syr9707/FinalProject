@@ -53,15 +53,17 @@
 				</div>
 				<div class="plate">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
-					<img src="<c:url value='images/flour.png' />" class="food">
+					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>예</p>
 				</div>
 				<div class="plate">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
+					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>보통</p>
 				</div>
 				<div class="plate">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
+					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>아니오</p>
 				</div>
 			</div>
