@@ -32,24 +32,42 @@
 							드림주니어-진로탐사대
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn1" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn1" onclick="location.href='<c:url value='/videosubject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jinro_cont">
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+						<div class="video_jinro_cont2">
+							<div class="video_test">
+								<a href="<c:url value='/videodetail'/>" >
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<%-- <div class="video_play">
-							<img src="<c:url value='/images/video_play.png'/>">
-						</div> --%>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>">
+						<div class="video_jinro_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>">
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
+						<div class="video_jinro_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37869'/>">
+						<div class="video_jinro_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37869'/>">
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
 					</div>
 				</div>
@@ -62,7 +80,7 @@
 							드림주니어-탐나는진로탐사대
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn2" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn2" onclick="location.href='<c:url value='/videosubject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_tam_cont">
@@ -72,7 +90,7 @@
 				<div class="video_dream_jr">
 					<div class="video_jr_title">
 						<div class="video_jr_img">
-							<img src="<c:url value='/images/video_tam.png'/>">
+							<img src="<c:url value='/images/video_jr.png'/>">
 						</div>
 						<div class="video_jr_name">
 							드림주니어
@@ -88,7 +106,7 @@
 				<div class="video_jangbogo">
 					<div class="video_jang_title">
 						<div class="video_jang_img">
-							<img src="<c:url value='/images/video_tam.png'/>">
+							<img src="<c:url value='/images/video_jang.png'/>">
 						</div>
 						<div class="video_jang_name">
 							해양직업의 세계-꿈꾸는 장보고
@@ -104,7 +122,7 @@
 				<div class="video_mirae">
 					<div class="video_mirae_title">
 						<div class="video_mirae_img">
-							<img src="<c:url value='/images/video_tam.png'/>">
+							<img src="<c:url value='/images/video_mirae.png'/>">
 						</div>
 						<div class="video_mirae_name">
 							미래직업가이드
@@ -120,7 +138,7 @@
 				<div class="video_e">
 					<div class="video_e_title">
 						<div class="video_e_img">
-							<img src="<c:url value='/images/video_tam.png'/>">
+							<img src="<c:url value='/images/video_e.png'/>">
 						</div>
 						<div class="video_e_name">
 							창의적 진로개발-지식채널e
@@ -130,17 +148,37 @@
 						</div>
 					</div>
 					<div class="video_e_cont">
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+						<div class="video_e_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+						<div class="video_e_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+						<div class="video_e_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
-						<div class="video_test">
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+						<div class="video_e_cont2">
+							<div class="video_test">
+								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+							</div>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!
+							</div>
 						</div>
 					</div>
 				</div>

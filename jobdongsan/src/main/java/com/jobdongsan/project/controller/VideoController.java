@@ -9,4 +9,14 @@ public class VideoController {
 	public String video() {
 		return "video/video";
 	}
+	
+	@RequestMapping("/videosubject")
+	public String videosubject() {
+		return "video/video_subject";
+	}
+	
+	@RequestMapping("/videodetail")
+	public String videodetail() {
+		return "video/video_detail";
+	}
 }

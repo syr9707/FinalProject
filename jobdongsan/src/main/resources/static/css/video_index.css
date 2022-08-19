@@ -72,14 +72,14 @@
 /* MBC 드림주니어-진로탐사대 (20개) */
 .video_dream_jinro {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:175px;
 }
 
 .video_jinro_title {
 	display:flex;
     flex-direction: row;
-    width: 495px;
+    width: 510px;
 	height: 50px;
 	margin-left:0;
 }
@@ -146,10 +146,31 @@
 
 .video_jinro_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	display:flex;
     flex-direction: row;
 	margin-top:25px;
+}
+
+.video_jinro_cont2 {
+	width:300px;
+	height:255px;
+}
+
+.video_test_name {
+	width: 300px;
+	height: 30px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	
+	text-align: center;
+	letter-spacing: 1px;
+	
+	margin-top: 15px;
 }
 
 .video_test {
@@ -248,14 +269,14 @@
 /* MBC 드림주니어-탐나는진로탐사대 (40개) */
 .video_dream_tam {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:70px;
 }
 
 .video_tam_title {
 	display:flex;
     flex-direction: row;
-    width: 575px;
+    width: 585px;
 	height: 50px;
 	margin-left:0;
 }
@@ -315,7 +336,7 @@
 
 .video_tam_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	margin-top:25px;
 	display:flex;
     flex-direction: row;
@@ -349,14 +370,14 @@
 /* MBC 드림주니어 (86개) */
 .video_dream_jr {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:70px;
 }
 
 .video_jr_title {
 	display:flex;
     flex-direction: row;
-    width: 330px;
+    width: 340px;
 	height: 50px;
 	margin-left:0;
 }
@@ -416,7 +437,7 @@
 
 .video_jr_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	display:flex;
     flex-direction: row;
 	margin-top:25px;
@@ -450,14 +471,14 @@
 /* 해양직업의 세계-꿈꾸는 장보고 (34개) */
 .video_jangbogo {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:70px;
 }
 
 .video_jang_title {
 	display:flex;
     flex-direction: row;
-    width: 600px;
+    width: 610px;
 	height: 50px;
 	margin-left:0;
 }
@@ -517,7 +538,7 @@
 
 .video_jang_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	display:flex;
     flex-direction: row;
 	margin-top:25px;
@@ -562,14 +583,14 @@
 /* 미래직업가이드 (9개) */
 .video_mirae {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:70px;
 }
 
 .video_mirae_title {
 	display:flex;
     flex-direction: row;
-    width: 395px;
+    width: 405px;
 	height: 50px;
 	margin-left:0;
 }
@@ -629,7 +650,7 @@
 
 .video_mirae_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	display:flex;
     flex-direction: row;
 	margin-top:25px;
@@ -671,7 +692,7 @@
 /* 창의적 진로개발-지식채널e (52개) */
 .video_e {
 	width:1320px;
-	height:285px;
+	height:330px;
 	margin-top:70px;
 	margin-bottom:90px;
 }
@@ -679,7 +700,7 @@
 .video_e_title {
 	display:flex;
     flex-direction: row;
-    width: 555px;
+    width: 565px;
 	height: 50px;
 	margin-left:0;
 }
@@ -696,7 +717,7 @@
 }
 
 .video_e_name {
-	width: 360px;
+	width: 365px;
 	height: 35px;
 	
 	font-family: 'CookieRun';
@@ -739,10 +760,15 @@
 
 .video_e_cont {
 	width:1320px;
-	height:210px;
+	height:255px;
 	display:flex;
     flex-direction: row;
 	margin-top:25px;
+}
+
+.video_e_cont2 {
+	width:300px;
+	height:255px;
 }
 
 

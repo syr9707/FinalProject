@@ -127,6 +127,7 @@
 .job_star {
 	font-size: 2rem;
 	color:#17CBC0;
+	cursor:pointer;
 }
 
 .job_star2 {
