@@ -50,6 +50,7 @@ strong {
 #map_detail_sub_title {
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 #map_bookmark {
@@ -135,13 +136,13 @@ strong {
 }
 
 #map_api {
-	border: 2px dashed black;
-	border-radius: 50px;
+	border: 1px solid black;
+	/* border-radius: 50px; */
 	/*  */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 600px;
-	height: 400px;
-	margin-bottom: 90px;
+	width: 800px;
+	height: 500px;
+	margin-bottom: 120px;
 }
