@@ -91,12 +91,12 @@ $(document).ready(function(){
 
         if(!id) {
             $('#id_error').text('아이디를 입력해주세요.')
-            $('#id_error').css('display', 'block');
+            $('#id_error').show();
         } else if(!id_rule.test(id)) {
             $('#id_error').text('아이디는 5자~20자의 영문 소문자, 숫자와 특수기호(_) , (-)만 사용 가능합니다.')
-            $('#id_error').css('display', 'block');
+            $('#id_error').show();
         } else {
-            $('#id_error').css('display', 'none');
+            $('#id_error').hide();
         }
     });
 
@@ -107,12 +107,12 @@ $(document).ready(function(){
 
         if(!pw) {
             $('#pw_error').text('비밀번호를 입력해주세요.')
-            $('#pw_error').css('display', 'block');
+            $('#pw_error').show();
         } else if(!pw_rule.test(pw)) {
             $('#pw_error').text('비밀번호는 8자~16자의 영문 대 소문자, 숫자, 특수문자를 조합해서 사용해주세요.')
-            $('#pw_error').css('display', 'block');
+            $('#pw_error').show();
         } else {
-            $('#pw_error').css('display', 'none');
+            $('#pw_error').hide();
         }
     });
     
@@ -123,12 +123,12 @@ $(document).ready(function(){
 
         if(!pw_chk) {
             $('#pw_chk_error').text('비밀번호를 입력해주세요.')
-            $('#pw_chk_error').css('display', 'block');
+            $('#pw_chk_error').show();
         } else if(pw_chk != pw) {
             $('#pw_chk_error').text('비밀번호가 일치하지 않습니다.')
-            $('#pw_chk_error').css('display', 'block');
+            $('#pw_chk_error').show();
         } else {
-            $('#pw_chk_error').css('display', 'none');
+            $('#pw_chk_error').hide();
         }
     });
 
@@ -137,9 +137,9 @@ $(document).ready(function(){
         var name = $('.name').val();
 
         if(name == "") {
-            $('#name_error').css('display', 'block');
+            $('#name_error').show();
         } else {
-            $('#name_error').css('display', 'none');
+            $('#name_error').hide();
         }
     });
 
@@ -150,12 +150,12 @@ $(document).ready(function(){
         
         if(year == "") {
             $('#birth_error').text('태어난 년도를 입력해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
         } else if(!year_rule.test(year)){
             $('#birth_error').text('태어난 년도 4자리를 정확하게 입력해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
         } else {
-            $('#birth_error').css('display', 'none');
+            $('#birth_error').hide();
         }
     });
 
@@ -164,9 +164,9 @@ $(document).ready(function(){
 
         if(idx1 == 0) {
             $('#birth_error').text('태어난 월을 선택해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
         } else {
-            $('#birth_error').css('display', 'none');
+            $('#birth_error').hide();
         }
     });
 
@@ -175,9 +175,9 @@ $(document).ready(function(){
 
         if(idx2 == 0) {
             $('#birth_error').text('태어난 일을 선택해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
         } else {
-            $('#birth_error').css('display', 'none');
+            $('#birth_error').hide();
         }
     });
 
@@ -191,27 +191,27 @@ $(document).ready(function(){
         
         if(!email1) {
             $('#email_error').text('이메일 아이디를 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else if(!id_rule.test(email1)){
             $('#email_error').text('이메일 아이디를 형식에 맞게 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else {
-            $('#email_error').css('display', 'none');
+            $('#email_error').hide();
         }
         
         if(email2 == "") {
             
         } else if(!email_rule.test(email)){
             $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else {
-            $('#email_error').css('display', 'none');
+            $('#email_error').hide();
             $('.email_auth').css('background-color', '#FFFACD');
             $('.email_auth').css('color', 'black');
         }
@@ -227,27 +227,27 @@ $(document).ready(function(){
 
         if(!email2) {
             $('#email_error').text('이메일 도메인을 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else if(!mail_rule.test(email2)) {
             $('#email_error').text('이메일 도메인을 형식에 맞게 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else {
-            $('#email_error').css('display', 'none');
+            $('#email_error').hide();
         }
 
         if(email1 == "") {
             
         } else if(!email_rule.test(email)){
             $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
         } else {
-            $('#email_error').css('display', 'none');
+            $('#email_error').hide();
             $('.email_auth').css('background-color', '#FFFACD');
             $('.email_auth').css('color', 'black');
         }
@@ -260,12 +260,12 @@ $(document).ready(function(){
 
         if(!phone) {
             $('#phone_error').text('전화번호 입력해주세요.')
-            $('#phone_error').css('display', 'block');
+            $('#phone_error').show();
         } else if(!phone_rule.test(phone)) {
             $('#phone_error').text('전화번호를 다시 확인해주세요.')
-            $('#phone_error').css('display', 'block');
+            $('#phone_error').show();
         } else {
-            $('#phone_error').css('display', 'none');
+            $('#phone_error').hide();
         }
     });
 
@@ -277,7 +277,7 @@ $(document).ready(function(){
 
         if(!id) {
             $('#id_error').text('아이디를 입력해주세요.')
-            $('#id_error').css('display', 'block');
+            $('#id_error').show();
             $('.id').focus();
             return false;
         }
@@ -287,7 +287,7 @@ $(document).ready(function(){
 
         if(!pw) {
             $('#pw_error').text('비밀번호를 입력해주세요.')
-            $('#pw_error').css('display', 'block');
+            $('#pw_error').show();
             $('.pw').focus();
             return false;
         }
@@ -297,7 +297,7 @@ $(document).ready(function(){
 
         if(!pw_chk) {
             $('#pw_chk_error').text('비밀번호를 입력해주세요.')
-            $('#pw_chk_error').css('display', 'block');
+            $('#pw_chk_error').show();
             $('.pw_chk').focus();
             return false;
         }
@@ -306,11 +306,11 @@ $(document).ready(function(){
         var name = $('.name').val();
 
         if(name == "") {
-            $('#name_error').css('display', 'block');
+            $('#name_error').show();
             $('.name').focus();
             return false;
         } else {
-            $('#name_error').css('display', 'none');
+            $('#name_error').hide();
         }
 
         // 자녀나이 체크
@@ -320,21 +320,21 @@ $(document).ready(function(){
 
         if(birth_year == "") {
             $('#birth_error').text('태어난 년도를 입력해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
             $('.birth_year').focus();
             return false;
         } else if(idx1 == 0) {
             $('#birth_error').text('태어난 월을 선택해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
             $('.birth_month').focus();
             return false;
         } else if(idx2 == 0) {
             $('#birth_error').text('태어난 일을 선택해주세요.')
-            $('#birth_error').css('display', 'block');
+            $('#birth_error').show();
             $('.birth_date').focus();
             return false;
         } else {
-            $('#birth_error').css('display', 'none');
+            $('#birth_error').hide();
         }
 
         // 이메일체크
@@ -345,13 +345,13 @@ $(document).ready(function(){
         
         if(!email_rule.test(email)){
             $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
-            $('#email_error').css('display', 'block');
+            $('#email_error').show();
             $('.email_auth').css('background-color', '#bbbbbb');
             $('.email_auth').css('color', '#ffffff');
             $('.email1').focus();
             return false;
         } else {
-            $('#email_error').css('display', 'none');
+            $('#email_error').hide();
             $('.email_auth').css('background-color', '#FFFACD');
             $('.email_auth').css('color', 'black');
         }
@@ -362,16 +362,16 @@ $(document).ready(function(){
 
         if(!phone) {
             $('#phone_error').text('전화번호 입력해주세요.')
-            $('#phone_error').css('display', 'block');
+            $('#phone_error').show();
             $('.phone').focus();
             return false;
         } else if(!phone_rule.test(phone)) {
             $('#phone_error').text('전화번호를 다시 확인해주세요.')
-            $('#phone_error').css('display', 'block');
+            $('#phone_error').show();
             $('.phone').focus();
             return false;
         } else {
-            $('#phone_error').css('display', 'none');
+            $('#phone_error').hide();
         }
 
         // 주소 체크
@@ -380,11 +380,11 @@ $(document).ready(function(){
         var address2 = $('.address2').val();
 
         if(zipcode == "" || address1 == "" || address2 == "") {
-            $('#address_error').css('display', 'block');
+            $('#address_error').show();
             $('.address2').focus();
             return false;
         } else {
-            $('#address_error').css('display', 'none');
+            $('#address_error').hide();
         }
 
         $('#mypage_update_form').submit();

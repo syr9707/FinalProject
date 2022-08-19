@@ -1,6 +1,9 @@
 .section_wrap {
+    position: relative;
     width: 1320px;
     text-align: center;
+    z-index: 1;
+    margin-bottom: 90px;
 }
 
 .section div,
@@ -35,10 +38,254 @@
     height: 120px;
 }
 
+.my_jobdongsan_info div:nth-child(2) {
+    width: 120px;
+}
+
 .my_jobdongsan_btn {
-    width: 280px;
+    width: 200px;
+}
+
+.my_jobdongsan_btn img {
+    width: 200px;
+    cursor: pointer;
 }
 
 .my_jobdongsan_btn img:nth-child(1) {
     margin: 45px auto 10px;
+}
+
+.my_history {
+    width: 1120px;
+    height: 805px;
+    margin-top: 100px;
+}
+
+.my_history_img {
+    display: flex;
+    width: 720px;
+    margin: 0 auto 0 70px;
+    padding-top: 35px;
+}
+
+.my_history_img img:nth-child(1) {
+    margin: 0 auto 0 0;
+}
+
+.my_history_img img:nth-child(2) {
+    margin: 0;   
+}
+
+.my_history_contents {
+    display: flex;
+}
+
+.my_interest_info {
+    width: 500px;
+    height: 505px;
+    margin: 0 auto auto;
+    border: 3px solid #777777;
+    border-radius: 80px;
+}
+
+.my_interest_title {
+    margin: 29px auto 30px;
+}
+
+.my_interest_title b {
+    font-size: 30px;
+    color: #FEC703;
+}
+
+.my_interest_content {
+    border-top: 3px solid #777777;
+}
+
+.my_interest_pic {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.my_interest_content div p:nth-child(2) {
+    color: #FFA200;
+}
+
+.btn_interest_div {
+    width: 500px;
+    margin-top: 25px;
+    margin-right: 0;
+}
+
+.btn_interest_div img {
+    cursor: pointer;
+}
+
+.my_job_info {
+    width: 500px;
+    height: 505px;
+    margin: 0 auto auto;
+    border: 3px solid #777777;
+    border-radius: 80px;
+}
+
+.my_job_title {
+    margin: 29px auto 30px;
+}
+
+.my_job_title b {
+    font-size: 30px;
+    color: #17CBC0;
+}
+
+.my_job_content {
+    border-top: 3px solid #777777;
+}
+
+.my_job_add_pic {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.my_job_add div p:nth-child(2) {
+    color: #17CBC0;
+}
+
+.my_job_like {
+    display: none;
+}
+
+.my_job_pic {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.btn_job_div {
+    width: 500px;
+    margin-top: 25px;
+    margin-left: 0;
+}
+
+.btn_job_add {
+    cursor: pointer;
+}
+
+.btn_job {
+    display: none;
+    cursor: pointer;
+}
+
+.my_video {
+    margin-top: 100px;
+    height: 460px;
+    background-image: url("/images/mypage_background3.png");
+}
+
+.my_video_text {
+    height: 41px;
+    line-height: 41px;
+    margin-bottom: 9px;
+}
+
+.my_video_contents {
+    display: flex;
+    height: 400px;
+    align-items: center;
+}
+
+.arrows {
+    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.my_video_list_text {
+    /* display: none; */
+    width: 1050px;
+}
+
+.my_video_list_text img{
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.my_video_list {
+    /* display: flex; */
+    display: none;
+    width: 1050px;
+    padding: 0 25px;
+    overflow: hidden;
+}
+
+.my_video_list img {
+    margin: 0 50px 0 0;
+}
+
+.my_map {
+    margin-top: 100px;
+    height: 460px;
+    background-image: url("/images/mypage_background4.png");
+}
+
+.my_map_text {
+    height: 41px;
+    line-height: 41px;
+    margin-bottom: 9px;
+}
+
+.my_map_contents {
+    display: flex;
+    height: 400px;
+    align-items: center;
+}
+
+.arrows {
+    width: 80px;
+    height: 80px;
+}
+
+.my_map_list_text {
+    /* display: none; */
+    width: 1050px;
+}
+
+.my_map_list_text img{
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.my_map_list {
+    /* display: flex; */
+    display: none;
+    width: 1050px;
+    padding: 0 25px;
+    overflow: hidden;
+}
+
+.my_map_list img {
+    margin: 0 50px 0 0;
+}
+
+.background {
+    position: absolute;
+    top: 210px;
+    width: 100%;
+	height: 500px;
+	background-image: url("/images/background.png");
+    z-index: 0;
+}
+
+.background2 {
+    position: absolute;
+    top: 700px;
+    width: 100%;
+	height: 805px;
+	background-image: url("/images/mypage_background2.png");
+    z-index: 0;
 }

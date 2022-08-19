@@ -28,78 +28,102 @@
                                 </div>
                             </div>
                             <div class="my_jobdongsan_btn">
-                                <img src="<c:url value='/images/mypage_update_btn.png' />"><br>
-                                <img src="<c:url value='/images/mypage_logout_btn.png' />">
+                                <img src="<c:url value='/images/mypage_update_btn.png' />" class="btn_mypage_update"><br>
+                                <img src="<c:url value='/images/mypage_logout_btn.png' />" class="btn_logout">
                             </div>
                         </div>
                     </div>
                     <div class="my_history">
-                        <div class="my_interest">
-                            <div class="my_interest_info">
-                                <div class="my_interest_title txt_30">
-                                    나의 <b>흥미</b> 탐색
-                                </div>
-                                <div class="my_interest_content">
-                                    <div><img src="<c:url value='/images/mypage_circle.png' />" class="my_interest_pic"></div>
-                                    <div>
-                                        <p class="txt_30">아직 탐색한 흥미가 없어요</p>
-                                        <p class="txt_25">나의 흥미를 알아볼까요?</p>
-                                    </div>
-                                </div>
-                                <div><img src="<c:url value='/images/mypage_interest.png' />"></div>
-                            </div>
-                            <div class="btn_my_interest"></div>
+                        <div class="my_history_img">
+                            <img src="<c:url value='/images/mypage_cow.png' />" alt="">
+                            <img src="<c:url value='/images/mypage_rabbit.png' />" alt="">
                         </div>
-                        <div class="my_job">
-                            <div class="my_job_info">
-                                <div class="my_job_title txt_30">
-                                    나의 <b>직업</b> 탐색
-                                </div>
-                                <div class="my_job_content">
-                                    <div><img src="<c:url value='/images/mypage_circle.png' />" class="my_job_pic"></div>
-                                    <div>
-                                        <p class="txt_30">아직 탐색한 직업이 없어요</p>
-                                        <p class="txt_25">나의 직업을 알아볼까요?</p>
+                        <div class="my_history_contents">
+                            <div class="my_interest">
+                                <div class="my_interest_info">
+                                    <div class="my_interest_title txt_30">
+                                        나의 <b>흥미</b> 탐색
+                                    </div>
+                                    <div class="my_interest_content">
+                                        <img src="<c:url value='/images/mypage_circle.png' />" class="my_interest_pic">
+                                        <div>
+                                            <p class="txt_30">아직 탐색한 흥미가 없어요</p>
+                                            <p class="txt_25">나의 흥미를 알아볼까요?</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div><img src="<c:url value='/images/mypage_job.png' />"></div>
+                                <div class="btn_interest_div"><img src="<c:url value='/images/mypage_interest.png' />" class="btn_interest"></div>
                             </div>
-                            <div class="btn_my_job"></div>
+                            <div class="my_job">
+                                <div class="my_job_info">
+                                    <div class="my_job_title txt_30">
+                                        나의 <b>직업</b> 탐색
+                                    </div>
+                                    <div class="my_job_content">
+                                        <div class="my_job_add">
+                                            <div><img src="<c:url value='/images/mypage_circle.png' />" class="my_job_add_pic"></div>
+                                            <div>
+                                                <p class="txt_30">아직 탐색한 직업이 없어요</p>
+                                                <p class="txt_25">나의 직업을 알아볼까요?</p>
+                                            </div>
+                                        </div>
+                                        <div class="my_job_like">
+                                            <img src="<c:url value='/images/my_job_pic.png' />" class="my_job_pic">
+                                            <p class="txt_30">드론 조종사</p>
+                                            <p class="txt_25">초경량 비행체인 드론을 조종해요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_job_div">
+                                    <img src="<c:url value='/images/mypage_job_add.png' />" class="btn_job_add">
+                                    <img src="<c:url value='/images/mypage_job.png' />" class="btn_job">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="my_video">
-                        <div class="txt_30 gray">진로 · 직업 영상들을 저장하고 볼 수 있어요</div>
-                        <div>
-                            <img src="<c:url value='/images/mypage_left.png' />">
-                            <div>
+                        <div class="my_video_text txt_25 gray">진로 · 직업 영상들을 저장하고 볼 수 있어요</div>
+                        <div class="my_video_contents">
+                            <img src="<c:url value='/images/mypage_left.png' />" class="arrows" id="my_video_left">
+                            <div class="my_video_list_text">
                                 <p class="txt_30">보고싶은 진로 · 직업 영상를 찜해볼까요?</p>
-                                <img src="<c:url value='/images/mypage_my_video_btn.png' />"> <c:url value='' />
+                                <img src="<c:url value='/images/mypage_my_video_btn.png' />" class="btn_video"> 
                             </div>
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_right.png' />">
+                            <div class="my_video_list">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                            </div>
+                            <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_video_right">
                         </div>
                     </div>
                     <div class="my_map">
-                        <div class="txt_30 gray">관심있는 직업 체험 장소를 저장할 수 있어요</div>
-                        <div>
-                            <img src="<c:url value='/images/mypage_left.png' />">
-                            <div>
+                        <div class="my_map_text txt_25 gray">관심있는 직업 체험 장소를 저장할 수 있어요</div>
+                        <div class="my_map_contents">
+                            <img src="<c:url value='/images/mypage_left.png' />" class="arrows" id="my_map_left">
+                            <div class="my_map_list_text">
                                 <p class="txt_30">가고싶은 직업 체험 장소를 찜해볼까요?</p>
-                                <img src="<c:url value='/images/mypage_my_map_btn.png' />">
+                                <img src="<c:url value='/images/mypage_my_map_btn.png' />" class="btn_map">
                             </div>
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                            <img src="<c:url value='/images/mypage_right.png' />">
+                            <div class="my_map_list">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
+                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
+                            </div>
+                            <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_map_right">
                         </div>
                     </div>
 				</div>
                 <div class="background"></div>
                 <div class="background2"></div>
-                <div class="my_video_title"><img src="<c:url value='/images/mypage_my_video_title.png' />"></div>
-                <div class="my_map_title"><img src="<c:url value='/images/mypage_my_map_title.png' />"></div>
 			</form>
 		</section>
 		<!-- bottom.jsp -->
