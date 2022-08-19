@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+section {
+	margin-top: 40px;
+	border-top: 1px solid #777777;
+	margin-bottom: 90px;
+}
+
+.section_wrap {
+	width: 600px;
+	text-align: center;
+}
+
+section p {
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 9px;
+	cursor: pointer;
+}
+
+h3 {
+	margin: 50px auto 10px;
+	margin-bottom: 50px;
+}
+
+input {
+	width: 400px;
+	height: 50px;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 19px;
+	font-weight: bold;
+	background-color: #FFFACD;
+}
+
+#result_box {
+	border-top: 1px solid #777777;
+	border-bottom: 1px solid #777777;
+	width: 600px;
+	height: 200px;
+	margin-bottom: 40px;
+}
+
+b {
+	font-size: 22px;
+	color: #05B4FF;
+}
+
+#result_find_id {
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+	padding: 70px 0px 0px 0px;
+}
