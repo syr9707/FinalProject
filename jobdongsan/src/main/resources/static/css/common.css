@@ -284,6 +284,7 @@ footer {
 .btns p {
 	font-size: 25px;
 	color: #B76DCA;
+	margin: 0;
 }
 
 .btns .btn_top {
@@ -296,5 +297,10 @@ footer {
 .btns .chatbot {
 	width: 100px;
 	display: block;
+	margin: 0;
+}
+
+header p,
+footer p {
 	margin: 0;
 }
