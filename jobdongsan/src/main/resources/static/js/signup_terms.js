@@ -7,7 +7,7 @@ $(document).ready(function(){
             $('.allcheck').children('i').removeClass('white');
             $('.checkbox').children('i').removeClass('white');
             $('.checkbox').children('i').attr('name', 'chked');
-            $('.terms_error').css('display', 'none');
+            $('.terms_error').hide();
         } else {
             $('.allcheck').children('i').addClass('white');
             $('.checkbox').children('i').addClass('white');
@@ -20,7 +20,7 @@ $(document).ready(function(){
             $(this).children('i').removeClass('white');
             $(this).children('i').attr('name', 'chked');
             if($(this).parents('.terms_check').next().css('display') == 'block'){
-                $(this).parents('.terms_check').next().css('display', 'none');
+                $(this).parents('.terms_check').next().hide();
             }
         } else {
             $(this).children('i').addClass('white');
@@ -41,7 +41,7 @@ $(document).ready(function(){
             $('.checkbox').children('i').each(function(){
                 if($(this).hasClass('white')) {
                     $(this).parents('.checkbox').attr('tabindex', -1).focus();
-                    $(this).parents('.terms_check').next().css('display', 'block');
+                    $(this).parents('.terms_check').next().show();
                     return false;
                 }
             });

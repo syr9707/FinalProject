@@ -31,6 +31,12 @@ public class MemberController {
   		return result;
 	}
 	
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "index";
+	}
+	
 	@RequestMapping("/signup_terms")
 	public String signup_terms() {
 		return "member/signup_terms";
