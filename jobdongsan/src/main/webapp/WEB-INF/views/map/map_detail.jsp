@@ -90,9 +90,9 @@
 				
 				<div id="speech_bubble_box1">
 				<div id="speech_bubble">여기에서는 어떤 체험을 할 수 있을까?</div>
-				<span id="speech_bubble_char1">
+				<div id="speech_bubble_char1">
 				<img src="<c:url value='/images/map_bubble_duck.png'/>">
-				</span>
+				</div>
 				</div>
 				
 				<div id="map_experience_slide">
@@ -124,9 +124,9 @@
 				
 														
 				<div id="speech_bubble_box2">
-				<span id="speech_bubble_char2">
+				<div id="speech_bubble_char2">
 				<img src="<c:url value='/images/map_bubble_rabbit.png'/>">
-				</span>
+				</div>
 				<div id="speech_bubble">우와~ 어디에 있는 곳이지?</div>
 				</div>
 				

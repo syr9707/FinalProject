@@ -31,6 +31,7 @@
 				<div id="background">
 				</div>
 			
+			
 			<!-- 전체 wrap -->
 			<div class="section_wrap">
 			
@@ -50,35 +51,152 @@
 				<img src="<c:url value='/images/map_tap.png'/>">
 				</div>
 				
+				
 					
 				<!-- 지도 영역 시작 -->				
 				<div id="map_box">
 				
 				
-				
+							
 						<!-- 각 지역 리스트 -->		
 						<div id="list_seoul">
 							<div id="list_title">서울</div>	
 							<div id="list_detail">
 							 <ul>
 							 	<li>
-							 	<a href="<c:url value='/map/mapDetailView'/>">키자니아</a>
+							 	<a href="<c:url value='/map/mapDetailView'/>">❂ 키자니아</a>
 							 	</li>	 
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 기상청 체험학습
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 청와대 사랑채 체험학습
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 롯데제과 스위트 팩토리
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 서울지방경찰청 체험학습
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 법원 전시관
 							 	</li>	 
+							 </ul>
+							 </div>	 
+						</div>
+						
+						
+						<div id="list_gyeonggido">
+							<div id="list_title">경기도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>
+						
+						<div id="list_chungcheongnamdo">
+							<div id="list_title">충청남도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>
+						
+						<div id="list_chungcheongbukdo">
+							<div id="list_title">충청북도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>
+						
+							<div id="list_jeollabukdo">
+							<div id="list_title">전라북도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>
+						
+							<div id="list_jeollanamdo">
+							<div id="list_title">전라남도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
 							 </ul>
 							 </div>	 
 						</div>
@@ -89,23 +207,71 @@
 							<div id="list_detail">
 							 <ul>	 
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 체험학습 장소 이름
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 체험학습 장소 이름
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 체험학습 장소 이름
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
+							 	❂ 체험학습 장소 이름
 							 	</li>
 							 	<li>
-							 	여기에 DB 데이터가 들어갑니다
-							 	</li>	 
+							 	❂ 체험학습 장소 이름
+							 	</li> 
 							 </ul>
 							 </div> 
-						</div>				
+						</div>
+						
+						
+							<div id="list_gyeongsangbukdo">
+							<div id="list_title">경상북도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>
+						
+						
+						<div id="list_gyeongsangnamdo">
+							<div id="list_title">경상남도</div>	
+							<div id="list_detail">
+							 <ul> 
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 	<li>
+							 	❂ 체험학습 장소 이름
+							 	</li>
+							 </ul>
+							 </div>	 
+						</div>					
 						<!-- 각 지역 리스트 끝 -->
 						
 						
@@ -154,23 +320,23 @@
 								</g>
 								
 								<g>
-								<text id="LCD11" class="TEXT" x="156" y="214">서울</text>
-								<text id="LCD26" class="TEXT" x="503" y="695">부산</text>
-								<text id="LCD27" class="TEXT" x="418" y="567">대구</text>
-								<text id="LCD28" class="TEXT" x="67" y="177">인천</text>
-								<text id="LCD29" class="TEXT" x="127" y="707">광주</text>
-								<text id="LCD30" class="TEXT" x="221" y="463">대전</text>
-								<text id="LCD31" class="TEXT" x="531" y="622">울산</text>
-								<text id="LCD36" class="TEXT" x="199" y="418">세종</text>
-								<text id="LCD41" class="TEXT" x="216" y="245">경기도</text>
-								<text id="LCD42" class="TEXT" x="370" y="179">강원도</text>
-								<text id="LCD43" class="TEXT" x="260" y="381">충청북도</text>
-								<text id="LCD44" class="TEXT" x="105" y="449">충청남도</text>
-								<text id="LCD45" class="TEXT" x="179" y="592">전라북도</text>
-								<text id="LCD46" class="TEXT" x="138" y="764">전라남도</text>
-								<text id="LCD47" class="TEXT" x="447" y="460">경상북도</text>
-								<text id="LCD48" class="TEXT" x="367" y="672">경상남도</text>
-								<text id="LCD50" class="TEXT" x="76" y="1070">제주도</text>
+								<text id="LCD11" class="TEXT" x="155" y="210">▼서울</text>
+								<text id="LCD26" class="TEXT" x="500" y="695">▼부산</text>
+								<text id="LCD27" class="TEXT" x="415" y="565">▼대구</text>
+								<text id="LCD28" class="TEXT" x="60" y="175">▼인천</text>
+								<text id="LCD29" class="TEXT" x="125" y="705">▼광주</text>
+								<text id="LCD30" class="TEXT" x="220" y="460">▼대전</text>
+								<text id="LCD31" class="TEXT" x="530" y="620">▼울산</text>
+								<text id="LCD36" class="TEXT" x="190" y="415">▼세종</text>
+								<text id="LCD41" class="TEXT" x="215" y="245">▼경기도</text>
+								<text id="LCD42" class="TEXT" x="360" y="175">▼강원도</text>
+								<text id="LCD43" class="TEXT" x="260" y="380">▼충청북도</text>
+								<text id="LCD44" class="TEXT" x="95" y="445">▼충청남도</text>
+								<text id="LCD45" class="TEXT" x="170" y="590">▼전라북도</text>
+								<text id="LCD46" class="TEXT" x="135" y="760">▼전라남도</text>
+								<text id="LCD47" class="TEXT" x="445" y="460">▼경상북도</text>
+								<text id="LCD48" class="TEXT" x="365" y="670">▼경상남도</text>
+								<text id="LCD50" class="TEXT" x="60" y="1070">▼제주도</text>
 								</g>
 				</svg>
 				<!-- 지도 SVG 끝 -->

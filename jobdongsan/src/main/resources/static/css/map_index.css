@@ -17,12 +17,14 @@ h3 {
 
 li {
 	font-family: 'CookieRun';
-	font-size: 17px;
+	font-size: 18px;
 }
 
 a {
 	font-family: 'CookieRun';
-	font-size: 17px;
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
 }
 
 TEXT {
@@ -64,7 +66,6 @@ TEXT {
 	height: 80px;
 	/*  */
 	background: #FFFACD;
-	border-radius: 80px;
 	margin-bottom: 30px;
 }
 
@@ -92,25 +93,22 @@ TEXT {
 
 #map_box {
 	/* border: 2px solid red; */
-	/*  */
 	position: relative;
-	margin-bottom: 90px;
+	margin-bottom: 160px;
 }
 
 #map_korea {
 	position: relative;
-	margin-top: 50px;
-	margin-left: 420px;
-	/* z-index: -1; */
+	top: 50px;
+	left: 420px;
 }
 
 #list_title {
-	border-bottom: 2px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	border-bottom-style: dashed;
 	font-size: 20px;
 	/*  */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 	/*  */
 	padding: 10px;
 }
@@ -119,16 +117,86 @@ TEXT {
 	padding: 10px;
 }
 
+
+/******** hidden 지역 박스 ********/
+
+
 #list_seoul {
 	z-index: 1;
 	border: 3px solid #fde48a;
 	border-radius: 50px;
 	position: absolute;
 	width: 300px;
+	background-color: white;
 	display: none;
 	/* 위치 가변 */
-	top: 200px;
-	left: 120px;
+	top: 100px;
+	left: 150px;
+}
+
+#list_gyeonggido {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 150px;
+	left: 150px;
+}
+
+#list_chungcheongnamdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 350px;
+	left: 150px;
+}
+
+#list_chungcheongbukdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 300px;
+	left: 150px;
+}
+
+#list_jeollabukdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 500px;
+	left: 150px;
+}
+
+#list_jeollanamdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 700px;
+	left: 150px;
 }
 
 #list_gangwondo {
@@ -141,5 +209,31 @@ TEXT {
 	display: none;
 	/* 위치 가변 */
 	top: 100px;
-	left: 920px;
+	left: 930px;
+}
+
+#list_gyeongsangbukdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 350px;
+	left: 930px;
+}
+
+#list_gyeongsangnamdo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 600px;
+	left: 930px;
 }
