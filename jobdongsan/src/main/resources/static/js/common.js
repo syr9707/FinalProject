@@ -53,5 +53,13 @@ $(document).ready(function(){
         $('li:last-child img').attr('src', "/images/ic_map.png")
         .css('transform', 'rotate(0)');
     });
+    
+    // 탑 버튼 눌렀을 때 최상단으로 이동
+    $(".btn_top_up, .btn_top, .btns p").click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
 
 });
