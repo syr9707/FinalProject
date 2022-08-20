@@ -58,7 +58,7 @@
 						</div>
 					</div>
 					<div class="contents_char">
-						<img src="<c:url value='images/mypage_ginger.png' />">
+						<img src="<c:url value='images/mypage_detail_ginger.png' />">
 					</div>
 				</div>
 				<div class="result_graph_box">

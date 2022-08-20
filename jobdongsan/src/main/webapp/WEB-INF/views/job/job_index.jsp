@@ -89,7 +89,7 @@
 		              	<div class="job_test">
 		              		<div class="job_cont1">
 			                	<div class="job_detail_img">
-			                		<a href="<c:url value='/jobdetail'/>">
+			                		<a href="<c:url value='/job_detail'/>">
 			                		<img src="<c:url value='/images/job_img.png'/>">
 			                		</a>
 			                	</div>

@@ -64,7 +64,7 @@
 							<div id="list_detail">
 							 <ul>
 							 	<li>
-							 	<a href="<c:url value='/map/mapDetailView'/>">❂ 키자니아</a>
+							 	<a href="<c:url value='/map_detail'/>">❂ 키자니아</a>
 							 	</li>	 
 							 	<li>
 							 	❂ 기상청 체험학습

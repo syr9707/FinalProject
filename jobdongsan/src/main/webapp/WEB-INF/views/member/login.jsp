@@ -29,8 +29,8 @@
 						<div class="login_error red">아이디와 비밀번호를 확인해 주세요.</div>
 						<div class="btn_login bold txt_20 bg_y">로그인</div>
 						<div class="login_sub">
-							<a class="btn_login_sub" href="<c:url value='/find_id' />">아이디 찾기</a>
-							<a class="btn_login_sub" href="<c:url value='/find_pw' />">비밀번호 찾기</a>
+							<a class="btn_login_sub" href="<c:url value='/find_id_index' />">아이디 찾기</a>
+							<a class="btn_login_sub" href="<c:url value='/find_pw_index' />">비밀번호 찾기</a>
 							<a class="btn_login_sub" href="<c:url value='/signup_terms' />">회원가입</a>
 						</div>
 					</div>

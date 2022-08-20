@@ -32,13 +32,13 @@
 							드림주니어-진로탐사대
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn1" onclick="location.href='<c:url value='/videosubject'/>'">더보기</button >
+							<button id="videobtn1" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jinro_cont">
 						<div class="video_jinro_cont2">
 							<div class="video_test">
-								<a href="<c:url value='/videodetail'/>" >
+								<a href="<c:url value='/video_detail'/>" >
 								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
 								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>

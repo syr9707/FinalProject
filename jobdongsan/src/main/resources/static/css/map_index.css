@@ -7,6 +7,8 @@
 
 h2 {
 	font-family: 'CookieRun';
+	font-size: 40px;
+    font-weight: bold;
 }
 
 h3 {
@@ -20,7 +22,7 @@ li {
 	font-size: 18px;
 }
 
-a {
+section a {
 	font-family: 'CookieRun';
 	font-size: 18px;
 	text-decoration: none;

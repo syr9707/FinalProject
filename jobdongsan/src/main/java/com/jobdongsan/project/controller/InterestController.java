@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class InterestController {
-	@RequestMapping("/interest")
-	public String interest() {
-		return "interest/interest";
+	@RequestMapping("/interest_index")
+	public String interest_index() {
+		return "interest/interest_index";
 	}
 	
 	@RequestMapping("/interest_test")

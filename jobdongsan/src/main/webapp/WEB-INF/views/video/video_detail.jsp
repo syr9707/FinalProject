@@ -75,7 +75,7 @@
 							
 							<div class="video_similar_box">
 								<div class="video_similar_detail">
-									<a href="<c:url value='/videodetail'/>" >
+									<a href="<c:url value='/video_detail'/>" >
 									<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>"></a>
 								</div>
 								<div class="video_similar_name">

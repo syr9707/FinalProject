@@ -172,7 +172,7 @@
 				</div>
 				<div class="joblist_button">
 					<!-- <input type="button" id="joblistBtn" value="목록보기"> -->
-					<button id="joblistBtn" onclick="location.href='<c:url value='/jobindex'/>'">목록보기</button >
+					<button id="joblistBtn" onclick="location.href='<c:url value='/job_index'/>'">목록보기</button >
 				</div>
 			</div>
 		</section>

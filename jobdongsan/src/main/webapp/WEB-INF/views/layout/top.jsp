@@ -27,15 +27,19 @@
 						<ul>
 							<li>
 								<img src="/images/ic_int.png" class="interest">
-								<a href="/interest" class="interest">흥미 냠냠</a>
+								<a href="/interest_index" class="interest">흥미 냠냠</a>
 							</li>
 							<li>
 								<img src="/images/ic_job.png" class="job">
-								<a href="/job" class="job">직업 냠냠</a>
+								<a href="/job_index" class="job">직업 냠냠</a>
+							</li>
+							<li>
+								<img src="/images/ic_video.png" class="video">
+								<a href="/video_index" class="video">영상 냠냠</a>
 							</li>
 							<li>
 								<img src="/images/ic_map.png" class="experience">
-								<a href="/map" class="experience">체험 냠냠</a>
+								<a href="/map_index" class="experience">체험 냠냠</a>
 							</li>
 						</ul>
 					</nav>

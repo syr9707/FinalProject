@@ -5,18 +5,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class VideoController {
-	@RequestMapping("/video")
-	public String video() {
+	@RequestMapping("/video_index")
+	public String video_index() {
 		return "video/video_index";
 	}
 	
-	@RequestMapping("/videosubject")
-	public String videosubject() {
+	@RequestMapping("/video_subject")
+	public String video_subject() {
 		return "video/video_subject";
 	}
 	
-	@RequestMapping("/videodetail")
-	public String videodetail() {
+	@RequestMapping("/video_detail")
+	public String video_detail() {
 		return "video/video_detail";
 	}
 }

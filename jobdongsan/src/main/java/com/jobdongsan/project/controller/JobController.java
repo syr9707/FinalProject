@@ -17,14 +17,14 @@ public class JobController {
 	JobService jobService;
 	
 	// 화면 테스트 
-	@RequestMapping("/jobdetail")
-	public String jobdetail() {
+	@RequestMapping("/job_detail")
+	public String job_detail() {
 		return "job/job_detail";
 	}
 	
 	// 화면 테스트 
-	@RequestMapping("/jobindex")
-	public String jobindex() {
+	@RequestMapping("/job_index")
+	public String job_index() {
 		return "job/job_index";
 	}
 	

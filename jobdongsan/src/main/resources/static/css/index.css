@@ -173,6 +173,7 @@ section div {
     padding: 30px 25px;
     border-radius: 10px;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .today_job_info {
@@ -181,6 +182,7 @@ section div {
     margin: 20px;
     padding: 10px;
     background-color: #FFFACD;
+    font-size: 20px
 }
 
 .today_map {
@@ -206,6 +208,7 @@ section div {
     padding: 30px 25px;
     border-radius: 10px;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .today_map_info {
@@ -214,6 +217,7 @@ section div {
     margin: 20px;
     padding: 10px;
     background-color: #FFFACD;
+    font-size: 20px
 }
 
 .today_video {
@@ -271,11 +275,13 @@ section div {
     position: relative;
     margin-right: 200px;
     z-index: 1;
+    cursor: pointer;
 }
 
 #main_video2 {
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 #main_biscuit {

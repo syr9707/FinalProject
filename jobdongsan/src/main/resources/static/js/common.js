@@ -40,6 +40,20 @@ $(document).ready(function(){
         $('li:nth-child(2) img').attr('src', "/images/ic_job.png")
         .css('transform', 'rotate(0)');
     });
+    
+    // 영상 냠냠 호버했을때 애니메이션
+    $('.video').hover(function(){
+        $('li:nth-child(3) img').attr('src', "/images/ic_video2.png")
+        .css('transform', 'rotate(20deg)').css('transition', '0.3s');
+        setTimeout(function(){
+            $('li:nth-child(3) img').attr('src', "/images/ic_video3.png")
+            .css('transform', 'rotate(-20deg)');
+        }, 300);
+    }, function(){
+        $('li:nth-child(3) img').attr('src', "/images/ic_video.png")
+        .css('transform', 'rotate(0)');
+    });
+    
 
     // 체험 냠냠 호버했을때 애니메이션
     $('.experience').hover(function(){

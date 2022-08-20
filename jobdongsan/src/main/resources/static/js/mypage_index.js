@@ -13,28 +13,28 @@ $(document).ready(function(){
 
     // 흥미 탐색 하러가기 버튼 눌렀을 때
     $('.btn_interest').click(function(){
-        location.href='/interest';
+        location.href='/interest_index';
     });
 
     // 직업 탐색 하러가기 버튼 눌렀을 때
     $('.btn_job_add').click(function(){
-        location.href='/jobindex';
+        location.href='/job_index';
     });
 
     // 데이터 연동 후 추가 필요****************************************
-    // // 직업 정보 보러가기 버튼 눌렀을 때
-    // $('.btn_job').click(function(){
-    //     location.href='/jobdetail';
-    // });
+    // 직업 정보 보러가기 버튼 눌렀을 때
+    $('.btn_job').click(function(){
+        location.href='/job_detail';
+    });
 
     // 진로 직업 영상 찜하러 가기 버튼 눌렀을 때
     $('.btn_video').click(function(){
-        location.href='/video';
+        location.href='/video_index';
     });
 
     // 직업 정보 체험 찜하러 가기 버튼 눌렀을 때
     $('.btn_map').click(function(){
-        location.href='/map/mapIndexView';
+        location.href='/map_index';
     });
 
     // 찜한 직업 있을 때

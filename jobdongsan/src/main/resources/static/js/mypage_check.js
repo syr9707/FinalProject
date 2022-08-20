@@ -19,7 +19,7 @@ $(document).ready(function(){
     // 확인 버튼 눌렀을 때 비밀번호 체크
     // 추가 ajax 작업 필요
     $('.check').click(function(){
-        location.href('/mypage_update');
+        location.href='/mypage_update';
         // $('mypage_check_form').submit();
     });
 });

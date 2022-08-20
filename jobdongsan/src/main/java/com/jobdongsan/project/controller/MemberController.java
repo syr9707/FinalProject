@@ -37,14 +37,24 @@ public class MemberController {
 		return "index";
 	}
 	
-	@RequestMapping("/find_id")
-	public String find_id() {
-		return "member/find_id";
+	@RequestMapping("/find_id_index")
+	public String find_id_index() {
+		return "member/find_id_index";
 	}
 	
-	@RequestMapping("/find_pw")
-	public String find_pw() {
-		return "member/find_pw";
+	@RequestMapping("/find_id_result")
+	public String find_id_result() {
+		return "member/find_id_result";
+	}
+	
+	@RequestMapping("/find_pw_index")
+	public String find_pw_index() {
+		return "member/find_pw_index";
+	}
+	
+	@RequestMapping("/find_pw_result")
+	public String find_pw_result() {
+		return "member/find_pw_result";
 	}
 	
 	@RequestMapping("/signup_terms")
@@ -57,7 +67,7 @@ public class MemberController {
 		return "member/signup";
 	}
 	
-	@RequestMapping("/mypage")
+	@RequestMapping("/mypage_index")
 	public String mypage_index() {
 		return "member/mypage_index";
 	}

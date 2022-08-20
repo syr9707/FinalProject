@@ -29,7 +29,7 @@
 							드림주니어-진로탐사대
 						</div>
 						<div class="video_list_btn">
-							<button id="videolistbtn" onclick="location.href='<c:url value='/video'/>'">목록보기</button >
+							<button id="videolistbtn" onclick="location.href='<c:url value='/video_index'/>'">목록보기</button >
 						</div>
 					</div>
 					<div class="video_ctg_detail2">
@@ -50,7 +50,7 @@
 						%>
 						
 						<div class="video_ctg_test">
-							<a href="<c:url value='/videodetail'/>" >
+							<a href="<c:url value='/video_detail'/>" >
 							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
 							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 						</div>
@@ -67,7 +67,7 @@
 						%>
 						
 						<div class="video_ctg_test2">
-							<a href="<c:url value='/videodetail'/>" >
+							<a href="<c:url value='/video_detail'/>" >
 							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>"></a>
 							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 						</div>
