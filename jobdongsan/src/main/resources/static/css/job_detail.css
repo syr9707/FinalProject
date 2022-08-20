@@ -557,6 +557,10 @@
 	cursor:pointer;
 }
 
+.job_play img:hover {
+	transform: scale(1.1);
+}
+
 .job_stop_title {
 	position:relative;
 	font-family: 'CookieRun';
@@ -567,18 +571,23 @@
 	width:70px;
 	height:40px;
 	margin-top:10px;
-	left:15px;
+	left:10px;
 }
 
 .job_stop {
 	width:40px;
 	height:40px;
+	margin-top: 5px;
 }
 
 .job_stop img {
-	width:53px;
-	height:53px;
+	width:40px;
+	height:40px;
 	cursor:pointer;
+}
+
+.job_stop img:hover {
+	transform: scale(1.1);
 }
 
 
