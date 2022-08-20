@@ -39,7 +39,8 @@
 						<div class="video_jinro_cont2">
 							<div class="video_test">
 								<a href="<c:url value='/videodetail'/>" >
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!유도학과 수업에 도전하다!
@@ -47,7 +48,8 @@
 						</div>
 						<div class="video_jinro_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -55,7 +57,8 @@
 						</div>
 						<div class="video_jinro_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -63,7 +66,8 @@
 						</div>
 						<div class="video_jinro_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37869'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37869'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -150,7 +154,8 @@
 					<div class="video_e_cont">
 						<div class="video_e_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -158,7 +163,8 @@
 						</div>
 						<div class="video_e_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -166,7 +172,8 @@
 						</div>
 						<div class="video_e_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!
@@ -174,7 +181,8 @@
 						</div>
 						<div class="video_e_cont2">
 							<div class="video_test">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!

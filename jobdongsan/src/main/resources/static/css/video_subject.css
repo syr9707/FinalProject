@@ -183,16 +183,19 @@
 	margin-top:60px;
 }
 
-.video_ctg_list img {
+.video_ctg_list .video_thumbnail {
 	width: 300px;
 	height: 200px;
 	border-radius: 20px;
 	border: 1px solid #9C9C9C;
 }
 
-.video_ctg_list img:hover {
-	opacity:0.5;
-	border:5px solid #05B4FF;
+.video_play {
+	position: absolute;
+	width: 70px;
+	margin: -135px 0 0 115px;
+	display: none;
+	cursor: pointer;
 }
 
 .video_ctg_box {

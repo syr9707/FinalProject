@@ -166,7 +166,9 @@
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 26px;
-	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	text-align: center;
 	letter-spacing: 1px;
 	
@@ -181,7 +183,7 @@
 	border-radius: 20px;
 }
 
-.video_test img {
+.video_test .video_thumbnail {
 	width:300px;
 	height:200px;
 	border-radius: 20px;
@@ -189,9 +191,12 @@
 	cursor:pointer;
 }
 
-.video_test img:hover {
-	opacity:0.5;
-	border:5px solid #05B4FF;
+.video_play {
+	position: absolute;
+	width: 70px;
+	margin: 65px 0 0 -185px;
+	display: none;
+	cursor: pointer;
 }
 
 /* .test2 {

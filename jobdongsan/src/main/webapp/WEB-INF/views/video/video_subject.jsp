@@ -51,7 +51,8 @@
 						
 						<div class="video_ctg_test">
 							<a href="<c:url value='/videodetail'/>" >
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
+							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
+							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 						</div>
 						
 						<%
@@ -67,7 +68,8 @@
 						
 						<div class="video_ctg_test2">
 							<a href="<c:url value='/videodetail'/>" >
-							<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>"></a>
+							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>"></a>
+							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 						</div>
 						
 						<%

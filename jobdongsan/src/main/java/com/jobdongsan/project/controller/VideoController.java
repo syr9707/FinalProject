@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class VideoController {
 	@RequestMapping("/video")
 	public String video() {
-		return "video/video";
+		return "video/video_index";
 	}
 	
 	@RequestMapping("/videosubject")
