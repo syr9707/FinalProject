@@ -17,31 +17,13 @@
  		location.href = "/interest_test2";
  	});
  	
- 	// 1번째 접시 호버시 
- 	$('.plate:nth-child(5)').hover(function(){
- 		$('.plate:nth-child(5) .food').show();
- 		$('.plate:nth-child(5) p').css('color', 'white').css('text-shadow', '1px 1px 5px black');
+ 	//접시 호버시 
+ 	$('.plate').hover(function(){
+ 		$(this).children('.food').show();
+ 		$(this).children('p').css('color', 'white').css('text-shadow', '1px 1px 5px black');
  	},function(){
- 		$('.plate:nth-child(5) .food').hide();	
- 		$('.plate:nth-child(5) p').css('color', 'black').css('text-shadow', '');
- 	});
- 	
- 	// 2번째 접시 호버시 
- 	$('.plate:nth-child(6)').hover(function(){
- 		$('.plate:nth-child(6) .food').show();
- 		$('.plate:nth-child(6) p').css('color', 'white').css('text-shadow', '1px 1px 5px black');
- 	},function(){
- 		$('.plate:nth-child(6) .food').hide();	
- 		$('.plate:nth-child(6) p').css('color', 'black').css('text-shadow', '');
- 	});
- 	
- 	// 3번째 접시 호버시 
- 	$('.plate:nth-child(7)').hover(function(){
- 		$('.plate:nth-child(7) .food').show();
- 		$('.plate:nth-child(7) p').css('color', 'white').css('text-shadow', '1px 1px 5px black');
- 	},function(){
- 		$('.plate:nth-child(7) .food').hide();	
- 		$('.plate:nth-child(7) p').css('color', 'black').css('text-shadow', '');
+ 		$(this).children('.food').hide();	
+ 		$(this).children('p').css('color', 'black').css('text-shadow', '');
  	});
 });    
     
