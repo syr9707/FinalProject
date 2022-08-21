@@ -16,12 +16,12 @@
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<!-- section.jsp -->
 		<section class="section">
-			<form id="mypage_update_form" method="post" action="<c:url value='/mypage_update'/>">
-				<div class="section_wrap">
+			<div class="section_wrap">
+				<form id="mypage_update_form" method="post" action="<c:url value='/mypage_update'/>">
                     <h3 class="semibold txt_30">기본정보수정</h3>
 					<div class="input_id">
                         <p>아이디</p>
-                        <input type="text" name="id" class="id" value="aaa">
+                        <input type="text" name="id" class="id" value="aaaaaa">
                     </div>
                     <div class="error red" id="id_error">5자~20자의 영문 소문자, 숫자와 특수기호(_) , (-)만 사용 가능합니다.</div>
                     <div class="input_pw">
