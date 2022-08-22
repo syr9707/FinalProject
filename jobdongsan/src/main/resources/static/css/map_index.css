@@ -3,23 +3,27 @@
 .section div {
 	font-family: 'CookieRun';
 	font-size: 17px;
+	cursor: pointer;
 }
 
 h2 {
 	font-family: 'CookieRun';
 	font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 h3 {
 	font-family: 'CookieRun';
 	color: #FFFFFF;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	cursor: pointer;
 }
 
 li {
 	font-family: 'CookieRun';
 	font-size: 18px;
+	cursor: pointer;
 }
 
 section a {
@@ -27,6 +31,7 @@ section a {
 	font-size: 18px;
 	text-decoration: none;
 	color: black;
+	cursor: pointer;
 }
 
 TEXT {
@@ -34,6 +39,7 @@ TEXT {
 	font-size: 22px;
 	fill: white;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	cursor: pointer;
 }
 
 .section_wrap {

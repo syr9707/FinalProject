@@ -3,21 +3,25 @@
 .section div {
 	font-family: 'CookieRun';
 	font-size: 17px;
+	cursor: pointer;
 }
 
 h2 {
 	font-family: 'CookieRun';
 	font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 h4 {
 	font-family: 'CookieRun';
+	cursor: pointer;
 }
 
 strong {
 	font-family: 'CookieRun';
 	font-size: 19px;
+	cursor: pointer;
 }
 
 .section_wrap {
