@@ -10,6 +10,16 @@ public class InterestController {
 		return "interest/interest_index";
 	}
 	
+	@RequestMapping("/interest_index2")
+	public String interest_index2() {
+		return "interest/interest_index";
+	}
+	
+	@RequestMapping("/interest_index3")
+	public String interest_index3() {
+		return "interest/interest_index";
+	}
+	
 	@RequestMapping("/interest_test")
 	public String interest_test() {
 		return "interest/interest_test";

@@ -167,7 +167,7 @@
 	border-radius: 10px;
 	border: 1px solid #9E9E9E;
 	margin-right: 20px;
-	padding: 10px;
+	padding-left: 10px;
 }
 
 .contents_title {
@@ -195,6 +195,7 @@
 	height: 50px;
 	border-radius: 10px;
 	border: 1px solid #9E9E9E;
+	padding-left: 10px;
 }
 
 .friends_think,.my_future,.my_future_plan {

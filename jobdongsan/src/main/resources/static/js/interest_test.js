@@ -32,8 +32,8 @@
  	
  	$('.test_not_mem_start').click(function(){
  		var target = $('.interest_text', window.parent.document);
- 		var span = $('.interest_text span', window.parent.document);
  		target.html('<p>먼저, <span>직업의 의미</span>를 알아볼까요?<br>직업이란 "나의 꿈을 이루어가는 과정"이랍니다.</p>');
+ 		var span = $('.interest_text span', window.parent.document);
  		span.css('color', '#FF7979');
  	});
  	

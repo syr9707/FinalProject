@@ -159,7 +159,7 @@
 	                	<img src="<c:url value='images/interest_happy.png' />" class="interest_happy">
 	                </div>
 	            </div>
-	            <input type="submit" class="finish_btn" value="탐색 완료하고 저장히기">
+	            <input type="submit" class="finish_btn" value="탐색 완료하고 저장하기">
 	        </div>
 	    </section>
 	    <!-- bottom.jsp -->

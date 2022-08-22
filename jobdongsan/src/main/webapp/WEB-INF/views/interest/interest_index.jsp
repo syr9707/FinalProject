@@ -8,7 +8,7 @@
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/interest.css' />"/>
 		<!-- js -->
-		<%-- <script src="<c:url value='/js/interest.js' />"></script> --%>
+		<script src="<c:url value='/js/interest_index.js' />"></script>
 	</head>
 	<body>
 		<!-- top.jsp -->
