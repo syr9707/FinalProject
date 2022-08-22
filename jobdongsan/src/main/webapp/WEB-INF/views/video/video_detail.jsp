@@ -76,7 +76,8 @@
 							<div class="video_similar_box">
 								<div class="video_similar_detail">
 									<a href="<c:url value='/video_detail'/>" >
-									<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>"></a>
+									<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
 								</div>
 								<div class="video_similar_name">
 									'경찰경호과’ 수업에 도전하다!

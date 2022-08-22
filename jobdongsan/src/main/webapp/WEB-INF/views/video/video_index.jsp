@@ -39,8 +39,8 @@
 						<div class="video_jinro_cont2">
 							<div class="video_test">
 								<a href="<c:url value='/video_detail'/>" >
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
 							</div>
 							<div class="video_test_name">
 								유도학과 수업에 도전하다!유도학과 수업에 도전하다!

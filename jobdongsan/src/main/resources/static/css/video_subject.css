@@ -152,38 +152,35 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 영상 리스트 나열 */
 .video_ctg_list {
-	width:1320px;
-	margin-top:60px;
+	width: 1320px;
+	margin-top: 30px;
+	margin-bottom: 100px;
 }
 
-.video_ctg_list .video_thumbnail {
+.video_ctg_box {
+	display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+.video_ctg_test {
+	width: 300px;
+	height: 200px;
+	border: black 1px solid;
+	border-radius: 20px;
+    margin: 60px 15px 0 15px;
+    background: #D9D9D9;
+    display: none;
+}
+
+.video_ctg_test.active {
+	display: block;
+}
+
+.video_ctg_test .video_thumbnail {
 	width: 300px;
 	height: 200px;
 	border-radius: 20px;
@@ -198,71 +195,21 @@
 	cursor: pointer;
 }
 
-.video_ctg_box {
-	display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-}
-
-.video_ctg_test {
+.video_test_name {
 	width: 300px;
-	height: 200px;
-	
-	border: black 1px solid;
-	border-radius: 20px;
-	
-    margin-top:30px;
-    
-    background: #D9D9D9;
+	height: 20px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	color: #9e9e9e;
+	margin-top: 10px;
 }
-
-.video_ctg_box2 {
-	display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-}
-
-.video_ctg_test2 {
-	width: 300px;
-	height: 200px;
-	
-	border: black 1px solid;
-	border-radius: 20px;
-	
-    margin-top:30px;
-    
-    background: #E9F697;
-}
-
-.video_ctg_test3 {
-	width: 300px;
-	height: 200px;
-	
-	background: #FFFFFF;
-	border: 0;
-	border-radius: 20px;
-	
-    margin-top:30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

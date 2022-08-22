@@ -44,54 +44,23 @@
 					</div>
 				</div>
 				<div class="video_ctg_list">
-					<div class="video_ctg_box">
+					<div id="video_ctg_box" class="video_ctg_box">
 						<%
-							for(int i = 0; i < 12; i++) {
+							for(int i = 0; i < 18; i++) {
 						%>
-						
 						<div class="video_ctg_test">
 							<a href="<c:url value='/video_detail'/>" >
-							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>"></a>
-							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+							</a>
+							<div class="video_test_name">
+								유도학과 수업에 도전하다!유도학과 수업에 도전하다!
+							</div>
 						</div>
-						
 						<%
 							}
 						%>
 					</div>
-					
-					<!-- 더보기 버튼 클릭 시 보여질 영역 -->
-					<div class="video_ctg_box2">	
-						<%
-							for(int i = 0; i < 6; i++) {
-						%>
-						
-						<div class="video_ctg_test2">
-							<a href="<c:url value='/video_detail'/>" >
-							<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>"></a>
-							<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-						</div>
-						
-						<%
-							}
-						%>
-						
-						<%
-			               	int count = 6;
-			               	int num = 0;
-			               	if(count % 4 != 0) {
-			               		num = 4 - (count % 4);
-			               	}
-			               	for(int i = 0; i < num; i++) {
-			            %>
-			               
-			            <div class="video_ctg_test3"></div>
-			               
-			            <%
-			            	}
-			            %>
-					</div>	
-					
 				</div>
 				<div class="video_ctg_more">
 					<div class="video_ctg_btn">
