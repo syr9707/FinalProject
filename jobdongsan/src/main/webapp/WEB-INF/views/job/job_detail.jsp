@@ -51,7 +51,7 @@
 				</div>
 				<div class="job_info">
 					<div class="job_img">
-						<img src="<c:url value='/images/job_img.png'/>">
+						<img src="<c:url value='https://www.career.go.kr/cnet/front/base/juniorJob/thumbnail.do?seq=40445&no=1&width=190'/>">
 					</div>
 					<div class="job_info2">
 						<div class="job_infotitle">

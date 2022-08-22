@@ -32,6 +32,10 @@
 							</div>
 							<div class="video_content">
 								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<!-- <video id="jp_video_0" preload="metadata" src="https://cdn.career.go.kr/cnet/real/upload/2014/10/00000046785600054899.mp4" style="width: 0px; height: 0px;"></video> -->
+								<video controls>
+									<source src="<c:url value='https://cdn.career.go.kr/cnet/real/upload/2014/09/00000046310400067245.mp4'/>" type="video/mp4">
+								</video>
 							</div>
 						</div>
 						<div class="video_explain">
