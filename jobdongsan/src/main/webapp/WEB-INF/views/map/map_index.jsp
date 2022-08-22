@@ -277,7 +277,7 @@
 						
 										
 				<!-- 지도 SVG 시작 -->		
-				<svg id="map_korea" height="1000" width="900" viewBox="0 0 1000 1100" xmlns="http://www.w3.org/2000/svg">
+				<svg id="map_korea" height="1100" width="1000" viewBox="0 0 1000 1100" xmlns="http://www.w3.org/2000/svg">
 				
 						<defs>
 						    <feMergeNode />
@@ -334,7 +334,7 @@
 								<text id="LCD44" class="TEXT" x="95" y="445">▼충청남도</text>
 								<text id="LCD45" class="TEXT" x="170" y="590">▼전라북도</text>
 								<text id="LCD46" class="TEXT" x="135" y="760">▼전라남도</text>
-								<text id="LCD47" class="TEXT" x="445" y="460">▼경상북도</text>
+								<text id="LCD47" class="TEXT" x="435" y="460">▼경상북도</text>
 								<text id="LCD48" class="TEXT" x="365" y="670">▼경상남도</text>
 								<text id="LCD50" class="TEXT" x="60" y="1070">▼제주도</text>
 								</g>
