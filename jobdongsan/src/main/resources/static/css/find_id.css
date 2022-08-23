@@ -26,6 +26,11 @@ input {
 	cursor: pointer;
 }
 
+input[type=text],
+input[type=password] {
+    padding-left: 10px;
+}
+
 h3 {
 	margin: 50px auto 10px;
 }
