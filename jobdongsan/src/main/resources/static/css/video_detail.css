@@ -136,12 +136,17 @@
 }
 
 .video_content img {
+	position: absolute;
 	width: 785px;
     height: 455px;
 	border-radius: 60px;
 }
 
-
+.video_content video {
+	width: 785px;
+    height: 455px;
+    border-radius: 60px;
+}
 
 
 

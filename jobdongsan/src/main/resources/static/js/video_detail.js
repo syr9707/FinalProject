@@ -21,4 +21,8 @@
  		$(this).children('a').children('.video_play').hide();
  	});
     
+    
+    $('.video_content img,video').click(function(){
+    	$('.video_content img').hide();
+    });
  });
