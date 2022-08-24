@@ -88,12 +88,23 @@
 					
 				</div>
 				
+				<div id="background_donut">
+				<img src="<c:url value='/images/map_american_food.png'/>">
+				</div>
+				
 				
 				<div id="map_category">
 				
-				<div id="map_category_img">유형 이미지</div>
-				<div id="map_category_img">유형 이미지</div>
-				<div>이 체험 장소는 '-', '-' 유형에게 알맞는 장소예요!</div>		
+				<div id="map_category_img">
+				<img src="<c:url value='/images/category_1.png'/>">
+				</div>
+				
+				<div id="map_category_img">
+				<img src="<c:url value='/images/category_2.png'/>">
+				</div>
+				
+				<div><b>이 체험 장소는 '뚝딱이', '탐험이' 유형에게 알맞는 장소예요!</b></div>
+				
 				</div>
 				
 				

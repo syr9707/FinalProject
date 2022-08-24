@@ -19,7 +19,13 @@ h4 {
 
 strong {
 	font-family: 'CookieRun';
-	font-size: 19px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+b {
+	font-family: 'CookieRun';
+	font-size: 25px;
 	cursor: pointer;
 }
 
@@ -73,7 +79,7 @@ strong {
 	align-items: center;
 	width: 1320px;
 	height: 350px;
-	margin-bottom: 90px;
+	margin-bottom: 50px;
 }
 
 #map_info_logo {
@@ -97,8 +103,15 @@ strong {
 	padding: 10px;
 }
 
+#background_donut {
+	position: relative;
+	margin-left: 180px;
+}
+
 #map_category {
-	border: 1px solid red;
+	border-top: 3px solid #FF8282;
+	border-bottom: 3px solid #FF8282;
+	background: #FFEFEF;
 	/*  */
 	display: flex;
 	align-items: center;
@@ -106,17 +119,18 @@ strong {
 	width: 1320px;
 	height: 200px;
 	margin-bottom: 90px;
-	padding: 0px 300px 0px 200px;
+	padding: 0px 250px 0px 100px;
 }
 
 #map_category_img {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	/*  */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 200px;
-	height: 200px;
+	margin: 10px;
+}
+
+#map_category_img img {
+	width: 120px;
+	height: 120px;
 }
 
 #speech_bubble_box1 {
@@ -140,7 +154,7 @@ strong {
 }
 
 #speech_bubble1 {
-	border: 2px solid black;
+	border: 2px solid #FEC703;
 	border-style: dashed;
 	border-radius: 100px;
 	padding: 30px 50px 30px 50px;
@@ -148,7 +162,7 @@ strong {
 }
 
 #speech_bubble2 {
-	border: 2px solid black;
+	border: 2px solid #FF889D;
 	border-style: dashed;
 	border-radius: 100px;
 	padding: 30px 50px 30px 50px;
