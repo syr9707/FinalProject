@@ -112,7 +112,6 @@
 							</div>
 							<div class="interest_info">
 								씩씩이형<br>
-								탐험이형<br>
 							</div>
 						</div>
 					</div>

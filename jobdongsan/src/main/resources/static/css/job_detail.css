@@ -309,7 +309,7 @@
 }
 
 .need_info {
-	width:240px;
+	width:210px;
 	height:130px;
 	margin-top:25px;
 	text-align:center;
@@ -365,14 +365,14 @@
 }
 
 .interest_info {
-	width:240px;
-	height:130px;
-	margin-top:25px;
+	width:210px;
+	height:45px;
+	margin-top:65px;
 	text-align:center;
 	font-family: 'CookieRun';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 30px;
 	line-height: 26px;
 }
 
@@ -420,7 +420,7 @@
 }
 
 .value_info {
-	width:240px;
+	width:210px;
 	height:130px;
 	margin-top:25px;
 	text-align:center;
