@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MemberController {
+	@RequestMapping("/")
+	public String main() {
+		return "index";
+	}
+	
 	@RequestMapping("/login")
 	public String login() {
 		return "member/login";
