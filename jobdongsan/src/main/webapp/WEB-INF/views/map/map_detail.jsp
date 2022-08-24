@@ -88,8 +88,17 @@
 					
 				</div>
 				
+				
+				<div id="map_category">
+				
+				<div id="map_category_img">유형 이미지</div>
+				<div id="map_category_img">유형 이미지</div>
+				<div>이 체험 장소는 '-', '-' 유형에게 알맞는 장소예요!</div>		
+				</div>
+				
+				
 				<div id="speech_bubble_box1">
-				<div id="speech_bubble">여기에서는 어떤 체험을 할 수 있을까?</div>
+				<div id="speech_bubble1">여기에서는 어떤 체험을 할 수 있을까?</div>
 				<div id="speech_bubble_char1">
 				<img src="<c:url value='/images/map_bubble_duck.png'/>">
 				</div>
@@ -127,7 +136,7 @@
 				<div id="speech_bubble_char2">
 				<img src="<c:url value='/images/map_bubble_rabbit.png'/>">
 				</div>
-				<div id="speech_bubble">우와~ 어디에 있는 곳이지?</div>
+				<div id="speech_bubble2">우와~ 어디에 있는 곳이지?</div>
 				</div>
 				
 				<div id="map_api">여기에 맵 api가 들어갑니다</div>
