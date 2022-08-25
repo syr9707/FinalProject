@@ -1,12 +1,15 @@
 package com.jobdongsan.project.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jobdongsan.project.model.JobVO;
 import com.jobdongsan.project.service.JobService;
@@ -16,18 +19,6 @@ public class JobController {
 	// DI 설정
 	@Autowired
 	JobService jobService;
-	
-	// 화면 테스트 
-	/*@RequestMapping("/job_detail")
-	public String job_detail() {
-		return "job/job_detail";
-	}*/
-	
-	// 화면 테스트 
-	/*@RequestMapping("/job_index")
-	public String job_index() {
-		return "job/job_index";
-	}*/
 	
 	// 전체 직업 출력
 	@RequestMapping("/job_index")
@@ -46,6 +37,19 @@ public class JobController {
 		
 		return "job/job_detail";
 	}
+	
+	// 직업 검색
+	@ResponseBody
+	@RequestMapping("/jobsearchtest")
+	public ArrayList<JobVO> jobSearch(@RequestParam String keyword, Model model) {
+		ArrayList<JobVO> jobList = jobService.jobSearch(keyword);
+		model.addAttribute("jobList", jobList);
+		
+		return jobList;
+	}
+	
+	// 마이페이지에 찜직업(관심직업) 추가 
+	
 
 }
 

@@ -82,14 +82,16 @@
 	width: 680px;
 	height: 90px;
 	
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
+	
+	background:rgb(232, 240, 254);
 	border: 2px solid #CDCDCD;
 	border-radius: 50px;
-	margin-left:320px;
+	margin-left:140px;
 }
 
 .job_searchtext {
-	width: 450px;
+	width: 400px;
 	height: 50px;
 	
 	font-family: 'CookieRun';
@@ -99,7 +101,10 @@
 	line-height: 26px;
 	
 	margin-top:20px;
-	margin-left:53px;
+	margin-left:65px;
+	
+	background:rgb(232, 240, 254);
+	letter-spacing: 3px;
 	
 	border: 0;
 }
@@ -111,7 +116,7 @@
 	
 	background: rgba(23, 203, 192, 0.28);
 	border-radius: 50px;
-	right:264px;
+	right:150px;
 	
 	cursor:pointer;
 }
@@ -237,6 +242,11 @@
 	border-radius: 10px;
 	text-align:center;
 	margin-top:40px;
+	cursor:pointer;
+}
+
+.job_cont1:hover {
+	transform: scale(1.05);
 }
 
 .job_cont2 {
@@ -283,6 +293,19 @@
 	line-height: 26px;
 	margin-top:1px;
 }
+
+#jobSearchForm {
+	display:flex;
+    flex-direction: row;
+}
+
+#jobSearchResultBox {
+	width: 1320px;
+	/* margin-top: 75px;
+    margin-bottom: 90px; */
+}
+
+
 
 
 

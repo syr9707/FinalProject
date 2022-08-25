@@ -17,11 +17,6 @@ public class VideoController {
 	@Autowired
 	VideoService videoService;
 	
-	/*
-	 * @RequestMapping("/video_subject") public String video_subject() { return
-	 * "video/video_subject"; }
-	 */
-	
 	// 전체 영상 출력 
 	@RequestMapping("/video_index")
 	public String viewVideoAllList(Model model) {

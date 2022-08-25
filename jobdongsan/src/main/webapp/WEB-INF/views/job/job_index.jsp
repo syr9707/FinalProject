@@ -30,14 +30,16 @@
 					</div>
 				</div>
 				<div class="job_search">
+					<form id="jobSearchForm">
 					<div class="job_searchbox">
-						<input type="text" class="job_searchtext" id="job_searchtext" name="job_searchtext" placeholder="                검색어를 입력해주세요.">
+						<input type="text" class="job_searchtext" id="job_searchtext" name="keyword" placeholder="        검색어를 입력해주세요.">
 					</div>
 					<div class="job_searchbtn">
 						<div class="job_searchimg">
 							<img src="<c:url value='/images/job_search.png'/>">
 						</div>
 					</div>
+					</form>
 				</div>
 				<div class="job_pink">
 					<div class="job_pinktitle">
@@ -47,6 +49,9 @@
 					<div class="job_pinkdonut">
 						<img src="<c:url value='/images/job_pink.png'/>">
 					</div>
+				</div>
+				<div id="jobSearchResultBox">
+					
 				</div>
 				<div class="job_list">
 		            <ul class="nav nav-tabs">
@@ -91,11 +96,9 @@
 		              			int count = 0;
 		              		%>
 		              		<c:forEach items="${jobList }" var="job">
-		              			<div class="job_cont1">
+		              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
 		              				<div class="job_detail_img">
-		              					<a href="<c:url value='/job_detail/${job.jobNo }'/>">
 					                	<img src="<c:url value='${job.jobImg}'/>">
-					                	</a>
 		              				</div>
 		              				<div class="job_detail_title">
 				                		${job.jobName}
@@ -104,6 +107,7 @@
 				                		${job.jobInfo}
 				                	</div>
 		              			</div>
+		              			
 		              			<%
 		              				count++;
 		              			%>
@@ -128,12 +132,10 @@
 		              	%>
 		              	<c:forEach items="${jobList }" var="job">
 		              		<c:if test="${job.jobCtg eq '1' }">
-		              			<div class="job_cont1">
-			              			<div class="job_detail_img">
-			              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-						               	<img src="<c:url value='${job.jobImg}'/>">
-						               	</a>
-			              			</div>
+		              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+		              				<div class="job_detail_img">
+					                	<img src="<c:url value='${job.jobImg}'/>">
+		              				</div>
 			              			<div class="job_detail_title">
 					               		${job.jobName}
 					               	</div>
@@ -166,12 +168,10 @@
 		              	%>
 		              	<c:forEach items="${jobList }" var="job">
 		              		<c:if test="${job.jobCtg eq '2' }">
-		              			<div class="job_cont1">
-			              			<div class="job_detail_img">
-			              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-						               	<img src="<c:url value='${job.jobImg}'/>">
-						               	</a>
-			              			</div>
+		              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+		              				<div class="job_detail_img">
+					                	<img src="<c:url value='${job.jobImg}'/>">
+		              				</div>
 			              			<div class="job_detail_title">
 					               		${job.jobName}
 					               	</div>
@@ -204,12 +204,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '3' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -242,12 +240,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '4' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -280,12 +276,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '5' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -318,12 +312,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '6' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -356,12 +348,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '7' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -394,12 +384,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '8' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -432,12 +420,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '9' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
@@ -470,12 +456,10 @@
 			              	%>
 			              	<c:forEach items="${jobList }" var="job">
 			              		<c:if test="${job.jobCtg eq '10' }">
-			              			<div class="job_cont1">
-				              			<div class="job_detail_img">
-				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
-							               	<img src="<c:url value='${job.jobImg}'/>">
-							               	</a>
-				              			</div>
+			              			<div class="job_cont1" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
+			              				<div class="job_detail_img">
+						                	<img src="<c:url value='${job.jobImg}'/>">
+			              				</div>
 				              			<div class="job_detail_title">
 						               		${job.jobName}
 						               	</div>
