@@ -87,200 +87,418 @@
 		            <div class="tab-content">
 		              <div class="tab-pane fade show active" id="job1">
 		              	<div class="job_test">
-		              		<div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<a href="<c:url value='/job_detail'/>">
-			                		<img src="<c:url value='/images/job_img.png'/>">
-			                		</a>
-			                	</div>
-			                	<div class="job_detail_title">
-			                		기자
-			                	</div>
-			                	<div class="job_detail_info">
-			                		뉴스를 취재하고 기사를 써요.
-			                	</div>
-			                </div>
-			                <div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<img src="<c:url value='/images/job_img2.png'/>">
-			                	</div>
-			                	<div class="job_detail_title">
-			                		드론조종사
-			                	</div>
-			                	<div class="job_detail_info">
-			                		초경량 비행체인 드론을 조종해요.
-			                	</div>
-			                </div>
-			                <div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<img src="<c:url value='/images/job_img3.png'/>">
-			                	</div>
-			                	<div class="job_detail_title">
-			                		상품, 공간, 스토리텔러
-			                	</div>
-			                	<div class="job_detail_info">
-			                		홍보를 위해 상품이나 서비스와 관련된 스토리를 만들어요.
-			                	</div>
-			                </div>
-			                <div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<img src="<c:url value='/images/job_img4.png'/>">
-			                	</div>
-			                	<div class="job_detail_title">
-			                		인공지능전문가
-			                	</div>
-			                	<div class="job_detail_info">
-			                		스스로 판단하는 인공지능 프로그램을 만들어요.
-			                	</div>
-			                </div>
-			                <div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<img src="<c:url value='/images/job_img3.png'/>">
-			                	</div>
-			                	<div class="job_detail_title">
-			                		상품, 공간, 스토리텔러
-			                	</div>
-			                	<div class="job_detail_info">
-			                		홍보를 위해 상품이나 서비스와 관련된 스토리를 만들어요.
-			                	</div>
-			                </div>
-			                <div class="job_cont1">
-			                	<div class="job_detail_img">
-			                		<img src="<c:url value='/images/job_img4.png'/>">
-			                	</div>
-			                	<div class="job_detail_title">
-			                		인공지능전문가
-			                	</div>
-			                	<div class="job_detail_info">
-			                		스스로 판단하는 인공지능 프로그램을 만들어요.
-			                	</div>
-			                </div>
-			                
+		              		<%
+		              			int count = 0;
+		              		%>
+		              		<c:forEach items="${jobList }" var="job">
+		              			<div class="job_cont1">
+		              				<div class="job_detail_img">
+		              					<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+					                	<img src="<c:url value='${job.jobImg}'/>">
+					                	</a>
+		              				</div>
+		              				<div class="job_detail_title">
+				                		${job.jobName}
+				                	</div>
+				                	<div class="job_detail_info">
+				                		${job.jobInfo}
+				                	</div>
+		              			</div>
+		              			<%
+		              				count++;
+		              			%>
+		              		</c:forEach>
 			                <%
-			                	int count = 6;
 			                	int num = 0;
 			                	if(count % 4 != 0) {
 			                		num = 4 - (count % 4);
 			                	}
 			                	for(int i = 0; i < num; i++) {
 			                %>
-			                
 			                <div class="job_cont2"></div>
-			                
 			                <%
 			                	}
 			                %>
-			                
 		              	</div>
 		              </div>
 		              <div class="tab-pane fade" id="job2">
 		                <div class="job_test">
-		                	<div class="job_cont1">
-			                	job1
-			                </div>
-			                <div class="job_cont1">
-			                	job2
-			                </div>
-			                <div class="job_cont1">
-			                	job3
-			                </div>
-			                <div class="job_cont1">
-			                	job4
-			                </div>
-			                <div class="job_cont1">
-			                	job5
-			                </div>
-			                <div class="job_cont1">
-			                	job6
-			                </div>
-			                <div class="job_cont1">
-			                	job7
-			                </div>
-			                <div class="job_cont1">
-			                	job8
-			                </div>
-			                
+		                <%
+		              		int count2 = 0;
+		              	%>
+		              	<c:forEach items="${jobList }" var="job">
+		              		<c:if test="${job.jobCtg eq '1' }">
+		              			<div class="job_cont1">
+			              			<div class="job_detail_img">
+			              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+						               	<img src="<c:url value='${job.jobImg}'/>">
+						               	</a>
+			              			</div>
+			              			<div class="job_detail_title">
+					               		${job.jobName}
+					               	</div>
+					               	<div class="job_detail_info">
+					               		${job.jobInfo}
+					               	</div>
+		              			</div>
+		              			<%
+		              				count2++;
+		              			%>
+		              		</c:if>
+		              		</c:forEach>
 			                <%
-			                	int count2 = 8;
 			                	int num2 = 0;
 			                	if(count2 % 4 != 0) {
 			                		num2 = 4 - (count2 % 4);
 			                	}
 			                	for(int i = 0; i < num2; i++) {
 			                %>
-			                
 			                <div class="job_cont2"></div>
-			                
 			                <%
 			                	}
 			                %>
-			                
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job3">
 		                <div class="job_test">
-		                	<div class="job_cont1">
-			                	job1
-			                </div>
-			                <div class="job_cont1">
-			                	job2
-			                </div>
-			                
+		                <%
+		              		int count3 = 0;
+		              	%>
+		              	<c:forEach items="${jobList }" var="job">
+		              		<c:if test="${job.jobCtg eq '2' }">
+		              			<div class="job_cont1">
+			              			<div class="job_detail_img">
+			              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+						               	<img src="<c:url value='${job.jobImg}'/>">
+						               	</a>
+			              			</div>
+			              			<div class="job_detail_title">
+					               		${job.jobName}
+					               	</div>
+					               	<div class="job_detail_info">
+					               		${job.jobInfo}
+					               	</div>
+		              			</div>
+		              			<%
+			              			count3++;
+			              		%>
+		              		</c:if>
+		              		</c:forEach>
 			                <%
-			                	int count3 = 2;
 			                	int num3 = 0;
 			                	if(count3 % 4 != 0) {
 			                		num3 = 4 - (count3 % 4);
 			                	}
 			                	for(int i = 0; i < num3; i++) {
 			                %>
-			                
 			                <div class="job_cont2"></div>
-			                
 			                <%
 			                	}
 			                %>
-			                
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job4">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count4 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '3' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count4++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num4 = 0;
+				                	if(count4 % 4 != 0) {
+				                		num4 = 4 - (count4 % 4);
+				                	}
+				                	for(int i = 0; i < num4; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job5">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count5 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '4' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count5++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num5 = 0;
+				                	if(count5 % 4 != 0) {
+				                		num5 = 4 - (count5 % 4);
+				                	}
+				                	for(int i = 0; i < num5; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job6">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count6 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '5' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count6++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num6 = 0;
+				                	if(count6 % 4 != 0) {
+				                		num6 = 4 - (count6 % 4);
+				                	}
+				                	for(int i = 0; i < num6; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job7">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count7 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '6' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count7++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num7 = 0;
+				                	if(count7 % 4 != 0) {
+				                		num7 = 4 - (count7 % 4);
+				                	}
+				                	for(int i = 0; i < num7; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job8">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count8 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '7' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count8++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num8 = 0;
+				                	if(count8 % 4 != 0) {
+				                		num8 = 4 - (count8 % 4);
+				                	}
+				                	for(int i = 0; i < num8; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job9">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count9 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '8' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count9++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num9 = 0;
+				                	if(count9 % 4 != 0) {
+				                		num9 = 4 - (count9 % 4);
+				                	}
+				                	for(int i = 0; i < num9; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job10">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count10 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '9' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count10++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num10 = 0;
+				                	if(count10 % 4 != 0) {
+				                		num10 = 4 - (count10 % 4);
+				                	}
+				                	for(int i = 0; i < num10; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		              <div class="tab-pane fade" id="job11">
 		                <div class="job_test">
-		                	
+		                	<%
+			              		int count11 = 0;
+			              	%>
+			              	<c:forEach items="${jobList }" var="job">
+			              		<c:if test="${job.jobCtg eq '10' }">
+			              			<div class="job_cont1">
+				              			<div class="job_detail_img">
+				              				<a href="<c:url value='/job_detail/${job.jobNo }'/>">
+							               	<img src="<c:url value='${job.jobImg}'/>">
+							               	</a>
+				              			</div>
+				              			<div class="job_detail_title">
+						               		${job.jobName}
+						               	</div>
+						               	<div class="job_detail_info">
+						               		${job.jobInfo}
+						               	</div>
+			              			</div>
+			              			<%
+				              			count11++;
+				              		%>
+			              		</c:if>
+			              		</c:forEach>
+				                <%
+				                	int num11 = 0;
+				                	if(count11 % 4 != 0) {
+				                		num11 = 4 - (count11 % 4);
+				                	}
+				                	for(int i = 0; i < num11; i++) {
+				                %>
+				                <div class="job_cont2"></div>
+				                <%
+				                	}
+				                %>
 		                </div>
 		              </div>
 		            </div>

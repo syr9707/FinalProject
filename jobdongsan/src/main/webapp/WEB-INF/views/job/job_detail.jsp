@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 		<!-- head.jsp -->
@@ -38,10 +38,10 @@
 					</div>
 					<div class="job_title">
 						<div class="job_name">
-							기자
+							${job. jobName}
 						</div>
 						<div class="job_title2">
-							" 뉴스를 취재하고 기사를 써요. "
+							" ${job. jobInfo} "
 						</div>
 					</div>
 					<div class="job_good">
@@ -51,18 +51,19 @@
 				</div>
 				<div class="job_info">
 					<div class="job_img">
-						<img src="<c:url value='https://www.career.go.kr/cnet/front/base/juniorJob/thumbnail.do?seq=40445&no=1&width=190'/>">
+						<img src="<c:url value='${job.jobImg}'/>">
 					</div>
 					<div class="job_info2">
 						<div class="job_infotitle">
 							" 어떤 일을 하나요? "
 						</div>
 						<div class="job_infodetail">
+							<c:set var="jobWork" value="${job.jobWork }" />
+							<c:set var="jobWorkList" value="${fn:split(jobWork,'|') }" />
 							<ul>
-								<li> •  뉴스 및 기타 관련자료를 취재하고 이를 신문, 잡지, 전문서적에 싣는 일을 합니다.</li>
-								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
-								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
-								<li> •  정확한 사실을 사람들에게 알리고 잘못된 사실을 지적하고 비판해서 많은 사람들의 목소리를 대신하기도 합니다.</li>
+								<c:forEach var="joblisttest" items="${jobWorkList }">
+									<li> •  ${joblisttest }</li>
+								</c:forEach>
 							</ul>
 						</div>
 					</div>
@@ -77,10 +78,12 @@
 						</div>
 					</div>
 					<div class="job_howdetail">
+						<c:set var="jobHow" value="${job.jobHow }" />
+						<c:set var="jobHowList" value="${fn:split(jobHow,'|') }" />
 						<ul>
-							<li> •  기자가 되려면 사회에서 일어나는 모든 현상에 관심을 가지고 깊이 있게 보는 안목이 필요합니다.</li>
-							<li> •  학교나 지역에서 학생들이 만드는 신문이 있다면 참가하는 것이 좋습니다.</li>
-							<li> •  취재는 어떻게 하는 것이고 글을 작성해서 편집하는 것까지 자연스럽게 과정을 익힐 수 있을 것입니다.</li>
+							<c:forEach var="joblisttest2" items="${jobHowList }">
+								<li> •  ${joblisttest2 }</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -94,11 +97,11 @@
 								<img src="<c:url value='/images/job_knowledge.png'/>">
 							</div>
 							<div class="need_info">
-								국어<br>
-								역사<br>
-								철학과 신학<br>
-								사회와 인류<br>
-								예술<br>
+								<c:set var="jobNeeds" value="${job.jobNeeds }" />
+								<c:set var="jobNeedsList" value="${fn:split(jobNeeds,'|') }" />
+								<c:forEach var="joblisttest3" items="${jobNeedsList }">
+									${joblisttest3 }<br>
+								</c:forEach>
 							</div>
 						</div>
 					</div>
@@ -108,10 +111,10 @@
 						</div>
 						<div class="interest_box">
 							<div class="interest_img">
-								<img src="<c:url value='/images/job_dance.png'/>">
+								<img src="<c:url value='${job.categoryImg }'/>">
 							</div>
 							<div class="interest_info">
-								씩씩이형<br>
+								${job.categoryName }형<br>
 							</div>
 						</div>
 					</div>
@@ -124,11 +127,11 @@
 								<img src="<c:url value='/images/job_brain.png'/>">
 							</div>
 							<div class="value_info">
-								지적 추구<br>
-								타인에 대한 영향<br>
-								자율<br>
-								애국<br>
-								개인지향<br>
+								<c:set var="jobValues" value="${job.jobValues }" />
+								<c:set var="jobValuesList" value="${fn:split(jobValues,'|') }" />
+								<c:forEach var="joblisttest4" items="${jobValuesList }">
+									${joblisttest4 }<br>
+								</c:forEach>
 							</div>
 						</div>
 					</div>

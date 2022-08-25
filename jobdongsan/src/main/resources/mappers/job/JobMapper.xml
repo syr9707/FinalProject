@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.jobdongsan.project.dao.IJobDAO">
+  	<resultMap id="jobResult" type="com.jobdongsan.project.model.JobVO" >
+  		<result property="jobNo" column="jobNo" />
+  		<result property="jobName" column="jobName" />
+  		<result property="jobInfo" column="jobInfo" />
+  		<result property="jobImg" column="jobImg" />
+  		<result property="jobWork" column="jobWork" />
+  		<result property="jobHow" column="jobHow" />
+  		<result property="jobNeeds" column="jobNeeds" />
+  		<result property="jobValues" column="jobValues" />
+  		<result property="jobCtg" column="jobCtg" />
+  		<result property="categoryNo" column="categoryNo" />
+  	</resultMap>
+  	
+  	<!-- 전체 직업 출력 -->
+  	<select id="listAllJob" resultMap="jobResult">
+  		SELECT * FROM job ORDER BY jobNo
+  	</select>
+  	
+  	<!-- 직업 상세 정보 조회 -->
+  	<select id="detailViewJob" parameterType="int" resultType="com.jobdongsan.project.model.JobVO">
+  		<!-- SELECT * FROM job
+  		WHERE jobNo=#{jobNo} -->
+  		SELECT j.jobNo, j.jobName, j.jobInfo, j.jobImg, j.jobWork, j.jobHow, j.jobNeeds, j.jobValues, j.jobCtg, c.categoryNo, c.categoryName, c.categoryImg
+  		FROM job j, category c
+  		WHERE j.categoryNo = c.categoryNo AND j.jobNo=#{jobNo}
+  	</select>
+  
+  </mapper>

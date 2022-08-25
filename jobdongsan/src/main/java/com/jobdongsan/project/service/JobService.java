@@ -1,5 +1,7 @@
 package com.jobdongsan.project.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,11 @@ public class JobService implements IJobService {
 	@Override
 	public JobVO detailViewJob(int jobNo) {
 		return dao.detailViewJob(jobNo);
+	}
+
+	@Override
+	public ArrayList<JobVO> listAllJob() {
+		return dao.listAllJob();
 	}
 
 }

@@ -263,7 +263,7 @@
 }
 
 .job_detail_title {
-	width: 250px;
+	width: 280px;
 	height: 40px;
 	font-family: 'CookieRun';
 	font-style: normal;
@@ -275,7 +275,7 @@
 
 .job_detail_info {
 	width: 280px;
-	height: 60px;
+	height: 75px;
 	font-family: 'CookieRun';
 	font-style: normal;
 	font-weight: 400;

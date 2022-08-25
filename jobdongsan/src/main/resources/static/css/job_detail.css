@@ -359,13 +359,19 @@
 }
 
 .interest_img {
-	width: 100px;
-	height: 100px;
-	margin-top:40px;
+	width: 150px;
+	height: 150px;
+	margin-top:15px;
+	margin-left:35px;
+}
+
+.interest_img img {
+	width: 150px;
+	height: 150px;
 }
 
 .interest_info {
-	width:210px;
+	width:175px;
 	height:45px;
 	margin-top:65px;
 	text-align:center;
@@ -374,6 +380,7 @@
 	font-weight: 400;
 	font-size: 30px;
 	line-height: 26px;
+	margin-right:35px;
 }
 
 

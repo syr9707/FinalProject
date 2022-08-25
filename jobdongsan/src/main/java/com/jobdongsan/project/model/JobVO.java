@@ -8,8 +8,15 @@ public class JobVO {
 	private String jobWork;
 	private String jobHow;
 	private String jobNeeds;
-	private String jobInterests;
 	private String jobValues;
+	private String jobCtg;
+	private int categoryNo;
+	
+	// DB 테이블에는 없지만
+	// Mapper에서 받아서 View에 출력할 때 사용할 필드
+	private String categoryName;
+	private String categoryImg;
+	
 	
 	public int getJobNo() {
 		return jobNo;
@@ -53,17 +60,35 @@ public class JobVO {
 	public void setJobNeeds(String jobNeeds) {
 		this.jobNeeds = jobNeeds;
 	}
-	public String getJobInterests() {
-		return jobInterests;
-	}
-	public void setJobInterests(String jobInterests) {
-		this.jobInterests = jobInterests;
-	}
 	public String getJobValues() {
 		return jobValues;
 	}
 	public void setJobValues(String jobValues) {
 		this.jobValues = jobValues;
 	}
-
+	public String getJobCtg() {
+		return jobCtg;
+	}
+	public void setJobCtg(String jobCtg) {
+		this.jobCtg = jobCtg;
+	}
+	public int getCategoryNo() {
+		return categoryNo;
+	}
+	public void setCategoryNo(int categoryNo) {
+		this.categoryNo = categoryNo;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+	public String getCategoryImg() {
+		return categoryImg;
+	}
+	public void setCategoryImg(String categoryImg) {
+		this.categoryImg = categoryImg;
+	}
+	
 }
