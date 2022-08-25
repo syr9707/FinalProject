@@ -46,29 +46,29 @@ $(document).ready(function(){
             $('.login_error').text('비밀번호를 입력해주세요.');
             return false;
         }
-    
-        $('#login_form').submit(function(){
-            event.preventDefault();
+        
+        // 로그인 체크 기능
+        event.preventDefault();
 
-            $.ajax({
-                type: "post",
-                url: "loginCheck",
-                data:{"id": $('#id').val(),
-                      "pw": $('#pw').val()},
-                dataType: "text",
-                success: function(result){
-                    if(result == "success"){
-                    	$('.login_error').css('visibility', 'hidden');
-                        location.href="/";
-                    }else{
-                        $('#id').css('border', '1px solid #f33333');
-                        $('.login_error').css('visibility', 'visible');
-                    }
-                },
-                error: function(){
-                	alert("전송 실패");
+        $.ajax({
+            type: "post",
+            url: "loginCheck",
+            data:{"memId": $('#id').val(),
+                  "memPw": $('#pw').val()},
+            dataType: "text",
+            success: function(result){
+                if(result == "success"){
+                	$('.login_error').css('visibility', 'hidden');
+                    location.href="/";
+                }else{
+                    $('#id').css('border', '1px solid #f33333');
+                    $('.login_error').css('visibility', 'visible');
+                    console.log(result);
                 }
-            });
+            },
+            error: function(){
+            	alert("전송 실패");
+            }
         });
     });
 });
