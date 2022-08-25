@@ -31,17 +31,17 @@
 								<img src="<c:url value='/images/video_detail_tv.png'/>">
 							</div>
 							<div class="video_content">
-								<img src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
+								<img src="<c:url value='${video.videoThumbnail }'/>">
 								<!-- <video id="jp_video_0" preload="metadata" src="https://cdn.career.go.kr/cnet/real/upload/2014/10/00000046785600054899.mp4" style="width: 0px; height: 0px;"></video> -->
 								<video controls>
-									<source src="<c:url value='https://cdn.career.go.kr/cnet/real/upload/2014/09/00000046310400067245.mp4'/>" type="video/mp4">
+									<source src="<c:url value='${video.videoLink }'/>" type="video/mp4">
 								</video>
 							</div>
 						</div>
 						<div class="video_explain">
 							<div class="video_title">
 								<div class="video_detail_title">
-									가상현실 전문가 - 직업 가이드
+									${video.videoName } - ${video.videoName2 } 
 								</div>
 								<div class="video_good">
 									<div class="video_star">★</div>
@@ -58,12 +58,7 @@
 									</div>
 								</div>
 								<div class="video_detail">
-									청소년들이 직업의 변화에 맞추어 진로를 결정할 수 있도록 교육부와 한국직업능력개발원에서 미래 직업을 안내합니다.
-									누구도 정보를 조작할 수 없는 블록 체인 기술을 개발해요. 블록 체인 전문가.
-									청소년들이 직업의 변화에 맞추어 진로를 결정할 수 있도록 교육부와 한국직업능력개발원에서 미래 직업을 안내합니다.
-									누구도 정보를 조작할 수 없는 블록 체인 기술을 개발해요. 블록 체인 전문가.
-									청소년들이 직업의 변화에 맞추어 진로를 결정할 수 있도록 교육부와 한국직업능력개발원에서 미래 직업을 안내합니다.
-									누구도 정보를 조작할 수 없는 블록 체인 기술을 개발해요. 블록 체인 전문가. -> 6줄 정도 까지
+									${video.videoStory }
 								</div>
 							</div>
 						</div>
@@ -74,23 +69,34 @@
 						</div>
 						<div class="video_similar_content">
 							<%
-								for(int i = 0; i < 6; i++) {
+								int count = 0;
 							%>
-							
-							<div class="video_similar_box">
-								<div class="video_similar_detail">
-									<a href="<c:url value='/video_detail'/>" >
-									<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+							<c:set var="doneLoop" value="false" />
+							<c:forEach items="${videoList }" var="videoList">
+							<c:if test="${not doneLoop}">
+							<c:if test="${videoList.videoNo ne video.videoNo }">
+								<div class="video_similar_box">
+									<div class="video_similar_detail">
+										<a href="<c:url value='/video_detail/${videoList.videoNo}'/>" >
+										<img class="video_thumbnail" src="<c:url value='${videoList.videoThumbnail}'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+									</div>
+									<div class="video_similar_name">
+										${videoList.videoName } - ${videoList.videoName2 }
+									</div>
 								</div>
-								<div class="video_similar_name">
-									'경찰경호과’ 수업에 도전하다!
-								</div>
-							</div>
-							
 							<%
-								}
+								count++;
+								if(count == 6) {
 							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}								
+							%>
+							</c:if>
+							</c:if>
+							</c:forEach>
+							
 						</div>
 					</div>
 				</div>

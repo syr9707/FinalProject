@@ -96,7 +96,7 @@
 /* 비디오 컨텐츠 박스 */
 .video_detail_content {
 	width:1320px;
-	height:1160px;
+	/* height:1160px; */
 	margin-top:165px;
 	margin-bottom:90px;
 }
@@ -108,7 +108,7 @@
 
 .video_detail_play {
 	width: 860px;
-	height:1160px;
+	/* height:1160px; */
 	margin-left:0;
 }
 
@@ -154,7 +154,7 @@
 
 /* 동영상 설명 영역 */
 .video_explain {
-	height:400px;
+	/* height:400px; */
 	margin-top:50px;
 }
 
@@ -172,7 +172,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 30px;
-	line-height: 26px;
+	line-height: 35px;
 	
 	letter-spacing: 1px;
 	
@@ -210,7 +210,7 @@
 
 
 .video_explain_detail {
-	height: 235px;
+	/* height: 235px; */
 	margin-top:35px;
 }
 
@@ -246,7 +246,7 @@
 }
 
 .video_detail {
-	height:150px;
+	/* height:150px; */
 	
 	font-family: 'CookieRun';
 	font-style: normal;

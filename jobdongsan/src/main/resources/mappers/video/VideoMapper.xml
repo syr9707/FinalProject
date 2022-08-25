@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.jobdongsan.project.dao.IVideoDAO">
+  	<resultMap id="videoResult" type="com.jobdongsan.project.model.VideoVO" >
+  		<result property="videoNo" column="videoNo"/>
+  		<result property="videoName" column="videoName"/>
+  		<result property="videoName2" column="videoName2"/>
+  		<result property="videoCtg" column="videoCtg"/>
+  		<result property="videoThumbnail" column="videoThumbnail"/>
+  		<result property="videoLink" column="videoLink"/>
+  		<result property="videoStory" column="videoStory"/>
+  		<result property="categoryNo" column="categoryNo"/>
+  	</resultMap>
+  	
+  	<!-- 전체 영상 출력 -->
+  	<select id="listAllVideo" resultMap="videoResult">
+  		SELECT * FROM video ORDER BY videoNo
+  	</select>
+  	
+  	<!-- 영상 상세 정보 조회 -->
+  	<select id="detailViewVideo" parameterType="int" resultType="com.jobdongsan.project.model.VideoVO" >
+  		SELECT v.videoNo, v.videoName, v.videoName2, v.videoCtg, v.videoThumbnail, v.videoLink, v.videoStory, c.categoryNo, c.categoryName, c.categoryImg
+  		FROM video v, category c
+  		WHERE v.categoryNo = c.categoryNo AND v.videoNo=#{videoNo}
+  	</select>
+  	
+  	<!-- 동일 카테고리 영화 조회 -->
+  	<select id="listSubjectVideo" parameterType="string" resultType="com.jobdongsan.project.model.VideoVO" >
+  		SELECT * FROM video WHERE videoCtg=#{videoCtg}
+  	</select>
+  
+  </mapper>

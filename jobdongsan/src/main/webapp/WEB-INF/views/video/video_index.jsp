@@ -36,43 +36,34 @@
 						</div>
 					</div>
 					<div class="video_jinro_cont">
-						<div class="video_jinro_cont2">
-							<div class="video_test">
-								<a href="<c:url value='/video_detail'/>" >
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+						<%
+							int count = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '진로탐사대' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
 							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_jinro_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37865'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_jinro_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37867'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_jinro_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37869'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
+						<%
+							count++;
+							if(count == 4) {
+						%>
+						<c:set var="doneLoop" value="true"/>
+						<%
+							}
+						%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="video_dream_tam">
@@ -84,11 +75,38 @@
 							드림주니어-탐나는진로탐사대
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn2" onclick="location.href='<c:url value='/videosubject'/>'">더보기</button >
+							<button id="videobtn2" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_tam_cont">
-						
+						<%
+							int count2 = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '탐나는진로탐사대' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
+							</div>
+							<%
+								count2++;
+								if(count2 == 4) {
+							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}
+							%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="video_dream_jr">
@@ -100,11 +118,38 @@
 							드림주니어
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn3" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn3" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jr_cont">
-						
+						<%
+							int count3 = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '드림주니어' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
+							</div>
+							<%
+								count3++;
+								if(count3 == 4) {
+							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}
+							%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="video_jangbogo">
@@ -116,11 +161,38 @@
 							해양직업의 세계-꿈꾸는 장보고
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn4" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn4" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jang_cont">
-						
+						<%
+							int count4 = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '해양직업의 세계 - 꿈꾸는 장보고 -' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
+							</div>
+							<%
+								count4++;
+								if(count4 == 4) {
+							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}
+							%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="video_mirae">
@@ -132,11 +204,38 @@
 							미래직업가이드
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn5" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn5" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_mirae_cont">
-						
+						<%
+							int count5 = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '미래직업 가이드' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
+							</div>
+							<%
+								count5++;
+								if(count5 == 4) {
+							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}
+							%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="video_e">
@@ -148,46 +247,38 @@
 							창의적 진로개발-지식채널e
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn6" onclick="location.href='<c:url value='/jobindex'/>'">더보기</button >
+							<button id="videobtn6" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_e_cont">
-						<div class="video_e_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+						<%
+							int count6 = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoList }" var="video" >
+						<c:if test="${not doneLoop}">
+						<c:if test="${video.videoCtg eq '창의적 진로개발 지식채널e' }">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${video.videoName }
+								</div>
 							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_e_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>" >
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_e_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
-						<div class="video_e_cont2">
-							<div class="video_test">
-								<img class="video_thumbnail" src="<c:url value='https://www.career.go.kr/cnet/commonBiz/imageViewBySer.do?seq=37863'/>">
-								<img class="video_play" src="<c:url value='/images/video_play.png'/>">
-							</div>
-							<div class="video_test_name">
-								유도학과 수업에 도전하다!
-							</div>
-						</div>
+							<%
+								count6++;
+								if(count6 == 4) {
+							%>
+							<c:set var="doneLoop" value="true"/>
+							<%
+								}
+							%>
+						</c:if>
+						</c:if>
+						</c:forEach>
 					</div>
 				</div>
 			</div>
