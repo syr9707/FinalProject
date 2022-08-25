@@ -28,7 +28,7 @@
  	$('.plate').click(function(){
  		var target = $('.interest_text', window.parent.document);
  		target.html('<p>자기이해 결과가 나왔습니다.<br>원하는 유형을 선택하여 직업정보를 살펴보세요.</p>');
- 		location.href="/interest_result";
+ 		//location.href="/interest_result";
  	});
  	
  	$('.back_arrow').click(function(){
@@ -47,5 +47,75 @@
  		$(this).children('.food').hide();	
  		$(this).children('p').css('color', 'black').css('text-shadow', '');
  	});
+
+
+	$.ajax({
+   		type: "GET",
+   		url: "http://www.career.go.kr/inspct/openapi/test/questions?apikey=a6a461565fccd2eb51bc229af7f62255&q=19",
+    }).done(function(result) {
+    	
+    	var questionJSON = result.RESULT; 
+    	var questionList = new Array();
+    	
+    	questionJSON.forEach(function(el, i) {
+    		//var ran = Math.floor(Math.random() * 47) + 1;
+    		questionList2 = questionJSON[i].question;
+    		questionList[i] = questionList2;
+    	});
+    	
+    	var i=0
+    	
+    	indexUp(i);
+    	$('.plate').click(function(){
+    		if(i == 19){
+    			location.href="/interest_result";
+    		}else{
+    			indexUp(i+1);
+    			i++;
+    		}
+    	});
+    	
+    	function indexUp(i){
+    		var ran = Math.floor(Math.random() * 47) + 1;
+    		$('.chat_contents').empty();
+    		$('.chat_contents').append((i+1) + ". " + questionList[ran]);
+    	}
+    	
+    });
+    
+    function callAjax(){
+    	$.ajax({
+    		type: "POST",
+    		url: "interest_index3_1",
+    		data: questionList,
+    		dataType: 'text',
+	    	success: function(result){
+	    		
+	    	},
+	    	error: function(){
+	    		alert("전송 실패");
+	    	}	
+    	});
+    }
 });    
+    
+   
+   	
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     

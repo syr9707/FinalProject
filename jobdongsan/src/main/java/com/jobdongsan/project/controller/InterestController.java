@@ -1,10 +1,16 @@
 package com.jobdongsan.project.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.jobdongsan.project.model.QuestionVO;
 
 @Controller
 public class InterestController {
+	
 	@RequestMapping("/interest_index")
 	public String interest_index() {
 		return "interest/interest_index";
@@ -19,6 +25,17 @@ public class InterestController {
 	public String interest_index3() {
 		return "interest/interest_index";
 	}
+	
+	/*
+	 * @ResponseBody
+	 * 
+	 * @RequestMapping("/interest_index3_1") public ArrayList<QuestionVO>
+	 * interest_index3_1() { String question = "";
+	 * 
+	 * return question; }
+	 */
+	
+	
 	
 	@RequestMapping("/interest_test")
 	public String interest_test() {

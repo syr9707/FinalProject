@@ -46,7 +46,7 @@
 				<div class="chat">
 					<img src="<c:url value='images/chat.png' />">
 					<p class="chat_title">자기이해</p>
-					<p class="chat_contents">1. 친구와 함께 운동하는 것을 좋아한다.</p>
+					<p class="chat_contents"></p>
 				</div>
 				<div class="back_arrow">
 					<img src="<c:url value='images/interest_arrow.png' />" class="interest_arrow">
