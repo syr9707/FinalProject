@@ -15,7 +15,7 @@
  	load('.video_ctg_test', '12');
  	
  	$('.video_ctg_btn').click(function(){
- 		load('.video_ctg_test', '4', '.video_ctg_btn');
+ 		load('.video_ctg_test', '8', '.video_ctg_btn');
  	});
  	
  	function load(id, cnt, btn) {

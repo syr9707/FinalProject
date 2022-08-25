@@ -29,10 +29,10 @@
 							<img src="<c:url value='/images/video_rocket.png'/>">
 						</div>
 						<div class="video_jinro_name">
-							드림주니어-진로탐사대
+							드림주니어-진로탐사대 
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn1" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn1" onclick="location.href='<c:url value='/video_subject/1'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jinro_cont">
@@ -75,7 +75,7 @@
 							드림주니어-탐나는진로탐사대
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn2" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn2" onclick="location.href='<c:url value='/video_subject/2'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_tam_cont">
@@ -118,7 +118,7 @@
 							드림주니어
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn3" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn3" onclick="location.href='<c:url value='/video_subject/3'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jr_cont">
@@ -161,7 +161,7 @@
 							해양직업의 세계-꿈꾸는 장보고
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn4" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn4" onclick="location.href='<c:url value='/video_subject/4'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_jang_cont">
@@ -204,7 +204,7 @@
 							미래직업가이드
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn5" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn5" onclick="location.href='<c:url value='/video_subject/5'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_mirae_cont">
@@ -247,7 +247,7 @@
 							창의적 진로개발-지식채널e
 						</div>
 						<div class="video_more_btn">
-							<button id="videobtn6" onclick="location.href='<c:url value='/video_subject'/>'">더보기</button >
+							<button id="videobtn6" onclick="location.href='<c:url value='/video_subject/6'/>'">더보기</button >
 						</div>
 					</div>
 					<div class="video_e_cont">

@@ -9,6 +9,8 @@ public class VideoVO {
 	private String videoLink;
 	private String videoStory;
 	private String categoryNo;
+	private int videoCtgNo;
+	
 	
 	// DB 테이블에는 없지만
 	// Mapper에서 받아서 View에 출력할 때 사용할 필드
@@ -75,6 +77,13 @@ public class VideoVO {
 	}
 	public void setCategoryImg(String categoryImg) {
 		this.categoryImg = categoryImg;
+	}
+	
+	public int getVideoCtgNo() {
+		return videoCtgNo;
+	}
+	public void setVideoCtgNo(int videoCtgNo) {
+		this.videoCtgNo = videoCtgNo;
 	}
 	
 }

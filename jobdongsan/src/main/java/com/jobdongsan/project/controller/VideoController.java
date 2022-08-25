@@ -18,18 +18,8 @@ public class VideoController {
 	VideoService videoService;
 	
 	/*
-	 * @RequestMapping("/video_index") public String video_index() { return
-	 * "video/video_index"; }
-	 */
-	
-	@RequestMapping("/video_subject")
-	public String video_subject() {
-		return "video/video_subject";
-	}
-	
-	/*
-	 * @RequestMapping("/video_detail") public String video_detail() { return
-	 * "video/video_detail"; }
+	 * @RequestMapping("/video_subject") public String video_subject() { return
+	 * "video/video_subject"; }
 	 */
 	
 	// 전체 영상 출력 
@@ -47,11 +37,21 @@ public class VideoController {
 		VideoVO video = videoService.detailViewVideo(videoNo);
 		model.addAttribute("video", video);
 		
-		// 동일 카테고리 영화 조회 요청 처리
+		// 동일 카테고리 영상 조회 요청 처리 (문자 버전)
 		ArrayList<VideoVO> videoList = videoService.listSubjectVideo(video.getVideoCtg());
 		model.addAttribute("videoList", videoList);
 		
 		return "video/video_detail";
 	}
+	
+	// 동일 카테고리 영상 조회 페이지 (숫자 버전)
+	@RequestMapping("/video_subject/{videoCtgNo}")
+	public String listSubjectNoVideo(@PathVariable int videoCtgNo, Model model) {
+		ArrayList<VideoVO> videoList = videoService.listSubjectNoVideo(videoCtgNo);
+		model.addAttribute("videoList", videoList);
+		
+		return "video/video_subject";
+	}
+	
 	
 }

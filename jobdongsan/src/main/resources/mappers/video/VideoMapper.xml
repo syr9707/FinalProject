@@ -13,6 +13,7 @@
   		<result property="videoLink" column="videoLink"/>
   		<result property="videoStory" column="videoStory"/>
   		<result property="categoryNo" column="categoryNo"/>
+  		<result property="videoCtgNo" column="videoCtgNo"/>
   	</resultMap>
   	
   	<!-- 전체 영상 출력 -->
@@ -22,14 +23,19 @@
   	
   	<!-- 영상 상세 정보 조회 -->
   	<select id="detailViewVideo" parameterType="int" resultType="com.jobdongsan.project.model.VideoVO" >
-  		SELECT v.videoNo, v.videoName, v.videoName2, v.videoCtg, v.videoThumbnail, v.videoLink, v.videoStory, c.categoryNo, c.categoryName, c.categoryImg
+  		SELECT v.videoNo, v.videoName, v.videoName2, v.videoCtg, v.videoThumbnail, v.videoLink, v.videoStory, v.videoCtgNo, c.categoryNo, c.categoryName, c.categoryImg
   		FROM video v, category c
   		WHERE v.categoryNo = c.categoryNo AND v.videoNo=#{videoNo}
   	</select>
   	
-  	<!-- 동일 카테고리 영화 조회 -->
+  	<!-- 동일 카테고리 영상 조회 (문자) -->
   	<select id="listSubjectVideo" parameterType="string" resultType="com.jobdongsan.project.model.VideoVO" >
   		SELECT * FROM video WHERE videoCtg=#{videoCtg}
+  	</select>
+  	
+  	<!-- 동일 카테고리 영상 조회 (숫자) -->
+  	<select id="listSubjectNoVideo" parameterType="int" resultMap="videoResult" >
+  		SELECT * FROM video WHERE videoCtgNo=#{videoCtgNo}
   	</select>
   
   </mapper>

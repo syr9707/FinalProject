@@ -30,4 +30,9 @@ public class VideoService implements IVideoService {
 		return dao.detailViewVideo(videoNo);
 	}
 
+	@Override
+	public ArrayList<VideoVO> listSubjectNoVideo(int videoCtgNo) {
+		return dao.listSubjectNoVideo(videoCtgNo);
+	}
+
 }
