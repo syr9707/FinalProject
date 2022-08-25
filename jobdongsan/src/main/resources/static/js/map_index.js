@@ -49,4 +49,8 @@ $(document).ready(function(){
 		$('#list_gyeongsangnamdo').slideToggle("fast");
 	});
 	
+	$('#CD50').on("click", function(){
+		$('#list_jejudo').slideToggle("fast");
+	});
+	
 });

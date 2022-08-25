@@ -8,12 +8,13 @@
 h2 {
 	font-family: 'CookieRun';
 	font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 h3 {
 	font-family: 'CookieRun';
+	font-size: 28px;
 	color: #FFFFFF;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	cursor: pointer;
@@ -124,9 +125,10 @@ TEXT {
 	padding: 10px;
 }
 
-
 /******** hidden 지역 박스 ********/
-
+.list_box {
+	padding: 10px 20px 10px 20px;
+}
 
 #list_seoul {
 	z-index: 1;
@@ -243,4 +245,17 @@ TEXT {
 	/* 위치 가변 */
 	top: 600px;
 	left: 930px;
+}
+
+#list_jejudo {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 920px;
+	left: 200px;
 }

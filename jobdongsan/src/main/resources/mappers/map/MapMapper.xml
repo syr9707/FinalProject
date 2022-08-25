@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.jobdongsan.project.dao.IMapDAO">
+
+	  <resultMap id="mapList" type="com.jobdongsan.project.model.MapVO" >
+	  		<result property="mapJobNo" column="mapJobNo"/>
+	  		<result property="mapJobArea" column="mapJobArea"/>
+	  		<result property="mapJobLogo" column="mapJobLogo"/>
+	  		<result property="mapJobAdd" column="mapJobAdd"/>
+	  		<result property="mapJobName" column="mapJobName"/>
+	  		<result property="mapJobPH" column="mapJobPH"/>
+	  		<result property="mapJobLink" column="mapJobLink"/>
+	  		<result property="mapJobImg1" column="mapJobImg1"/>
+	  		<result property="mapJobImg2" column="mapJobImg2"/>
+	  		<result property="mapJobImg3" column="mapJobImg3"/>
+	  		<result property="categoryNo" column="categoryNo"/>
+	  		<result property="categoryNo2" column="categoryNo2"/>
+	  	</resultMap>
+	  	
+		<!-- 전체 리스트 출력 -->
+	  	<select id="listAllMap" resultMap="mapList">
+	  		SELECT * FROM map_job
+	  	</select>
+	  	
+	  	<!-- 맵 상세 정보 출력 -->
+	  	<select id="detailMapView" parameterType="int" resultType="com.jobdongsan.project.model.MapVO">
+	  	SELECT m.mapJobNo, m.mapJobArea, m.mapJobLogo, m.mapJobAdd, m.mapJobName, m.mapJobPH, m.mapJobLink, m.mapJobImg1, m.mapJobImg2, m.mapJobImg3,
+	  		   m.categoryNo, m.categoryNo2, c.categoryName, c.categoryImg
+  		FROM map_job m, category c
+  		WHERE m.categoryNo = c.categoryNo AND m.mapJobNo=#{mapJobNo} <!-- AND m.categoryNo2 = c.categoryNo -->
+	  	</select>
+
+	</mapper>

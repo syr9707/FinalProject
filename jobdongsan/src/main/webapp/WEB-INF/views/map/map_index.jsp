@@ -6,13 +6,6 @@
 		<!-- head.jsp -->
 		<c:import url="/WEB-INF/views/layout/head.jsp" />
 		
-		<!-- 부트스트랩 -->
-		<!-- CSS only -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-		<!-- JavaScript Bundle with Popper -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-		
-		
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/map_index.css'/>"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -59,10 +52,20 @@
 				
 							
 						<!-- 각 지역 리스트 -->		
-						<div id="list_seoul">
-							<div id="list_title">서울</div>	
+						<div id="list_seoul" class="list_box">
+							<div id="list_title">서울</div>
 							<div id="list_detail">
-							 <ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '서울' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
+							
+							<%--  <ul>
 							 	<li>
 							 	<a href="<c:url value='/map_detail'/>">❂ 키자니아</a>
 							 	</li>	 
@@ -81,197 +84,150 @@
 							 	<li>
 							 	❂ 법원 전시관
 							 	</li>	 
-							 </ul>
+							 </ul> --%>				 
+							 
 							 </div>	 
 						</div>
 						
 						
-						<div id="list_gyeonggido">
+						<div id="list_gyeonggido" class="list_box">
 							<div id="list_title">경기도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
-							 </div>	 
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '경기도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
+							</div>	 
 						</div>
 						
-						<div id="list_chungcheongnamdo">
+						<div id="list_chungcheongnamdo" class="list_box">
 							<div id="list_title">충청남도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '충청남도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
 						</div>
 						
-						<div id="list_chungcheongbukdo">
+						<div id="list_chungcheongbukdo" class="list_box">
 							<div id="list_title">충청북도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '충청북도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
 						</div>
 						
-							<div id="list_jeollabukdo">
+							<div id="list_jeollabukdo" class="list_box">
 							<div id="list_title">전라북도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '전라북도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
 						</div>
 						
-							<div id="list_jeollanamdo">
+							<div id="list_jeollanamdo" class="list_box">
 							<div id="list_title">전라남도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '전라남도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
 						</div>
 
 
-						<div id="list_gangwondo">
+						<div id="list_gangwondo" class="list_box">
 							<div id="list_title">강원도</div>
 							<div id="list_detail">
-							 <ul>	 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li> 
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '강원도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div> 
 						</div>
 						
 						
-							<div id="list_gyeongsangbukdo">
+							<div id="list_gyeongsangbukdo" class="list_box">
 							<div id="list_title">경상북도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '경상북도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
 						</div>
 						
 						
-						<div id="list_gyeongsangnamdo">
+						<div id="list_gyeongsangnamdo" class="list_box">
 							<div id="list_title">경상남도</div>	
 							<div id="list_detail">
-							 <ul> 
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 	<li>
-							 	❂ 체험학습 장소 이름
-							 	</li>
-							 </ul>
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '경상남도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
 							 </div>	 
-						</div>					
+						</div>
+						
+						
+						<div id="list_jejudo" class="list_box">
+							<div id="list_title">제주도</div>	
+							<div id="list_detail">
+							<ul>
+							<c:forEach items="${mapList }" var="map">
+							<c:if test="${map.mapJobArea eq '제주도' }">
+							<li>
+							<a href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂ ${map.mapJobName }</a>
+							</li>
+							</c:if>
+							</c:forEach>
+							</ul>
+							 </div>	 
+						</div>						
 						<!-- 각 지역 리스트 끝 -->
 						
 						

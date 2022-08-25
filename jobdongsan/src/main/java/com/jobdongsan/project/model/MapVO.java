@@ -1,7 +1,7 @@
 package com.jobdongsan.project.model;
 
 public class MapVO {
-	private int mapJabNo;
+	private int mapJobNo;
 	private String mapJobArea;
 	private String mapJobLogo;
 	private String mapJobAdd;
@@ -14,12 +14,41 @@ public class MapVO {
 	private int categoryNo;
 	private int categoryNo2;
 	
+	private String categoryName;
+	private String categoryName2;
+	private String categoryImg;
+	private String categoryImg2;
 	
-	public int getMapJabNo() {
-		return mapJabNo;
+	
+	public String getCategoryName2() {
+		return categoryName2;
 	}
-	public void setMapJabNo(int mapJabNo) {
-		this.mapJabNo = mapJabNo;
+	public void setCategoryName2(String categoryName2) {
+		this.categoryName2 = categoryName2;
+	}
+	public String getCategoryImg2() {
+		return categoryImg2;
+	}
+	public void setCategoryImg2(String categoryImg2) {
+		this.categoryImg2 = categoryImg2;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+	public String getCategoryImg() {
+		return categoryImg;
+	}
+	public void setCategoryImg(String categoryImg) {
+		this.categoryImg = categoryImg;
+	}
+	public int getMapJobNo() {
+		return mapJobNo;
+	}
+	public void setMapJabNo(int mapJobNo) {
+		this.mapJobNo = mapJobNo;
 	}
 	public String getMapJobArea() {
 		return mapJobArea;

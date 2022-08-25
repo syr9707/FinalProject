@@ -15,12 +15,19 @@ h2 {
 h4 {
 	font-family: 'CookieRun';
 	cursor: pointer;
+	font-size: 30px;
 }
 
 strong {
 	font-family: 'CookieRun';
 	font-size: 20px;
 	cursor: pointer;
+}
+
+#map_info_detail_line a {
+	font-family: 'CookieRun';
+	font-size: 17px;
+	color: black;
 }
 
 b {
@@ -45,7 +52,7 @@ b {
 	position: relative;
 	margin-left: 900px;
 	margin-top: -350px;
-	top: 140px;
+	top: 150px;
 }
 
 #map_detail_title {
@@ -71,7 +78,7 @@ b {
 }
 
 #map_info {
-	border: 3px solid black;
+	border: 2px solid black;
 	border-radius: 50px;
 	backdrop-filter: blur(7px);
 	/*  */
@@ -79,7 +86,7 @@ b {
 	align-items: center;
 	width: 1320px;
 	height: 350px;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 
 #map_info_logo {
@@ -90,6 +97,10 @@ b {
 	justify-content: center;
 	width: 300px;
 	height: 300px;
+}
+
+#map_info_logo img {
+	width: 60%;
 }
 
 #map_info_detail {
@@ -139,7 +150,7 @@ b {
 	align-items: center;
 	width: 500px;
 	height: 100px;
-	/* margin-bottom: 30px; */
+	margin-bottom: 30px;
 	margin-right: -5px;
 }
 
@@ -173,25 +184,17 @@ b {
 	margin-left: 85px;
 }
 
-#map_experience_slide {
-	/* 	border: 2px dashed black;
-	border-radius: 50px; */
+#map_experience {
 	/*  */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 800px;
-	height: 500px;
-	margin-bottom: 60px;
+	width: 1000px;
+	margin-bottom: 90px;
+}
+
+#map_experience img {
+	width: 1000px;
 }
 
 #map_api {
-	border: 1px solid black;
-	/* border-radius: 50px; */
-	/*  */
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 800px;
 	height: 500px;
 	margin-bottom: 120px;
