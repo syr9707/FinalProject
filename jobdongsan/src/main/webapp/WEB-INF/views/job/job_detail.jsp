@@ -181,6 +181,35 @@
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
+	
+	<script>
+	$(document).ready(function(){
+	
+		$('.job_star').click(function() {
+			
+		   	if(${empty sessionScope.sid}){
+	    	   if(confirm("로그인이 필요한 서비스 입니다.\n로그인 하시겠습니까?")) {
+	    			location.href="<c:url value='/login'/>";
+	    		}
+	    	}
+		   	else {
+		   		if(confirm("나의 관심 직업으로 선택하시겠습니까?")) {
+		   			
+		   			
+		   			
+		   			
+		   			
+		   			
+		   			
+		   			alert("관심 직업에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");
+		   		}
+		   	}
+		   	
+	    });
+		
+	});
+	</script>
+	
 </html>
 
 

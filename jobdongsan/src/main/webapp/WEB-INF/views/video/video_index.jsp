@@ -171,7 +171,7 @@
 						<c:set var="doneLoop" value="false" />
 						<c:forEach items="${videoList }" var="video" >
 						<c:if test="${not doneLoop}">
-						<c:if test="${video.videoCtg eq '해양직업의 세계 - 꿈꾸는 장보고 -' }">
+						<c:if test="${video.videoCtg eq '해양직업의 세계 - 꿈꾸는 장보고' }">
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >

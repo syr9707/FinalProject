@@ -27,10 +27,7 @@ public class JobService implements IJobService {
 		return dao.listAllJob();
 	}
 
-	@Override
-	public ArrayList<JobVO> jobSearch(String jobName) {
-		return dao.jobSearch(jobName);
-	}
+	
 
 	@Override
 	public void jobInsert(MyHistoryVO vo) {
@@ -49,6 +46,12 @@ public class JobService implements IJobService {
 	@Override
 	public void jobDelete(int jobNo) {
 		dao.jobDelete(jobNo);
+	}
+
+	@Override
+	public ArrayList<JobVO> jobSearch(HashMap<String, Object> map) {
+		
+		return dao.jobSearch(map);
 	}
 
 }

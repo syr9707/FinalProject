@@ -307,7 +307,28 @@
 
 
 
+/* 검색 결과 출력 */
+#jobSearchResultBox {
+	width:1320px;
+	
+    
+}
 
+#jobtesttt {
+	margin-top:75px;
+	margin-bottom:90px;
+	/* border: blue 1px solid; */
+	display:flex;
+    flex-direction: row;
+    
+    font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 26px;
+	text-align:center;
+	border-top: rgba(23, 203, 192, 0.28) 3px solid;
+}
 
 
 

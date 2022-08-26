@@ -32,13 +32,9 @@
   	</select>
   	
   	<!-- 직업 검색 -->
-  	<select id="jobSearch" parameterType="string" resultMap="jobResult">
+  	<select id="jobSearch" parameterType="hashmap" resultMap="jobResult">
   		SELECT * FROM job WHERE
-  			<choose>
-  				<when test="type != null and type.equals('jobName')">
-  					jobName LIKE CONCAT('%', #{keyword}, '%')
-  				</when>
-  			</choose>
+  		jobName LIKE CONCAT('%', #{keyword}, '%')
   	</select>
   	
   	<!-- 마이페이지에 동일 찜직업이 존재하는지 확인 -->

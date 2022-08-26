@@ -51,7 +51,6 @@
 					</div>
 				</div>
 				<div id="jobSearchResultBox">
-					
 				</div>
 				<div class="job_list">
 		            <ul class="nav nav-tabs">
