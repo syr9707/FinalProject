@@ -40,10 +40,12 @@ $(document).ready(function(){
         $(".email3 option:selected").each(function () {
             if ($(this).val() == "") { //직접입력일 경우
                 $(".email2").val('');
-                $(".email2").attr("disabled", false);
+                $(".email2").attr("readonly", false);
+                $(".email2").removeClass("bg_gray");
             } else { //직접입력이 아닐경우
                 $(".email2").val($(this).text());
-                $(".email2").attr("disabled", true);
+                $(".email2").attr("readonly", true);
+                $(".email2").addClass("bg_gray");
             }
         });
 
@@ -388,5 +390,10 @@ $(document).ready(function(){
         }
 
         $('#mypage_update_form').submit();
+    });
+    
+    // 회원 탈퇴 버튼 눌렀을 때
+    $('.delete').click(function(){
+    	$('#mypage_delete_form').submit();
     });
 });

@@ -40,10 +40,12 @@ $(document).ready(function(){
         $(".email3 option:selected").each(function () {
             if ($(this).val() == "") { //직접입력일 경우
                 $(".email2").val('');
-                $(".email2").attr("disabled", false);
+                $(".email2").attr("readonly", false);
+                $(".eamil2").removeClass("bg_gray");
             } else { //직접입력이 아닐경우
                 $(".email2").val($(this).text());
-                $(".email2").attr("disabled", true);
+                $(".email2").attr("readonly", true);
+                $(".eamil2").addClass("bg_gray");
             }
         });
 

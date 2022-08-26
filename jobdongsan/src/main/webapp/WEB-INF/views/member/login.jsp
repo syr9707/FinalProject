@@ -10,7 +10,7 @@
 		<!-- js -->
 		<script src="<c:url value='/js/login.js' />"></script>
 	</head>
-	<body> 
+	<body>
 		<!-- top.jsp -->
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<!-- section.jsp -->

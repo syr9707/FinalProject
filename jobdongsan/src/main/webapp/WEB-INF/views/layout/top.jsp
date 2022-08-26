@@ -12,7 +12,7 @@
 						</c:if>
 						<c:if test="${not empty sessionScope.sid }">
 							<a class="btn_account" href="<c:url value='/logout' />">로그아웃</a>
-							<a class="btn_account" href="<c:url value='/mypage' />">나의 잡동산</a>
+							<a class="btn_account" href="<c:url value='/mypage_index' />">나의 잡동산</a>
 						</c:if>
 					</div>
 				</div>

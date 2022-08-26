@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 		<!-- head.jsp -->
@@ -17,11 +18,11 @@
 		<!-- section.jsp -->
 		<section class="section">
 			<div class="section_wrap">
-				<form id="mypage_update_form" method="post" action="<c:url value='/mypage_update'/>">
+				<form id="mypage_update_form" method="post" action="<c:url value='/update_memberInfo'/>">
                     <h3 class="semibold txt_30">기본정보수정</h3>
 					<div class="input_id">
                         <p>아이디</p>
-                        <input type="text" name="id" class="id" value="aaaaaa">
+                        <input type="text" name="id" class="id bg_gray" value="${mem.memId }" readonly>
                     </div>
                     <div class="error red" id="id_error">5자~20자의 영문 소문자, 숫자와 특수기호(_) , (-)만 사용 가능합니다.</div>
                     <div class="input_pw">
@@ -36,16 +37,16 @@
                     <div class="error red" id="pw_chk_error">비밀번호가 일치하지 않습니다.</div>
                     <div class="input_name">
                         <p>이름</p>
-                        <input type="text" name="name" class="name" value="홍길동">
+                        <input type="text" name="name" class="name" value="${mem.memName }">
                     </div>
                     <div class="error red" id="name_error">이름을 입력해주세요.</div>
                     <div class="input_birth">
                         <p>자녀나이</p>
                         <div class="birth_input">
-                            <input type="text" class="birth_year" maxlength="4" placeholder="년(4자)" value="2000">
-                            <select class="birth_month">
+                            <input type="text" name="birth_year" class="birth_year" maxlength="4" placeholder="년(4자)" value="${fn:substring(mem.memChildBirth, 0, 4) }">
+                            <select name="birth_month" class="birth_month">
                                 <option value="">월</option>
-                                <option value="01" selected>01</option>
+                                <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
                                 <option value="04">04</option>
@@ -58,9 +59,9 @@
                                 <option value="11">11</option>
                                 <option value="12">12</option>
                             </select>
-                            <select class="birth_date">
+                            <select name="birth_date" class="birth_date">
                                 <option value="">일</option>
-                                <option value="01" selected>01</option>
+                                <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
                                 <option value="04">04</option>
@@ -98,10 +99,10 @@
                     <div class="input_email">
                         <p>이메일</p>
                         <div class="email_input">
-                            <input type="text" name="email1" class="email1" value="aaa">@<input type="text" name="email2" class="email2" placeholder="직접 입력" value="naver.com">
+                            <input type="text" name="email1" class="email1" value="${fn:split(mem.memEmail, '@')[0]}">@<input type="text" name="email2" class="email2" placeholder="직접 입력" value="${fn:split(mem.memEmail, '@')[1]}">
                             <select name="email3" class="email3">
                                 <option value="">직접입력</option>
-                                <option value="naver.com" selected>naver.com</option>
+                                <option value="naver.com">naver.com</option>
                                 <option value="gmail.com">gmail.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
                                 <option value="nate.com">nate.com</option>
@@ -112,27 +113,35 @@
                     </div>
                     <div class="input_phone">
                         <p>전화번호</p>
-                        <input type="text" maxlength="11" name="phone" class="phone" placeholder="ex)01012345678" value="01011112222">
+                        <input type="text" maxlength="11" name="phone" class="phone" placeholder="ex)01012345678" value="${mem.memHP }">
                     </div>
                     <div class="error red" id="phone_error">전화번호를 다시 확인해주세요.</div>
                     <div class="input_address">
                         <p>주소</p>
-                        <div><input type="text" name="zipcode" id="zipcode" class="zipcode" disabled="true" value="06220"> <input type="button" name="find_zipcode" class="find_zipcode bg_y semibold" value="우편번호찾기"></div>
-                        <div><input type="text" name="address1" id="address1" class="address1" disabled="true" value="서울 강남구 테헤란로 212(역삼동멀티캠퍼스)"></div>
-                        <div><input type="text" name="address2" id="address2" class="address2" placeholder="상세주소입력" value="7층"></div>
+                        <div><input type="text" name="zipcode" id="zipcode" class="zipcode bg_gray" readonly value="${mem.memZipcode }"> <input type="button" name="find_zipcode" class="find_zipcode bg_y semibold" value="우편번호찾기"></div>
+                        <div><input type="text" name="address1" id="address1" class="address1 bg_gray" readonly value="${mem.memAddress1 }"></div>
+                        <div><input type="text" name="address2" id="address2" class="address2" placeholder="상세주소입력" value="${mem.memAddress2 }"></div>
                     </div>
                     <div class="error red" id="address_error">주소를 입력해주세요.</div>
                     <div class="btn_update">
                         <input type="button" name="update" class="update semibold txt_20 bg_y" value="수정">
                         <input type="button" name="cancle" class="cancle semibold txt_20" value="취소">
                     </div>
+                    <input type="hidden" name="chk" id="chk" value="3">
                 </form>
-                <form id="mypage_delete_form" method="post" action="<c:url value='/mypage_delete'/>">
+                <form id="mypage_delete_form" method="post" action="<c:url value='/delete_check'/>">
                     <div class="btn_delete"><input type="button" name="delete" class="delete semibold txt_20" value="회원 탈퇴"></div>
+                    <input type="hidden" name="chk" id="chk2" value="2">
                 </form>
 			</div>
 		</section>
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.birth_month').val("${fn:substring(mem.memChildBirth, 5, 7)}").prop("selected",true);
+			$('.birth_date').val("${fn:substring(mem.memChildBirth, 8, 10)}").prop("selected",true);
+		});
+	</script>
 </html>

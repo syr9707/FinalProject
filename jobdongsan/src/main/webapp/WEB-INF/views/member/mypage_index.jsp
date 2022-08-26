@@ -15,7 +15,7 @@
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<!-- section.jsp -->
 		<section class="section">
-			<form id="mypage_index_form" method="post" action="<c:url value='/mypage_index'/>">
+			<form id="mypage_index_form" method="post" action="<c:url value='/mypage_check'/>">
 				<div class="section_wrap">
 					<div class="my_jobdongsan">
                         <h3 class="bold txt_40">나의 잡동산</h3>
@@ -124,6 +124,7 @@
 				</div>
                 <div class="background"></div>
                 <div class="background2"></div>
+                <input type="hidden" name="chk" id="chk" value="1">
 			</form>
 		</section>
 		<!-- bottom.jsp -->

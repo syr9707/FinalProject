@@ -17,9 +17,29 @@ $(document).ready(function(){
     );
 
     // 확인 버튼 눌렀을 때 비밀번호 체크
-    // 추가 ajax 작업 필요
     $('.check').click(function(){
-        location.href='/mypage_update';
-        // $('mypage_check_form').submit();
+        event.preventDefault();
+        
+        $.ajax({
+        	type: "post",
+        	url: "checkPw",
+        	data: {"input_pw": $('.pw').val()},
+ 			dataType: "text",
+ 			success: function(result){
+ 				if(result == "success") {
+ 					$('#pw_chk_error').hide();
+ 					if($('#chk').val() == "1") {
+ 						$('#to_mypage_update').submit();
+ 					} else {
+ 						$('#to_delete_memberInfo').submit();
+ 					}
+ 				} else {
+ 					$('#pw_chk_error').show();
+ 				}
+ 			},
+ 			error: function(){
+ 				alert("전송 실패");
+ 			}
+        });
     });
 });

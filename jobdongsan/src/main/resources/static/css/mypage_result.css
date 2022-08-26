@@ -1,0 +1,42 @@
+section {
+    margin: 40px auto 90px;
+    border-top: 1px solid #777777;
+    text-align: center;
+}
+
+.section_wrap {
+    width: 1000px;
+}
+
+h3 {
+    margin: 50px auto;
+}
+
+#result_box {
+    height: 167px;
+    border: 1px solid #777777;
+    border-left: none;
+    border-right: none;
+}
+
+#result_signup {
+    margin: 70px auto;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#result_signup b {
+    font-size: 22px;
+    font-weight: 600;
+    color: #05B4FF;
+}
+
+.btn_login {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 40px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -16,7 +16,8 @@
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<!-- section.jsp -->
 		<section class="section">
-			<form id="signup_form" method="post" action="<c:url value='/signup'/>">
+			<form id="signup_form" method="post" action="<c:url value='/insert_member'/>">
+				<input type="hidden" name="chk" value="1">
 				<div class="section_wrap">
                     <h3 class="semibold txt_30">회원가입</h3>
 					<div class="input_id">
@@ -42,8 +43,8 @@
                     <div class="input_birth">
                         <p>자녀나이</p>
                         <div class="birth_input">
-                            <input type="text" class="birth_year" maxlength="4" placeholder="년(4자)">
-                            <select class="birth_month">
+                            <input type="text" name="birth_year" class="birth_year" maxlength="4" placeholder="년(4자)">
+                            <select name="birth_month" class="birth_month">
                                 <option value="" selected>월</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
@@ -58,7 +59,7 @@
                                 <option value="11">11</option>
                                 <option value="12">12</option>
                             </select>
-                            <select class="birth_date">
+                            <select name="birth_date" class="birth_date">
                                 <option value="" selected>일</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
@@ -117,8 +118,8 @@
                     <div class="error red" id="phone_error">전화번호를 다시 확인해주세요.</div>
                     <div class="input_address">
                         <p>주소</p>
-                        <div><input type="text" name="zipcode" id="zipcode" class="zipcode" disabled="true"> <input type="button" name="find_zipcode" class="find_zipcode bg_y semibold" value="우편번호찾기"></div>
-                        <div><input type="text" name="address1" id="address1" class="address1" disabled="true"></div>
+                        <div><input type="text" name="zipcode" id="zipcode" class="zipcode bg_gray" readonly> <input type="button" name="find_zipcode" class="find_zipcode bg_y semibold" value="우편번호찾기"></div>
+                        <div><input type="text" name="address1" id="address1" class="address1 bg_gray" readonly></div>
                         <div><input type="text" name="address2" id="address2" class="address2" placeholder="상세주소입력"></div>
                     </div>
                     <div class="error red" id="address_error">주소를 입력해주세요.</div>

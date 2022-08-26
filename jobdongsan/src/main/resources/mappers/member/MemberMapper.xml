@@ -6,24 +6,39 @@
 <mapper namespace="com.jobdongsan.project.dao.IMemberDAO">
 	<!-- 로그인 확인 -->
 	<select id="loginCheck" parameterType="HashMap" resultType="String">
-		SELECT memId FROM member WHERE memID = #{memID} AND memPw = #{memPw}
+		SELECT memId FROM member WHERE memID = #{memId} AND memPw = #{memPw}
 	</select>
 	
 	<!-- 회원 가입 -->
-	
+	<insert id="insertMember" parameterType="com.jobdongsan.project.model.MemberVO">
+		INSERT INTO member VALUES (#{memId}, #{memPw}, #{memName}, #{memEmail}, #{memChildBirth}, #{memHP},
+		#{memZipcode}, #{memAddress1}, #{memAddress2})
+	</insert>
 	
 	<!-- 아이디 중복 체크 -->
-	
+	<select id="checkMemId" parameterType="String" resultType="String">
+		SELECT memId FROM member WHERE memId = #{memId}
+	</select>
 	
 	<!-- 회원 정보 조회 -->
-	
+	<select id="getMemberInfo" parameterType="String" resultType="com.jobdongsan.project.model.MemberVO">
+		SELECT * FROM member WHERE memId = #{memId}
+	</select>
 	
 	<!-- 비밀번호 확인 -->
-	
+	<select id="mypageCheck" parameterType="String" resultType="String">
+		SELECT memPw FROM member WHERE memId = #{memId}
+	</select>
 	
 	<!-- 회원 정보 수정 -->
-	
+	<update id="updateMemberInfo" parameterType="com.jobdongsan.project.model.MemberVO">
+		UPDATE member SET memPw = #{memPw}, memName = #{memName}, memEmail = #{memEmail},
+		memChildBirth = #{memChildBirth}, memHP = #{memHP}, memZipcode = #{memZipcode}, memAddress1 = #{memAddress1},
+		memAddress2 = #{memAddress2} WHERE memId = #{memId}
+	</update>
 	
 	<!-- 회원 탈퇴 -->
-	
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM member WHERE memId = #{memId} 
+	</delete>
 </mapper>
