@@ -28,9 +28,11 @@
 	  	<!-- 맵 상세 정보 출력 -->
 	  	<select id="detailMapView" parameterType="int" resultType="com.jobdongsan.project.model.MapVO">
 	  	SELECT m.mapJobNo, m.mapJobArea, m.mapJobLogo, m.mapJobAdd, m.mapJobName, m.mapJobPH, m.mapJobLink, m.mapJobImg1, m.mapJobImg2, m.mapJobImg3,
-	  		   m.categoryNo, m.categoryNo2, c.categoryName, c.categoryImg
+	  		   m.categoryNo, m.categoryNo2, m.mapX, m.mapY, c.categoryName, c.categoryImg
   		FROM map_job m, category c
-  		WHERE m.categoryNo = c.categoryNo AND m.mapJobNo=#{mapJobNo} <!-- AND m.categoryNo2 = c.categoryNo -->
+  		WHERE m.categoryNo = c.categoryNo AND m.mapJobNo=#{mapJobNo}
+  		
+  		<!-- AND m.categoryNo2 = c.categoryNo -->
 	  	</select>
 
 	</mapper>

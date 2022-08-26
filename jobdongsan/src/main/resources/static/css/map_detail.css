@@ -199,3 +199,44 @@ b {
 	height: 500px;
 	margin-bottom: 120px;
 }
+
+.iw_inner {
+	padding: 10px;
+}
+
+.iw_inner h3 {
+	font-family: 'CookieRun';
+	font-size: 19px;
+}
+
+.iw_inner p {
+	font-family: 'CookieRun';
+	font-size: 17px;
+}
+
+.maplist_button {
+	width: 360px;
+	height: 70px;
+	margin-top: 95px;
+	margin-bottom: 90px;
+}
+
+#maplistBtn {
+	width: 360px;
+	height: 70px;
+	background: #FFFACD;
+	border-radius: 50px;
+	/*  */
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	/*  */
+	border: #FFFACD;
+	cursor: pointer;
+}
+
+#maplistBtn:hover {
+	border: 3px solid #fde48a;
+}

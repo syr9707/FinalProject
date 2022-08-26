@@ -120,29 +120,6 @@
 				<img src="<c:url value='${map.mapJobImg2 }'/>">
 				<img src="<c:url value='${map.mapJobImg3 }'/>">
 				
-				<%-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				  <div class="carousel-inner">
-				    <div class="carousel-item active">
-				      <img src="<c:url value='/images/sample1.png'/>" class="d-block w-100">
-				    </div>
-				    <div class="carousel-item">
-				      <img src="<c:url value='/images/sample2.png'/>" class="d-block w-100">
-				    </div>
-				    <div class="carousel-item">
-				       <img src="<c:url value='/images/sample3.png'/>" class="d-block w-100">
-				    </div>
-				  </div>  
-				  <!-- 슬라이드 버튼 -->
-				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				    <span class="visually-hidden">Previous</span>
-				  </button>
-				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span class="visually-hidden">Next</span>
-				  </button>
-				</div> --%>
-				
 				</div>
 				
 				
@@ -159,17 +136,46 @@
 					<div id="map" style="width:100%; height:500px;"></div>
 					
 					<script>
+						var HOME_PATH = window.HOME_PATH || '.';
+						
 						var map = new naver.maps.Map('map',{
-						  center: new naver.maps.LatLng(37.3405761, 127.3164609),
-						  zoom: 30
+						  center: new naver.maps.LatLng(${map.mapY }, ${map.mapX }),
+						  zoom: 15
 						});
 
 						var marker = new naver.maps.Marker({
-						  position: new naver.maps.LatLng(37.3405761, 127.3164609),
+						  position: new naver.maps.LatLng(${map.mapY }, ${map.mapX }),
 						  map: map
 						});
+						
+						var contentString = [
+					        '<div class="iw_inner">',
+					        '   <h3>${map. mapJobName}</h3>',
+					        '   <p>${map. mapJobAdd}<br />', 
+					        '   </p>',
+					        '</div>'
+					    ].join('');
+
+						var infowindow = new naver.maps.InfoWindow({
+						    content: contentString
+						});
+	
+						naver.maps.Event.addListener(marker, "click", function(e) {
+						    if (infowindow.getMap()) {
+						        infowindow.close();
+						    } else {
+						        infowindow.open(map, marker);
+						    }
+						});
+	
+						infowindow.open(map, marker);
 					</script>
 				
+				</div>
+				
+				
+				<div class="maplist_button">
+					<button id="maplistBtn" onclick="location.href='<c:url value='/map_index'/>'">목록보기</button>
 				</div>
 				
 				
