@@ -1,12 +1,9 @@
 package com.jobdongsan.project.controller;
 
-import java.util.ArrayList;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.jobdongsan.project.model.QuestionVO;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class InterestController {
@@ -34,7 +31,10 @@ public class InterestController {
 	 * 
 	 * return question; }
 	 */
-	
+	@RequestMapping("/interest_score")
+	public void interest_score(@RequestParam String score, Model model) {
+		
+	}
 	
 	
 	@RequestMapping("/interest_test")

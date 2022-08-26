@@ -51,17 +51,17 @@
 				<div class="back_arrow">
 					<img src="<c:url value='images/interest_arrow.png' />" class="interest_arrow">
 				</div>
-				<div class="plate">
+				<div class="plate" id="yes">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
 					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>예</p>
 				</div>
-				<div class="plate">
+				<div class="plate" id="soso">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
 					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>보통</p>
 				</div>
-				<div class="plate">
+				<div class="plate" id="no">
 					<img src="<c:url value='images/plate.png' />" class="plate_img">
 					<img src="<c:url value='images/interest_flour.png' />" class="food">
 					<p>아니오</p>

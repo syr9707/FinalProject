@@ -25,12 +25,6 @@
  	
  	
  	// 컨텐츠 박스 
- 	$('.plate').click(function(){
- 		var target = $('.interest_text', window.parent.document);
- 		target.html('<p>자기이해 결과가 나왔습니다.<br>원하는 유형을 선택하여 직업정보를 살펴보세요.</p>');
- 		//location.href="/interest_result";
- 	});
- 	
  	$('.back_arrow').click(function(){
  		var target = $('.interest_text', window.parent.document);
  		target.html('<p>먼저, <span>직업의 의미</span>를 알아볼까요?<br>직업이란 "나의 꿈을 이루어가는 과정"이랍니다.</p>');
@@ -49,55 +43,304 @@
  	});
 
 
+	
+	// 질문 API 가져와서 뿌려주기
 	$.ajax({
    		type: "GET",
    		url: "http://www.career.go.kr/inspct/openapi/test/questions?apikey=a6a461565fccd2eb51bc229af7f62255&q=19",
     }).done(function(result) {
     	
     	var questionJSON = result.RESULT; 
-    	var questionList = new Array();
+    	var questionList = [];
+    	let randomIndexArray = [];
+    	var score1 = 0, score2 = 0, score3 = 0;
+    	var score4 = 0, score5 = 0, score6 = 0;
+    	var index = 0;
+    	var totalScore = [];
     	
-    	questionJSON.forEach(function(el, i) {
+    	// 질문 API 파싱
+    	questionJSON.forEach(function(el, index) {
     		//var ran = Math.floor(Math.random() * 47) + 1;
-    		questionList2 = questionJSON[i].question;
-    		questionList[i] = questionList2;
+    		questionList2 = questionJSON[index].question;
+    		questionList[index] = questionList2;
     	});
     	
-    	var i=0
+    	randomNum(); // 랜덤 번호 선출
     	
-    	indexUp(i);
+    	indexUp(index); // 첫문제 질문
+    	
+    	console.log(randomIndexArray[index]);
+    	
+    	// 답변 클릭시 진행
+    	$('#yes').click(function(){
+    		scoreClickYes(index); // 스코어 쌓기
+    	});
+    	
+		$('#soso').click(function(){
+			scoreClickSoso(index); // 스코어 쌓기
+    	});
+    	
+		$('#no').click(function(){
+			scoreClickNo(index); // 스코어 쌓기
+    	});
+    	
     	$('.plate').click(function(){
-    		if(i == 19){
+    		if(index == 19){
+    			console.log("뚝딱이: " + score1);
+		    	console.log("탐험이: " + score2);
+		    	console.log("멋쟁이: " + score3);
+		    	console.log("친절이: " + score4);
+		    	console.log("씩씩이: " + score5);
+		    	console.log("성실이: " + score6);
+		    	totalScore[0] = score1;
+		    	totalScore[1] = score2;
+		    	totalScore[2] = score3;
+		    	totalScore[3] = score4;
+		    	totalScore[4] = score5;
+		    	totalScore[5] = score6;
+		    	
+		    	callAjax();
+		    	console.log("전체 스코어: " + totalScore);
+    			var target = $('.interest_text', window.parent.document);
+ 				target.html('<p>자기이해 결과가 나왔습니다.<br>원하는 유형을 선택하여 직업정보를 살펴보세요.</p>');
     			location.href="/interest_result";
     		}else{
-    			indexUp(i+1);
-    			i++;
+    			indexUp(index+1); // 2번째문제부터 번호와 질문
+    			index++;
     		}
+    		console.log(randomIndexArray[index]);
     	});
     	
-    	function indexUp(i){
-    		var ran = Math.floor(Math.random() * 47) + 1;
-    		$('.chat_contents').empty();
-    		$('.chat_contents').append((i+1) + ". " + questionList[ran]);
+    	
+    	// 함수들 
+    	function randomNum(){
+	    	for(var j=0; j<=questionList.length; j++){
+	    		
+	    		var ran = Math.floor(Math.random() * questionList.length);
+	    		
+	    		if (randomIndexArray.indexOf(ran) === -1) {
+				    randomIndexArray.push(ran);
+				}
+			}
     	}
     	
-    });
-    
-    function callAjax(){
-    	$.ajax({
-    		type: "POST",
-    		url: "interest_index3_1",
-    		data: questionList,
-    		dataType: 'text',
-	    	success: function(result){
-	    		
-	    	},
-	    	error: function(){
-	    		alert("전송 실패");
-	    	}	
-    	});
-    }
-});    
+    	function indexUp(i){
+    		$('.chat_contents').empty();
+    		$('.chat_contents').append((i+1) + ". " + questionList[randomIndexArray[i]]);
+    	}
+    	
+    	function callAjax(){
+	    	$.ajax({
+	    		type: "POST",
+	    		url: "/interest_score",
+	    		data: totalScore,
+	    		dataType: 'text',
+		    	success: function(result){
+		    		
+		    	},
+		    	error: function(){
+		    		alert("전송 실패");
+		    	}	
+	    	});
+	    }
+    	
+    	function scoreClickYes(i){
+    		switch(randomIndexArray[i]){
+    			case 0: 
+    			case 6: 
+				case 12:
+				case 24: 
+				case 30:
+				case 36: 
+    				score1 += 1;
+    				break;
+				case 1: 
+				case 2:
+				case 7: 
+				case 13:
+				case 19: 
+				case 25:
+				case 37:
+				case 42: 
+				case 43: 
+    				score2 += 1;
+    				break;
+				case 8: 
+				case 14:
+				case 20: 
+				case 44: 
+				case 26: 
+				case 32: 
+				case 28: 
+				case 38: 
+    				score3 += 1;
+    				break;
+				case 3: 
+				case 9:
+				case 15: 
+				case 21:
+				case 33:
+				case 39:
+				case 45: 
+				case 18:  
+				case 27:
+    				score4 += 1;
+    				break;
+				case 4: 
+				case 10:
+				case 16: 
+				case 22:
+				case 34:
+				case 40: 
+    				score5 += 1;
+    				break;
+				case 5: 
+				case 11:
+				case 17: 
+				case 23: 
+				case 47: 
+				case 29: 
+				case 31:
+				case 35: 
+				case 46:
+				case 41: 
+    				score6 += 1;
+    				break;
+    		}
+    	}
+    	
+    	function scoreClickSoso(i){
+    		switch(randomIndexArray[i]){
+    			case 29: 
+				case 31:
+				case 37:
+				case 43: 
+    				score1 += 1;
+    				break;	
+    			case 0: 
+				case 6: 
+				case 12:
+				case 24: 
+				case 18: 
+				case 22: 
+				case 26: 
+				case 32:
+				case 30: 
+				case 36: 
+				case 38:
+    				score2 += 1;
+    				break;
+				case 1: 
+				case 13:
+				case 2: 
+				case 19:
+				case 34:
+				case 41: 
+				case 42:
+    				score3 += 1;
+    				break;
+				case 5: 
+				case 11:
+				case 17: 
+				case 23: 
+				case 47: 
+				case 35: 
+				case 46:
+				case 40: 
+    				score4 += 1;
+    				break;
+				case 7: 
+				case 8: 
+				case 14:
+				case 15: 
+				case 21:
+				case 33:
+				case 39:
+				case 45:  
+				case 20: 
+				case 44:
+				case 27: 
+				case 28: 
+    				score5 += 1;
+    				break;
+    			case 3: 
+				case 4: 
+				case 9: 
+    			case 10: 
+				case 16: 
+				case 25:
+    				score6 += 1;
+    				break;	
+    		}
+    	}
+    	
+    	function scoreClickNo(i){
+    		switch(randomIndexArray[i]){
+    			case 3: 
+    			case 10:
+    			case 15: 
+				case 21:
+				case 33:
+				case 39:
+				case 45:  
+				case 18: 
+				case 20: 
+				case 44:
+				case 34: 
+				case 40: 
+    				score1 += 1;
+    				break;
+    			case 16: 
+    			case 35: 
+				case 46: 
+    				score2 += 1;
+    				break;		
+				case 4: 
+				case 5: 
+				case 11:
+				case 17: 
+				case 23: 
+				case 47: 
+				case 9: 
+				case 27:
+				case 29: 
+				case 31:
+				case 37: 
+    				score3 += 1;
+    				break;
+				case 6: 
+				case 12:
+				case 24: 
+				case 7: 
+				case 22:
+				case 25:
+				case 30: 
+				case 38:  
+    				score4 += 1;
+    				break;	
+    			case 1: 
+				case 13:
+				case 36: 
+				case 41: 
+    				score5 += 1;
+    				break;	
+    			case 0: 
+				case 2: 
+				case 19: 
+				case 8: 
+				case 14:
+				case 26: 
+				case 32:
+				case 28: 
+				case 42:
+				case 43: 
+    				score6 += 1;
+    				break;
+    		}
+    	}
+    	
+    });// ajax 끝  
+});// ready 끝    
     
    
    	

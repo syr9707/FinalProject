@@ -17,6 +17,8 @@
 			 <div class="image_box">
 			    <div class="back_img1"></div>
 		    </div>
+		    
+		    
 	        <div class="section_wrap">
 	            <div class="interest_title">
 	                <p>어린이 진로 흥미 탐색</p>
@@ -25,6 +27,8 @@
 	                <p>꿈을 위해 나는 어떤 노력을 해야 할까요?<br><span>나의 다짐</span>을 작성하고 부모님, 친구들과 함께 이야기해요.</p>
 	            </div>
 	            <img src="images/interest_man.png" class="interest_man">
+	            <!-- form 태그 -->
+	            <form id="my_promise_submit">
 	            <div class="view_box">
 	                <div class="inner_view_box">
 	                	<div class="side_wrap">
@@ -159,7 +163,8 @@
 	                	<img src="<c:url value='images/interest_happy.png' />" class="interest_happy">
 	                </div>
 	            </div>
-	            <input type="submit" class="finish_btn" value="탐색 완료하고 저장하기">
+	            <input type="submit" class="finish_btn" value="탐색 완료하고 저장하기">  
+                </form>
 	        </div>
 	    </section>
 	    <!-- bottom.jsp -->
