@@ -113,7 +113,12 @@ public class MemberController {
 	
 	// 마이페이지 인덱스 페이지 호출
 	@RequestMapping("/mypage_index")
-	public String mypage_index(HttpSession session) {
+	public String mypage_index(HttpSession session, Model model) {
+		String memId = (String) session.getAttribute("sid");
+		MemberVO mem = memService.getMemberInfo(memId);
+
+		model.addAttribute("mem", mem);
+		
 		return "member/mypage_index";
 	}
 	
