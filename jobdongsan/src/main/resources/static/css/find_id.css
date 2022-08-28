@@ -38,7 +38,7 @@ h3 {
 select {
 	width: 120px;
 	height: 50px;
-	padding: 0 10px;
+	padding-left: 10px;
 	border-color: #bbbbbb;
 	border-radius: 5px;
 	cursor: pointer;
@@ -75,7 +75,7 @@ select {
 }
 
 .code_check {
-	margin-top: 20px;
+	margin-top: 50px;
 	border: none;
 	color: #ffffff;
 	background-color: #bbbbbb;

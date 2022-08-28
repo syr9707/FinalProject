@@ -255,6 +255,27 @@ $(document).ready(function(){
         }
     });
 
+    // 이메일체크
+    $('.email1, .email2, .email3').blur(function(){
+        var email_rule =  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+        var email1 = $(".email1").val();
+        var email2 = $(".email2").val();
+        var email = email1 + "@" + email2;  
+        
+        if(!email_rule.test(email)){
+            $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
+            $('#email_error').show();
+            $('.email_code').css('background-color', '#bbbbbb');
+            $('.email_code').css('color', '#ffffff');
+            $('.email1').focus();
+            return false;
+        } else {
+            $('#email_error').hide();
+            $('.email_code').css('background-color', '#FFFACD');
+            $('.email_code').css('color', 'black');
+        }
+    });
+
     // 전화번호 체크
     $('.phone').blur(function(){
         var phone_rule = /^01([0|1|6|7|8|9])([0-9]{3,4})([0-9]{4})$/;
@@ -337,25 +358,6 @@ $(document).ready(function(){
             return false;
         } else {
             $('#birth_error').hide();
-        }
-
-        // 이메일체크
-        var email_rule =  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-        var email1 = $(".email1").val();
-        var email2 = $(".email2").val();
-        var email = email1 + "@" + email2;  
-        
-        if(!email_rule.test(email)){
-            $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
-            $('#email_error').show();
-            $('.email_auth').css('background-color', '#bbbbbb');
-            $('.email_auth').css('color', '#ffffff');
-            $('.email1').focus();
-            return false;
-        } else {
-            $('#email_error').hide();
-            $('.email_auth').css('background-color', '#FFFACD');
-            $('.email_auth').css('color', 'black');
         }
 
         // 전화번호 체크

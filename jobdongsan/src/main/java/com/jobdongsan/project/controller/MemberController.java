@@ -124,7 +124,12 @@ public class MemberController {
 	
 	// 마이페이지 디테일 페이지 호출
 	@RequestMapping("/mypage_detail")
-	public String mypage_detail() {
+	public String mypage_detail(HttpSession session, Model model) {
+		String memId = (String) session.getAttribute("sid");
+		MemberVO mem = memService.getMemberInfo(memId);
+		
+		model.addAttribute("mem", mem);
+		
 		return "member/mypage_detail";
 	}
 	

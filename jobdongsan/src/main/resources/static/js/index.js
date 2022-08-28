@@ -20,11 +20,11 @@ $(document).ready(function(){
     );
 
     $('#main_car').click(function(){
-            if($(this).hasClass('animate__animated animate__backInLeft')) {
-                $(this).removeClass('animate__animated animate__backInLeft');
-            }
-            else
-                $(this).addClass('animate__animated animate__backInLeft');
+            $(this).addClass('animate__animated animate__backInLeft');
+
+            setTimeout(function(){
+                jQuery('#main_car').removeClass('animate__animated animate__backInLeft');
+            },1000);
     });
 
     $('#main_today_cookie').hover(

@@ -23,8 +23,8 @@
                             <div class="my_jobdongsan_info">
                                 <img src="<c:url value='/images/mypage_circle.png' />" class="my_jobdongsan_pic">
                                 <div>
-                                    <p class="txt_30">홍길동</p>
-                                    <p class="txt_30">aaaaaa</p>
+                                    <p class="txt_30">${mem.memName }</p>
+                                    <p class="txt_30">${mem.memId }</p>
                                 </div>
                             </div>
                             <div class="my_jobdongsan_btn">
