@@ -24,6 +24,10 @@ section {
 	cursor: pointer;
 }
 
+.char_profile img {
+	width: 110px;
+}
+
 .char_name {
 	font-family: 'CookieRun';
 	font-size: 25px;
@@ -68,9 +72,6 @@ section {
 .char_explain_text {
 	width: 280px;
 	line-height: 30px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 	font-size: 17px;
 }
 
@@ -93,9 +94,10 @@ section {
 }
 
 .char_job {
-	height: 150px;
+	width: 480px;
+	height: 315px;
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .char_job:nth-child(2) {
@@ -117,11 +119,14 @@ section {
 
 .job_kind p {
 	width: 113px;
-	height: 20px;
+	height: 30px;
 	font-family: 'CookieRun';
 	font-size: 17px;
 	margin: 5px 0 0 19px;
 	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 /*********** 다음 버튼 ************/
@@ -137,9 +142,9 @@ section {
 .next_btn p {
 	font-family: 'CookieRun';
 	width: 178px;
-	height: 30px;
+	height: 50px;
 	text-align: center;
-	margin-top: -110px;
+	margin-top: -120px;
 	margin-left: 2px;
 }
 
