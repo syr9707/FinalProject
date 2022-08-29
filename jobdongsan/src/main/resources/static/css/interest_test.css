@@ -81,6 +81,13 @@ section {
 	background-color: #F8EFA6;
 }
 
+.login_start {
+	position: relative;
+	top: 100px;
+	background-color: #F8EFA6;
+}
+
+
 /*********************** 캐릭터 ***********************/
 
 .cooking {

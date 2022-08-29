@@ -127,8 +127,10 @@ ul li .side_menu_name {
 
 .result_graph {
 	display: flex;
+	position: relative;
 	width: 575px;
-	height: 200px;
+	height: 300px;
+	bottom: 90px;
 }
 
 .char_graph {
@@ -136,6 +138,7 @@ ul li .side_menu_name {
 	flex-direction: column-reverse;
 	width: 75px;
 	position: relative;
+	bottom: 10px;
 }
 
 .char_graph div:nth-child(2) {
@@ -143,38 +146,34 @@ ul li .side_menu_name {
 }
 
 .char_graph img {
-	position: absolute;
+	position: relative;
+	top: 30px;
 	width: 75px;
-	top: -20px;
+	display: none;
+	
 }
 
 .dde_graph {
-	height: 150px;
 	background-color: #FB635F;
 }
 
 .the_graph {
-	height: 100px;
 	background-color: #89F578;
 }
 
 .mje_graph {
-	height: 60px;
 	background-color: #E39233;
 }
 
 .cje_graph {
-	height: 100px;
 	background-color: #33A4E3;
 }
 
 .sse_graph {
-	height: 60px;
 	background-color: #F072F2;
 }
 
 .ssle_graph {
-	height: 80px;
 	background-color: #33E3CE;
 }
 

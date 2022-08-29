@@ -15,6 +15,7 @@
 		$('html, body').animate({scrollTop: $('.interest_text').offset().top});
 	}
 	
-	
+	// 전페이지 url
+	// document.referrer;
 });    
     

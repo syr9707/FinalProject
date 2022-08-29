@@ -13,62 +13,31 @@
 	<body>
 		<section>
 			<div class="char_profile_box">
+				<c:forEach var="ctg" items="${ctgList}">
 				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">뚝딱이</div>
+					<img src="<c:url value='${ctg.categoryImg}'/>">
+					<div class="char_name">${ctg.categoryName}</div>
 				</div>
-				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">탐험이</div>
-				</div>
-				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">멋쟁이</div>
-				</div>
-				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">친절이</div>
-				</div>
-				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">씩씩이</div>
-				</div>
-				<div class="char_profile">
-					<img src="<c:url value='images/interest_dde.png' />">
-					<div class="char_name">성실이</div>
-				</div>
+				</c:forEach>
 			</div>
 			<div class="box_line"></div>
+			<!-- 유형 리스트 -->
+			<c:forEach var="ctg" items="${ctgList}">
 			<div class="char_explain_box">
 				<div class="char_explain">
-					<div class="char_explain_title">뚝딱이</div>
-					<div class="char_explain_text">
-						손재주가 있거나 만들기를 좋아해요.<br>
-						만들기에 필요한 도구나 기계를 잘 다뤄요.<br>
-						그리고 활동적이고 몸을 움직이는 것을 좋아해요.<br>
-						뚝딱이는 솔직하고 성실하면서도 수줍음이 많은 편이에요.<br>
-					</div>
+					<div class="char_explain_title">${ctg.categoryName}</div>
+					<div class="char_explain_text">${ctg.categoryInfo}</div>
 				</div>
 				<div class="char_job_box">
-					<p><span>"뚝딱이"</span>형에게 잘 맞는 대표 직업은?</p>
+					<p><span>"${ctg.categoryName}"</span>형에게 잘 맞는 대표 직업은?</p>
 					<div class="char_job">
-						<div class="job_kind">
-							
+						<!-- 유형에 따른 직업정보 -->
+						<c:forEach items="${CtgJobList}" var="ctgJob" varStatus="status" end="4">
+						<div class="job_kind" onclick="parent.location.href='<c:url value='/job_detail/${ctgJob.jobNo }'/>'">
+							<img src="<c:url value='${ctgJob.jobImg}'/>">
+							<p>${ctgJob.jobName}</p>
 						</div>
-						<div class="job_kind">
-						
-						</div>
-						<div class="job_kind">
-						
-						</div>
-					</div>
-					<div class="char_job">
-						<div class="job_kind">
-						
-						</div>
-						<div class="job_kind">	
-							
-						</div>
+						</c:forEach>	
 						<div class="job_kind">
 							<img src="<c:url value='images/interest_zoom-in.png' />">
 							<p>더 보러 가기</p>
@@ -78,8 +47,9 @@
 			</div>
 			<div class="next_btn">
 				<img src="<c:url value='images/direction.png' />">
-				<p>나의 다짐 작성하기</p>
+				<p><span>"${ctg.categoryName}"</span>형에게 잘 맞는<br>체험 장소 보러가기</p>
 			</div>
+			</c:forEach>
 		</section>
 	</body>
 </html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.jobdongsan.project.dao.IResultDAO">
+	<select id="ctgJob" resultType="com.jobdongsan.project.model.JobVO">
+		select * from job
+	</select>
+	
+	<select id="ctgMap" resultType="com.jobdongsan.project.model.MapVO">
+		select * from map_job
+	</select>
+	
+	<insert id="insertScore" parameterType="HashMap">
+		insert into result (score1, score2, score3, score4, score5, score6, memId)
+					values (#{score1}, #{score2}, #{score3}, #{score4}, #{score5}, #{score6}, #{memId})
+	</insert>
+	
+	<select id="getScore" resultType="HashMap">
+		select score1,score2,score3,score4,score5,score6 
+		from result 
+		order by resultNo DESC limit 1
+	</select>
+	
+	<insert id="insertPromise" parameterType="com.jobdongsan.project.model.ResultVO">
+		insert into result (myPromise) values (#{myPromise})
+	</insert>
+</mapper>

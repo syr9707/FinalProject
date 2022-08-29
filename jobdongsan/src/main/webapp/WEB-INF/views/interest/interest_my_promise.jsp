@@ -28,7 +28,7 @@
 	            </div>
 	            <img src="images/interest_man.png" class="interest_man">
 	            <!-- form 태그 -->
-	            <form id="my_promise_submit">
+	            <form id="my_promise_submit" method="post" action="<c:url value='/my_promise_text'/>">
 	            <div class="view_box">
 	                <div class="inner_view_box">
 	                	<div class="side_wrap">
@@ -62,10 +62,10 @@
 						<!----------------- 컨텐츠 내용 ------------------->
 						<div class="contents_wrap">
 							<div class="mem_info">
-								<input type="text" size="19" placeholder="초등학교">
-								<input type="text" size="8" placeholder="학년">
-								<input type="text" size="8" placeholder="반">
-								<input type="text" size="16" placeholder="이름">
+								<input type="text" name="school" size="19" placeholder="초등학교">
+								<input type="text" name="grade" size="8" placeholder="학년">
+								<input type="text" name="class" size="8" placeholder="반">
+								<input type="text" name="name" size="16" placeholder="이름">
 							</div>
 							<div class="contents_title">
 								자기이해
@@ -77,12 +77,12 @@
 								<ul class="list_sentence">
 									<li>
 										나의 친구들은 나를 
-										<input type="text" size="14" placeholder="예: 멋쟁이"> 
+										<input type="text" name="friends_think" size="14" placeholder="예: 멋쟁이"> 
 										라고 부른다.
 									</li>
 									<li>
 										나의 친구들은 나에게 
-										<input type="text" size="14" placeholder="예: 정리정돈을"> 
+										<input type="text" name="friends_think2" size="14" placeholder="예: 정리정돈을"> 
 										잘한다고 한다.
 									</li>
 								</ul>
@@ -94,12 +94,12 @@
 								<ul class="list_sentence">
 									<li>
 										나는
-										<input type="text" size="45" placeholder="예: 수학과 과학을 잘하고, 발표를"> 
+										<input type="text" name="my_think" size="45" placeholder="예: 수학과 과학을 잘하고, 발표를"> 
 										잘한다.
 									</li>
 									<li>
 										나는
-										<input type="text" size="45" placeholder="예: 친구들과 함께 어울리고 이야기 하는 것을"> 
+										<input type="text" name="my_think2" size="45" placeholder="예: 친구들과 함께 어울리고 이야기 하는 것을"> 
 										잘한다.
 									</li>
 								</ul>
@@ -116,12 +116,12 @@
 								<ul class="list_sentence">
 									<li>
 										나의 꿈은
-										<input type="text" size="35" placeholder="예: 행복하게 사는 것"> 
+										<input type="text" name="my_future" size="35" placeholder="예: 행복하게 사는 것"> 
 										이다.
 									</li>
 									<li>
 										내가 원하는 직업은
-										<input type="text" size="20" placeholder="예: 의사"> 
+										<input type="text" name="my_future2" size="20" placeholder="예: 의사"> 
 										이다.
 									</li>
 								</ul>
@@ -133,12 +133,12 @@
 								<ul class="list_sentence">
 									<li>
 										나는 집에서
-										<input type="text" size="40" placeholder="예: 과학책을 틈틈이 보겠다고"> 
+										<input type="text" name="my_plan" size="40" placeholder="예: 과학책을 틈틈이 보겠다고"> 
 										약속합니다.
 									</li>
 									<li>
 										나는 학교에서
-										<input type="text" size="40" placeholder="예: 어려운 일을 솔선수범 하겠다고"> 
+										<input type="text" name="my_plan2" size="40" placeholder="예: 어려운 일을 솔선수범 하겠다고"> 
 										약속합니다.
 									</li>
 								</ul>
@@ -150,7 +150,7 @@
 								<ul class="list_sentence">
 									<li>
 										나는
-										<input type="text" size="55" placeholder="예: 따듯한 마을을 가진 의사선생님이 되겠다고"> 
+										<input type="text" name="my_promise" size="55" placeholder="예: 따듯한 마을을 가진 의사선생님이 되겠다고"> 
 										다짐합니다.
 									</li>
 								</ul>

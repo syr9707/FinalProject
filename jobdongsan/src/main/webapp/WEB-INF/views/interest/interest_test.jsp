@@ -22,22 +22,19 @@
 				</div>
 			</div>
 			<div class="test_btn">
-				<div class="test_mem_start">
-					<c:if test="${empty sessionScope.sid }">
+				<c:if test="${empty sessionScope.sid }">
+					<div class="test_mem_start">
 						<a class="btn_login_start">로그인 후 시작</a>
-					</c:if>
-					<c:if test="${not empty sessionScope.sid }">
-						<a class="btn_login_start" href="<c:url value='/logout' />">이어하기</a>
-					</c:if>
-				</div>
-				<div class="test_not_mem_start">
-					<c:if test="${empty sessionScope.sid }">
-						<a class="btn_account" href="<c:url value='/interest_test2' />">비회원으로 시작</a>
-					</c:if>
-					<c:if test="${not empty sessionScope.sid }">
-						<a class="btn_account" href="<c:url value='/logout' />">처음부터 시작</a>
-					</c:if>
-				</div>
+					</div>
+					<div class="test_not_mem_start">
+						<a class="btn_account">비회원으로 시작</a>
+					</div>
+				</c:if>
+				<c:if test="${not empty sessionScope.sid }">
+					<div class="login_start">
+						<a class="btn_account">시작하기</a>
+					</div>
+				</c:if>
 			</div>
 			<img src="images/cooking.png" class="cooking">
 		</section>

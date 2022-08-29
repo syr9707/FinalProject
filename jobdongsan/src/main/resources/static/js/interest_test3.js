@@ -56,7 +56,6 @@
     	var score1 = 0, score2 = 0, score3 = 0;
     	var score4 = 0, score5 = 0, score6 = 0;
     	var index = 0;
-    	var totalScore = [];
     	
     	// 질문 API 파싱
     	questionJSON.forEach(function(el, index) {
@@ -92,18 +91,14 @@
 		    	console.log("친절이: " + score4);
 		    	console.log("씩씩이: " + score5);
 		    	console.log("성실이: " + score6);
-		    	totalScore[0] = score1;
-		    	totalScore[1] = score2;
-		    	totalScore[2] = score3;
-		    	totalScore[3] = score4;
-		    	totalScore[4] = score5;
-		    	totalScore[5] = score6;
-		    	
+		   
 		    	callAjax();
-		    	console.log("전체 스코어: " + totalScore);
+		    
     			var target = $('.interest_text', window.parent.document);
- 				target.html('<p>자기이해 결과가 나왔습니다.<br>원하는 유형을 선택하여 직업정보를 살펴보세요.</p>');
-    			location.href="/interest_result";
+ 				setTimeout(function(){
+ 					target.html('<p>자기이해 결과가 나왔습니다.<br>원하는 유형을 선택하여 직업정보를 살펴보세요.</p>');
+    				location.href="/interest_result";	
+ 				}, 300);
     		}else{
     			indexUp(index+1); // 2번째문제부터 번호와 질문
     			index++;
@@ -132,11 +127,10 @@
     	function callAjax(){
 	    	$.ajax({
 	    		type: "POST",
-	    		url: "/interest_score",
-	    		data: totalScore,
-	    		dataType: 'text',
+	    		url: "interest_score",
+	    		data: {'score1': score1, 'score2': score2, 'score3': score3,
+	    				'score4': score4, 'score5': score5, 'score6': score6},
 		    	success: function(result){
-		    		
 		    	},
 		    	error: function(){
 		    		alert("전송 실패");

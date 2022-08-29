@@ -1,6 +1,7 @@
 package com.jobdongsan.project.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,13 +18,16 @@ public class QuestionService implements IQuestionService {
 	IQuestionDAO dao;
 
 	@Override
-	public String getQuestionCon(int questionNo) {
-		return dao.getQuestionCon(questionNo);
+	public HashMap<String, Object> getQuestionCon(int questionNo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public ArrayList<QuestionVO> getQuestionChar() {
-		return dao.getQuestionChar();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	
 }

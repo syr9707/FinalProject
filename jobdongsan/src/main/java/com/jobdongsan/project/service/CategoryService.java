@@ -1,5 +1,7 @@
 package com.jobdongsan.project.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -15,8 +17,8 @@ public class CategoryService implements ICategoryService {
 	ICategoryDAO dao;
 
 	@Override
-	public CategoryVO getCategoryInfo(int categoryNo) {
-		return dao.getCategoryInfo(categoryNo);
+	public ArrayList<CategoryVO> getCategoryInfo() {
+		return dao.getCategoryInfo();
 	}
 	
 }
