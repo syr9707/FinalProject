@@ -110,6 +110,8 @@
                         </div>
                         <div class="error red" id="email_error">이메일 주소를 다시 확인해주세요.</div>
                         <input type="button" name="email_auth" class="email_auth semibold" value="인증하기">
+                        <input type="text" name="email_auth_check" class="email_auth_check" disabled="true">
+                        <div class="email_auth_text">인증번호가 일치합니다.</div>
                     </div>
                     <div class="input_phone">
                         <p>전화번호</p>

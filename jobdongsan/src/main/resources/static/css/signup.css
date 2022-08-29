@@ -81,7 +81,20 @@ h3 {
     margin-top: 20px;
     border: none;
     color: #ffffff;
-    background-color: #bbbbbb;
+    background-color: #dddddd;
+}
+
+.email_auth_check {
+	display: none;
+	margin-top: 20px;
+	background-color: #dddddd;
+}
+
+.email_auth_text {
+	display: none;
+	margin-top: 10px;
+	text-align: left;
+	color: #02af4e;
 }
 
 .input_address div {
