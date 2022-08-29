@@ -12,14 +12,11 @@ public class MapVO {
 	private String mapJobImg2;
 	private String mapJobImg3;
 	private int categoryNo;
-	private int categoryNo2;
 	private String mapX;
 	private String mapY;
 
 	private String categoryName;
-	private String categoryName2;
 	private String categoryImg;
-	private String categoryImg2;
 
 	public String getMapX() {
 		return mapX;
@@ -35,22 +32,6 @@ public class MapVO {
 
 	public void setMapY(String mapY) {
 		this.mapY = mapY;
-	}
-
-	public String getCategoryName2() {
-		return categoryName2;
-	}
-
-	public void setCategoryName2(String categoryName2) {
-		this.categoryName2 = categoryName2;
-	}
-
-	public String getCategoryImg2() {
-		return categoryImg2;
-	}
-
-	public void setCategoryImg2(String categoryImg2) {
-		this.categoryImg2 = categoryImg2;
 	}
 
 	public String getCategoryName() {
@@ -155,14 +136,6 @@ public class MapVO {
 
 	public void setCategoryNo(int categoryNo) {
 		this.categoryNo = categoryNo;
-	}
-
-	public int getCategoryNo2() {
-		return categoryNo2;
-	}
-
-	public void setCategoryNo2(int categoryNo2) {
-		this.categoryNo2 = categoryNo2;
 	}
 
 }

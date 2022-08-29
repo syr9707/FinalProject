@@ -1,6 +1,7 @@
 package com.jobdongsan.project.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -26,6 +27,25 @@ public class MapService implements IMapService {
 	@Override
 	public MapVO detailMapView(int mapJobNo) {
 		return dao.detailMapView(mapJobNo);
+	}
+	
+	@Override
+	public void insertMap(HashMap<String, Object> param) {
+		dao.insertMap(param);
+	}
+	
+	@Override
+	public int checkMap(int mapJobNo, String memId) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("mapJobNo", mapJobNo);
+		map.put("memid", memId);
+		
+		return dao.checkMap(map);
+	}
+	
+	@Override
+	public void deleteMap(int mapJobNo) {
+		dao.deleteMap(mapJobNo);
 	}
 
 }

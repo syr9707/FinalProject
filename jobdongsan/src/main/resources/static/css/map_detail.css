@@ -130,13 +130,14 @@ b {
 	width: 1320px;
 	height: 200px;
 	margin-bottom: 90px;
-	padding: 0px 250px 0px 100px;
+	padding: 0px 300px 0px 100px;
 }
 
 #map_category_img {
 	/* border: 1px solid blue; */
 	/*  */
 	margin: 10px;
+	padding-left: 180px;
 }
 
 #map_category_img img {

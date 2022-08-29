@@ -17,7 +17,6 @@
 	  		<result property="mapJobImg2" column="mapJobImg2"/>
 	  		<result property="mapJobImg3" column="mapJobImg3"/>
 	  		<result property="categoryNo" column="categoryNo"/>
-	  		<result property="categoryNo2" column="categoryNo2"/>
 	  	</resultMap>
 	  	
 		<!-- 전체 리스트 출력 -->
@@ -28,11 +27,29 @@
 	  	<!-- 맵 상세 정보 출력 -->
 	  	<select id="detailMapView" parameterType="int" resultType="com.jobdongsan.project.model.MapVO">
 	  	SELECT m.mapJobNo, m.mapJobArea, m.mapJobLogo, m.mapJobAdd, m.mapJobName, m.mapJobPH, m.mapJobLink, m.mapJobImg1, m.mapJobImg2, m.mapJobImg3,
-	  		   m.categoryNo, m.categoryNo2, m.mapX, m.mapY, c.categoryName, c.categoryImg
+	  		   m.categoryNo, m.mapX, m.mapY, c.categoryName, c.categoryImg
   		FROM map_job m, category c
   		WHERE m.categoryNo = c.categoryNo AND m.mapJobNo=#{mapJobNo}
-  		
-  		<!-- AND m.categoryNo2 = c.categoryNo -->
 	  	</select>
+	  	
+		<!-- 관심 리스트에 추가 -->
+	  	<select id="insertMap" parameterType="hashmap">
+	  		INSERT INTO my_history (memId, mapJobNo)
+	  		VALUES(#{memId}, #{mapJobNo})
+	  	</select>
+	  	
+	  	<!-- 마이페이지에 동일 영상이 존재하는지 확인 -->
+	  	<select id="checkMap" parameterType="hashmap" resultType="int">
+	  		SELECT COUNT(*)
+	  		FROM my_history
+	  		WHERE mapJobNo=#{mapJobNo} AND memId=#{memId}
+	  	</select>
+	  	
+	  	<!-- 동일 영상이 존재했을 떄 삭제 -->
+	  	<delete id="deleteMap" parameterType="int">
+	  		DELETE
+	  		FROM my_history
+	  		WHERE mapJobNo=#{mapJobNo}
+	  	</delete>
 
 	</mapper>

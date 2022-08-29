@@ -12,5 +12,5 @@
             $(this).removeClass('animate__animated animate__headShake');
         }
     );
- 
+	
  });
