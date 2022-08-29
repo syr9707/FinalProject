@@ -38,7 +38,7 @@ public class MapService implements IMapService {
 	public int checkMap(int mapJobNo, String memId) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("mapJobNo", mapJobNo);
-		map.put("memid", memId);
+		map.put("memId", memId);
 		
 		return dao.checkMap(map);
 	}

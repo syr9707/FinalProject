@@ -12,6 +12,6 @@ public interface IMapService {
 	
 	public void insertMap(HashMap<String, Object> param);
 	int checkMap(int mapJobNo, String memId);
-	void deleteMap(int mapJobnNo);
+	void deleteMap(int mapJobNo);
 
 }

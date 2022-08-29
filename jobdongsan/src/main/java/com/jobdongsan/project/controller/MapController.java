@@ -51,8 +51,6 @@ public class MapController {
 		param.put("memId", memId);
 		
 		int count = mapService.checkMap(Integer.parseInt((String) param.get("mapJobNo")), memId);
-		System.out.println(count);
-		System.out.println(memId);
 		System.out.println(Integer.parseInt((String) param.get("mapJobNo")));
 		if (count == 0) {
 			mapService.insertMap(param);
