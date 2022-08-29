@@ -16,5 +16,7 @@ public interface IJobService {
 	int checkJob(int jobNo, String memId); // 동일 직업 존재 여부 체크
 	void deleteJob(int jobNo); // 담아 놓은 관심 직업 삭제
 	void updateJob(MyHistoryVO vo); // 찜직업 교체
+	
+	MyHistoryVO checkJobNo(String memId); // memId - jobNo가 둘 다 존재하는지 확인
 
 }

@@ -63,5 +63,12 @@
   		SET jobNo=#{jobNo}
   		WHERE myHistoryNo=#{myHistoryNo}
   	</update>
+  	
+  	<!-- memId에 따른 jobNo가 null 값인지 확인 -->
+  	<select id="checkJobNo" parameterType="string" resultType="com.jobdongsan.project.model.MyHistoryVO">
+  		SELECT *
+  		FROM my_history
+  		WHERE memId=#{memId}
+  	</select>
   
   </mapper>

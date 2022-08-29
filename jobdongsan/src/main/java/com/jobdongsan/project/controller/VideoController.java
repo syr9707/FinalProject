@@ -60,11 +60,12 @@ public class VideoController {
 	// 관심 영상(찜영상) 담기 
 	@ResponseBody
 	@RequestMapping("/insert_video")
-	public String insertVideo(@RequestParam HashMap<String, Object> param, MyHistoryVO vo, HttpSession session) {
+	public String insertVideo(@RequestParam HashMap<String, Object> param, HttpSession session) {
 		String result = null;
 		String memId = (String)session.getAttribute("sid");
-		vo.setMemId(memId);
-		int count = videoService.checkVideo(vo.getVideoNo(), memId);
+		//vo.setMemId(memId);
+		param.put("memId", memId);
+		int count = videoService.checkVideo(Integer.parseInt((String)param.get("videoNo")), memId);
 		if(count == 0) {
 			videoService.insertVideo(param);
 			result = "0";

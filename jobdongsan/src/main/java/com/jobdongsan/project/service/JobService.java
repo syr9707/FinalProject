@@ -56,4 +56,11 @@ public class JobService implements IJobService {
 		dao.updateJob(vo);
 	}
 
+	@Override
+	public MyHistoryVO checkJobNo(String memId) {
+		
+		return dao.checkJobNo(memId);
+	}
+
+	
 }

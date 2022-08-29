@@ -121,8 +121,7 @@
 		   			$.ajax({
 		   				type:"post",
 		   				url:"/insert_video",
-		   				data:{"videoNo":${videoNo}, 
-		   					  "memId":${sessionScope.sid}},
+		   				data:{"videoNo":${videoNo}},
 		   				success:function(result) {
 		   					if(result == "0") {
 		   						alert("관심 영상에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");

@@ -53,14 +53,72 @@ public class JobController {
 		return "job/job_search_result";
 	}
 	
-	// 마이페이지에 찜직업(관심직업) 추가 
+	// 관심 직업(찜직업) 담기
+	@ResponseBody
+	@RequestMapping("/insert_job")
+	public String insertJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
+		String result = null;
+		String memId = (String)session.getAttribute("sid");
+		int jobNo = Integer.parseInt((String)param.get("jobNo"));
+		
+		//vo.setMemId(memId);
+		param.put("memId", memId);
+		
+		MyHistoryVO vo = jobService.checkJobNo(memId);
+		System.out.println(vo.getJobNo());
+		
+		
+		/*
+		 * int db_jobNo = vo.getJobNo();
+		 * 
+		 * //int db_historyNo = vo.getMyHistoryNo(); if(db_jobNo == 0) {
+		 * jobService.insertJob(param); result = "0"; } else if(db_jobNo == jobNo){
+		 * result = "1"; } else { //vo.setJobNo(jobNo); //jobService.updateJob(vo);
+		 * result = "2"; }
+		 */
+		
+		return result;
+	}
+	
+	// 관심 직업(찜직업) 삭제
+	@ResponseBody
+	@RequestMapping("/delete_job")
+	public String deleteJob(@RequestParam HashMap<String, Object> param) {
+		
+		int jobNo = Integer.parseInt((String)param.get("jobNo"));
+		jobService.deleteJob(jobNo);
+		
+		return "1";
+	}
+	
+	// 관심 직업(찜직업) 존재 여부 확인
+	@ResponseBody
+	@RequestMapping("/update_job")
+	public String updateJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
+		String memId = (String)session.getAttribute("sid");
+		int jobNo = Integer.parseInt((String)param.get("jobNo"));
+		MyHistoryVO vo = jobService.checkJobNo(memId);
+		
+		vo.setJobNo(jobNo);
+		jobService.updateJob(vo);
+		
+		return "2";
+	}
+	
+	
+	// 관심 직업(찜직업) 존재 여부 확인
 	/*
 	 * @ResponseBody
 	 * 
-	 * @RequestMapping("/job_insert") public String jobInsert(MyHistoryVO vo) {
+	 * @RequestMapping("/check_jobNo") public String checkJobNo(@RequestParam
+	 * HashMap<String, Object> param, MyHistoryVO vo, HttpSession session) {
 	 * 
-	 * // 동일 직업이 존재하는지 }
+	 * String memId = (String)session.getAttribute("sid"); vo.setMemId(memId);
+	 * //String checkjobNo = jobService.checkJobNo(0, memId)
+	 * 
+	 * return "ok"; }
 	 */
+	
 
 }
 

@@ -195,13 +195,48 @@
 		   	else {
 		   		if(confirm("나의 관심 직업으로 선택하시겠습니까?")) {
 		   			
-		   			
-		   			
-		   			
-		   			
-		   			
-		   			
-		   			alert("관심 직업에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");
+		   			$.ajax({
+		   				type:"post",
+		   				url:"/insert_job",
+		   				data:{"jobNo":${jobNo}},
+		   				success:function(result) {
+		   					if(result == "0") {
+		   						alert("관심 직업에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");
+		   						
+		   					}
+		   					else if(result == "1") {
+		   						
+		   						if(confirm("나의 관심 직업에 존재합니다. 삭제하시겠습니까?")) {
+		   							$.ajax({
+			   							type:"post",
+			   			   				url:"/delete_job",
+			   			   				data:{"jobNo":${jobNo}},
+			   			   				success:function(result) {
+			   			   					alert("나의 관심 직업에서 삭제되었습니다.");
+			   			   				}
+			   						});
+		   						}
+		   					}
+		   					else {
+		   						if(confirm("나의 관심 직업이 존재합니다. 변경하시겠습니까?")) {
+		   							$.ajax({
+			   							type:"post",
+			   			   				url:"/update_job",
+			   			   				data:{"jobNo":${jobNo}},
+			   			   				success:function(result) {
+			   			   					alert("나의 관심 직업이 변경되었습니다.");
+			   			   				}
+			   						});
+		   							
+		   						}
+		   					
+		   					}
+		   					
+		   				},
+		   				error:function() {
+		   					alert("전송 실패");
+		   				}
+		   			});
 		   		}
 		   	}
 		   	
