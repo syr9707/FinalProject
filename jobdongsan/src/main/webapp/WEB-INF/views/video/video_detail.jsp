@@ -105,6 +105,55 @@
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
+	
+	<script>
+	$(document).ready(function(){
+		
+		$('.video_star').click(function() {
+			if(${empty sessionScope.sid}){
+	    	   if(confirm("로그인이 필요한 서비스 입니다.\n로그인 하시겠습니까?")) {
+		   			location.href="<c:url value='/login'/>";
+		   		}
+		   	}
+			else {
+		   		if(confirm("나의 관심 영상으로 선택하시겠습니까?")) {
+		   			
+		   			$.ajax({
+		   				type:"post",
+		   				url:"/insert_video",
+		   				data:{"videoNo":${videoNo}, 
+		   					  "memId":${sessionScope.sid}},
+		   				success:function(result) {
+		   					if(result == "0") {
+		   						alert("관심 영상에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");
+		   						
+		   					}
+		   					else if(result == "1") {
+		   						
+		   						if(confirm("나의 관심 영상에 존재합니다. 삭제하시겠습니까?")) {
+		   							$.ajax({
+			   							type:"post",
+			   			   				url:"/delete_video",
+			   			   				data:{"videoNo":${videoNo}},
+			   			   				success:function(result) {
+			   			   					alert("나의 관심 영상에서 삭제되었습니다.");
+			   			   				}
+			   						});
+		   						}
+		   					}
+		   					
+		   				},
+		   				error:function() {
+		   					alert("전송 실패");
+		   				}
+		   			});
+		   		}
+		   	}
+		});
+		
+	});
+	</script>
+	
 </html>
 
 

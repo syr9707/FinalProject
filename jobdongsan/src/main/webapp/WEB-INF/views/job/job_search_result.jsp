@@ -15,6 +15,10 @@
 		<div id="jobtesttt">
 			<c:choose>
 				<c:when test="${empty jobList }">
+					<br><br>
+					<% for(int i = 0; i < 26; i++) { %>
+					&nbsp;
+					<% } %>
 					검색 결과가 없습니다.
 				</c:when>				
 				<c:otherwise>

@@ -11,8 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jobdongsan.project.model.JobVO;
+import com.jobdongsan.project.model.MyHistoryVO;
 import com.jobdongsan.project.service.JobService;
 
 @Controller
@@ -52,7 +54,13 @@ public class JobController {
 	}
 	
 	// 마이페이지에 찜직업(관심직업) 추가 
-	
+	/*
+	 * @ResponseBody
+	 * 
+	 * @RequestMapping("/job_insert") public String jobInsert(MyHistoryVO vo) {
+	 * 
+	 * // 동일 직업이 존재하는지 }
+	 */
 
 }
 

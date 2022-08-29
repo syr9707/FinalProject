@@ -12,8 +12,9 @@ public interface IJobDAO {
 	public JobVO detailViewJob(int jobNo); // 직업 상세 정보 조회
 	public ArrayList<JobVO> jobSearch(HashMap<String, Object> map); // 직업 검색
 	
-	void jobInsert(MyHistoryVO vo); // 마이페이지에 직업 찜하기 추가
-	int jobCheck(HashMap<String, Object> map); // 동일 직업 존재 여부 확인
-	void jobDelete(int jobNo); // 마이페이지에 삭제 후... 
+	public void insertJob (HashMap<String, Object> param); // 관심 직업 담기
+	int checkJob(HashMap<String, Object> map); // 동일 직업 존재 여부 체크
+	void deleteJob (int jobNo); // 담아 놓은 관심 직업 삭제
+	void updateJob(MyHistoryVO vo); // 찜직업 교체
 
 }

@@ -37,5 +37,25 @@
   	<select id="listSubjectNoVideo" parameterType="int" resultMap="videoResult" >
   		SELECT * FROM video WHERE videoCtgNo=#{videoCtgNo}
   	</select>
+  	
+  	<!-- 관심 영상(찜영상) 리스트에 추가 -->
+  	<select id="insertVideo" parameterType="hashmap">
+  		INSERT INTO my_history (memId, videoNo) 
+  		VALUES(#{memId}, #{videoNo})
+  	</select>
+  	
+  	<!-- 마이페이지에 동일 영상이 존재하는지 확인 -->
+  	<select id="checkVideo" parameterType="hashmap" resultType="int">
+  		SELECT COUNT(*)
+  		FROM my_history 
+  		WHERE videoNo=#{videoNo} AND memId=#{memId} 
+  	</select>
+  	
+  	<!-- 동일 영상이 존재했을 떄 삭제 -->
+  	<delete id="deleteVideo" parameterType="int">
+  		DELETE
+  		FROM my_history 
+  		WHERE videoNo=#{videoNo} 
+  	</delete>
   
   </mapper>

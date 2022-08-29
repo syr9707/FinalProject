@@ -32,7 +32,7 @@
 				<div class="job_search">
 					<form id="jobSearchForm">
 					<div class="job_searchbox">
-						<input type="text" class="job_searchtext" id="job_searchtext" name="keyword" placeholder="        검색어를 입력해주세요.">
+						<input type="text" class="job_searchtext" id="job_searchtext" name="keyword" placeholder="        검색어를 입력해주세요." >
 					</div>
 					<div class="job_searchbtn">
 						<div class="job_searchimg">

@@ -27,31 +27,33 @@ public class JobService implements IJobService {
 		return dao.listAllJob();
 	}
 
-	
-
 	@Override
-	public void jobInsert(MyHistoryVO vo) {
-		dao.jobInsert(vo);
-	}
-
-	@Override
-	public int jobCheck(String jobNo, String memId) {
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("jobNo", jobNo);
-		map.put("memId", memId);
-		
-		return dao.jobCheck(map);
-	}
-
-	@Override
-	public void jobDelete(int jobNo) {
-		dao.jobDelete(jobNo);
+	public void deleteJob(int jobNo) {
+		dao.deleteJob(jobNo);
 	}
 
 	@Override
 	public ArrayList<JobVO> jobSearch(HashMap<String, Object> map) {
-		
 		return dao.jobSearch(map);
+	}
+
+	@Override
+	public void insertJob(HashMap<String, Object> param) {
+		dao.insertJob(param);
+	}
+
+	@Override
+	public int checkJob(int jobNo, String memId) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("jobNo", jobNo);
+		map.put("memId", memId);
+		
+		return dao.checkJob(map);
+	}
+
+	@Override
+	public void updateJob(MyHistoryVO vo) {
+		dao.updateJob(vo);
 	}
 
 }

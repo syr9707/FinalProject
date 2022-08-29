@@ -38,23 +38,30 @@
   	</select>
   	
   	<!-- 마이페이지에 동일 찜직업이 존재하는지 확인 -->
-  	<select id="jobCheck" parameterType="hashmap" resultType="int">
+  	<select id="checkJob" parameterType="hashmap" resultType="int">
   		SELECT COUNT(*)
   		FROM my_history
   		WHERE jobNo=#{jobNo} AND memId=#{memId}
   	</select>
   	
   	<!-- 찜직업 추가  -->
-  	<insert id="jobInsert" parameterType="com.jobdongsan.project.model.MyHistoryVO">
+  	<select id="insertJob" parameterType="hashmap">
   		INSERT INTO my_history (memId, jobNo)
   		VALUES(#{memId}, #{jobNo})
-  	</insert>
+  	</select>
   	
   	<!-- 찜직업 삭제 -->
-  	<delete id="jobDelete" parameterType="int">
+  	<delete id="deleteJob" parameterType="int">
   		DELETE
   		FROM my_history
   		WHERE jobNo=#{jobNo}
   	</delete>
+  	
+  	<!-- 기존 직업 삭제 후 새로 추가 (교체) -->
+  	<update id="updateJob" parameterType="com.jobdongsan.project.model.MyHistoryVO">
+  		UPDATE my_history
+  		SET jobNo=#{jobNo}
+  		WHERE myHistoryNo=#{myHistoryNo}
+  	</update>
   
   </mapper>
