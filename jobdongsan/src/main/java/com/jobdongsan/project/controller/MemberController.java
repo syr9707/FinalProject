@@ -12,12 +12,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.service.MailService;
 import com.jobdongsan.project.service.MemberService;
 
 @Controller
 public class MemberController {
 	@Autowired
 	MemberService memService;
+	@Autowired
+	MailService mailService;
 	
 	// 인덱스 페이지 호출
 	@RequestMapping("/")
@@ -87,6 +90,15 @@ public class MemberController {
 	@RequestMapping("/signup")
 	public String signup() {
 		return "member/signup";
+	}
+	
+	//이메일 인증
+	@ResponseBody
+	@RequestMapping("/mailCheck")
+	public String mailCheck(String email) {
+		System.out.println("이메일 인증 요청이 들어옴!");
+		System.out.println("이메일 인증 이메일 : " + email);
+		return mailService.joinEmail(email);
 	}
 	
 	// 회원 가입 기능 후 가입 완료 페이지로 이동

@@ -84,21 +84,48 @@ $(document).ready(function(){
     });
 
     // ********************이메일 인증 추가 필요
-    $('.email_auth').click(function() {
-		const check_email = $('.email1').val() + $('.email2').val(); // 이메일 주소값 얻어오기!
-		console.log('완성된 이메일 : ' + check_email); // 이메일 오는지 확인
-		const authInput = $('.email_auth_input') // 인증번호 입력하는곳 
+	$('.email_auth').click(function() {
+		const check_email = $('.email1').val() + "@" + $('.email2').val(); // 이메일 주소값 얻어오기!
+		console.log('완성된 이메일 : ' + check_email); // 이메일 오는지 확인 
 		
 		$.ajax({
 			type : 'get',
-			url : '<c:url value ="/user/mailCheck?email="/>'+check_email, // GET방식이라 Url 뒤에 email을 뭍힐수있다.
+			url : '/mailCheck', // GET방식이라 Url 뒤에 email을 뭍힐수있다.
+			data : {"email": check_email},
+			dataType: "text",
 			success : function (data) {
 				console.log("data : " +  data);
-				authInput.attr('disabled', false);
+				$('.email_auth_check').attr('disabled',false);
+				$('.email_auth_check').css('background-color', '#ffffff');
+				$('.email_auth_check').show();
+				$('.email_auth_check').focus();
 				code = data;
 				alert('인증번호가 전송되었습니다.')
+				
 			}			
-		});
+		}); // end ajax
+	}); // end send eamil
+	
+	// 인증번호 비교 
+	// blur -> focus가 벗어나는 경우 발생
+	$('.email_auth_check').blur(function () {
+		const inputCode = $(this).val();
+		const $resultMsg = $('.email_auth_text');
+		
+		if(inputCode === code){
+			$resultMsg.html('인증번호가 일치합니다.');
+			$resultMsg.show();
+			$resultMsg.css('color','green');
+			$('.email_auth_btn').attr('disabled',true);
+			$('.email1').attr('readonly',true);
+			$('.email2').attr('readonly',true);
+			$('.email2').attr('onFocus', 'this.initialSelect = this.selectedIndex');
+	        $('.email2').attr('onChange', 'this.selectedIndex = this.initialSelect');
+		}else{
+			$resultMsg.html('인증번호가 불일치 합니다. 다시 확인해주세요!.');
+			$resultMsg.show();
+			$resultMsg.css('color','red');
+		}
 	});
 
     // 유효성 검사
@@ -291,6 +318,12 @@ $(document).ready(function(){
             $('.email_code').css('color', 'black');
         }
     });
+    
+    // 이메일 인증 체크
+    if($('.email_auth_text').html() != "인증번호가 일치합니다.") {
+    	$('.email_auth_check').focus();
+    	return false;
+    };
 
     // 전화번호 체크
     $('.phone').blur(function(){
