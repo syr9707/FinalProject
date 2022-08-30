@@ -218,13 +218,18 @@
 		   						}
 		   					}
 		   					else {
-		   						if(confirm("나의 관심 직업이 존재합니다. 변경하시겠습니까?")) {
+		   						if(confirm("나의 관심 직업이 존재합니다. 삭제 또는 변경하시겠습니까?")) {
 		   							$.ajax({
 			   							type:"post",
 			   			   				url:"/update_job",
 			   			   				data:{"jobNo":${jobNo}},
 			   			   				success:function(result) {
-			   			   					alert("나의 관심 직업이 변경되었습니다.");
+			   			   					if(result == "1"){
+			   			   					alert("나의 관심 직업에서 삭제되었습니다.");
+			   			   					}else{
+			   			   					 alert("나의 관심 직업이 변경되었습니다.");
+			   			   					}
+			   			   					
 			   			   				}
 			   						});
 		   							

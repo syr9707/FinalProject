@@ -28,8 +28,8 @@ public class JobService implements IJobService {
 	}
 
 	@Override
-	public void deleteJob(int jobNo) {
-		dao.deleteJob(jobNo);
+	public void deleteJob(String memId) {
+		dao.deleteJob(memId);
 	}
 
 	@Override
@@ -52,12 +52,12 @@ public class JobService implements IJobService {
 	}
 
 	@Override
-	public void updateJob(MyHistoryVO vo) {
-		dao.updateJob(vo);
+	public void updateJob(HashMap<String, Object> map) {
+		dao.updateJob(map);
 	}
 
 	@Override
-	public MyHistoryVO checkJobNo(String memId) {
+	public HashMap<String, Object> checkJobNo(String memId) {
 		
 		return dao.checkJobNo(memId);
 	}

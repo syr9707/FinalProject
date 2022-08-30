@@ -64,18 +64,27 @@ public class JobController {
 		//vo.setMemId(memId);
 		param.put("memId", memId);
 		
-		MyHistoryVO vo = jobService.checkJobNo(memId);
-		System.out.println(vo.getJobNo());
+		HashMap<String, Object> map = jobService.checkJobNo(memId);
 		
 		
-		/*
-		 * int db_jobNo = vo.getJobNo();
-		 * 
-		 * //int db_historyNo = vo.getMyHistoryNo(); if(db_jobNo == 0) {
-		 * jobService.insertJob(param); result = "0"; } else if(db_jobNo == jobNo){
-		 * result = "1"; } else { //vo.setJobNo(jobNo); //jobService.updateJob(vo);
-		 * result = "2"; }
-		 */
+		//String jobNo2 = (String)map.get("jobNo");
+		//System.out.println(map.get("jobNo").getClass().getName());
+		//int db_jobNo = vo.getJobNo();
+
+		// int db_historyNo = vo.getMyHistoryNo();
+		
+		
+		if (map == null) {
+			jobService.insertJob(param);
+			result = "0";
+		} /*
+			 * else if (jobNo2 == jobNo) { result = "1"; }
+			 */
+
+		else {
+			result = "2";
+		}
+		 
 		
 		return result;
 	}
@@ -83,10 +92,10 @@ public class JobController {
 	// 관심 직업(찜직업) 삭제
 	@ResponseBody
 	@RequestMapping("/delete_job")
-	public String deleteJob(@RequestParam HashMap<String, Object> param) {
-		
-		int jobNo = Integer.parseInt((String)param.get("jobNo"));
-		jobService.deleteJob(jobNo);
+	public String deleteJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
+		String memId = (String)session.getAttribute("sid");
+		//int jobNo = Integer.parseInt((String)param.get("jobNo"));
+		//jobService.deleteJob(memId);
 		
 		return "1";
 	}
@@ -97,12 +106,27 @@ public class JobController {
 	public String updateJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
 		String memId = (String)session.getAttribute("sid");
 		int jobNo = Integer.parseInt((String)param.get("jobNo"));
-		MyHistoryVO vo = jobService.checkJobNo(memId);
+		HashMap<String, Object> map = jobService.checkJobNo(memId);
+		String result = null;
 		
-		vo.setJobNo(jobNo);
-		jobService.updateJob(vo);
+		int jobNo2 = (int)map.get("jobNo");
+		//String jobNo3 = null;
 		
-		return "2";
+		if(jobNo2 == jobNo) {
+			/*
+			 * map.put("jobNo", jobNo3); map.put("memId", memId); jobService.updateJob(map);
+			 */
+			jobService.deleteJob(memId);
+			
+			result = "1";
+		}else {
+			 map.put("jobNo", jobNo); 
+			  map.put("memId", memId);
+			  jobService.updateJob(map);
+			  result = "2";
+		}
+		
+		return result;
 	}
 	
 	
