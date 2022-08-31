@@ -58,8 +58,12 @@ public class JobService implements IJobService {
 
 	@Override
 	public HashMap<String, Object> checkJobNo(String memId) {
-		
 		return dao.checkJobNo(memId);
+	}
+
+	@Override
+	public ArrayList<JobVO> listCategoryJob(int categoryNo) {
+		return dao.listCategoryJob(categoryNo);
 	}
 
 	

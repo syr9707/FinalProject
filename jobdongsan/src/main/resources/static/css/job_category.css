@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	
+}
+
+.section {
+	font-family: 'CookieRun';
+}
+
+#wrap {
+	position:relative;
+	/* margin-left: 300px; */
+    width:1320px;
+    /* border: blue 1px solid; */
+    /* display:flex;
+    flex-direction: column; */
+    /* font-family: 'CookieRun'; */
+    margin-top:-500px;
+}
+
+
+/* div 가이드 라인 */
+#wrap div {
+   /* border: red 1px solid; */
+}
+
+/* .job_background {
+	width:1903px;
+}
+
+.job_background img {
+	width:1903px;
+} */
+
+.job_background {
+	width: 100%;
+	height: 500px;
+	background-image: url("../images/background.png");
+}
+
+
+/* 다양한 직업 냠냠 */
+.job_head {
+	width: 400px;
+	height: 110px;
+	margin-top:90px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_headname {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 54px;
+}
+
+.job_doughnut {
+	width: 105px;
+	height: 110px;
+}
+
+.job_doughnut img {
+	width: 80px;
+}
+
+
+
+
+/* 카테고리 이름 */
+.job_ctg_head {
+	display:flex;
+    flex-direction: row;
+    width:405px;
+    margin-top:110px;
+}
+
+.job_ctg_title {
+	width:255px;
+	height: 60px;
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: 45px;
+}
+
+.job_ctg_img {
+	width:150px;
+	height:150px;
+}
+
+.job_ctg_img img {
+	width:150px;
+	height:150px;
+}
+
+.job_ctg_title b {
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.a {
+	color:#FF8E8E;
+}
+
+.b {
+	color:#89F578;
+}
+
+.c {
+	color:#FBE28A;
+}
+
+.d {
+	color:#33A4E3;
+}
+
+.e {
+	color:#F072F2;
+}
+
+.f {
+	color:#33E3CE;
+}
+
+
+
+
+/* 가이드 멘트 도넛 */
+.job_pink {
+	width:1320px;
+	height:70px;
+	margin-top:65px;
+	display:flex;
+    flex-direction: row;
+}
+
+.job_pinktitle {
+	width: 500px;
+	height: 70px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 30px;
+	text-align:center;
+	margin-left:410px;
+}
+
+.job_pinktitle b {
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 30px;
+	
+	color: #17CBC0;
+}
+
+.job_pinkdonut {
+	position:relative;
+	width: 295px;
+	height: 295px;
+	margin-left:115px;
+	margin-top:75px;
+	bottom:229px;
+	left:25px;
+}
+
+
+
+
+/* 유형별 직업 */
+.job_category_main {
+	width:1320px;
+	display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+	margin-top:75px;
+	border-top: rgba(23, 203, 192, 0.28) 3px solid;
+}
+
+
+.job_cont1 {
+	display:flex;
+    flex-direction: column;
+	width:300px;
+	height:300px;
+	background: #FFFFFF;
+	border: 1px solid #B7B7B7;
+	border-radius: 10px;
+	text-align:center;
+	margin-top:40px;
+	cursor:pointer;
+}
+
+.job_cont1:hover {
+	transform: scale(1.05);
+}
+
+.job_cont2 {
+	display:flex;
+    flex-direction: column;
+	width:300px;
+	height:300px;
+	background: #FFFFFF;
+	border: 0;
+	border-radius: 10px;
+	text-align:center;
+	margin-top:40px;
+}
+
+.job_detail_img {
+	width: 170px;
+	height: 170px;
+	margin-top:8px;
+}
+
+.job_detail_img img {
+	width: 170px;
+	height: 170px;
+}
+
+.job_detail_title {
+	width: 280px;
+	height: 40px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 26px;
+	margin-top:12px;
+}
+
+.job_detail_info {
+	width: 280px;
+	height: 75px;
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 26px;
+	margin-top:1px;
+}
+
+
+
+
+/* 목록보기 버튼 */
+.joblist_button {
+	width:360px;
+	height:70px;
+	margin-top:95px;
+	margin-bottom:90px;
+}
+
+#joblistBtn {
+	width: 360px;
+	height: 70px;
+	background: rgba(23, 203, 192, 0.28);
+	border-radius: 50px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	
+	border: rgba(23, 203, 192, 0.28);
+	
+	cursor:pointer;
+}
+
+#joblistBtn:hover {
+	/* background-color:; */
+	border: 3px solid #17CBC0;
+}

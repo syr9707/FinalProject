@@ -70,5 +70,12 @@
   		FROM my_history2
   		WHERE memId=#{memId}
   	</select>
+  	
+  	<!-- 동일 유형 직업 리스트 조회 -->
+  	<select id="listCategoryJob" parameterType="int" resultType="com.jobdongsan.project.model.JobVO">
+  		SELECT j.jobNo, j.jobName, j.jobInfo, j.jobImg, j.jobWork, j.jobHow, j.jobNeeds, j.jobValues, j.jobCtg, c.categoryNo, c.categoryName, c.categoryImg
+  		FROM job j, category c
+  		WHERE j.categoryNo = c.categoryNo AND j.categoryNo=#{categoryNo}
+  	</select>
   
   </mapper>

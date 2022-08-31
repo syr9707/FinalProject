@@ -77,14 +77,10 @@ public class JobController {
 		if (map == null) {
 			jobService.insertJob(param);
 			result = "0";
-		} /*
-			 * else if (jobNo2 == jobNo) { result = "1"; }
-			 */
-
+		}
 		else {
 			result = "2";
 		}
-		 
 		
 		return result;
 	}
@@ -129,19 +125,14 @@ public class JobController {
 		return result;
 	}
 	
-	
-	// 관심 직업(찜직업) 존재 여부 확인
-	/*
-	 * @ResponseBody
-	 * 
-	 * @RequestMapping("/check_jobNo") public String checkJobNo(@RequestParam
-	 * HashMap<String, Object> param, MyHistoryVO vo, HttpSession session) {
-	 * 
-	 * String memId = (String)session.getAttribute("sid"); vo.setMemId(memId);
-	 * //String checkjobNo = jobService.checkJobNo(0, memId)
-	 * 
-	 * return "ok"; }
-	 */
+	// 6개 유형별 직업 보기 
+	@RequestMapping("/job_category/{categoryNo}")
+	public String categoryJob(@PathVariable int categoryNo, Model model) {
+		ArrayList<JobVO> jobList = jobService.listCategoryJob(categoryNo);
+		model.addAttribute("jobList", jobList);
+		
+		return "job/job_category";
+	}
 	
 
 }

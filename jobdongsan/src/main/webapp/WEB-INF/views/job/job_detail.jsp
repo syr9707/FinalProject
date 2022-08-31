@@ -111,7 +111,7 @@
 						</div>
 						<div class="interest_box">
 							<div class="interest_img">
-								<img src="<c:url value='${job.categoryImg }'/>">
+								<img src="<c:url value='${job.categoryImg }'/>" onclick="location.href='<c:url value='/job_category/${job.categoryNo }'/>'">
 							</div>
 							<div class="interest_info">
 								${job.categoryName }형<br>

@@ -369,6 +369,11 @@
 .interest_img img {
 	width: 150px;
 	height: 150px;
+	cursor:pointer;
+}
+
+.interest_img img:hover {
+	transform: scale(1.05);
 }
 
 .interest_info {
