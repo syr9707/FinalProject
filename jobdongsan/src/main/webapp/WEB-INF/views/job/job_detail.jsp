@@ -155,6 +155,12 @@
 							<img src="<c:url value='/images/job_donut.png'/>">
 						</div>
 						<div class="job_chat_detail">
+							<div class="job_chatbot_box"></div>
+							<div class="job_user_box">
+								<form id="job_chatForm" name="job_chatForm">
+									<input type="text" id="message" name="message" size="30"  placeholder="질문을 입력해보아요"/><input type="submit" id="chat_submit" value="전송">
+								</form>
+							</div>
 						</div>
 					</div>
 					<div class="job_chat_btn">
@@ -162,14 +168,18 @@
 							질문 시작
 						</div>
 						<div class="job_play">
-							<img src="<c:url value='/images/job_play.png'/>">
+							<img src="<c:url value='/images/job_play.png'/>" id="record">
 						</div>
 						<div class="job_stop_title">
 							질문 끝
 						</div>
 						<div class="job_stop">
-							<img src="<c:url value='/images/job_stop.png'/>">
+							<img src="<c:url value='/images/job_stop.png'/>" id="stop">
 						</div>
+					</div>
+					<div id="sound_clips"></div>
+					<div id="audio_box">
+						<audio id="audio" preload="auto" controls></audio>
 					</div>
 				</div>
 				<div class="joblist_button">
