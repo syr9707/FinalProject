@@ -90,7 +90,7 @@ section {
 }
 
 .char_job_box span {
-	color: #FB635F;
+	color: #FF8E8E;
 }
 
 .char_job {
@@ -102,6 +102,10 @@ section {
 
 .char_job:nth-child(2) {
 	margin: 10px 0 13px 0;
+}
+
+.job_count {
+	display: none;
 }
 
 .job_kind {
@@ -150,7 +154,7 @@ section {
 
 .next_btn span {
 	font-family: 'CookieRun';
-	color: #FB635F;
+	color: #FF8E8E;
 }
 
 

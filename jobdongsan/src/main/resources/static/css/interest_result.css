@@ -72,6 +72,8 @@ ul li .side_menu_name {
 }
 
 .contents_text {
+	width: 420px;
+	height: 260px;
 	margin-top: 50px;
 	margin-left: 100px;
 }
@@ -111,6 +113,7 @@ ul li .side_menu_name {
 	font-size: 17px;
 	line-height: 30px;
 	font-family: "NanumSquareRound",sans-serif;
+	z-index: 1;
 }
 
 .result_contents .contents_char img {
@@ -130,7 +133,7 @@ ul li .side_menu_name {
 	position: relative;
 	width: 575px;
 	height: 300px;
-	bottom: 90px;
+	bottom: 80px;
 }
 
 .char_graph {
@@ -154,7 +157,7 @@ ul li .side_menu_name {
 }
 
 .dde_graph {
-	background-color: #FB635F;
+	background-color: #FF8E8E;
 }
 
 .the_graph {
@@ -162,7 +165,7 @@ ul li .side_menu_name {
 }
 
 .mje_graph {
-	background-color: #E39233;
+	background-color: #FBE28A;
 }
 
 .cje_graph {
@@ -187,7 +190,7 @@ ul li .side_menu_name {
 .next_btn {
 	width: 200px;
 	height: 160px;
-	margin-top: 58px;
+	margin-top: 78px;
 	margin-left: 10px;
 	cursor: pointer;
 }

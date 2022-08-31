@@ -108,8 +108,16 @@ public class InterestController {
 	public String interest_result2(Model model) {
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<JobVO> CtgJobList = resultService.ctgJob();
+		HashMap<String, Integer> scoreList = resultService.getScore();
+		
+		Map.Entry<String, Integer> maxScore =
+                Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
+		String maxScoreKey = maxScore.getKey();
+		String maxScoreKeyNum = maxScoreKey.substring(5,6);
+		
 		model.addAttribute("ctgList", ctgList);
 		model.addAttribute("CtgJobList", CtgJobList);
+		model.addAttribute("maxScoreKeyNum", maxScoreKeyNum);
 		return "interest/interest_result2";
 	}
 	
@@ -118,8 +126,16 @@ public class InterestController {
 	public String interest_result3(Model model) {
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<MapVO> CtgMapList = resultService.ctgMap();
+		HashMap<String, Integer> scoreList = resultService.getScore();
+		
+		Map.Entry<String, Integer> maxScore =
+                Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
+		String maxScoreKey = maxScore.getKey();
+		String maxScoreKeyNum = maxScoreKey.substring(5,6);
+		
 		model.addAttribute("ctgList", ctgList);
 		model.addAttribute("CtgMapList", CtgMapList);
+		model.addAttribute("maxScoreKeyNum", maxScoreKeyNum);
 		return "interest/interest_result3";
 	}
 	

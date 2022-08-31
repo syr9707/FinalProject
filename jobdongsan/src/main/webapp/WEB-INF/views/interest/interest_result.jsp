@@ -14,16 +14,28 @@
 				var score = "${maxScoreKeyNum}";
 				if(score == '1'){
 			 		$('.char_graph:nth-child(1) img').show();
+			 		$('.char_name span').css("color", "#FF8E8E");
+			 		$('.next_btn span').css("color", "#FF8E8E");
 			 	}else if(score == '2'){
 			 		$('.char_graph:nth-child(2) img').show();
+			 		$('.char_name span').css("color", "#89F578");
+			 		$('.next_btn span').css({"color": "#89F578", "text-shadow": "1px 1px 3px black"});
 			 	}else if(score == '3'){
 			 		$('.char_graph:nth-child(3) img').show();
+			 		$('.char_name span').css("color", "#FBE28A");
+			 		$('.next_btn span').css({"color": "#FBE28A", "text-shadow": "1px 1px 2px black"});
 			 	}else if(score == '4'){
 			 		$('.char_graph:nth-child(4) img').show();
+			 		$('.char_name span').css("color", "#33A4E3");
+			 		$('.next_btn span').css("color", "#33A4E3");
 			 	}else if(score == '5'){
 			 		$('.char_graph:nth-child(5) img').show();
+			 		$('.char_name span').css("color", "#F072F2");
+			 		$('.next_btn span').css("color", "#F072F2");
 			 	}else if(score == '6'){
 			 		$('.char_graph:nth-child(6) img').show();
+			 		$('.char_name span').css("color", "#33E3CE");
+			 		$('.next_btn span').css("color", "#33E3CE");
 			 	}
 				
 				$(".dde_graph").animate({height: ${scoreList['score1']} * 25 +"px"}, 1000);
