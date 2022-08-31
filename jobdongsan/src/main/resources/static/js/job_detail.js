@@ -13,8 +13,17 @@
         }
     );
     
-    // 시작하자마자 웰컴 메시지 요청
-	callAjax();
+    $(window).scroll(function() {
+		var hT = $('.job_chatbot').offset().top,
+       		hH = $('.job_chatbot').outerHeight(),
+       		wH = $(window).height(),
+       		wS = $(this).scrollTop();
+   		if (wS > (hT+hH-wH-300)){
+	  		// 시작하자마자 웰컴 메시지 요청
+       		callAjax();
+       		$(window).off('scroll');
+   		}
+	});
 	
 	// 음성으로 질문하기
 	const record = document.getElementById("record");
@@ -167,7 +176,6 @@
 				// callAjaxTTS() 함수는 TTS 요청해서 음성파일 받고, audio play, audio 안보이게
 				
 				$('#message').val("");
-				$('#message').focus();
 			},
 			error:function(){
 				// 오류있을 경우 수행 되는 함수
