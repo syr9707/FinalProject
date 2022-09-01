@@ -3,7 +3,6 @@ package com.jobdongsan.project.model;
 public class MyHistoryVO {
 	private int myHistoryNo;
 	private int resultNo;
-	private int jobNo;
 	private int videoNo;
 	private int mapJobNo;
 	private String memId;
@@ -20,12 +19,6 @@ public class MyHistoryVO {
 	}
 	public void setResultNo(int resultNo) {
 		this.resultNo = resultNo;
-	}
-	public int getJobNo() {
-		return jobNo;
-	}
-	public void setJobNo(int jobNo) {
-		this.jobNo = jobNo;
 	}
 	public int getVideoNo() {
 		return videoNo;

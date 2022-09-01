@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.jobdongsan.project.model.MemberVO;
 import com.jobdongsan.project.service.MailService;
 import com.jobdongsan.project.service.MemberService;
+import com.jobdongsan.project.service.MyHistoryService;
 
 @Controller
 public class MemberController {
@@ -21,6 +22,8 @@ public class MemberController {
 	MemberService memService;
 	@Autowired
 	MailService mailService;
+	@Autowired
+	MyHistoryService myService;
 	
 	// 인덱스 페이지 호출
 	@RequestMapping("/")
@@ -128,7 +131,15 @@ public class MemberController {
 	public String mypage_index(HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
 		MemberVO mem = memService.getMemberInfo(memId);
-
+		
+		Integer check = myService.checkResultNo(memId);
+		
+		if(check == null) {
+			// insert 작업
+		} else {
+			// update 작업
+		}
+		
 		model.addAttribute("mem", mem);
 		
 		return "member/mypage_index";

@@ -33,10 +33,10 @@
                         </select> 
                     </div>
                     <div class="error red" id="email_error">이메일 주소를 다시 확인해주세요.</div>
-	                    <input type="button" name="email_code" class="email_code semibold" value="이메일로 코드 발송하기">
-	                    <div class="input_code">
+                    <input type="button" name="email_code" class="email_code semibold" value="이메일로 코드 발송하기">
+                    <div class="input_code">
 	                    <p>코드 입력</p>
-	                    <input type="text" name="code" class="code">
+                    	<input type="text" name="code" class="code">
                		</div>
                		<input type="button" name="code_check" class="code_check semibold" value="확인">
 				</div><!-- wrap 끝 -->

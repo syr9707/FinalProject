@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.jobdongsan.project.dao.IMyHistoryDAO">
+	<!-- Result 체크 -->
+	<select id="checkResultNo" parameterType="String" resultType="int">
+		SELECT resultNo FROM my_history WHERE (NOT resultNo is NULL AND memId = #{memId })
+	</select>
+</mapper>
