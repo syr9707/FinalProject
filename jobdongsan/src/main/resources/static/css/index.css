@@ -173,6 +173,7 @@ section div {
     padding: 30px 25px;
     border-radius: 10px;
     background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px black;
     cursor: pointer;
 }
 
@@ -181,12 +182,13 @@ section div {
 }
 
 .today_job_info {
+	display: flex;
+	align-items: center;
     width: 220px;
     height: 200px;
     margin: 20px;
     padding: 10px;
-    background-color: #FFFACD;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .today_map {
@@ -212,6 +214,7 @@ section div {
     padding: 30px 25px;
     border-radius: 10px;
     background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px black;
     cursor: pointer;
 }
 
@@ -220,12 +223,13 @@ section div {
 }
 
 .today_map_info {
+	display: flex;
+	align-items: center;
     width: 220px;
     height: 200px;
     margin: 20px;
     padding: 10px;
-    background-color: #FFFACD;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .today_video {
@@ -287,6 +291,7 @@ section div {
     width:560px;
     height:310px;
     border-radius: 40px;
+    box-shadow: 1px 1px 5px black;
 }
 
 #main_video1:hover {
@@ -300,6 +305,7 @@ section div {
     width:560px;
     height:310px;
     border-radius: 40px;
+    box-shadow: 1px 1px 5px black;
 }
 
 #main_video2:hover {
