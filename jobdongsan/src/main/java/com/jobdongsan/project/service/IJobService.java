@@ -18,6 +18,7 @@ public interface IJobService {
 	//void updateJob(MyHistoryVO vo); // 찜직업 교체
 	void updateJob(HashMap<String, Object> map);
 	//MyHistoryVO checkJobNo(String memId); // memId - jobNo가 둘 다 존재하는지 확인
+	
 	HashMap<String, Object> checkJobNo(String memId);
 	
 	public ArrayList<JobVO> listCategoryJob(int categoryNo); // 동일 유형 직업 리스트 조회

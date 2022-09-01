@@ -59,22 +59,10 @@ public class JobController {
 	public String insertJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
 		String result = null;
 		String memId = (String)session.getAttribute("sid");
-		int jobNo = Integer.parseInt((String)param.get("jobNo"));
-		
-		//vo.setMemId(memId);
-		param.put("memId", memId);
-		
 		HashMap<String, Object> map = jobService.checkJobNo(memId);
 		
-		
-		//String jobNo2 = (String)map.get("jobNo");
-		//System.out.println(map.get("jobNo").getClass().getName());
-		//int db_jobNo = vo.getJobNo();
-
-		// int db_historyNo = vo.getMyHistoryNo();
-		
-		
 		if (map == null) {
+			param.put("memId", memId);
 			jobService.insertJob(param);
 			result = "0";
 		}
@@ -85,7 +73,7 @@ public class JobController {
 		return result;
 	}
 	
-	// 관심 직업(찜직업) 삭제
+	// 관심 직업(찜직업) 삭제 (보류)
 	@ResponseBody
 	@RequestMapping("/delete_job")
 	public String deleteJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
@@ -104,22 +92,19 @@ public class JobController {
 		int jobNo = Integer.parseInt((String)param.get("jobNo"));
 		HashMap<String, Object> map = jobService.checkJobNo(memId);
 		String result = null;
-		
 		int jobNo2 = (int)map.get("jobNo");
-		//String jobNo3 = null;
+		
 		
 		if(jobNo2 == jobNo) {
-			/*
-			 * map.put("jobNo", jobNo3); map.put("memId", memId); jobService.updateJob(map);
-			 */
 			jobService.deleteJob(memId);
 			
 			result = "1";
 		}else {
-			 map.put("jobNo", jobNo); 
-			  map.put("memId", memId);
-			  jobService.updateJob(map);
-			  result = "2";
+			map.put("jobNo", jobNo); 
+			map.put("memId", memId);
+			jobService.updateJob(map);
+			
+			result = "2";
 		}
 		
 		return result;

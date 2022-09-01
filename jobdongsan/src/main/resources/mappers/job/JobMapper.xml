@@ -46,29 +46,29 @@
   	
   	<!-- 찜직업 추가  -->
   	<select id="insertJob" parameterType="hashmap">
-  		INSERT INTO my_history2 (memId, jobNo)
+  		INSERT INTO my_history (memId, jobNo)
   		VALUES(#{memId}, #{jobNo})
   	</select>
   	
   	<!-- 찜직업 삭제 -->
   	<delete id="deleteJob" parameterType="String">
   		DELETE
-  		FROM my_history2
-  		WHERE memId=#{memId}
+  		FROM my_history
+  		WHERE (NOT jobNo is null AND memId=#{memId})
   	</delete>
   	
   	<!-- 기존 직업 삭제 후 새로 추가 (교체) -->
   	<update id="updateJob" parameterType="HashMap">
-  		UPDATE my_history2
+  		UPDATE my_history
   		SET jobNo=#{jobNo}
-  		WHERE memId=#{memId}
+  		WHERE (NOT jobNo is null AND memId=#{memId})
   	</update>
   	
   	<!-- memId에 따른 jobNo가 null 값인지 확인 -->
   	<select id="checkJobNo" parameterType="string" resultType="HashMap">
   		SELECT jobNo
-  		FROM my_history2
-  		WHERE memId=#{memId}
+  		FROM my_history
+  		WHERE (NOT jobNo is null AND memId=#{memId})
   	</select>
   	
   	<!-- 동일 유형 직업 리스트 조회 -->
