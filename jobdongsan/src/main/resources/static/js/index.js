@@ -45,15 +45,6 @@ $(document).ready(function(){
         }
     );
     
-    $('.today_job_wrap').click(function(){
-    	location.href='/job_detail';
-    });
     
-    $('.today_map_wrap').click(function(){
-    	location.href='/map_detail';
-    });
     
-    $('.today_video_img img').click(function(){
-    	location.href='/video_detail';
-    });
 });

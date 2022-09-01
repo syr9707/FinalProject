@@ -11,10 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.jobdongsan.project.model.JobVO;
+import com.jobdongsan.project.model.MapVO;
 import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.model.VideoVO;
+import com.jobdongsan.project.service.JobService;
 import com.jobdongsan.project.service.MailService;
+import com.jobdongsan.project.service.MapService;
 import com.jobdongsan.project.service.MemberService;
 import com.jobdongsan.project.service.MyHistoryService;
+import com.jobdongsan.project.service.VideoService;
 
 @Controller
 public class MemberController {
@@ -24,10 +30,32 @@ public class MemberController {
 	MailService mailService;
 	@Autowired
 	MyHistoryService myService;
+	@Autowired
+	JobService jobService;
+	@Autowired
+	MapService mapService;
+	@Autowired
+	VideoService videoService;
 	
 	// 인덱스 페이지 호출
 	@RequestMapping("/")
-	public String main() {
+	public String main(Model model) {
+		int jobNo = (int)(Math.random() * 134 + 1);
+		JobVO job = jobService.detailViewJob(jobNo);
+		model.addAttribute("job", job);
+		
+		int mapJobNo = (int)(Math.random() * 45 + 1);
+		MapVO map = mapService.detailMapView(mapJobNo);
+		model.addAttribute("map", map);
+		
+		int videoNo = (int)(Math.random() * 215 + 1);
+		VideoVO video = videoService.detailViewVideo(videoNo);
+		model.addAttribute("video", video);
+		
+		int videoNo2 = (int)(Math.random() * 215 + 1);
+		VideoVO video2 = videoService.detailViewVideo(videoNo2);
+		model.addAttribute("video2", video2);
+		
 		return "index";
 	}
 	

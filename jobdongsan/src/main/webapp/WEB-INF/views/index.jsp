@@ -37,23 +37,25 @@
                     <img src="<c:url value='/images/main_today_char.png' />" id="main_today_char">
                     <div class="today_job">
                         <h3>오늘의 <b>직업</b></h3>
-                        <div class="today_job_wrap">
+                        <div class="today_job_wrap" onclick="location.href='<c:url value='/job_detail/${job.jobNo }'/>'">
                             <div class="today_job_pic">
-                                <img src="<c:url value='/images/main_today_job.png' />" id="main_today_job">
+                                <img src="<c:url value='${job.jobImg}'/>" id="main_today_job">
                             </div>
                             <div class="today_job_info">
-                                국민의 생명과 재산을 보호하고 범죄를 막아요.
+                            	❂ ${job. jobName}<br><br>
+                                ${job. jobInfo}
                             </div>
                         </div>
                     </div>
                     <div class="today_map">
                         <h3>오늘의 <b>체험</b></h3>
-                        <div class="today_map_wrap">
+                        <div class="today_map_wrap" onclick="location.href='<c:url value='/map_detail/${map.mapJobNo }'/>'">
                             <div class="today_map_pic">
-                                <img src="<c:url value='/images/main_today_map.png' />" id="main_today_map">
+                                <img src="<c:url value='${map. mapJobLogo}'/>" id="main_today_map">
                             </div>
                             <div class="today_map_info">
-                                가나다라마바사아자차카타파하
+                                ❂ ${map. mapJobName}<br><br>
+                                ${map. mapJobAdd}
                             </div>
                         </div>
                     </div>
@@ -63,8 +65,8 @@
                     <h3>오늘의 <b>영상</b></h3>
                     <div class="today_video_text"><b>잡</b><b>동</b><b>산</b>의 <b>다양한 직업</b> 영상부터<br>과자 친구들이 자유롭게 나누고 싶은 달콤 가득한 영상까지,<br>이곳에서 만나보세요!</div>
                     <div class="today_video_img">
-                        <img src="<c:url value='/images/main_video1.png' />" id="main_video1">
-                        <img src="<c:url value='/images/main_video2.png' />" id="main_video2">
+                        <img src="<c:url value='${video.videoThumbnail }'/>" id="main_video1" onclick="location.href='<c:url value='/video_detail/${video.videoNo }'/>'">
+                        <img src="<c:url value='${video2.videoThumbnail }'/>" id="main_video2" onclick="location.href='<c:url value='/video_detail/${video2.videoNo }'/>'">
                     </div>
                     <img src="<c:url value='/images/main_biscuit.png' />" id="main_biscuit">
                     <img src="<c:url value='/images/main_mould.png' />" id="main_mould">

@@ -176,6 +176,10 @@ section div {
     cursor: pointer;
 }
 
+.today_job_wrap:hover {
+	transform: scale(1.02);
+}
+
 .today_job_info {
     width: 220px;
     height: 200px;
@@ -209,6 +213,10 @@ section div {
     border-radius: 10px;
     background-color: #FFFFFF;
     cursor: pointer;
+}
+
+.today_map_wrap:hover {
+	transform: scale(1.02);
 }
 
 .today_map_info {
@@ -276,12 +284,26 @@ section div {
     margin-right: 200px;
     z-index: 1;
     cursor: pointer;
+    width:560px;
+    height:310px;
+    border-radius: 40px;
+}
+
+#main_video1:hover {
+	transform: scale(1.01);
 }
 
 #main_video2 {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    width:560px;
+    height:310px;
+    border-radius: 40px;
+}
+
+#main_video2:hover {
+	transform: scale(1.01);
 }
 
 #main_biscuit {
@@ -300,5 +322,16 @@ section div {
     width: 100px;
     height: 100px;
     z-index: 0;
+}
+
+#main_today_job {
+	width: 240px;
+    height: 240px;
+}
+
+#main_today_map {
+	width: 220px;
+    height: 120px;
+	margin-top: 60px;
 }
 
