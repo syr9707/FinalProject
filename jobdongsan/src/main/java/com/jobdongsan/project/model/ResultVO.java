@@ -9,7 +9,8 @@ public class ResultVO {
 	private int score4;
 	private int score5;
 	private int score6;
-	private int memId;
+	private int categoryNo;
+	private String memId;
 	
 	
 	public int getResultNo() {
@@ -60,13 +61,19 @@ public class ResultVO {
 	public void setScore6(int score6) {
 		this.score6 = score6;
 	}
-	public int getMemId() {
+	public int getCategoryNo() {
+		return categoryNo;
+	}
+	public void setCategoryNo(int categoryNo) {
+		this.categoryNo = categoryNo;
+	}
+	public String getMemId() {
 		return memId;
 	}
-	public void setMemId(int memId) {
+	public void setMemId(String memId) {
 		this.memId = memId;
 	}
+}	
 	
 	
 	
-}

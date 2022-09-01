@@ -78,23 +78,47 @@ public class InterestController {
 	@RequestMapping("/interest_score")
 	public String interest_score(@RequestParam HashMap<String, Object> map, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
+		HashMap<String, Integer> scoreList = resultService.getScore(memId);
 		map.put("memId", memId);
-		resultService.insertScore(map);
+		if(scoreList == null) {
+			resultService.insertScore(map);
+		}else {
+			resultService.updateScore(map);
+		}
+		
 		return "success";
 	}
 	
 	// 흥미 결과 페이지
 	@RequestMapping("/interest_result")
-	public String interest_result(Model model) {
+	public String interest_result(Model model, HttpSession session) {
+		String memId = (String) session.getAttribute("sid");
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
-		HashMap<String, Integer> scoreList = resultService.getScore();
+		HashMap<String, Integer> scoreList = resultService.getScore(memId);
+		HashMap<String, Object> checkResultNo = resultService.checkResultNo(memId);
+		int resultNo = resultService.getResultNo(memId);
+		HashMap<String, Object> highScore = new HashMap<String, Object>();
+		HashMap<String, Object> insertResultNo = new HashMap<String, Object>();
 		
 		Map.Entry<String, Integer> maxScore =
-                Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
+            Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
 
 		String maxScoreKey = maxScore.getKey();
-		
 		String maxScoreKeyNum = maxScoreKey.substring(5,6);
+		int maxScoreKeyNumInt = Integer.parseInt(maxScoreKeyNum);
+		
+		highScore.put("categoryNo", maxScoreKeyNumInt);
+		highScore.put("memId", memId);
+		
+		insertResultNo.put("resultNo", resultNo);
+		insertResultNo.put("memId", memId);
+		
+		resultService.insertCategory(highScore);
+		
+		if(checkResultNo == null) {
+			resultService.insertResultNo(insertResultNo);
+		}
+		
 
 		model.addAttribute("ctgList", ctgList);
 		model.addAttribute("scoreList", scoreList);
@@ -105,13 +129,14 @@ public class InterestController {
 	
 	
 	@RequestMapping("/interest_result2")
-	public String interest_result2(Model model) {
+	public String interest_result2(Model model, HttpSession session) {
+		String memId = (String) session.getAttribute("sid");
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<JobVO> CtgJobList = resultService.ctgJob();
-		HashMap<String, Integer> scoreList = resultService.getScore();
+		HashMap<String, Integer> scoreList = resultService.getScore(memId);
 		
 		Map.Entry<String, Integer> maxScore =
-                Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
+            Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
 		String maxScoreKey = maxScore.getKey();
 		String maxScoreKeyNum = maxScoreKey.substring(5,6);
 		
@@ -123,13 +148,14 @@ public class InterestController {
 	
 	
 	@RequestMapping("/interest_result3")
-	public String interest_result3(Model model) {
+	public String interest_result3(Model model, HttpSession session) {
+		String memId = (String) session.getAttribute("sid");
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<MapVO> CtgMapList = resultService.ctgMap();
-		HashMap<String, Integer> scoreList = resultService.getScore();
+		HashMap<String, Integer> scoreList = resultService.getScore(memId);
 		
 		Map.Entry<String, Integer> maxScore =
-                Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
+            Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
 		String maxScoreKey = maxScore.getKey();
 		String maxScoreKeyNum = maxScoreKey.substring(5,6);
 		
@@ -146,14 +172,15 @@ public class InterestController {
 	}
 	
 	@RequestMapping("/my_promise_text")
-	public String my_promise_text(@RequestParam HashMap<String, Object> map, ResultVO vo) {
-		System.out.println(map);
+	public String my_promise_text(@RequestParam HashMap<String, Object> map, ResultVO vo, HttpSession session) {
+		String memId = (String) session.getAttribute("sid");
 		String my_promise = (String)map.get("school") + "|" + (String)map.get("grade") + "|" + (String)map.get("class") + "|" + (String)map.get("name") + "|" +
 							(String)map.get("friends_think") + "|" + (String)map.get("friends_think2") + "|" + (String)map.get("my_think") + "|" + (String)map.get("my_think2") + "|" + 
 							(String)map.get("my_future") + "|" + (String)map.get("my_future2") + "|" + (String)map.get("my_plan") + "|" + (String)map.get("my_plan2") + "|" +
 							(String)map.get("my_promise");
 		
 		vo.setMyPromise(my_promise);
+		vo.setMemId(memId);
 		
 		resultService.insertPromise(vo);
 		

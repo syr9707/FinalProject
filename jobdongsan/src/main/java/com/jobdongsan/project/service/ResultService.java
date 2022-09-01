@@ -21,6 +21,43 @@ public class ResultService implements IResultService {
 
 	
 	@Override
+	public void insertScore(HashMap<String, Object> map) {
+		dao.insertScore(map);
+	}
+	
+	@Override
+	public void updateScore(HashMap<String, Object> map) {
+		dao.updateScore(map);
+		
+	}
+	
+	@Override
+	public HashMap<String, Integer> getScore(String memId) {
+		return dao.getScore(memId);
+	}
+	
+	@Override
+	public int getResultNo(String memId) {
+		return dao.getResultNo(memId);
+	}
+
+	
+	@Override
+	public void insertCategory(HashMap<String, Object> map) {
+		dao.insertCategory(map);	
+	}
+	
+	@Override
+	public void insertResultNo(HashMap<String, Object> map) {
+		dao.insertResultNo(map);
+	}
+	
+	@Override
+	public HashMap<String, Object> checkResultNo(String memId) {
+		return dao.checkResultNo(memId);
+	}
+	
+	@Override
 	public ArrayList<JobVO> ctgJob() {
 		return dao.ctgJob();
 	}
@@ -31,22 +68,9 @@ public class ResultService implements IResultService {
 	}
 	
 	@Override
-	public void insertScore(HashMap<String, Object> map) {
-		dao.insertScore(map);
-	}
-	
-	@Override
-	public HashMap<String, Integer> getScore() {
-		return dao.getScore();
-	}
-	
-	@Override
 	public void insertPromise(ResultVO vo) {
 		dao.insertPromise(vo);
 	}
 
-	
-
-	
 
 }

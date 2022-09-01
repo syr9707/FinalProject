@@ -4,26 +4,77 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.jobdongsan.project.dao.IResultDAO">
+	
+	<!-- 유형 스코어 넣기 -->
+	<insert id="insertScore" parameterType="HashMap">
+		insert into result 
+		(score1, score2, score3, score4, score5, score6, memId)
+		values (#{score1}, #{score2}, #{score3}, #{score4}, #{score5}, #{score6}, #{memId})
+	</insert>
+	
+	<!-- 유형 스코어 업데이트 -->
+	<update id="updateScore" parameterType="HashMap">
+		update result
+		set score1=#{score1},
+			score2=#{score2},
+			score3=#{score3},
+			score4=#{score4},
+			score5=#{score5},
+			score6=#{score6}
+		where memId=#{memId} 	
+	</update>
+	
+	<!-- 유형 스코어 가져오기 -->
+	<select id="getScore" resultType="HashMap">
+		select score1,score2,score3,score4,score5,score6 
+		from result 
+		where memId=#{memId}
+	</select>
+	
+	<!-- resultNo 가져오기 -->
+	<select id="getResultNo" resultType="int">
+		select resultNo
+		from result 
+		where memId=#{memId}
+	</select>
+	
+	<!-- 가장 높은 스코어 유형 넣기 -->
+	<update id="insertCategory" parameterType="HashMap">
+		update result
+		set categoryNo=#{categoryNo}
+		where memId=#{memId}
+	</update>
+	
+	<!-- 마이페이지에 resultNo 넣기 -->
+	<insert id="insertResultNo" parameterType="HashMap">
+		insert into my_history 
+		(resultNo, memId)
+		values (#{resultNo}, #{memId})
+	</insert>
+	
+	<!-- 마이페이지 resultNo 체크하기 -->
+	<select id="checkResultNo" parameterType="string" resultType="HashMap">
+  		SELECT resultNo
+  		FROM my_history
+  		WHERE (NOT resultNo is null AND memId=#{memId})
+  	</select>
+	
+	<!-- 유형별 직업 가져오기 -->
 	<select id="ctgJob" resultType="com.jobdongsan.project.model.JobVO">
 		select * from job
 	</select>
 	
+	<!-- 유형별 체험 장소 가져오기 -->
 	<select id="ctgMap" resultType="com.jobdongsan.project.model.MapVO">
 		select * from map_job
 	</select>
 	
-	<insert id="insertScore" parameterType="HashMap">
-		insert into result (score1, score2, score3, score4, score5, score6, memId)
-					values (#{score1}, #{score2}, #{score3}, #{score4}, #{score5}, #{score6}, #{memId})
-	</insert>
+	<!-- 나의 다짐 넣기  -->
+	<update id="insertPromise" parameterType="com.jobdongsan.project.model.ResultVO">
+		update result 
+		set myPromise=#{myPromise}
+		where memId=#{memId}
+	</update>
 	
-	<select id="getScore" resultType="HashMap">
-		select score1,score2,score3,score4,score5,score6 
-		from result 
-		order by resultNo DESC limit 1
-	</select>
 	
-	<insert id="insertPromise" parameterType="com.jobdongsan.project.model.ResultVO">
-		insert into result (myPromise) values (#{myPromise})
-	</insert>
 </mapper>

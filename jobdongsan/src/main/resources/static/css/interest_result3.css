@@ -111,10 +111,6 @@ section {
 	cursor: pointer;
 }
 
-.map_count {
-	display: none;
-}
-
 .map_kind .map_logo_box {
 	width: 85px;
 	height: 85px;
@@ -136,6 +132,11 @@ section {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+.map_count {
+	display: none;
+}
+
 
 /*********** 다음 버튼 ************/
 .next_btn {
