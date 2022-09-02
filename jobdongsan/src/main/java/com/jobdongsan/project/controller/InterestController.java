@@ -47,16 +47,6 @@ public class InterestController {
 		return "interest/interest_index";
 	}
 	
-	/*
-	 * @ResponseBody
-	 * 
-	 * @RequestMapping("/interest_index3_1") public ArrayList<QuestionVO>
-	 * interest_index3_1() { String question = "";
-	 * 
-	 * return question; }
-	 */
-	
-	
 	// 흥미 테스트 페이지
 	@RequestMapping("/interest_test")
 	public String interest_test() {
@@ -78,8 +68,18 @@ public class InterestController {
 	@RequestMapping("/interest_score")
 	public String interest_score(@RequestParam HashMap<String, Object> map, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
-		HashMap<String, Integer> scoreList = resultService.getScore(memId);
-		map.put("memId", memId);
+		String checkMemId = "";
+		
+		if(memId == null) {
+			map.put("memId", "notMem");
+			checkMemId = "notMem";
+		}else {
+			map.put("memId", memId);
+			checkMemId = memId;
+		}
+		
+		HashMap<String, Integer> scoreList = resultService.getScore(checkMemId);
+		
 		if(scoreList == null) {
 			resultService.insertScore(map);
 		}else {
@@ -93,10 +93,16 @@ public class InterestController {
 	@RequestMapping("/interest_result")
 	public String interest_result(Model model, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
+		String checkMemId = "";
+		if(memId == null) {
+			checkMemId = "notMem";
+		}else {
+			checkMemId = memId;
+		}
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
-		HashMap<String, Integer> scoreList = resultService.getScore(memId);
-		HashMap<String, Object> checkResultNo = resultService.checkResultNo(memId);
-		int resultNo = resultService.getResultNo(memId);
+		HashMap<String, Integer> scoreList = resultService.getScore(checkMemId);
+		HashMap<String, Object> checkResultNo = resultService.checkResultNo(checkMemId);
+		int resultNo = resultService.getResultNo(checkMemId);
 		HashMap<String, Object> highScore = new HashMap<String, Object>();
 		HashMap<String, Object> insertResultNo = new HashMap<String, Object>();
 		
@@ -108,10 +114,10 @@ public class InterestController {
 		int maxScoreKeyNumInt = Integer.parseInt(maxScoreKeyNum);
 		
 		highScore.put("categoryNo", maxScoreKeyNumInt);
-		highScore.put("memId", memId);
+		highScore.put("memId", checkMemId);
 		
 		insertResultNo.put("resultNo", resultNo);
-		insertResultNo.put("memId", memId);
+		insertResultNo.put("memId", checkMemId);
 		
 		resultService.insertCategory(highScore);
 		
@@ -131,9 +137,15 @@ public class InterestController {
 	@RequestMapping("/interest_result2")
 	public String interest_result2(Model model, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
+		String checkMemId = "";
+		if(memId == null) {
+			checkMemId = "notMem";
+		}else {
+			checkMemId = memId;
+		}
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<JobVO> CtgJobList = resultService.ctgJob();
-		HashMap<String, Integer> scoreList = resultService.getScore(memId);
+		HashMap<String, Integer> scoreList = resultService.getScore(checkMemId);
 		
 		Map.Entry<String, Integer> maxScore =
             Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());
@@ -150,9 +162,15 @@ public class InterestController {
 	@RequestMapping("/interest_result3")
 	public String interest_result3(Model model, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
+		String checkMemId = "";
+		if(memId == null) {
+			checkMemId = "notMem";
+		}else {
+			checkMemId = memId;
+		}
 		ArrayList<CategoryVO> ctgList = categoryService.getCategoryInfo();
 		ArrayList<MapVO> CtgMapList = resultService.ctgMap();
-		HashMap<String, Integer> scoreList = resultService.getScore(memId);
+		HashMap<String, Integer> scoreList = resultService.getScore(checkMemId);
 		
 		Map.Entry<String, Integer> maxScore =
             Collections.max(scoreList.entrySet(), Map.Entry.comparingByValue());

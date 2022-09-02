@@ -163,7 +163,11 @@
 	                	<img src="<c:url value='images/interest_happy.png' />" class="interest_happy">
 	                </div>
 	            </div>
+	            <c:if test="${empty sessionScope.sid }">
+	            </c:if>
+	            <c:if test="${not empty sessionScope.sid }">
 	            <input type="submit" class="finish_btn" value="탐색 완료하고 저장하기">  
+	            </c:if>
                 </form>
 	        </div>
 	    </section>

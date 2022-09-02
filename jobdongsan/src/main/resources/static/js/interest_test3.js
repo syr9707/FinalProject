@@ -85,13 +85,7 @@
     	
     	$('.plate').click(function(){
     		if(index == 19){
-    			console.log("뚝딱이: " + score1);
-		    	console.log("탐험이: " + score2);
-		    	console.log("멋쟁이: " + score3);
-		    	console.log("친절이: " + score4);
-		    	console.log("씩씩이: " + score5);
-		    	console.log("성실이: " + score6);
-		   
+
 		    	callAjax();
 		    
     			var target = $('.interest_text', window.parent.document);

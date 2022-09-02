@@ -158,6 +158,10 @@
 
 /******** 컨텐츠 내용 *********/
 
+input[type="text"] {
+	font-family: 'CookieRun';
+}
+
 .mem_info {
 	margin: 40px 0 0 90px;
 }
