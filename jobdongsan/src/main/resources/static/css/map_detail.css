@@ -45,7 +45,9 @@ b {
 #background {
 	width: 100%;
 	height: 500px;
+	position: relative;
 	background-image: url("../images/background.png");
+	z-index: -10;
 }
 
 #background_star {
@@ -53,16 +55,19 @@ b {
 	margin-left: 900px;
 	margin-top: -350px;
 	top: 150px;
+	z-index: -1;
 }
 
 #map_detail_title {
 	font-family: 'CookieRun';
 	display: flex;
+	position: relative;
 	align-items: center;
 	width: 400px;
 	height: 60px;
 	margin-top: 90px;
 	margin-bottom: 70px;
+	z-index: 1;
 }
 
 #map_detail_sub_title {
@@ -118,7 +123,6 @@ b {
 	position: relative;
 	margin-left: 180px;
 } */
-
 #map_category {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
