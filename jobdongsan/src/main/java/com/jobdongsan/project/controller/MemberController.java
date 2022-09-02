@@ -80,6 +80,21 @@ public class MemberController {
   		return result;
 	}
 	
+	// 아이디 중복 체크
+	@ResponseBody
+	@RequestMapping("/checkMemId")
+	public String checkMemId(String id) {
+		String result = "";
+		
+		if(memService.checkMemId(id) == null) {
+			result = "ok";
+		} else {
+			result = "no";
+		}
+		
+		return result;
+	}
+	
 	// 로그아웃
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
