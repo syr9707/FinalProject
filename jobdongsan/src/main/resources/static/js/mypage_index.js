@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 
     // 찜한 직업 있을 때
-    if($('.my_job_like')) {
+    if($('#job_chk').text() != "") {
         $('.my_job_add').hide();
         $('.my_job_like').show();
         $('.btn_job_add').hide();
