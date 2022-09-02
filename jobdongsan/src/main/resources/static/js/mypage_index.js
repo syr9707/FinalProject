@@ -34,8 +34,16 @@ $(document).ready(function(){
     $('.btn_map').click(function(){
         location.href='/map_index';
     });
+    
+     // 흥미 유형이 있을 때
+    if($('#interest_chk').text() != "") {
+        $('.my_interest_add').hide();
+        $('.my_interest_content').show();
+        $('.btn_interest').hide();
+        $('.btn_job').show();
+    }
 
-    // 찜한 직업 있을 때
+    // 찜한 직업이 있을 때
     if($('#job_chk').text() != "") {
         $('.my_job_add').hide();
         $('.my_job_like').show();

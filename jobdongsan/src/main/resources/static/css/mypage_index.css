@@ -97,13 +97,18 @@
     color: #FEC703;
 }
 
+.my_interest_add {
+	border-top: 3px solid #777777;
+}
+
 .my_interest_content {
-    border-top: 3px solid #777777;
+	border-top: 3px solid #777777;
+    display: none;
 }
 
 .my_interest_pic {
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 200px;
     height: 200px;
 }
@@ -145,7 +150,7 @@
 
 .my_job_add_pic {
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 200px;
     height: 200px;
 }
@@ -164,8 +169,8 @@
 }
 
 .my_job_pic {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     width: 200px;
     height: 200px;
 }

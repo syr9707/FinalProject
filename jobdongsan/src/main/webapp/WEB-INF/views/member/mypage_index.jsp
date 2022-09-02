@@ -44,11 +44,18 @@
                                     <div class="my_interest_title txt_30">
                                         나의 <b>흥미</b> 탐색
                                     </div>
+                                    <div class="my_interest_add">
+                                        <img src="<c:url value='/images/mypage_circle.png' />" class="my_interest_pic">
+                                        <div>
+                                            <p class="txt_30">아직 탐색한 흥미가 없어요</p>
+                                            <p class="txt_25">나의 흥미를 알아볼까요?</p>
+                                        </div>
+                                    </div>
                                     <div class="my_interest_content">
                                         <img src="<c:url value='${myCtgInfo.categoryImg}' />" class="my_interest_pic">
                                         <div>
-                                            <p class="txt_30" id="interest_chk">아직 탐색한 흥미가 없어요</p>
-                                            <p class="txt_25">나의 흥미를 알아볼까요?</p>
+                                            <p class="txt_30" id="interest_chk">${myCtgInfo.categoryName}</p>
+                                            <p class="txt_25">${myCtgInfo.categoryName}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +77,7 @@
                                         <div class="my_job_like">
                                             <img src="<c:url value='${myJobInfo.jobImg}' />" class="my_job_pic">
                                             <p class="txt_30" id="job_chk">${myJobInfo.jobName}</p>
-                                            <p class="txt_20">${myJobInfo.jobInfo}</p>
+                                            <p class="txt_25">${myJobInfo.jobInfo}</p>
                                         </div>
                                     </div>
                                 </div>
