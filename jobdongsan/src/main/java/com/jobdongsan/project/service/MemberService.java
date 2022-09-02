@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.jobdongsan.project.dao.IMemberDAO;
 import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.model.VideoVO;
 
 @Service
 public class MemberService implements IMemberService {

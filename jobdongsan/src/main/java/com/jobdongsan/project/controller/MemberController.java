@@ -1,5 +1,6 @@
 package com.jobdongsan.project.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.jobdongsan.project.model.CategoryVO;
 import com.jobdongsan.project.model.JobVO;
 import com.jobdongsan.project.model.MapVO;
 import com.jobdongsan.project.model.MemberVO;
@@ -44,7 +46,7 @@ public class MemberController {
 		JobVO job = jobService.detailViewJob(jobNo);
 		model.addAttribute("job", job);
 		
-		int mapJobNo = (int)(Math.random() * 45 + 1);
+		int mapJobNo = (int)(Math.random() * 82 + 1);
 		MapVO map = mapService.detailMapView(mapJobNo);
 		model.addAttribute("map", map);
 		
@@ -177,6 +179,11 @@ public class MemberController {
 		
 		Integer check = myService.checkResultNo(memId);
 		
+		ArrayList<VideoVO> myVideoList = myService.getMyVideo(memId);
+		ArrayList<MapVO> myMapList = myService.getMyMap(memId);
+		CategoryVO myCtgInfo = myService.getMyCtg(memId);
+		JobVO myJobInfo = myService.getMyJob(memId);
+		
 		if(check == null) {
 			// insert 작업
 		} else {
@@ -184,6 +191,10 @@ public class MemberController {
 		}
 		
 		model.addAttribute("mem", mem);
+		model.addAttribute("myVideoList", myVideoList);
+		model.addAttribute("myMapList", myMapList);
+		model.addAttribute("myCtgInfo", myCtgInfo);
+		model.addAttribute("myJobInfo", myJobInfo);
 		
 		return "member/mypage_index";
 	}

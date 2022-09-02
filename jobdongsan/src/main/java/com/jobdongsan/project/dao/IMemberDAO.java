@@ -3,6 +3,7 @@ package com.jobdongsan.project.dao;
 import java.util.HashMap;
 
 import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.model.VideoVO;
 
 public interface IMemberDAO {
 	public String loginCheck(HashMap<String, Object> map);	// 로그인 확인
