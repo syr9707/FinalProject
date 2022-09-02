@@ -259,3 +259,81 @@ TEXT {
 	top: 920px;
 	left: 200px;
 }
+
+#list_incheon {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 80px;
+	left: 150px;
+}
+
+#list_daejeon {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 350px;
+	left: 150px;
+}
+
+#list_gwangju {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 700px;
+	left: 150px;
+}
+
+#list_busan {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 700px;
+	left: 930px;
+}
+
+#list_daegu {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 500px;
+	left: 930px;
+}
+
+#list_ulsan {
+	z-index: 1;
+	border: 3px solid #fde48a;
+	border-radius: 50px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	display: none;
+	/* 위치 가변 */
+	top: 650px;
+	left: 930px;
+}

@@ -123,13 +123,73 @@ $(document).ready(function(){
 	  }
 	});
 	
-	//$('body').on('click', function(e){
-	//	var $tgPoint = $(e.target);
-	//	var $popCallBtn = $tgPoint.hasClass('#CD50')
-	//	var $popArea = $tgPoint.hasClass('#list_jejudo')	
-	//	if ( !$popCallBtn && !$popArea ) {
-	//		$('#list_jejudo').removeClass('view');
-	//		}		
-	//	});
+	$('#CD28').on("click", function(){
+		$('#list_incheon').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_incheon");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	$('#CD30').on("click", function(){
+		$('#list_daejeon').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_daejeon");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	$('#CD29').on("click", function(){
+		$('#list_gwangju').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_gwangju");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	$('#CD26').on("click", function(){
+		$('#list_busan').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_busan");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	$('#CD27').on("click", function(){
+		$('#list_daegu').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_daegu");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	
+	$('#CD31').on("click", function(){
+		$('#list_ulsan').slideToggle("fast");
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#list_ulsan");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	
 	
 });

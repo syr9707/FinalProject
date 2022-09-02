@@ -64,31 +64,8 @@
 								</c:if>
 							</c:forEach>
 						</ul>
-
-						<%--  <ul>
-							 	<li>
-							 	<a href="<c:url value='/map_detail'/>">❂ 키자니아</a>
-							 	</li>	 
-							 	<li>
-							 	❂ 기상청 체험학습
-							 	</li>
-							 	<li>
-							 	❂ 청와대 사랑채 체험학습
-							 	</li>
-							 	<li>
-							 	❂ 롯데제과 스위트 팩토리
-							 	</li>
-							 	<li>
-							 	❂ 서울지방경찰청 체험학습
-							 	</li>
-							 	<li>
-							 	❂ 법원 전시관
-							 	</li>	 
-							 </ul> --%>
-
 					</div>
 				</div>
-
 
 				<div id="list_gyeonggido" class="list_box">
 					<div id="list_title">경기도</div>
@@ -220,6 +197,96 @@
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.mapJobArea eq '제주도' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_incheon" class="list_box">
+					<div id="list_title">인천</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '인천' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_daejeon" class="list_box">
+					<div id="list_title">대전</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '대전' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_gwangju" class="list_box">
+					<div id="list_title">광주</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '광주' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_busan" class="list_box">
+					<div id="list_title">부산</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '부산' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_daegu" class="list_box">
+					<div id="list_title">대구</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '대구' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+				</div>
+
+				<div id="list_ulsan" class="list_box">
+					<div id="list_title">울산</div>
+					<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.mapJobArea eq '울산' }">
 									<li><a
 										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
 											${map.mapJobName }</a></li>

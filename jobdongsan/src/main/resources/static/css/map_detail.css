@@ -114,21 +114,21 @@ b {
 	padding: 10px;
 }
 
-#background_donut {
+/* #background_donut {
 	position: relative;
 	margin-left: 180px;
-}
+} */
 
 #map_category {
-	border-top: 3px solid #FF8282;
-	border-bottom: 3px solid #FF8282;
-	background: #FFEFEF;
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	background: #FFFACD;
 	/*  */
 	display: flex;
 	align-items: center;
 	/*  */
 	width: 1320px;
-	height: 200px;
+	height: 180px;
 	margin-bottom: 90px;
 	padding: 0px 300px 0px 100px;
 }
@@ -141,8 +141,8 @@ b {
 }
 
 #map_category_img img {
-	width: 120px;
-	height: 120px;
+	width: 130px;
+	height: 130px;
 }
 
 #speech_bubble_box1 {
