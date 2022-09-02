@@ -22,10 +22,8 @@ $(document).ready(function(){
     });
 
     // 데이터 연동 후 추가 필요****************************************
-    // 직업 정보 보러가기 버튼 눌렀을 때
-    $('.btn_job').click(function(){
-        location.href='/job_detail';
-    });
+    // 직업 정보 보러가기 버튼 눌렀을 때 (jsp에서 구현)
+   
 
     // 진로 직업 영상 찜하러 가기 버튼 눌렀을 때
     $('.btn_video').click(function(){

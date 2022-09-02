@@ -158,6 +158,11 @@
     display: none;
 }
 
+.my_job_like p:nth-child(3) {
+	width: 420px;
+	margin-top: 5px;
+}
+
 .my_job_pic {
     margin-top: 15px;
     margin-bottom: 20px;
@@ -227,6 +232,13 @@
     margin: 0 50px 0 0;
 }
 
+.my_video_pic {
+	width: 300px;
+	height: 200px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
 .my_map {
     margin-top: 100px;
     height: 460px;
@@ -270,6 +282,12 @@
 
 .my_map_list img {
     margin: 0 50px 0 0;
+}
+
+.my_map_pic {
+	width: 300px;
+	border-radius: 20px;
+	cursor: pointer;
 }
 
 .background {

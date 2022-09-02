@@ -45,7 +45,7 @@
                                         나의 <b>흥미</b> 탐색
                                     </div>
                                     <div class="my_interest_content">
-                                        <img src="<c:url value='/images/mypage_circle.png' />" class="my_interest_pic">
+                                        <img src="<c:url value='${myCtgInfo.categoryImg}' />" class="my_interest_pic">
                                         <div>
                                             <p class="txt_30">아직 탐색한 흥미가 없어요</p>
                                             <p class="txt_25">나의 흥미를 알아볼까요?</p>
@@ -68,15 +68,15 @@
                                             </div>
                                         </div>
                                         <div class="my_job_like">
-                                            <img src="<c:url value='/images/my_job_pic.png' />" class="my_job_pic">
-                                            <p class="txt_30">드론 조종사</p>
-                                            <p class="txt_25">초경량 비행체인 드론을 조종해요.</p>
+                                            <img src="<c:url value='${myJobInfo.jobImg}' />" class="my_job_pic">
+                                            <p class="txt_30">${myJobInfo.jobName}</p>
+                                            <p class="txt_20">${myJobInfo.jobInfo}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="btn_job_div">
                                     <img src="<c:url value='/images/mypage_job_add.png' />" class="btn_job_add">
-                                    <img src="<c:url value='/images/mypage_job.png' />" class="btn_job">
+                                    <img src="<c:url value='/images/mypage_job.png' />" class="btn_job" onClick = "location.href='<c:url value='job_detail/${myJobInfo.jobNo}'/>'">
                                 </div>
                             </div>
                         </div>
@@ -90,16 +90,9 @@
                                 <img src="<c:url value='/images/mypage_my_video_btn.png' />" class="btn_video"> 
                             </div>
                             <div class="my_video_list">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' />" class="my_video_pic">
+                            	<c:forEach var="myVideo" items="${myVideoList}">
+                            		<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
+                            	</c:forEach>
                             </div>
                             <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_video_right">
                         </div>
@@ -113,10 +106,9 @@
                                 <img src="<c:url value='/images/mypage_my_map_btn.png' />" class="btn_map">
                             </div>
                             <div class="my_map_list">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
-                                <img src="<c:url value='/images/mypage_my_video_pic.png' /> " class="my_video_pic">
+                               <c:forEach var="myMap" items="${myMapList}">
+                            		<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic" onClick = "location.href='<c:url value='map_detail/${myMap.mapJobNo}'/>'">
+                            	</c:forEach>
                             </div>
                             <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_map_right">
                         </div>

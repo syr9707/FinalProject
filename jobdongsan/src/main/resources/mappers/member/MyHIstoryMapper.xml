@@ -8,4 +8,29 @@
 	<select id="checkResultNo" parameterType="String" resultType="int">
 		SELECT resultNo FROM my_history WHERE (NOT resultNo is NULL AND memId = #{memId })
 	</select>
+	
+	<select id="getMyVideo" parameterType="String" resultType="com.jobdongsan.project.model.VideoVO">
+		SELECT v.videoNo, v.videoThumbnail 
+		FROM video v, my_history my
+		WHERE v.videoNo = my.videoNo and NOT my.videoNo is NULL and my.memId = #{memId}
+	</select>
+	
+	<select id="getMyMap" parameterType="String" resultType="com.jobdongsan.project.model.MapVO">
+		SELECT map.mapJobNo, map.mapJobLogo 
+		FROM map_job map, my_history my
+		WHERE map.mapJobNo = my.mapJobNo and NOT my.mapJobNo is NULL and my.memId = #{memId}
+	</select>
+	
+	<select id="getMyCtg" parameterType="String" resultType="com.jobdongsan.project.model.CategoryVO">
+		SELECT c.*
+		FROM category c, result r, my_history my
+		WHERE c.categoryNo = r.categoryNo and
+			  r.resultNo = my.resultNo and NOT my.resultNo is NULL and my.memId = #{memId}
+	</select>
+	
+	<select id="getMyJob" parameterType="String" resultType="com.jobdongsan.project.model.JobVO">
+		SELECT j.*
+		FROM job j, my_history my
+		WHERE j.jobNo = my.jobNo and NOT my.jobNo is NULL and my.memId = #{memId}
+	</select>
 </mapper>
