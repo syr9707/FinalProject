@@ -55,4 +55,9 @@ public class VideoService implements IVideoService {
 		dao.deleteVideo(videoNo);
 	}
 
+	@Override
+	public ArrayList<VideoVO> listCateogoryVideo(int categoryNo) {
+		return dao.listCateogoryVideo(categoryNo);
+	}
+
 }

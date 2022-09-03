@@ -23,6 +23,87 @@
 						어린이 직업 진로 동영상
 					</div>
 				</div>
+				<div class="empty_box"></div>
+				
+				<c:if test="${not empty memId }">
+				<div class="user_category">
+					<div class="user_category_title">
+						<div class="user_category_img">
+							<c:set var="doneLoop" value="false" />
+							<c:forEach items="${videoListtt }" var="test" >
+							<c:if test="${not doneLoop}">
+								<img src="<c:url value='${test.categoryImg }'/>">
+							<c:set var="doneLoop" value="true"/>
+							</c:if>
+							</c:forEach>
+						</div>
+						<div class="user_category_name">
+							<c:set var="doneLoop" value="false" />
+							<c:forEach items="${videoListtt }" var="test" >
+							<c:if test="${not doneLoop}">
+								<c:if test="${test.categoryNo eq '1' }">
+									<b class="a">뚝딱이</b> 유형 영상
+								</c:if>
+								<c:if test="${test.categoryNo eq '2' }">
+									<b class="b">탐험이</b> 유형 영상
+								</c:if>
+								<c:if test="${test.categoryNo eq '3' }">
+									<b class="c">멋쟁이</b> 유형 영상
+								</c:if>
+								<c:if test="${test.categoryNo eq '4' }">
+									<b class="d">친절이</b> 유형 영상
+								</c:if>
+								<c:if test="${test.categoryNo eq '5' }">
+									<b class="e">씩씩이</b> 유형 영상
+								</c:if>
+								<c:if test="${test.categoryNo eq '6' }">
+									<b class="f">성실이</b> 유형 영상
+								</c:if>
+							<c:set var="doneLoop" value="true"/>
+							</c:if>
+							</c:forEach>
+						</div>
+						<div class="video_more_btn">
+							<c:set var="doneLoop" value="false" />
+							<c:forEach items="${videoListtt }" var="test" >
+							<c:if test="${not doneLoop}">
+							<button id="videobtn1" onclick="location.href='<c:url value='/video_category/${test.categoryNo }'/>'">더보기</button >
+							<c:set var="doneLoop" value="true"/>
+							</c:if>
+							</c:forEach>
+						</div>
+					</div>
+					<div class="user_category_cont">
+						<%
+							int counttt = 0;
+						%>
+						<c:set var="doneLoop" value="false" />
+						<c:forEach items="${videoListtt }" var="test" >
+						<c:if test="${not doneLoop}">
+							<div class="video_jinro_cont2">
+								<div class="video_test">
+									<a href="<c:url value='/video_detail/${test.videoNo }'/>" >
+									<img class="video_thumbnail" src="<c:url value='${test.videoThumbnail }'/>">
+									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+								</div>
+								<div class="video_test_name">
+									${test.videoName }
+								</div>
+							</div>
+						<%
+							counttt++;
+							if(counttt == 4) {
+						%>
+						<c:set var="doneLoop" value="true"/>
+						<%
+							}
+						%>
+						</c:if>
+						</c:forEach>
+					</div>
+				</div>
+				</c:if>
+				
 				<div class="video_dream_jinro">
 					<div class="video_jinro_title">
 						<div class="video_jinro_img">

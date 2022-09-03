@@ -15,5 +15,7 @@ public interface IVideoService {
 	public void insertVideo(HashMap<String, Object> param); // 관심 영상 담기
 	int checkVideo(int videoNo, String memId); // 동일 영상 존재 여부 체크
 	void deleteVideo(int videoNo); // 담아 놓은 관심 영상 삭제
+	
+	public ArrayList<VideoVO> listCateogoryVideo(int categoryNo); // 동일 카테고리 조회
 
 }

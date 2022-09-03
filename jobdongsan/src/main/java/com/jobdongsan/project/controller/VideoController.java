@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jobdongsan.project.model.MyHistoryVO;
+import com.jobdongsan.project.model.MemberVO;
 import com.jobdongsan.project.model.VideoVO;
+import com.jobdongsan.project.service.MemberService;
+import com.jobdongsan.project.service.MyHistoryService;
 import com.jobdongsan.project.service.VideoService;
 
 @Controller
@@ -22,10 +24,28 @@ public class VideoController {
 	// DI 설정
 	@Autowired
 	VideoService videoService;
+	@Autowired
+	MemberService memService;
+	@Autowired
+	MyHistoryService myService;
 	
 	// 전체 영상 출력 
 	@RequestMapping("/video_index")
-	public String viewVideoAllList(Model model) {
+	public String viewVideoAllList(HttpSession session, Model model) {
+		String memId = (String) session.getAttribute("sid");
+		//MemberVO mem = memService.getMemberInfo(memId);
+		
+		Integer check = myService.checkResultNo(memId);
+		if(check != null) { 
+			model.addAttribute("memId", memId); 
+			ArrayList<VideoVO> videoListtt = videoService.listCateogoryVideo(check);
+			model.addAttribute("videoListtt", videoListtt);
+		}
+		
+		//model.addAttribute("memId", memId);
+		
+		// //////////////////////////////////////////////////
+		
 		ArrayList<VideoVO> videoList = videoService.listAllVideo();
 		model.addAttribute("videoList", videoList);
 		
@@ -88,6 +108,13 @@ public class VideoController {
 		return "1";
 	}
 	
-	
+	// 6개 유형별 영상 보기
+	@RequestMapping("/video_category/{categoryNo}")
+	public String categoryVideo(@PathVariable int categoryNo, Model model) {
+		ArrayList<VideoVO> videoList = videoService.listCateogoryVideo(categoryNo);
+		model.addAttribute("videoList", videoList);
+		
+		return "video/video_category";
+	}
 	
 }

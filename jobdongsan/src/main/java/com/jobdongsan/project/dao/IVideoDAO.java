@@ -16,4 +16,6 @@ public interface IVideoDAO {
 	int checkVideo(HashMap<String, Object> map); // 동일 영상 존재 여부 체크
 	void deleteVideo(int videoNo); // 담아 놓은 관심 영상 삭제
 	
+	public ArrayList<VideoVO> listCateogoryVideo(int categoryNo); // 동일 카테고리 조회
+	
 }

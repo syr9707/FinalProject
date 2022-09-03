@@ -39,7 +39,7 @@
   	</select>
   	
   	<!-- 관심 영상(찜영상) 리스트에 추가 -->
-  	<select id="insertVideo" parameterType="hashmap">
+  	<select id="insertVideo" parameterType="hashmap" >
   		INSERT INTO my_history (memId, videoNo) 
   		VALUES(#{memId}, #{videoNo})
   	</select>
@@ -57,5 +57,12 @@
   		FROM my_history 
   		WHERE videoNo=#{videoNo} 
   	</delete>
+  	
+  	<!-- 흥미탐색 결과 유형 영상들 조회 -->
+  	<select id="listCateogoryVideo" parameterType="int" resultType="com.jobdongsan.project.model.VideoVO">
+  		SELECT v.videoNo, v.videoName, v.videoName2, v.videoCtg, v.videoThumbnail, v.videoLink, v.videoStory, v.videoCtgNo, c.categoryNo, c.categoryName, c.categoryImg
+  		FROM video v, category c
+  		WHERE v.categoryNo = c.categoryNo AND v.categoryNo=#{categoryNo}
+  	</select>
   
   </mapper>

@@ -64,6 +64,138 @@
 	letter-spacing: 1px;
 }
 
+.empty_box {
+	width:1320px;
+	height:105px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 회원 + 흥미탐색 결과 있으면 출력 */
+.user_category {
+	width:1320px;
+	height:330px;
+	margin-top:70px;
+}
+
+.user_category_title {
+	display:flex;
+    flex-direction: row;
+    width: 440px;
+	height: 50px;
+	margin-left:0;
+}
+
+.user_category_img {
+	width: 50px;
+	height: 50px;
+	margin-left:0;
+}
+
+.user_category_img img {
+	width: 50px;
+	height: 50px;
+}
+
+.user_category_name {
+	width: 240px;
+	height: 35px;
+	
+	font-family: 'CookieRun';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 26px;
+	
+	letter-spacing: 1px;
+	
+	margin-top: 10px;
+	margin-left:15px;
+}
+
+.user_category_cont {
+	width:1320px;
+	height:255px;
+	margin-top:25px;
+	display:flex;
+    flex-direction: row;
+}
+
+.user_category_name b {
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+}
+
+.a {
+	color:#FF8E8E;
+}
+
+.b {
+	color:#89F578;
+}
+
+.c {
+	color:#FBE28A;
+}
+
+.d {
+	color:#33A4E3;
+}
+
+.e {
+	color:#F072F2;
+}
+
+.f {
+	color:#33E3CE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,7 +205,7 @@
 .video_dream_jinro {
 	width:1320px;
 	height:330px;
-	margin-top:175px;
+	margin-top:70px;
 }
 
 .video_jinro_title {
