@@ -48,6 +48,8 @@
 
 			<!-- 지도 영역 시작 -->
 			<div id="map_box">
+			
+			<div>test</div>
 
 
 
