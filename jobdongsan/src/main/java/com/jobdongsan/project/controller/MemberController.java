@@ -71,15 +71,18 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/loginCheck") 
 	public String loginCheck(@RequestParam HashMap<String, Object> map, HttpSession session) { 
-		String memId = memService.loginCheck(map);
-		String result = "fail";
- 
-		// 아이디/비밀번호 일치하면 
-		if(memId != null) { // 로그인 성공 시 세션 변수 지정 
-			session.setAttribute("sid", memId); 
-			result = "success"; 
+		// 로그인 체크 결과 : 아이디와 비밀번호 전달하고 로그인 성공하면 아이디 반환
+		String result = memService.loginCheck(map);
+		
+		System.out.println(map);
+		
+		// 아이디와 비밀번호 일치하면
+		if(result.equals("success")) {
+			// 로그인 성공하면 세션 변수 지정
+			session.setAttribute("sid", (String)map.get("memId"));			
 		}
-  		return result;
+		
+		return result;
 	}
 	
 	// 아이디 중복 체크

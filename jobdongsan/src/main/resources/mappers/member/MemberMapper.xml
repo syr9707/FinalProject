@@ -5,8 +5,13 @@
   
 <mapper namespace="com.jobdongsan.project.dao.IMemberDAO">
 	<!-- 로그인 확인 -->
-	<select id="loginCheck" parameterType="HashMap" resultType="String">
+<!-- 	<select id="loginCheck" parameterType="HashMap" resultType="String">
 		SELECT memId FROM member WHERE memID = #{memId} AND memPw = #{memPw}
+	</select> -->
+	
+	<!-- 암호화 로그인 확인 -->
+	<select id="loginCheck" parameterType="string" resultType="string">
+		SELECT memPw FROM member WHERE memId=#{id}
 	</select>
 	
 	<!-- 회원 가입 -->

@@ -75,11 +75,10 @@
 							<c:forEach items="${videoList }" var="videoList">
 							<c:if test="${not doneLoop}">
 							<c:if test="${videoList.videoNo ne video.videoNo }">
-								<div class="video_similar_box">
+								<div class="video_similar_box" onclick="location.href='<c:url value='/video_detail/${videoList.videoNo}'/>'">
 									<div class="video_similar_detail">
-										<a href="<c:url value='/video_detail/${videoList.videoNo}'/>" >
 										<img class="video_thumbnail" src="<c:url value='${videoList.videoThumbnail}'/>">
-										<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
 									</div>
 									<div class="video_similar_name">
 										${videoList.videoName } - ${videoList.videoName2 }
