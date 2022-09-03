@@ -13,7 +13,7 @@ $(document).ready(function(){
         }
     );
 	
-	$('#CD11').on("click", function(){
+	$('#CD11, #LCD11').on("click", function(){
 		$('#list_seoul').slideToggle("fast");
 	});
 	
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD42').on("click", function(){
+	$('#CD42, #LCD42').on("click", function(){
 		$('#list_gangwondo').slideToggle("fast");
 	});
 	
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD41').on("click", function(){
+	$('#CD41, #LCD41').on("click", function(){
 		$('#list_gyeonggido').slideToggle("fast");
 	});
 	
@@ -46,7 +46,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD44').on("click", function(){
+	$('#CD44, #LCD44').on("click", function(){
 		$('#list_chungcheongnamdo').slideToggle("fast");
 	});
 	
@@ -57,7 +57,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD43').on("click", function(){
+	$('#CD43, #LCD43').on("click", function(){
 		$('#list_chungcheongbukdo').slideToggle("fast");
 	});
 	
@@ -68,7 +68,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD45').on("click", function(){
+	$('#CD45, #LCD45').on("click", function(){
 		$('#list_jeollabukdo').slideToggle("fast");
 	});
 	
@@ -79,7 +79,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD46').on("click", function(){
+	$('#CD46, #LCD46').on("click", function(){
 		$('#list_jeollanamdo').slideToggle("fast");
 	});
 	
@@ -90,7 +90,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD47').on("click", function(){
+	$('#CD47, #LCD47').on("click", function(){
 		$('#list_gyeongsangbukdo').slideToggle("fast");
 	});
 	
@@ -101,7 +101,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD48').on("click", function(){
+	$('#CD48, #LCD48').on("click", function(){
 		$('#list_gyeongsangnamdo').slideToggle("fast");
 	});
 	
@@ -112,7 +112,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD50').on("click", function(){
+	$('#CD50, #LCD50').on("click", function(){
 		$('#list_jejudo').slideToggle("fast");
 	});
 	
@@ -123,7 +123,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD28').on("click", function(){
+	$('#CD28, #LCD28').on("click", function(){
 		$('#list_incheon').slideToggle("fast");
 	});
 	
@@ -134,7 +134,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD30').on("click", function(){
+	$('#CD30, #LCD30').on("click", function(){
 		$('#list_daejeon').slideToggle("fast");
 	});
 	
@@ -145,7 +145,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD29').on("click", function(){
+	$('#CD29, #LCD29').on("click", function(){
 		$('#list_gwangju').slideToggle("fast");
 	});
 	
@@ -156,7 +156,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD26').on("click", function(){
+	$('#CD26, #LCD26').on("click", function(){
 		$('#list_busan').slideToggle("fast");
 	});
 	
@@ -167,7 +167,7 @@ $(document).ready(function(){
 	  }
 	});
 	
-	$('#CD27').on("click", function(){
+	$('#CD27, #LCD27').on("click", function(){
 		$('#list_daegu').slideToggle("fast");
 	});
 	
@@ -179,7 +179,7 @@ $(document).ready(function(){
 	});
 	
 	
-	$('#CD31').on("click", function(){
+	$('#CD31, #LCD31').on("click", function(){
 		$('#list_ulsan').slideToggle("fast");
 	});
 	
