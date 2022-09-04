@@ -133,7 +133,7 @@ $(document).ready(function(){
     $('.id').blur(function(){
         var id_rule = /^[a-z0-9_-]{5,20}$/;
         var id = $('.id').val();
-
+		
         if(!id) {
             $('#id_error').text('아이디를 입력해주세요.')
             $('#id_error').show();
@@ -141,7 +141,23 @@ $(document).ready(function(){
             $('#id_error').text('아이디는 5자~20자의 영문 소문자, 숫자와 특수기호(_) , (-)만 사용 가능합니다.')
             $('#id_error').show();
         } else {
-            $('#id_error').hide();
+            $.ajax({
+	        	type: "post",
+	        	url: "/checkMemId",
+	        	data: {"id": id},
+	 			dataType: "text",
+	 			success: function(result){
+	 				if(result == "ok") {
+	 					$('#id_error').hide();
+	 				} else {
+	 					$('#id_error').html('이미 가입된 아이디 입니다.<br>다른 아이디를 사용해주세요.')
+	            		$('#id_error').show();
+	 				}
+	 			},
+	 			error: function(){
+	 				alert("전송 실패");
+	 			}
+	        });
         }
     });
 
@@ -249,7 +265,7 @@ $(document).ready(function(){
         }
         
         if(email2 == "") {
-            
+            $('.email2').focus();
         } else if(!email_rule.test(email)){
             $('#email_error').text('이메일을 형식에 맞게 입력해주세요.')
             $('#email_error').show();
