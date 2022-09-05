@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.model.CategoryVO;
 import com.jobdongsan.project.model.VideoVO;
 import com.jobdongsan.project.service.MemberService;
 import com.jobdongsan.project.service.MyHistoryService;
@@ -33,18 +33,16 @@ public class VideoController {
 	@RequestMapping("/video_index")
 	public String viewVideoAllList(HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
-		//MemberVO mem = memService.getMemberInfo(memId);
 		
 		Integer check = myService.checkResultNo(memId);
+		CategoryVO myCtgInfo = myService.getMyCtg(memId);
+		int myCtgNo = myCtgInfo.getCategoryNo();
+		
 		if(check != null) { 
 			model.addAttribute("memId", memId); 
-			ArrayList<VideoVO> videoListtt = videoService.listCateogoryVideo(check);
+			ArrayList<VideoVO> videoListtt = videoService.listCateogoryVideo(myCtgNo);
 			model.addAttribute("videoListtt", videoListtt);
 		}
-		
-		//model.addAttribute("memId", memId);
-		
-		// //////////////////////////////////////////////////
 		
 		ArrayList<VideoVO> videoList = videoService.listAllVideo();
 		model.addAttribute("videoList", videoList);
