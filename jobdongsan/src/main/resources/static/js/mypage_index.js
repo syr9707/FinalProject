@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     // 흥미 탐색 하러가기 버튼 눌렀을 때
-    $('.btn_interest').click(function(){
+    $('.btn_interest_add').click(function(){
         location.href='/interest_index';
     });
 
@@ -39,8 +39,8 @@ $(document).ready(function(){
     if($('#interest_chk').text() != "") {
         $('.my_interest_add').hide();
         $('.my_interest_content').show();
-        $('.btn_interest').hide();
-        $('.btn_job').show();
+        $('.btn_interest_add').hide();
+        $('.btn_interest').show();
     }
 
     // 찜한 직업이 있을 때
@@ -71,7 +71,7 @@ $(document).ready(function(){
     var video_idx = 0;
 
     $('#my_video_right').click(function(){
-        $('.my_video_list img:nth-child(1)').animate({marginLeft:  '-=350px' }, '1000');
+        $('.my_video_list div:nth-child(1)').animate({marginLeft:  '-=350px' }, '1000');
         $('#my_video_left').css('visibility', 'visible');
         video_idx++;
         if(video_idx == (my_video_list - 3))
@@ -79,7 +79,7 @@ $(document).ready(function(){
     });
 
     $('#my_video_left').click(function(){
-        $('.my_video_list img:nth-child(1)').animate({marginLeft:  '+=350px' }, '1000');
+        $('.my_video_list div:nth-child(1)').animate({marginLeft:  '+=350px' }, '1000');
         $('#my_video_right').css('visibility', 'visible');
         video_idx--;
         if(video_idx == 0)
@@ -107,7 +107,7 @@ $(document).ready(function(){
     var my_map_list = $('.my_map_list img').length;
 
     $('#my_map_right').click(function(){
-        $('.my_map_list img:nth-child(1)').animate({marginLeft:  '-=350px' }, '1000');
+        $('.my_map_list div:nth-child(1)').animate({marginLeft:  '-=350px' }, '1000');
         $('#my_map_left').css('visibility', 'visible');
         map_idx++;
         if(map_idx == (my_map_list - 3))
@@ -115,7 +115,7 @@ $(document).ready(function(){
     });
 
     $('#my_map_left').click(function(){
-        $('.my_map_list img:nth-child(1)').animate({marginLeft:  '+=350px' }, '1000');
+        $('.my_map_list div:nth-child(1)').animate({marginLeft:  '+=350px' }, '1000');
         $('#my_map_right').css('visibility', 'visible');
         map_idx--;
         if(map_idx == 0)

@@ -127,6 +127,14 @@
     cursor: pointer;
 }
 
+.btn_interest {
+	display: none;
+}
+
+
+
+
+
 .my_job_info {
     width: 500px;
     height: 505px;
@@ -229,12 +237,14 @@
     /* display: flex; */
     display: none;
     width: 1050px;
+    height: 210px;
     padding: 0 25px;
     overflow: hidden;
 }
 
-.my_video_list img {
-    margin: 0 50px 0 0;
+.my_video_list div {
+    margin: 0 50px 0 0 ;
+    box-shadow: 2px 2px 5px black;
 }
 
 .my_video_pic {
@@ -281,17 +291,21 @@
     /* display: flex; */
     display: none;
     width: 1050px;
+    height: 210px;
     padding: 0 25px;
     overflow: hidden;
 }
 
-.my_map_list img {
+.my_map_list div {
     margin: 0 50px 0 0;
+    display: flex;
+    align-items: center;
+    background-color: #bbbaa8;
+    box-shadow: 2px 2px 5px black;
 }
 
 .my_map_pic {
 	width: 300px;
-	border-radius: 20px;
 	cursor: pointer;
 }
 

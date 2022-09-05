@@ -59,7 +59,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn_interest_div"><img src="<c:url value='/images/mypage_interest.png' />" class="btn_interest"></div>
+                                <div class="btn_interest_div">
+                                	<img src="<c:url value='/images/mypage_interest_add.png' />" class="btn_interest_add">
+                                	<img src="<c:url value='/images/mypage_interest.png' />" class="btn_interest" onClick = "location.href='<c:url value='mypage_detail'/>'">
+                               	</div>
                             </div>
                             <div class="my_job">
                                 <div class="my_job_info">
@@ -98,7 +101,9 @@
                             </div>
                             <div class="my_video_list">
                             	<c:forEach var="myVideo" items="${myVideoList}">
-                            		<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
+                            		<div class="my_video_pic">
+                            			<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
+                            		</div>
                             	</c:forEach>
                             </div>
                             <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_video_right">
@@ -114,7 +119,9 @@
                             </div>
                             <div class="my_map_list">
                                <c:forEach var="myMap" items="${myMapList}">
-                            		<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic" onClick = "location.href='<c:url value='map_detail/${myMap.mapJobNo}'/>'">
+                               		<div class="my_video_pic" onClick = "location.href='<c:url value='map_detail/${myMap.mapJobNo}'/>'">
+                            			<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic">
+                            		</div>
                             	</c:forEach>
                             </div>
                             <img src="<c:url value='/images/mypage_right.png' />" class="arrows" id="my_map_right">
