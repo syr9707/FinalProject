@@ -73,4 +73,17 @@ public class MemberService implements IMemberService {
 		dao.deleteMember(memId);
 	}
 
+	@Override
+	public MemberVO findMemId(String memEmail) {
+		return dao.findMemId(memEmail);
+	}
+
+	@Override
+	public void updateMemPw(String memId, String newPw) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("memId", memId);
+		map.put("newPw", newPw);
+		dao.updateMemPw(map);
+	}
+
 }

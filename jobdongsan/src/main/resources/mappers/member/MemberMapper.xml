@@ -35,6 +35,16 @@
 		SELECT memPw FROM member WHERE memId = #{memId}
 	</select>
 	
+	<!-- 아이디 찾기 -->
+	<select id="findMemId" parameterType="String" resultType="com.jobdongsan.project.model.MemberVO">
+		SELECT * FROM member WHERE memEmail = #{memEmail}
+	</select>
+	
+	<!-- 회원 비밀번호 업데이트 -->
+	<update id="updateMemPw" parameterType="HashMap">
+		UPDATE member SET memPw = #{newPw} where memId = #{memId}
+	</update>
+	
 	<!-- 회원 정보 수정 -->
 	<update id="updateMemberInfo" parameterType="com.jobdongsan.project.model.MemberVO">
 		UPDATE member SET memPw = #{memPw}, memName = #{memName}, memEmail = #{memEmail},

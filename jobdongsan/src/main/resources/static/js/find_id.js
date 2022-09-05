@@ -150,4 +150,50 @@ $(document).ready(function(){
             $('.email_code').css('color', 'black');
         }
     });
+    
+    $('.email_code').click(function() {
+		const check_email = $('.email1').val() + "@" + $('.email2').val(); // 이메일 주소값 얻어오기!
+
+		$.ajax({
+			type : 'get',
+			url : '/find_id', // GET방식이라 Url 뒤에 email을 뭍힐수있다.
+			data : {"email": check_email},
+			dataType: "text",
+			success : function (data) {
+				console.log("data : " +  data);
+				$('.code').attr('disabled',false);
+				$('.code').css('background-color', '#ffffff');
+				$('.code').focus();
+				code = data;
+				alert('인증번호가 전송되었습니다.')
+			}			
+		});
+	});
+	
+	// 인증번호 비교 
+	// blur -> focus가 벗어나는 경우 발생
+	$('.code').blur(function () {
+		const inputCode = $(this).val();
+		const $resultMsg = $('#code_error');
+		
+		if(inputCode === code){
+			$resultMsg.html('인증번호가 일치합니다.');
+			$resultMsg.show();
+			$resultMsg.css('color','green');
+			$('.code').attr('disabled', true);
+			$('.email1').attr('readonly', true);
+			$('.email2').attr('readonly', true);
+			$('.email2').attr('onFocus', 'this.initialSelect = this.selectedIndex');
+	        $('.email2').attr('onChange', 'this.selectedIndex = this.initialSelect');
+	        $('.code_check').css('background-color', '#FFFACD');
+            $('.code_check').css('color', 'black');
+            $('.code_check').attr('type', 'submit');
+		}else{
+			$resultMsg.html('인증번호가 불일치 합니다. 다시 확인해주세요!');
+			$resultMsg.show();
+			$resultMsg.css('color','red');
+		}
+	});
+	
+	
 });

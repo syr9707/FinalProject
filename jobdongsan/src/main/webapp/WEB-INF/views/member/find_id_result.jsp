@@ -19,8 +19,8 @@
 				<h3 class="semibold txt_30">아이디 찾기</h3>
 				<div id="result_box">
 					<div id="result_find_id">
-						<b>채동혁</b> 회원님의 아이디는 <br>
-						<b>xlawkdsla123</b> 입니다.
+						<b>${memName }</b> 회원님의 아이디는 <br>
+						<b>${memId }</b> 입니다.
 					</div>
 				</div>
 				<input type="button" name="find_id_login" class="find_id_login" onclick="location.href='<c:url value='/login'/>';" value="로그인">

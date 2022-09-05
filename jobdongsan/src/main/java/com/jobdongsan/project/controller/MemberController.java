@@ -109,13 +109,26 @@ public class MemberController {
 	
 	// 아이디 찾기 페이지 호출
 	@RequestMapping("/find_id_index")
-	public String find_id_index() {
+	public String find_id_index() {	
 		return "member/find_id_index";
+	}
+	
+	// 아이디 찾기 이메일 인증
+	@ResponseBody
+	@RequestMapping("/find_id")
+	public String find_id(String email) {
+		return mailService.findId(email);
 	}
 	
 	// 아이디 찾기 결과 페이지 호출
 	@RequestMapping("/find_id_result")
-	public String find_id_result() {
+	public String find_id_result(@RequestParam HashMap<String, Object> map, Model model) {
+		String email = (String) map.get("email1") + "@" + (String) map.get("email2");
+		MemberVO vo = memService.findMemId(email);
+		
+		model.addAttribute("memName", vo.getMemName());
+		model.addAttribute("memId", vo.getMemId());
+		
 		return "member/find_id_result";
 	}
 	
@@ -127,7 +140,14 @@ public class MemberController {
 	
 	// 비밀번호 찾기 결과 페이지 호출
 	@RequestMapping("/find_pw_result")
-	public String find_pw_result() {
+	public String find_pw_result(@RequestParam HashMap<String, Object> map, Model model) {
+		String memEmail = (String) map.get("email1") + "@" + (String) map.get("email2");
+		String memId = (String) map.get("memId");
+		String newPw = mailService.getTempPassword();
+		
+		memService.updateMemPw(memId, newPw);
+		mailService.findPw(memEmail);
+		
 		return "member/find_pw_result";
 	}
 	
@@ -143,7 +163,7 @@ public class MemberController {
 		return "member/signup";
 	}
 	
-	//이메일 인증
+	// 회원가입 이메일 인증
 	@ResponseBody
 	@RequestMapping("/mailCheck")
 	public String mailCheck(String email) {

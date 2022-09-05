@@ -14,7 +14,7 @@
 		<!-- top.jsp -->
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<section class="section">
-			<form id="find_id_form" method="post" action="<c:url value='/find_id'/>">
+			<form id="find_id_form" method="post" action="<c:url value='/find_id_result'/>">
 				<div class="section_wrap">
 					<h3 class="semibold txt_30">아이디 찾기</h3>
 					<div class="gray">
@@ -36,8 +36,9 @@
                     <input type="button" name="email_code" class="email_code semibold" value="이메일로 코드 발송하기">
                     <div class="input_code">
 	                    <p>코드 입력</p>
-                    	<input type="text" name="code" class="code">
+                    	<input type="text" name="code" class="code" disabled="true">
                		</div>
+               		<div class="error" id="code_error">인증번호가 일치합니다.</div>
                		<input type="button" name="code_check" class="code_check semibold" value="확인">
 				</div><!-- wrap 끝 -->
 			</form>

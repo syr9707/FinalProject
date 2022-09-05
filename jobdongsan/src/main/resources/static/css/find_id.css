@@ -81,6 +81,10 @@ select {
 	background-color: #bbbbbb;
 }
 
+.code {
+	background-color: #dddddd;
+}
+
 .error {
 	display: none;
 	margin-top: 10px;
