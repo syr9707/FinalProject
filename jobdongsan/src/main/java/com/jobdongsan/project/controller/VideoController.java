@@ -36,10 +36,11 @@ public class VideoController {
 		
 		Integer check = myService.checkResultNo(memId);
 		CategoryVO myCtgInfo = myService.getMyCtg(memId);
-		int myCtgNo = myCtgInfo.getCategoryNo();
+		//int myCtgNo = myCtgInfo.getCategoryNo();
 		
 		if(check != null) { 
 			model.addAttribute("memId", memId); 
+			int myCtgNo = myCtgInfo.getCategoryNo();
 			ArrayList<VideoVO> videoListtt = videoService.listCateogoryVideo(myCtgNo);
 			model.addAttribute("videoListtt", videoListtt);
 		}
