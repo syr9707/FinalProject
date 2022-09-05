@@ -68,31 +68,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 비디오 컨텐츠 박스 */
 .video_detail_content {
 	width:1320px;
@@ -135,19 +110,67 @@
 	bottom: 639px;
 }
 
-.video_content img {
+.video_Thumbnail {
 	position: absolute;
 	width: 785px;
     height: 455px;
 	border-radius: 60px;
 }
 
-.video_content video {
+.video_content #video {
 	width: 785px;
     height: 455px;
     border-radius: 60px;
 }
 
+.video_btns {
+	display: flex;
+	height: 50px;
+	margin-top: 25px;
+}
+
+.on_off_btn {
+	cursor: pointer;
+}
+
+.on_off_btn:hover {
+	filter: opacity(80%);
+} 
+
+.video_btns2 {
+	display: flex;
+}
+
+.video_btns2 p {
+	margin-left: 10px;
+}
+
+.video_time_bar {
+	margin-top: 10px;
+}
+
+#time_bar {
+	width: 450px;
+	margin-right: 50px;
+	cursor: pointer;
+}
+
+.volume_btn {
+	margin-top: 10px;
+}
+
+.volume_bar {
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.fullscreen_btn {
+	cursor: pointer;
+}
+
+.fullscreen_btn:hover {
+	filter: opacity(80%);
+}
 
 
 
@@ -207,7 +230,6 @@
 	margin-top: 10px;
     height: 35px;
 }
-
 
 .video_explain_detail {
 	/* height: 235px; */

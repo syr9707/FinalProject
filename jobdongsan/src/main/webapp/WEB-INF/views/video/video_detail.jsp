@@ -31,11 +31,25 @@
 								<img src="<c:url value='/images/video_detail_tv.png'/>">
 							</div>
 							<div class="video_content">
-								<img src="<c:url value='${video.videoThumbnail }'/>">
+								<img class="video_Thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
 								<!-- <video id="jp_video_0" preload="metadata" src="https://cdn.career.go.kr/cnet/real/upload/2014/10/00000046785600054899.mp4" style="width: 0px; height: 0px;"></video> -->
-								<video controls>
+								<video id="video">
 									<source src="<c:url value='${video.videoLink }'/>" type="video/mp4">
 								</video>
+								<div class="video_btns">
+									<img class="on_off_btn" src="<c:url value='/images/video_onOff.png'/>">
+									<div class="video_btns2">
+										<div class="video_time_bar">
+											<div class="video_time">00:00</div>
+											<input type="range" id="time_bar" value="0">	
+										</div>
+										<div class="volume_btn">
+											<p>volume</p>
+											<input type="range" class="volume_bar" min="0" max="1" step="0.01" value="1">
+										</div>
+										<img class="fullscreen_btn" src="<c:url value='/images/video_fullscreen.png'/>">
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="video_explain">
