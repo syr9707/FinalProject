@@ -72,5 +72,10 @@ public class ResultService implements IResultService {
 		dao.insertPromise(vo);
 	}
 
+	@Override
+	public ResultVO getMyPromise(String memId) {
+		return dao.getMyPromise(memId);
+	}
+
 
 }

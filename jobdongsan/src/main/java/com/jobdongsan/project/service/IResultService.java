@@ -18,6 +18,7 @@ public interface IResultService {
 	public HashMap<String, Object> checkResultNo(String memId); // 마이페이지 resultNo 체크하기
 	public ArrayList<JobVO> ctgJob(); // 유형별 직업 가져오기
 	public ArrayList<MapVO> ctgMap(); // 유형별 체험 장소 가져오기
-	public void insertPromise(ResultVO vo);	// 나의 다짐 넣기 
+	public void insertPromise(ResultVO vo);	// 나의 다짐 넣기
+	public ResultVO getMyPromise(String memId);
 	
 }
