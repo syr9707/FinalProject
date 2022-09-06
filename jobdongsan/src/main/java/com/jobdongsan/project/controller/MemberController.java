@@ -184,14 +184,7 @@ public class MemberController {
 	public String signup() {
 		return "member/signup";
 	}
-	
-	// 회원가입 이메일 인증
-	@ResponseBody
-	@RequestMapping("/mailCheck")
-	public String mailCheck(String email) {
-		return mailService.joinEmail(email);
-	}
-	
+
 	// 회원 가입 이메일 중복 체크
 	@ResponseBody
 	@RequestMapping("/checkMemEmail")
@@ -205,6 +198,13 @@ public class MemberController {
 			result = "fail";
 		
 		return result;
+	}
+	
+	// 회원가입 이메일 인증
+	@ResponseBody
+	@RequestMapping("/mailCheck")
+	public String mailCheck(String email) {
+		return mailService.joinEmail(email);
 	}
 	
 	// 회원 가입 기능 후 가입 완료 페이지로 이동

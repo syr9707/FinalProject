@@ -88,18 +88,33 @@ $(document).ready(function(){
 		const check_email = $('.email1').val() + "@" + $('.email2').val();
 		
 		$.ajax({
-			type : 'get',
-			url : '/mailCheck',
+			type : 'post',
+			url : '/checkMemEmail',
 			data : {"email": check_email},
 			dataType: "text",
-			success : function (data) {
-				$('.email_auth_check').attr('disabled',false);
-				$('.email_auth_check').css('background-color', '#ffffff');
-				$('.email_auth_check').show();
-				$('.email_auth_check').focus();
-				code = data;
-				alert('인증번호가 전송되었습니다.')
-			}			
+			success : function (result) {
+				if(result == "fail") {
+					$('#email_error').html('이미 가입된 이메일 입니다.<br>이메일 주소를 확인해주세요.')
+		            $('#email_error').show();
+		            $('.email_auth').css('background-color', '#bbbbbb');
+		            $('.email_auth').css('color', '#ffffff');
+				} else {
+					$.ajax({
+						type : 'get',
+						url : '/mailCheck',
+						data : {"email": check_email},
+						dataType: "text",
+						success : function (data) {
+							$('.email_auth_check').attr('disabled',false);
+							$('.email_auth_check').css('background-color', '#ffffff');
+							$('.email_auth_check').show();
+							$('.email_auth_check').focus();
+							code = data;
+							alert('인증번호가 전송되었습니다.')
+						}			
+					});
+				}
+			}
 		});
 	});
 	
