@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
 <!DOCTYPE html>
 <html>
 		<!-- head.jsp -->
@@ -20,10 +23,10 @@
 					<div class="login_id">
 						<h3 class="semibold txt_30">ID 로그인</h3>
 						<div class="input_id">
-							<input type="text" class="login_input" id="id" name="id" placeholder="아이디">
+							<input type="text" class="login_input" id="id" name="memId" placeholder="아이디">
 						</div>
 						<div class="input_pw">
-							<input type="password" class="login_input" id="pw" name="pw" placeholder="비밀번호">
+							<input type="password" class="login_input" id="pw" name="memPw" placeholder="비밀번호">
 						</div>
 						<div class="login_continue gray"><span><i class="fa-regular fa-circle"></i></span><span>로그인 상태 유지</span></div>
 						<div class="login_error red">아이디와 비밀번호를 확인해 주세요.</div>
@@ -38,13 +41,13 @@
 						<h3 class="semibold txt_20">SNS 로그인</h3>
 						<div class="login_sns_bd">
 							<div>
-								<a href="<c:url value='/login/naver' />"><img src="<c:url value='/images/logo_naver.png' />"><span>네이버로 로그인</span></a>
+								<a href="<c:url value='/naver' />"><img src="<c:url value='/images/logo_naver.png' />"><span>네이버로 로그인</span></a>
 							</div>
 							<div>
-								<a href="<c:url value='/login/google' />"><img src="<c:url value='/images/logo_google.png' />"><span>구글로 로그인</span></a>
+								<a href="<c:url value='/google' />"><img src="<c:url value='/images/logo_google.png' />"><span>구글로 로그인</span></a>
 							</div>
 							<div>
-								<a href="<c:url value='/login/kakao' />"><img src="<c:url value='/images/logo_kakao.png' />"><span>카카오로 로그인</span></a>
+								<a href="<c:url value='/kakao' />"><img src="<c:url value='/images/logo_kakao.png' />"><span>카카오로 로그인</span></a>
 							</div>
 						</div>
 					</div>

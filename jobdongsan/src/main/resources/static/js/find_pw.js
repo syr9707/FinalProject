@@ -150,4 +150,25 @@ $(document).ready(function(){
             $('.email_code').css('color', 'black');
         }
     });
+    
+    $('.temp_pw').click(function(){
+    	const check_email = $('.email1').val() + "@" + $('.email2').val();
+		$.ajax({
+			type : 'get',
+			url : '/check_memInfo', 
+			data : {"memEmail": check_email, "memId": $('.id').val()},
+			dataType: "text",
+			success : function (data) {
+				if(data == "fail") {
+					$('#email_error').html('입력하신 정보로 가입된 회원 정보가 없습니다.<br>아이디와 이메일 주소를 확인해주세요.')
+		            $('#email_error').show();
+		            $('.email_code').css('background-color', '#bbbbbb');
+		            $('.email_code').css('color', '#ffffff');
+				} else {
+					alert('임시 비밀번호가 발급되었습니다.')
+					$('#find_pw_form').submit();
+				}		
+			}			
+		});
+    });
 });

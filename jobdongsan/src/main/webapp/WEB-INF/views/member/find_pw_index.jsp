@@ -15,7 +15,7 @@
 		<!-- top.jsp -->
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<section class="section">
-			<form id="find_id_form" method="post" action="<c:url value='/find_id'/>">
+			<form id="find_pw_form" method="post" action="<c:url value='/find_pw_result'/>">
 				<div class="section_wrap">
 					<h3 class="semibold txt_30">비밀번호 찾기</h3>
 					<div class="gray">

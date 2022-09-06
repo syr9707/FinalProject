@@ -65,6 +65,9 @@ public class MemberService implements IMemberService {
 
 	@Override
 	public void updateMemberInfo(MemberVO vo) {
+		String encodedPwd = pwdEncoder.encode(vo.getMemPw());
+		vo.setMemPw(encodedPwd);
+		
 		dao.updateMemberInfo(vo);
 	}
 
@@ -81,9 +84,25 @@ public class MemberService implements IMemberService {
 	@Override
 	public void updateMemPw(String memId, String newPw) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
+		
+		String encodedPwd = pwdEncoder.encode(newPw);
+		
 		map.put("memId", memId);
-		map.put("newPw", newPw);
+		map.put("newPw", encodedPwd);
 		dao.updateMemPw(map);
+	}
+
+	@Override
+	public String checkMemInfo(String memId, String memEmail) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("memId", memId);
+		map.put("memEmail", memEmail);
+		return dao.checkMemInfo(map);
+	}
+
+	@Override
+	public String checkMemEmail(String memEmail) {
+		return dao.checkMemEmail(memEmail);
 	}
 
 }

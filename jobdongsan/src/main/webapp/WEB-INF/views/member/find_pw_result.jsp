@@ -19,7 +19,7 @@
 					<h3 class="semibold txt_30">비밀번호 찾기</h3>
 					<div id="result_box">
 						<div id="result_find_pw">
-							<b>${mem.memId }</b> 회원님의 임시 비밀번호가 발급되었습니다. <br>
+							<b>${memName }</b> 회원님의 임시 비밀번호가 발급되었습니다. <br>
 							<div class="gray">※ 본 비밀번호는 3일간 유효합니다. </div>
 						</div>
 					</div>

@@ -202,6 +202,6 @@ public class InterestController {
 		
 		resultService.insertPromise(vo);
 		
-		return "/index";
+		return "redirect:/";
 	}
 }

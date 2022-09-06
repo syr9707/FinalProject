@@ -152,20 +152,25 @@ $(document).ready(function(){
     });
     
     $('.email_code').click(function() {
-		const check_email = $('.email1').val() + "@" + $('.email2').val(); // 이메일 주소값 얻어오기!
-
+		const check_email = $('.email1').val() + "@" + $('.email2').val();
 		$.ajax({
 			type : 'get',
-			url : '/find_id', // GET방식이라 Url 뒤에 email을 뭍힐수있다.
+			url : '/find_id', 
 			data : {"email": check_email},
 			dataType: "text",
 			success : function (data) {
-				console.log("data : " +  data);
-				$('.code').attr('disabled',false);
-				$('.code').css('background-color', '#ffffff');
-				$('.code').focus();
-				code = data;
-				alert('인증번호가 전송되었습니다.')
+				if(data == "fail") {
+					$('#email_error').html('해당 이메일 주소로 가입된 아이디가 없습니다.<br>이메일 주소를 확인해주세요.')
+		            $('#email_error').show();
+		            $('.email_code').css('background-color', '#bbbbbb');
+		            $('.email_code').css('color', '#ffffff');
+				} else {
+					$('.code').attr('disabled',false);
+					$('.code').css('background-color', '#ffffff');
+					$('.code').focus();
+					code = data;
+					alert('인증번호가 전송되었습니다.')
+				}		
 			}			
 		});
 	});

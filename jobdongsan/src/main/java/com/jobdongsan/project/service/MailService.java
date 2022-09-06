@@ -20,7 +20,6 @@ public class MailService {
 		// 난수의 범위 111111 ~ 999999 (6자리 난수)
 		Random r = new Random();
 		int checkNum = r.nextInt(888888) + 111111;
-		System.out.println("인증번호 : " + checkNum);
 		authNumber = checkNum;
 	}
 
@@ -37,27 +36,24 @@ public class MailService {
 	}
 	
 	// 아이디 찾기 이메일 양식
-	public String findId(String email) {
+	public void findId(String email) {
 		makeRandomNumber();
 		String setFrom = "jobdongsan_@naver.com";
 		String toMail = email;
-		String title = "잡동산 회원 아이디 찾기 이메일 입니다."; // 이메일 제목
-		String content = "홈페이지를 방문해주셔서 감사합니다." + // html 형식으로 작성 !
-				"<br><br>" + "인증 번호는 " + authNumber + "입니다." + "<br>" + "해당 인증번호를 인증번호 확인란에 기입하여 주세요."; // 이메일 내용 삽입
+		String title = "잡동산 회원 아이디 찾기 이메일 입니다.";
+		String content = "홈페이지를 방문해주셔서 감사합니다." +
+				"<br><br>" + "인증 번호는 " + authNumber + "입니다." + "<br>" + "해당 인증번호를 인증번호 확인란에 기입하여 주세요.";
 		mailSend(setFrom, toMail, title, content);
-		return Integer.toString(authNumber);
 	}
 	
 	// 비밀번호 찾기 이메일 양식
-	public String findPw(String email) {
-		String newPw = getTempPassword();
+	public void findPw(String email, String newPw) {
 		String setFrom = "jobdongsan_@naver.com";
 		String toMail = email;
-		String title = "잡동산 회원 비밀번호 찾기 이메일 입니다."; // 이메일 제목
-		String content = "홈페이지를 방문해주셔서 감사합니다." + // html 형식으로 작성 !
-				"<br><br>" + "회원님의 비밀번호는 " + newPw + "입니다." + "<br>" + "새로 발급된 비밀번호를 사용해주시고, 꼭 비밀번호를 변경해주세요."; // 이메일 내용 삽입
+		String title = "잡동산 회원 비밀번호 찾기 이메일 입니다.";
+		String content = "홈페이지를 방문해주셔서 감사합니다." +
+				"<br><br>" + "회원님의 비밀번호는 " + newPw + "입니다." + "<br>" + "새로 발급된 비밀번호를 사용해주시고, 꼭 비밀번호를 변경해주세요.";
 		mailSend(setFrom, toMail, title, content);
-		return Integer.toString(authNumber);
 	}
 	
 	// 랜덤함수로 임시비밀번호 생성

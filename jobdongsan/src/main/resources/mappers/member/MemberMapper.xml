@@ -11,7 +11,7 @@
 	
 	<!-- 암호화 로그인 확인 -->
 	<select id="loginCheck" parameterType="string" resultType="string">
-		SELECT memPw FROM member WHERE memId=#{id}
+		SELECT memPw FROM member WHERE memId = #{memId}
 	</select>
 	
 	<!-- 회원 가입 -->
@@ -35,6 +35,11 @@
 		SELECT memPw FROM member WHERE memId = #{memId}
 	</select>
 	
+	<!-- 회원 이메일 체크 -->
+	<select id="checkMemEmail" parameterType="String" resultType="String">
+		SELECT memEmail FROM member WHERE memEmail = #{memEmail}
+	</select>
+	
 	<!-- 아이디 찾기 -->
 	<select id="findMemId" parameterType="String" resultType="com.jobdongsan.project.model.MemberVO">
 		SELECT * FROM member WHERE memEmail = #{memEmail}
@@ -52,8 +57,13 @@
 		memAddress2 = #{memAddress2} WHERE memId = #{memId}
 	</update>
 	
+	<!-- 회원 아이디 이메일 체크 -->
+	<select id="checkMemInfo" parameterType="HashMap" resultType="String">
+		SELECT memPw FROM member WHERE memId = #{memId} AND memEmail = #{memEmail}
+	</select>
+	
 	<!-- 회원 탈퇴 -->
 	<delete id="deleteMember" parameterType="String">
-		DELETE FROM member WHERE memId = #{memId} 
+		DELETE FROM member WHERE memId = #{memId};
 	</delete>
 </mapper>

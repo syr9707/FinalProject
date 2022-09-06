@@ -74,8 +74,6 @@ public class MemberController {
 		// 로그인 체크 결과 : 아이디와 비밀번호 전달하고 로그인 성공하면 아이디 반환
 		String result = memService.loginCheck(map);
 		
-		System.out.println(map);
-		
 		// 아이디와 비밀번호 일치하면
 		if(result.equals("success")) {
 			// 로그인 성공하면 세션 변수 지정
@@ -89,12 +87,12 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/checkMemId")
 	public String checkMemId(String id) {
-		String result = "";
+		String result = "fail";
 		
 		if(memService.checkMemId(id) == null) {
-			result = "ok";
+			result = "success";
 		} else {
-			result = "no";
+			result = "fail";
 		}
 		
 		return result;
@@ -117,7 +115,15 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/find_id")
 	public String find_id(String email) {
-		return mailService.findId(email);
+		String check = memService.checkMemEmail(email);
+		
+		if(check == null)
+			return "fail";
+		else {
+			mailService.findId(email);
+			return "success";
+		}
+		
 	}
 	
 	// 아이디 찾기 결과 페이지 호출
@@ -138,15 +144,33 @@ public class MemberController {
 		return "member/find_pw_index";
 	}
 	
+	// 회원 아이디 이메일 체크
+	@ResponseBody
+	@RequestMapping("/check_memInfo")
+	public String check_memInfo(String memId, String memEmail) {
+		String result = "fail";
+		String check = memService.checkMemInfo(memId, memEmail);
+		
+		if(check == null)
+			result ="fail";
+		else 
+			result = "success";
+		
+		return result;
+	}
+	
 	// 비밀번호 찾기 결과 페이지 호출
 	@RequestMapping("/find_pw_result")
 	public String find_pw_result(@RequestParam HashMap<String, Object> map, Model model) {
 		String memEmail = (String) map.get("email1") + "@" + (String) map.get("email2");
-		String memId = (String) map.get("memId");
+		String memId = (String) map.get("id");
 		String newPw = mailService.getTempPassword();
+		MemberVO vo = memService.getMemberInfo(memId);
 		
 		memService.updateMemPw(memId, newPw);
-		mailService.findPw(memEmail);
+		mailService.findPw(memEmail, newPw);
+		
+		model.addAttribute("memName", vo.getMemName());
 		
 		return "member/find_pw_result";
 	}
@@ -167,8 +191,6 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/mailCheck")
 	public String mailCheck(String email) {
-		System.out.println("이메일 인증 요청이 들어옴!");
-		System.out.println("이메일 인증 이메일 : " + email);
 		return mailService.joinEmail(email);
 	}
 	
@@ -245,12 +267,12 @@ public class MemberController {
 	@RequestMapping("/checkPw")
 	public String mypage_checkPw(@RequestParam String input_pw, HttpSession session) {
 		String memId = (String) session.getAttribute("sid");
-		String memPw = memService.mypageCheck(memId);
-		String result = "fail";
+		HashMap<String, Object> param = new HashMap<String, Object>();
+		param.put("memId", memId);
+		param.put("memPw", input_pw);
 		
-		if(input_pw.equals(memPw)) {
-			result = "success";
-		}
+		String result = memService.loginCheck(param);
+		
 		return result;
 	}
 	

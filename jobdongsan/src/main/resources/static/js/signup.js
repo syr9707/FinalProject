@@ -85,26 +85,23 @@ $(document).ready(function(){
 
     // ********************이메일 인증 추가 필요
 	$('.email_auth').click(function() {
-		const check_email = $('.email1').val() + "@" + $('.email2').val(); // 이메일 주소값 얻어오기!
-		console.log('완성된 이메일 : ' + check_email); // 이메일 오는지 확인 
+		const check_email = $('.email1').val() + "@" + $('.email2').val();
 		
 		$.ajax({
 			type : 'get',
-			url : '/mailCheck', // GET방식이라 Url 뒤에 email을 뭍힐수있다.
+			url : '/mailCheck',
 			data : {"email": check_email},
 			dataType: "text",
 			success : function (data) {
-				console.log("data : " +  data);
 				$('.email_auth_check').attr('disabled',false);
 				$('.email_auth_check').css('background-color', '#ffffff');
 				$('.email_auth_check').show();
 				$('.email_auth_check').focus();
 				code = data;
 				alert('인증번호가 전송되었습니다.')
-				
 			}			
-		}); // end ajax
-	}); // end send eamil
+		});
+	});
 	
 	// 인증번호 비교 
 	// blur -> focus가 벗어나는 경우 발생
@@ -147,7 +144,7 @@ $(document).ready(function(){
 	        	data: {"id": id},
 	 			dataType: "text",
 	 			success: function(result){
-	 				if(result == "ok") {
+	 				if(result == "success") {
 	 					$('#id_error').hide();
 	 				} else {
 	 					$('#id_error').html('이미 가입된 아이디 입니다.<br>다른 아이디를 사용해주세요.')
