@@ -33,15 +33,135 @@
 			</div>
 
 			<div id="map_index_sub_title">
-				<h3>지도를 클릭해보아요!</h3>
-			</div>
-
-			<div id="map_img_korea">
-				<img src="<c:url value='/images/map_korea.png'/>">
+				<h3>유형을 클릭해보아요!</h3>
 			</div>
 
 			<div id="map_img_tap">
 				<img src="<c:url value='/images/map_tap.png'/>">
+			</div>
+
+
+			<div id="map_category">
+				<div id="map_category_c_1">
+					<img src="<c:url value='/images/category_1.png'/>">
+					<div id="map_category_t">뚝딱이</div>
+				</div>
+
+				<div id="map_category_c_2">
+					<img src="<c:url value='/images/category_2.png'/>">
+					<div id="map_category_t">탐험이</div>
+				</div>
+
+				<div id="map_category_c_3">
+					<img src="<c:url value='/images/category_3.png'/>">
+					<div id="map_category_t">멋쟁이</div>
+				</div>
+
+				<div id="map_category_c_4">
+					<img src="<c:url value='/images/category_4.png'/>">
+					<div id="map_category_t">친절이</div>
+				</div>
+
+				<div id="map_category_c_5">
+					<img src="<c:url value='/images/category_5.png'/>">
+					<div id="map_category_t">씩씩이</div>
+				</div>
+
+				<div id="map_category_c_6">
+					<img src="<c:url value='/images/category_6.png'/>">
+					<div id="map_category_t">성실이</div>
+				</div>
+
+			</div>
+			
+			<div id="map_category_e_1">
+			<b class="a">뚝딱이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '1' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+			</div>
+			
+			<div id="map_category_e_2">
+			<b class="b">탐험이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '2' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+			</div>
+			
+			<div id="map_category_e_3">
+			<b class="c">멋쟁이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '3' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+			</div>
+			
+			<div id="map_category_e_4">
+			<b class="d">친절이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '4' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+			</div>
+			
+			<div id="map_category_e_5">
+			<b class="e">씩씩이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '5' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
+			</div>
+			
+			<div id="map_category_e_6">
+			<b class="f">성실이</b> 유형의 직업 체험 장소 리스트
+			<div id="list_detail">
+						<ul>
+							<c:forEach items="${mapList }" var="map">
+								<c:if test="${map.categoryNo eq '6' }">
+									<li><a
+										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
+											${map.mapJobArea } - ${map.mapJobName }</a></li>
+								</c:if>
+							</c:forEach>
+						</ul>
+					</div>
 			</div>
 
 

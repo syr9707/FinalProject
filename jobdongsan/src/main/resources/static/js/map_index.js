@@ -12,6 +12,74 @@ $(document).ready(function(){
             $(this).removeClass('animate__animated animate__pulse');
         }
     );
+    
+    $('#map_category_c_1').on("click", function(){
+		$('#map_category_e_1').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_1");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	    $('#map_category_c_2').on("click", function(){
+		$('#map_category_e_2').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_2");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	    $('#map_category_c_3').on("click", function(){
+		$('#map_category_e_3').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_3");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	    $('#map_category_c_4').on("click", function(){
+		$('#map_category_e_4').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_4");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	    $('#map_category_c_5').on("click", function(){
+		$('#map_category_e_5').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_5");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	    $('#map_category_c_6').on("click", function(){
+		$('#map_category_e_6').toggle();
+	});
+	
+	$(document).mouseup(function (e){
+	 var LayerPopup = $("#map_category_e_6");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
+	
+	/////////////////////////////////////////////////
 	
 	$('#CD11, #LCD11').on("click", function(){
 		$('#list_seoul').slideToggle("fast");

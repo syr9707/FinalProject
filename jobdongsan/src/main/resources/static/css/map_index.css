@@ -2,7 +2,7 @@
 
 .section div {
 	font-family: 'CookieRun';
-	font-size: 17px;
+	font-size: 18px;
 }
 
 h2 {
@@ -74,24 +74,166 @@ TEXT {
 	height: 80px;
 	/*  */
 	background: #FFFACD;
+	margin-bottom: 70px;
+}
+
+#map_category {
+	display: flex;
+	flex-direction: row;
 	margin-bottom: 30px;
+	margin-left: 170px;
+	margin-right: 170px;
+	margin-top: 70px;
 }
 
-#map_img_korea {
+#map_category img {
+	width: 130px;
+	height: 130px;
+}
+
+#map_category_c:hover {
+	opacity: 0.5;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+#map_category_t {
 	position: relative;
-	margin-left: 820px;
-	margin-top: -120px;
+	margin-left: 40px;
+	font-size: 20px;
 }
 
-#map_img_korea img {
-	width: 100px;
-	height: 100px;
+#map_category_e_1 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+#map_category_e_2 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+#map_category_e_3 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+#map_category_e_4 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+#map_category_e_5 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+#map_category_e_6 {
+	border-top: 3px solid #fde48a;
+	border-bottom: 3px solid #fde48a;
+	font-size: 23px;
+	/*  */
+	width: 950px;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	/*  */
+	display: none;
+}
+
+b {
+	font-family: 'CookieRun';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.a {
+	color:#FF8E8E;
+}
+
+.b {
+	color:#89F578;
+}
+
+.c {
+	color:#FBE28A;
+}
+
+.d {
+	color:#33A4E3;
+}
+
+.e {
+	color:#F072F2;
+}
+
+.f {
+	color:#33E3CE;
 }
 
 #map_img_tap {
 	position: relative;
-	margin-left: 870px;
-	margin-top: -50px;
+	margin-left: 820px;
+	margin-top: -155px;
 }
 
 #map_img_tap img {
@@ -125,7 +267,11 @@ TEXT {
 	padding: 10px;
 }
 
-/******** hidden 지역 박스 ********/
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .list_box {
 	padding: 10px 20px 10px 20px;
 }
