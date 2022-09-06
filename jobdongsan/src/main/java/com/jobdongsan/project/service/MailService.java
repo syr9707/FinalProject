@@ -36,7 +36,7 @@ public class MailService {
 	}
 	
 	// 아이디 찾기 이메일 양식
-	public void findId(String email) {
+	public String findId(String email) {
 		makeRandomNumber();
 		String setFrom = "jobdongsan_@naver.com";
 		String toMail = email;
@@ -44,6 +44,7 @@ public class MailService {
 		String content = "홈페이지를 방문해주셔서 감사합니다." +
 				"<br><br>" + "인증 번호는 " + authNumber + "입니다." + "<br>" + "해당 인증번호를 인증번호 확인란에 기입하여 주세요.";
 		mailSend(setFrom, toMail, title, content);
+		return Integer.toString(authNumber);
 	}
 	
 	// 비밀번호 찾기 이메일 양식

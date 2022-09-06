@@ -120,10 +120,8 @@ public class MemberController {
 		if(check == null)
 			return "fail";
 		else {
-			mailService.findId(email);
-			return "success";
+			return mailService.findId(email);
 		}
-		
 	}
 	
 	// 아이디 찾기 결과 페이지 호출
@@ -192,6 +190,21 @@ public class MemberController {
 	@RequestMapping("/mailCheck")
 	public String mailCheck(String email) {
 		return mailService.joinEmail(email);
+	}
+	
+	// 회원 가입 이메일 중복 체크
+	@ResponseBody
+	@RequestMapping("/checkMemEmail")
+	public String check_memEmail(String email) {
+		String chk = memService.checkMemEmail(email);
+		String result = "fail";
+		
+		if(chk == null)
+			result = "success";
+		else
+			result = "fail";
+		
+		return result;
 	}
 	
 	// 회원 가입 기능 후 가입 완료 페이지로 이동
