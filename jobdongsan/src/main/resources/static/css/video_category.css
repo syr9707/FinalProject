@@ -166,7 +166,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 26px;
+	line-height: 30px;
 	letter-spacing: 1px;
 }
 
@@ -174,12 +174,12 @@
 	position:relative;
 	width: 310px;
 	height: 310px;
-	bottom:120px;
+	bottom:70px;
 }
 
 .video_snowman img {
-	width: 310px;
-	height: 310px;
+	width: 200px;
+	height: 200px;
 }
 
 

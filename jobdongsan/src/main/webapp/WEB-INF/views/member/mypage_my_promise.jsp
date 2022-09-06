@@ -31,42 +31,39 @@
 				action="<c:url value='/my_promise_text'/>">
 
 				<div class="view_box">
-					
-					<c:set var="myResult" value="${result.myPromise }" />
-					<c:set var="myResultList" value="${fn:split(myResult, '|') }" />
-					<%-- <c:forEach var="myResultList2" items="${myResultList }"> --%>
-						
 						<div class="inner_view_box">
 						
 							<!----------------- 컨텐츠 내용 ------------------->
 							<div class="contents_wrap">
 								<div class="mem_info">
-									<input type="text" name="school" size="19" value="${myResultList }" readonly>
-									<input type="text" name="grade" size="8" value="${myResultList }" readonly>
-									<input type="text" name="class" size="8" value="${myResultList }" readonly>
-									<input type="text" name="name" size="16" value="${myResultList }" readonly>
+									<input type="text" name="school" size="19" value="${arr[0] }" readonly>
+									<input type="text" name="grade" size="8" value="${arr[1] }" readonly>
+									<input type="text" name="class" size="8" value="${arr[2] }" readonly>
+									<input type="text" name="name" size="16" value="${arr[3] }" readonly>
+								
 								</div>
 								<div class="contents_title">자기이해</div>
 								<div class="friends_think wrap_box">
 									<div class="list_title">친구의 생각</div>
 									<ul class="list_sentence">
 										<li>나의 친구들은 나를 <input type="text" name="friends_think"
-											size="14" value="${myResultList }" readonly> 라고
+											size="14" value="${arr[4] }" readonly> 라고
 											부른다.
 										</li>
 										<li>나의 친구들은 나에게 <input type="text" name="friends_think2"
-											size="14" value="${myResultList }" readonly> 잘한다고 한다.
+											size="14" value="${arr[5] }" readonly> 잘한다고 한다.
 										</li>
+										
 									</ul>
 								</div>
 								<div class="my_think wrap_box">
 									<div class="list_title">나의 생각</div>
 									<ul class="list_sentence">
 										<li>나는 <input type="text" name="my_think" size="45"
-											placeholder="예: 수학과 과학을 잘하고, 발표를"> 잘한다.
+											value="${arr[6] }" readonly> 잘한다.
 										</li>
 										<li>나는 <input type="text" name="my_think2" size="45"
-											placeholder="예: 친구들과 함께 어울리고 이야기 하는 것을"> 잘한다.
+											value="${arr[7] }" readonly> 잘한다.
 										</li>
 									</ul>
 								</div>
@@ -78,10 +75,10 @@
 									<div class="list_title">나의 미래</div>
 									<ul class="list_sentence">
 										<li>나의 꿈은 <input type="text" name="my_future" size="35"
-											placeholder="예: 행복하게 사는 것"> 이다.
+											value="${arr[8] }" readonly> 이다.
 										</li>
 										<li>내가 원하는 직업은 <input type="text" name="my_future2"
-											size="20" placeholder="예: 의사"> 이다.
+											size="20" value="${arr[9] }" readonly> 이다.
 										</li>
 									</ul>
 								</div>
@@ -89,10 +86,10 @@
 									<div class="list_title">나의 미래를 위한 약속</div>
 									<ul class="list_sentence">
 										<li>나는 집에서 <input type="text" name="my_plan" size="40"
-											placeholder="예: 과학책을 틈틈이 보겠다고"> 약속합니다.
+											value="${arr[10] }" readonly> 약속합니다.
 										</li>
 										<li>나는 학교에서 <input type="text" name="my_plan2" size="40"
-											placeholder="예: 어려운 일을 솔선수범 하겠다고"> 약속합니다.
+											value="${arr[11] }" readonly> 약속합니다.
 										</li>
 									</ul>
 								</div>
@@ -100,7 +97,7 @@
 									<div class="list_title">나의 다짐</div>
 									<ul class="list_sentence">
 										<li>나는 <input type="text" name="my_promise" size="55"
-											placeholder="예: 따듯한 마을을 가진 의사선생님이 되겠다고"> 다짐합니다.
+											value="${arr[12] }" readonly> 다짐합니다.
 										</li>
 									</ul>
 								</div>

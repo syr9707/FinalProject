@@ -21,7 +21,11 @@ public class MyPromiseController {
 	public String myPageMyPromise(HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
 		ResultVO result = resultService.getMyPromise(memId);
-		model.addAttribute("result", result);
+		//model.addAttribute("result", result);
+		
+		String test = result.getMyPromise();
+		String[] arr = test.split("\\|");
+		model.addAttribute("arr", arr);
 		
 	return "member/mypage_my_promise";
 	}
