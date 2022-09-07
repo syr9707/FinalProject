@@ -23,11 +23,11 @@
 			<div id="wrap">
 				<div class="job_head">
 					<div class="job_headname">
-						다양한 직업 냠냠
+						다양한 직업 알아보기
 					</div>
-					<div class="job_doughnut">
+					<%-- <div class="job_doughnut">
 						<img src="<c:url value='/images/job_doughnut1.png'/>">
-					</div>
+					</div> --%>
 				</div>
 				<div class="job_mint">
 					<div class="job_mintdoughnut">

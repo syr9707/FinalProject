@@ -250,11 +250,11 @@
 	color: #777777;
 }
 
-#videobtn1 {
+.videobtn1 {
 	width: 110px;
 	height: 50px;
 	
-	border: 1px solid #777777;
+	border: 1px solid #FFFACD;
 	border-radius: 20px;
 	
 	font-family: 'CookieRun';
@@ -264,15 +264,14 @@
 	line-height: 26px;
 	letter-spacing: 2px;
 	
-	color: #777777;
-	background-color: white;
+	color: black;
+	background-color: #FFFACD;
 	
 	cursor:pointer;
 }
 
-#videobtn1:hover {
-	background-color:#D3F2FF;
-	border:1px solid #05B4FF;
+.videobtn1:hover {
+	border:3px solid #fde48a;
 	color:black;
 }
 
