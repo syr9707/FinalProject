@@ -22,6 +22,7 @@ import com.jobdongsan.project.service.MailService;
 import com.jobdongsan.project.service.MapService;
 import com.jobdongsan.project.service.MemberService;
 import com.jobdongsan.project.service.MyHistoryService;
+import com.jobdongsan.project.service.ResultService;
 import com.jobdongsan.project.service.VideoService;
 
 @Controller
@@ -38,6 +39,8 @@ public class MemberController {
 	MapService mapService;
 	@Autowired
 	VideoService videoService;
+	@Autowired
+	ResultService resultService;
 	
 	// 인덱스 페이지 호출
 	@RequestMapping("/")
@@ -259,11 +262,24 @@ public class MemberController {
 	
 	// 마이페이지 디테일 페이지 호출
 	@RequestMapping("/mypage_detail")
+	
 	public String mypage_detail(HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
 		MemberVO mem = memService.getMemberInfo(memId);
+		int myCtgNum = myService.getMyCtgNum(memId);
+		CategoryVO myCtgInfo = myService.getMyCtg(memId);
+		HashMap<String, Integer> scoreList = resultService.getScore(memId);
+		ArrayList<JobVO> myCtgJob = resultService.ctgJob();
+		ArrayList<MapVO> myCtgMap = resultService.ctgMap();
+		String checkMyPromise = myService.checkMyPromise(memId);
 		
 		model.addAttribute("mem", mem);
+		model.addAttribute("myCtgNum", myCtgNum);
+		model.addAttribute("myCtgInfo", myCtgInfo);
+		model.addAttribute("scoreList", scoreList);
+		model.addAttribute("myCtgJob", myCtgJob);
+		model.addAttribute("myCtgMap", myCtgMap);
+		model.addAttribute("checkMyPromise", checkMyPromise);
 		
 		return "member/mypage_detail";
 	}

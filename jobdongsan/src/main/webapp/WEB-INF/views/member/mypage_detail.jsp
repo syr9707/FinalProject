@@ -9,6 +9,51 @@
 		<link rel="stylesheet" href="<c:url value='/css/mypage_detail.css' />"/>
 		<!-- js -->
 		<script src="<c:url value='/js/mypage_detail.js' />"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var score = "${myCtgNum}";
+				var checkMyPromise = "${checkMyPromise}";
+				
+				if(score == '1'){
+			 		$('.char_graph:nth-child(1) img').show();
+			 		$('.my_interest_type b').css("color", "#FF8E8E");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css("color", "#FF8E8E");
+			 	}else if(score == '2'){
+			 		$('.char_graph:nth-child(2) img').show();
+			 		$('.my_interest_type b').css("color", "#89F578");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css({"color": "#89F578", "text-shadow": "1px 1px 3px black"});
+			 	}else if(score == '3'){
+			 		$('.char_graph:nth-child(3) img').show();
+			 		$('.my_interest_type b').css("color", "#FBE28A");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css({"color": "#FBE28A", "text-shadow": "1px 1px 2px black"});
+			 	}else if(score == '4'){
+			 		$('.char_graph:nth-child(4) img').show();
+			 		$('.my_interest_type b').css("color", "#33A4E3");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css("color", "#33A4E3");
+			 	}else if(score == '5'){
+			 		$('.char_graph:nth-child(5) img').show();
+			 		$('.my_interest_type b').css("color", "#F072F2");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css("color", "#F072F2");
+			 	}else if(score == '6'){
+			 		$('.char_graph:nth-child(6) img').show();
+			 		$('.my_interest_type b').css("color", "#33E3CE");
+			 		$('.my_interest_type_job_title b, .my_interest_type_map_title b').css("color", "#33E3CE");
+			 	}
+				
+				if(checkMyPromise == "") {
+					$('.my_promise_add_btn').show();
+				}else {
+					$('.my_promise_btn').show();
+				}
+				
+				$(".dde_graph").animate({height: ${scoreList['score1']} * 25 +"px"}, 1000);
+				$(".the_graph").animate({height: ${scoreList['score2']} * 25 +"px"}, 1000);
+				$(".mje_graph").animate({height: ${scoreList['score3']} * 25 +"px"}, 1000);
+				$(".cje_graph").animate({height: ${scoreList['score4']} * 25 +"px"}, 1000);
+				$(".sse_graph").animate({height: ${scoreList['score5']} * 25 +"px"}, 1000);
+				$(".ssle_graph").animate({height: ${scoreList['score6']} * 25 +"px"}, 1000);
+			});
+		</script>
 	</head>
 	<body> 
 		<!-- top.jsp -->
@@ -34,99 +79,91 @@
                         </div>
                     </div>
                     <div class="my_interest">
-                        <div class="my_interest_list">
-                            <div class="my_interest_contents">
-                                <p class="txt_20 gray">2022년 08월 12일</p>
-                                <p class="txt_20">나의 어린이 흥미유형은<br> '뚝딱이'예요.</p>
-                            </div>
-                            <div class="my_interest_contents">
-                                <p class="txt_20 gray">2022년 08월 12일</p>
-                                <p class="txt_20">나의 어린이 흥미유형은<br> '뚝딱이'예요.</p>
-                            </div>
-                        </div>
                         <div class="my_interest_info">
                             <div class="my_interest_date">
-                                <div class="txt_25 gray"><i class="fa-regular fa-clock"></i>2022년 08월 12일의 <b>어린이</b> <b>진로흥미탐색</b> <b>결과</b></div>
-                                <div><img src="<c:url value='/images/mypage_promise_btn.png' />" class="my_promise_btn"></div>
+                                <div class="txt_25 gray"><b>어린이</b> <b>진로흥미탐색</b> <b>결과</b></div>
+                                <div>
+                                	<img src="<c:url value='/images/mypage_promise_add_btn.png' />" class="my_promise_add_btn" onclick="location.href='<c:url value='/interest_my_promise'/>'">
+                                	<img src="<c:url value='/images/mypage_promise_btn.png' />" class="my_promise_btn" onclick="location.href='<c:url value='/mypage_my_promise'/>'">
+                                </div>
                             </div>
                             <div class="my_interest_info_detail">
                                 <div class="my_interest_title">
                                     <p class="txt_30">나에게 가장 적합한 유형은</p><img src="<c:url value='/images/mypage_detail_lollipop.png' />" class="lollipop">
                                 </div>
                                 <div class="my_interest_type">
-                                    <b>뚝딱이</b> 입니다. <img src="<c:url value='/images/mypage_detail_donut.png' />">
+                                    <b>${myCtgInfo.categoryName}</b> 입니다. <img src="<c:url value='/images/mypage_detail_donut.png' />">
                                 </div>
                                 <div class="my_interest_type_info">
                                     <div>
-                                        <p>손재주가 있거나 만들기를 좋아해요.</p>
-                                        <p>만들기에 필요한 도구나 기계를 잘 다뤄요.</p>
-                                        <p>그리고 활동적이고 몸을 움직이는 것을 좋아해요.</p>
-                                        <p>뚝딱이는 솔직하고 성실하면서도 수줍음이 많은 편이에요.</p>
+                                        <p>${myCtgInfo.categoryInfo}</p>
                                     </div>
-                                    <img src="<c:url value='/images/mypage_detail_ginger.png' />" class="gingerman">
+                                    <img src="<c:url value='${myCtgInfo.categoryImg}' />" class="gingerman">
                                 </div>
-                                <div class="my_interest_type_graph">
-                                    <div class="dduk">
-                                        <div class="dduk_graph"></div>
-                                        <div class="txt_25">뚝딱이</div>
-                                    </div>
-                                    <div class="tam">
-                                        <div class="tam_graph"></div>
-                                        <div class="txt_25">탐험이</div>
-                                    </div>
-                                    <div class="meot">
-                                        <div class="meot_graph"></div>
-                                        <div class="txt_25">멋쟁이</div>
-                                    </div>
-                                    <div class="chin">
-                                        <div class="chin_graph"></div>
-                                        <div class="txt_25">친절이</div>
-                                    </div>
-                                    <div class="ssik">
-                                        <div class="ssik_graph"></div>
-                                        <div class="txt_25">씩씩이</div>
-                                    </div>
-                                    <div class="seong">
-                                        <div class="seong_graph"></div>
-                                        <div class="txt_25">성실이</div>
-                                    </div>
-                                    <div class="star">
-                                        <img src="<c:url value='/images/mypage_interest_star.png' />" class="graph_star">
-                                    </div>
-                                </div>
+                                <div class="result_graph">
+									<div class="char_graph">
+										<div class="graph_name">뚝딱이</div>
+										<div class="dde_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+									<div class="char_graph">
+										<div class="graph_name">탐험이</div>
+										<div class="the_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+									<div class="char_graph">
+										<div class="graph_name">멋쟁이</div>
+										<div class="mje_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+									<div class="char_graph">
+										<div class="graph_name">친절이</div>
+										<div class="cje_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+									<div class="char_graph">
+										<div class="graph_name">씩씩이</div>
+										<div class="sse_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+									<div class="char_graph">
+										<div class="graph_name">성실이</div>
+										<div class="ssle_graph"></div>
+										<img src="<c:url value='images/interest_star.png' />">
+									</div>
+								</div>
                                 <div class="my_interest_type_job_title txt_25">
-                                    "<b>뚝딱이</b>" 유형에게 잘 맞는 대표 직업은?
+                                    <b>"${myCtgInfo.categoryName}"</b> 유형에게 잘 맞는 대표 직업은?
                                 </div>
                                 <div class="my_interest_type_job_list">
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job1.png' />">
-                                        <p>응급구조사</p>
+                                	<c:forEach items="${myCtgJob}" var="ctgJob">
+									<c:set var = "score" scope = "session" value = "${myCtgNum}"/>
+									<c:if test="${ctgJob.categoryNo eq score}">
+                                    <div class="my_interest_type_job" onclick="location.href='<c:url value='/job_detail/${ctgJob.jobNo }'/>'">
+                                        <img src="<c:url value='${ctgJob.jobImg}'/>">
+                                        <p>${ctgJob.jobName}</p>
                                     </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job2.png' />">
-                                        <p>직업군인</p>
+                                    </c:if>
+                                    </c:forEach>
+                                    <div class="my_interest_type_job_more" onclick="location.href='<c:url value='/job_category/${myCtgNum}'/>'">
+                                        <img src="<c:url value='/images/mypage_detail_more.png' />">
+                                        <p>더 보러 가기</p>
                                     </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job3.png' />">
-                                        <p>안경사</p>
+                                </div>
+                                <div class="my_interest_type_map_title txt_25">
+                                    <b>"${myCtgInfo.categoryName}"</b> 유형에게 잘 맞는 체험 장소는?
+                                </div>
+                                <div class="my_interest_type_map_list">
+                                	<c:forEach items="${myCtgMap}" var="ctgMap">
+									<c:set var = "score" scope = "session" value = "${myCtgNum}"/>
+									<c:if test="${ctgMap.categoryNo eq score}">
+                                    <div class="my_interest_type_map" onclick="location.href='<c:url value='/map_detail/${ctgMap.mapJobNo}'/>'">
+                                        <img src="<c:url value='${ctgMap.mapJobLogo}' />">
+                                        <p>${ctgMap.mapJobName}</p>
                                     </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job4.png' />">
-                                        <p>토목공학 기술자</p>
-                                    </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job5.png' />">
-                                        <p>요리사</p>
-                                    </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job6.png' />">
-                                        <p>운동선수</p>
-                                    </div>
-                                    <div class="my_interest_type_job">
-                                        <img src="<c:url value='/images/mypage_detail_job7.png' />">
-                                        <p>프로게이머</p>
-                                    </div>
-                                    <div class="my_interest_type_job">
+                                    </c:if>
+                                    </c:forEach>
+                                    <div class="my_interest_type_map_more" onclick="location.href='<c:url value="/map_index"/>'">
                                         <img src="<c:url value='/images/mypage_detail_more.png' />">
                                         <p>더 보러 가기</p>
                                     </div>

@@ -21,6 +21,12 @@
 		WHERE map.mapJobNo = my.mapJobNo and NOT my.mapJobNo is NULL and my.memId = #{memId}
 	</select>
 	
+	<select id="getMyCtgNum" parameterType="String" resultType="int">
+		SELECT categoryNo
+		FROM result
+		WHERE memId = #{memId}
+	</select>
+	
 	<select id="getMyCtg" parameterType="String" resultType="com.jobdongsan.project.model.CategoryVO">
 		SELECT c.*
 		FROM category c, result r, my_history my
@@ -28,9 +34,16 @@
 			  r.resultNo = my.resultNo and NOT my.resultNo is NULL and my.memId = #{memId}
 	</select>
 	
+	<select id="checkMyPromise" parameterType="String" resultType="String">
+		SELECT myPromise 
+		FROM result
+		WHERE memId = #{memId}
+	</select>
+	
 	<select id="getMyJob" parameterType="String" resultType="com.jobdongsan.project.model.JobVO">
 		SELECT j.*
 		FROM job j, my_history my
 		WHERE j.jobNo = my.jobNo and NOT my.jobNo is NULL and my.memId = #{memId}
 	</select>
+
 </mapper>

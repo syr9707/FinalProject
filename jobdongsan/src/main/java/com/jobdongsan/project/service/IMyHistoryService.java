@@ -11,6 +11,8 @@ public interface IMyHistoryService {
 	public Integer checkResultNo(String memId);
 	public ArrayList<VideoVO> getMyVideo(String memId);	// 마이페이지로 찜영상 가져오기
 	public ArrayList<MapVO> getMyMap(String memId); 	// 마이페이지로 찜장소 가져오기
+	public int getMyCtgNum(String memId);				// 마이페이지로 내 유형 번호 가져오기
 	public CategoryVO getMyCtg(String memId);			// 마이페이지로 내 유형 가져오기
+	public String checkMyPromise(String memId);			// 나의 다짐 유무 체크
 	public JobVO getMyJob(String memId);				// 마이페이지로 찜직업 가져오기
 }

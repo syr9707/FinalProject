@@ -63,13 +63,6 @@
     border-radius: 80px;
 }
 
-.my_interest_list {
-    width: 350px;
-    margin: 0;
-    padding-top: 120px;
-    border-right: 3px solid #777777;
-}
-
 .my_interest_contents {
     width: 250px;
     height: 150px;
@@ -88,7 +81,7 @@
 }
 
 .my_interest_info {
-    width: 870px;
+    width: 1070px;
 }
 
 .my_interest_date {
@@ -123,13 +116,19 @@
     margin-right: 0;
 }
 
+.my_promise_add_btn {
+	display: none;
+    cursor: pointer;
+}
+
 .my_promise_btn {
+	display: none;
     cursor: pointer;
 }
 
 .my_interest_info_detail {
     width: 790px;
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: left;
 }
 
@@ -188,6 +187,7 @@
 }
 
 .my_interest_type_info div p {
+	width: 500px;
     font-size: 25px;
 }
 
@@ -219,44 +219,70 @@
     margin-top: 6px;
 }
 
-.dduk_graph {
-    height: 200px;
-    background: #E33333;
+
+.result_graph {
+	display: flex;
+	position: relative;
+	width: 650px;
+	height: 300px;
+	bottom: 50px;
 }
 
-.tam_graph {
-    height: 160px;
-    background: #4CE333;
+.char_graph {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 75px;
+	position: relative;
+	bottom: 10px;
 }
 
-.meot_graph {
-    height: 120px;
-    background: #E39233;
+.char_graph div:nth-child(2) {
+	margin: 0;
 }
 
-.chin_graph {
-    height: 100px;
-    background: #33A4E3;
+.char_graph img {
+	position: relative;
+	top: 30px;
+	width: 75px;
+	display: none;
+	
 }
 
-.ssik_graph {
-    height: 80px;
-    background-color: #DF33E3;
+.dde_graph {
+	background-color: #FF8E8E;
 }
 
-.seong_graph {
-    height: 40px;
-    background: #33E3CE;
+.the_graph {
+	background-color: #89F578;
 }
 
-.star {
-    position: relative;
-    top: -210px;
-    left: -600px;
+.mje_graph {
+	background-color: #FBE28A;
 }
+
+.cje_graph {
+	background-color: #33A4E3;
+}
+
+.sse_graph {
+	background-color: #F072F2;
+}
+
+.ssle_graph {
+	background-color: #33E3CE;
+}
+
+.graph_name {
+	font-family: 'CookieRun';
+	font-size: 25px;
+	text-align: center;
+	height: 30px;
+}
+
+/* 유형별 대표 직업 */
 
 .my_interest_type_job_title {
-    width: 405px;
+    width: 415px;
     height: 30px;
     line-height: 30px;
     margin: 50px auto 40px 0;
@@ -281,9 +307,25 @@
     border: 1px solid #777777;
     border-radius: 10px;
     cursor: pointer;
+    display: none;
 }
 
 .my_interest_type_job img {
+	width: 90px;
+    margin-top: 20px;
+}
+
+.my_interest_type_job_more {
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    border: 1px solid #777777;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.my_interest_type_job_more img {
+	width: 90px;
     margin-top: 20px;
 }
 
@@ -291,6 +333,58 @@
     height: 20px;
     line-height: 20px;
     margin-top: 10px;
+}
+
+
+
+/* 유형별 체험 장소 */
+
+.my_interest_type_map_list {
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+    margin-bottom: 60px;
+}
+
+.my_interest_type_map_title {
+    width: 415px;
+    height: 30px;
+    line-height: 30px;
+    margin: 50px auto 40px 0;
+}
+
+.my_interest_type_map_title b {
+    font-size: 25px;
+    color: #E33333;
+}
+
+.my_interest_type_map {
+	width: 160px;
+    height: 160px;
+    text-align: center;
+    border: 1px solid #777777;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.my_interest_type_map_more {
+	width: 160px;
+    height: 160px;
+    text-align: center;
+    border: 1px solid #777777;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.my_interest_type_map img {
+	width: 90px;
+    margin-top: 20px;
+}
+
+.my_interest_type_map_more img {
+	width: 90px;
+    margin-top: 20px;
 }
 
 .background {

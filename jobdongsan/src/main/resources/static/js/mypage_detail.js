@@ -10,4 +10,16 @@ $(document).ready(function(){
     $('.btn_logout').click(function(){
         location.href='/logout';
     });
+    
+    // 체험 장소 보여지는 수량
+    for(var i=1; i<=7; i++){
+ 	$('.my_interest_type_job:nth-child('+ i +')').show();
+ 	}
+    
+    // 체험 장소 보여지는 수량
+    for(var i=1; i<=7; i++){
+ 	$('.my_interest_type_map:nth-child('+ i +')').show();
+ 	}
+ 	
+ 	
 });

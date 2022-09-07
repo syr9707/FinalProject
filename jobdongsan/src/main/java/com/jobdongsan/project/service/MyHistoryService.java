@@ -32,6 +32,11 @@ public class MyHistoryService implements IMyHistoryService {
 	public ArrayList<MapVO> getMyMap(String memId) {
 		return dao.getMyMap(memId);
 	}
+	
+	@Override
+	public int getMyCtgNum(String memId) {
+		return dao.getMyCtgNum(memId);
+	}
 
 	@Override
 	public CategoryVO getMyCtg(String memId) {
@@ -39,8 +44,17 @@ public class MyHistoryService implements IMyHistoryService {
 	}
 
 	@Override
+	public String checkMyPromise(String memId) {
+		return dao.checkMyPromise(memId);
+	}
+	
+	@Override
 	public JobVO getMyJob(String memId) {
 		return dao.getMyJob(memId);
 	}
+
+	
+
+	
 
 }
