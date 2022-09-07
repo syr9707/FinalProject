@@ -377,9 +377,19 @@
     cursor: pointer;
 }
 
+.mypage_map_img {
+	width: 90px;
+	height: 90px;
+	margin-top: 20px;
+}
+
 .my_interest_type_map img {
 	width: 90px;
     margin-top: 20px;
+}
+
+.my_interest_type_map p {
+	width: 130px;
 }
 
 .my_interest_type_map_more img {

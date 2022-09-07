@@ -16,6 +16,7 @@ import com.jobdongsan.project.model.CategoryVO;
 import com.jobdongsan.project.model.JobVO;
 import com.jobdongsan.project.model.MapVO;
 import com.jobdongsan.project.model.MemberVO;
+import com.jobdongsan.project.model.ResultVO;
 import com.jobdongsan.project.model.VideoVO;
 import com.jobdongsan.project.service.JobService;
 import com.jobdongsan.project.service.MailService;
@@ -282,6 +283,20 @@ public class MemberController {
 		model.addAttribute("checkMyPromise", checkMyPromise);
 		
 		return "member/mypage_detail";
+	}
+	
+	// 전체 직업 체험 장소 리스트
+	@RequestMapping("/mypage_my_promise")
+	public String myPageMyPromise(HttpSession session, Model model) {
+		String memId = (String) session.getAttribute("sid");
+		ResultVO result = resultService.getMyPromise(memId);
+		//model.addAttribute("result", result);
+		
+		String test = result.getMyPromise();
+		String[] arr = test.split("\\|");
+		model.addAttribute("arr", arr);
+		
+	return "member/mypage_my_promise";
 	}
 	
 	// 마이페이지 비밀번호 확인 페이지 호출

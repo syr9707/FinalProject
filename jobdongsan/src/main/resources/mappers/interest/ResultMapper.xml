@@ -76,5 +76,10 @@
 		where memId=#{memId}
 	</update>
 	
+	<!-- 나의다짐 보여주기 -->
+	<select id="getMyPromise" parameterType="string" resultType="com.jobdongsan.project.model.ResultVO">
+	SELECT * FROM result WHERE memId = #{memId}
+	</select>
+	
 	
 </mapper>

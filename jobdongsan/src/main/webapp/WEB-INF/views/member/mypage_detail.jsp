@@ -158,7 +158,9 @@
 									<c:set var = "score" scope = "session" value = "${myCtgNum}"/>
 									<c:if test="${ctgMap.categoryNo eq score}">
                                     <div class="my_interest_type_map" onclick="location.href='<c:url value='/map_detail/${ctgMap.mapJobNo}'/>'">
+                                        <div class="mypage_map_img">
                                         <img src="<c:url value='${ctgMap.mapJobLogo}' />">
+                                        </div>
                                         <p>${ctgMap.mapJobName}</p>
                                     </div>
                                     </c:if>
