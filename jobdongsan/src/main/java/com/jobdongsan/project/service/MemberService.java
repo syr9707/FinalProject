@@ -1,6 +1,7 @@
 package com.jobdongsan.project.service;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -46,6 +47,14 @@ public class MemberService implements IMemberService {
 		vo.setMemPw(encodedPwd);
 		
 		dao.insertMember(vo);
+	}
+	
+	@Override
+	public void insertOauthMember(MemberVO vo) {
+		String encodedPwd = pwdEncoder.encode(vo.getMemPw());
+		vo.setMemPw(encodedPwd);
+		
+		dao.insertOauthMember(vo);
 	}
 
 	@Override
@@ -103,6 +112,14 @@ public class MemberService implements IMemberService {
 	@Override
 	public String checkMemEmail(String memEmail) {
 		return dao.checkMemEmail(memEmail);
+	}
+
+	@Override
+	public Optional<MemberVO> findByProviderAndProviderId(String provider, String providerId) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("provider", provider);
+		map.put("providerId", providerId);
+		return dao.findByProviderAndProviderId(map);
 	}
 
 }

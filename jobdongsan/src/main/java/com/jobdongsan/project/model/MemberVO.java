@@ -1,5 +1,7 @@
 package com.jobdongsan.project.model;
 
+import java.util.Map;
+
 public class MemberVO {
 	private String memId;
 	private String memPw;
@@ -10,7 +12,42 @@ public class MemberVO {
 	private String memZipcode;
 	private String memAddress1;
 	private String memAddress2;
+	private String profileImg;
+	private String role;
+	private String provider;
+	private String providerId;
+	private Map<String, Object> attributes;
 	
+	public String getProfileImg() {
+		return profileImg;
+	}
+	public void setProfileImg(String profileImg) {
+		this.profileImg = profileImg;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public String getRole() {
+		return role;
+	}
+	public Map<String, Object> getAttributes() {
+		return attributes;
+	}
+	public void setAttributes(Map<String, Object> attributes) {
+		this.attributes = attributes;
+	}
+	public String getProviderId() {
+		return providerId;
+	}
+	public void setProviderId(String providerId) {
+		this.providerId = providerId;
+	}
+	public String getProvider() {
+		return provider;
+	}
+	public void setProvider(String provider) {
+		this.provider = provider;
+	}
 	public String getMemId() {
 		return memId;
 	}

@@ -16,8 +16,14 @@
 	
 	<!-- 회원 가입 -->
 	<insert id="insertMember" parameterType="com.jobdongsan.project.model.MemberVO">
-		INSERT INTO member VALUES (#{memId}, #{memPw}, #{memName}, #{memEmail}, #{memChildBirth}, #{memHP},
-		#{memZipcode}, #{memAddress1}, #{memAddress2})
+		INSERT INTO member (memId, memPw, memName, memEmail, memChildBirth, memHP, memZipcode, memAddress1, memAddress2)
+		VALUES (#{memId}, #{memPw}, #{memName}, #{memEmail}, #{memChildBirth}, #{memHP}, #{memZipcode}, #{memAddress1}, #{memAddress2})
+	</insert>
+	
+	<!-- Oauth 회원 가입  -->
+	<insert id="insertOauthMember" parameterType="com.jobdongsan.project.model.MemberVO">
+		INSERT INTO member (memId, memPw, memName, memEmail, profileImg, provider, providerId)
+		VALUES (#{memId}, #{memPw}, #{memName}, #{memEmail}, #{profileImg}, #{provider}, #{providerId})
 	</insert>
 	
 	<!-- 아이디 중복 체크 -->
@@ -66,4 +72,9 @@
 	<delete id="deleteMember" parameterType="String">
 		DELETE FROM member WHERE memId = #{memId};
 	</delete>
+	
+	<!-- 회원 조회 -->
+	<select id="findByProviderAndProviderId" parameterType="HashMap" resultType="com.jobdongsan.project.model.MemberVO">
+		SELECT * FROM member WHERE provider = #{provider} AND providerID = #{providerId}
+	</select>
 </mapper>
