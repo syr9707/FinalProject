@@ -247,17 +247,5 @@ $(document).ready(function(){
 	});
 	
 	
-	$('#CD31, #LCD31').on("click", function(){
-		$('#list_ulsan').slideToggle("fast");
-	});
-	
-	$(document).mouseup(function (e){
-	 var LayerPopup = $("#list_ulsan");
-	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
-	    LayerPopup.css('display','none');
-	  }
-	});
-	
-	
 	
 });

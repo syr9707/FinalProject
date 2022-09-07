@@ -201,33 +201,33 @@ TEXT {
 
 b {
 	font-family: 'CookieRun';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
 }
 
 .a {
-	color:#FF8E8E;
+	color: #FF8E8E;
 }
 
 .b {
-	color:#89F578;
+	color: #89F578;
 }
 
 .c {
-	color:#FBE28A;
+	color: #FBE28A;
 }
 
 .d {
-	color:#33A4E3;
+	color: #33A4E3;
 }
 
 .e {
-	color:#F072F2;
+	color: #F072F2;
 }
 
 .f {
-	color:#33E3CE;
+	color: #33E3CE;
 }
 
 #map_img_tap {
@@ -251,6 +251,12 @@ b {
 	position: relative;
 	top: 50px;
 	left: 390px;
+}
+
+#list_detail_e {
+	padding: 10px;
+	text-align: left;
+	margin-left: 250px;
 }
 
 #list_title {
@@ -468,18 +474,5 @@ b {
 	display: none;
 	/* 위치 가변 */
 	top: 500px;
-	left: 930px;
-}
-
-#list_ulsan {
-	z-index: 1;
-	border: 3px solid #fde48a;
-	border-radius: 50px;
-	position: absolute;
-	width: 300px;
-	background-color: white;
-	display: none;
-	/* 위치 가변 */
-	top: 650px;
 	left: 930px;
 }

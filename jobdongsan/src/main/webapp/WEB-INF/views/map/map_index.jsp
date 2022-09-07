@@ -76,7 +76,7 @@
 			
 			<div id="map_category_e_1">
 			<b class="a">뚝딱이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '1' }">
@@ -91,7 +91,7 @@
 			
 			<div id="map_category_e_2">
 			<b class="b">탐험이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '2' }">
@@ -106,7 +106,7 @@
 			
 			<div id="map_category_e_3">
 			<b class="c">멋쟁이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '3' }">
@@ -121,7 +121,7 @@
 			
 			<div id="map_category_e_4">
 			<b class="d">친절이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '4' }">
@@ -136,7 +136,7 @@
 			
 			<div id="map_category_e_5">
 			<b class="e">씩씩이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '5' }">
@@ -151,7 +151,7 @@
 			
 			<div id="map_category_e_6">
 			<b class="f">성실이</b> 유형의 직업 체험 장소 리스트
-			<div id="list_detail">
+			<div id="list_detail_e">
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.categoryNo eq '6' }">
@@ -392,21 +392,6 @@
 						<ul>
 							<c:forEach items="${mapList }" var="map">
 								<c:if test="${map.mapJobArea eq '대구' }">
-									<li><a
-										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
-											${map.mapJobName }</a></li>
-								</c:if>
-							</c:forEach>
-						</ul>
-					</div>
-				</div>
-
-				<div id="list_ulsan" class="list_box">
-					<div id="list_title">울산</div>
-					<div id="list_detail">
-						<ul>
-							<c:forEach items="${mapList }" var="map">
-								<c:if test="${map.mapJobArea eq '울산' }">
 									<li><a
 										href="<c:url value='/map_detail/${map.mapJobNo }'/>">❂
 											${map.mapJobName }</a></li>
