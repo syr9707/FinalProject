@@ -64,7 +64,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 			memService.updateMemberInfo(vo);
 		} else {
 			vo.setMemId(oAuth2UserInfo.getEmail());
-			vo.setMemPw(pwdEncoder.encode("1234"));
+			vo.setMemPw("1234");
 			vo.setMemName(oAuth2UserInfo.getName());
 			vo.setMemEmail(oAuth2UserInfo.getEmail());
 			vo.setRole("ROLE_USER");
