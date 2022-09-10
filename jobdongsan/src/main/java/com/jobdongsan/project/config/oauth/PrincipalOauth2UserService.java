@@ -1,5 +1,6 @@
 package com.jobdongsan.project.config.oauth;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,13 @@ import com.jobdongsan.project.config.oauth.provider.GoogleUserInfo;
 import com.jobdongsan.project.config.oauth.provider.KakaoUserInfo;
 import com.jobdongsan.project.config.oauth.provider.NaverUserInfo;
 import com.jobdongsan.project.config.oauth.provider.OAuth2UserInfo;
+import com.jobdongsan.project.dao.IMemberDAO;
 import com.jobdongsan.project.model.MemberVO;
-import com.jobdongsan.project.service.MemberService;
 
 @Service
 public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 	@Autowired
-	MemberService memService;
+	IMemberDAO dao;
 	
 	@Autowired
 	PasswordEncoder pwdEncoder;
@@ -53,15 +54,18 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 		} else {
 			System.out.println("잡동산은 구글, 카카오, 네이버만 지원합니다");
 		}
-
-		Optional<MemberVO> userOptional = memService.findByProviderAndProviderId(oAuth2UserInfo.getProvider(), oAuth2UserInfo.getProviderId());
+		
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("provider", oAuth2UserInfo.getProvider());
+		map.put("providerId", oAuth2UserInfo.getProviderId());
+		Optional<MemberVO> userOptional = dao.findByProviderAndProviderId(map);
 		
 		MemberVO vo = new MemberVO();
 		if (userOptional.isPresent()) {
 			vo = userOptional.get();
 			// user가 존재하면 update 해주기
 			vo.setMemEmail(oAuth2UserInfo.getEmail());
-			memService.updateMemberInfo(vo);
+			dao.updateMemberInfo(vo);
 		} else {
 			vo.setMemId(oAuth2UserInfo.getEmail());
 			vo.setMemPw("1234");
@@ -71,7 +75,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 			vo.setProvider(oAuth2UserInfo.getProvider());
 			vo.setProviderId(oAuth2UserInfo.getProviderId());
 			vo.setProfileImg(oAuth2UserInfo.getImageUrl());
-			memService.insertOauthMember(vo);
+			dao.insertOauthMember(vo);
 		}
 
 		return new PrincipalDetails(vo, oAuth2User.getAttributes());

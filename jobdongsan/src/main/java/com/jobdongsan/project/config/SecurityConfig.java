@@ -41,8 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.loginProcessingUrl("/loginProc")
 			.defaultSuccessUrl("/")
 		.and()
+            .logout()
+            .logoutSuccessUrl("/")
+		.and()
 			.oauth2Login()
 			.loginPage("/login")
+			//.defaultSuccessUrl("/login-success") // sns 로그인 후 페이지
 			.userInfoEndpoint()
 			.userService(principalOauth2UserService);
 	}
