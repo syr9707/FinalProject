@@ -51,9 +51,6 @@ public class MemberService implements IMemberService {
 	
 	@Override
 	public void insertOauthMember(MemberVO vo) {
-		String encodedPwd = pwdEncoder.encode(vo.getMemPw());
-		vo.setMemPw(encodedPwd);
-		
 		dao.insertOauthMember(vo);
 	}
 

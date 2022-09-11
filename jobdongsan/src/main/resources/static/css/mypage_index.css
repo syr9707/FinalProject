@@ -39,7 +39,8 @@
 }
 
 .my_jobdongsan_info div:nth-child(2) {
-    width: 120px;
+    width: 200px;
+    word-break: break-all;
 }
 
 .my_jobdongsan_btn {

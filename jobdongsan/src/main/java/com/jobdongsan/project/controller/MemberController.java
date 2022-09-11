@@ -102,6 +102,13 @@ public class MemberController {
 		return result;
 	}
 	
+	// SNS 회원가입 페이지 호출
+	@RequestMapping("/login_sns_result")
+	public String login_sns_result() {
+		return "member/login_sns_result";
+	}
+		
+		
 	// 로그아웃
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
