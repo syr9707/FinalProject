@@ -3,6 +3,8 @@ package com.jobdongsan.project.config.oauth;
 import java.util.HashMap;
 import java.util.Optional;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -26,6 +28,9 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 	
 	@Autowired
 	PasswordEncoder pwdEncoder;
+	
+	@Autowired
+	HttpSession session;
 
 	// userRequest 는 code를 받아서 accessToken을 응답 받은 객체
 	@Override
@@ -77,7 +82,9 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 			vo.setProfileImg(oAuth2UserInfo.getImageUrl());
 			dao.insertOauthMember(vo);
 		}
-
+		
+		session.setAttribute("sid", vo.getMemEmail());
+		
 		return new PrincipalDetails(vo, oAuth2User.getAttributes());
 	}
 }

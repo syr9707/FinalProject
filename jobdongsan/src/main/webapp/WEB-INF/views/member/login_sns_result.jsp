@@ -21,12 +21,12 @@
                         <b>SNS 회원가입</b>이 완료되었습니다.<br>
                         회원님의 아이디는 해당 이메일 주소이며,<br>
                         임시 비밀번호는 "1234" 입니다.<br>
-                        보안을 위해 로그인 후 비밀번호를 변경해주세요.
+                        보안을 위해 비밀번호를 변경해주세요.
                     </div>
                 </div>
-                <input type="button" class="btn_login txt_20 bg_y" value="로그인">						
+                <input type="button" class="btn_login txt_20 bg_y" value="메인페이지로 이동">						
             </div> <!-- wrap 끝 -->		
-            <input type="hidden" id="chk" value="1">
+            <input type="hidden" id="chk" value="4">
 		</section>
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
