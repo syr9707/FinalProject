@@ -70,7 +70,7 @@
 	
 	<!-- 회원 탈퇴 -->
 	<delete id="deleteMember" parameterType="String">
-		DELETE FROM member WHERE memId = #{memId};
+		DELETE FROM member WHERE memId = #{memId}
 	</delete>
 	
 	<!-- 회원 조회 -->

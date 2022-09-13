@@ -38,16 +38,16 @@
 						</div>
 					</div>
 					<div class="login_sns">
-						<h3 class="semibold txt_20">SNS 회원가입</h3>
+						<h3 class="semibold txt_20">SNS 로그인</h3>
 						<div class="login_sns_bd">
 							<div>
-								<a href="<c:url value='/oauth2/authorization/naver' />"><img src="<c:url value='/images/logo_naver.png' />"><span>네이버로 회원가입</span></a>
+								<a href="<c:url value='/oauth2/authorization/naver' />"><img src="<c:url value='/images/logo_naver.png' />"><span>네이버로 로그인</span></a>
 							</div>
 							<div>
-								<a href="<c:url value='/oauth2/authorization/google' />"><img src="<c:url value='/images/logo_google.png' />"><span>구글로 회원가입</span></a>
+								<a href="<c:url value='/oauth2/authorization/google' />"><img src="<c:url value='/images/logo_google.png' />"><span>구글로 로그인</span></a>
 							</div>
 							<div>
-								<a href="<c:url value='/oauth2/authorization/kakao' />"><img src="<c:url value='/images/logo_kakao.png' />"><span>카카오로 회원가입</span></a>
+								<a href="<c:url value='/oauth2/authorization/kakao' />"><img src="<c:url value='/images/logo_kakao.png' />"><span>카카오로 로그인</span></a>
 							</div>
 						</div>
 					</div>

@@ -81,5 +81,9 @@
 	SELECT * FROM result WHERE memId = #{memId}
 	</select>
 	
+	<!-- 회원 탈퇴를 위한 결과 삭제 -->
+	<delete id="deleteResult" parameterType="String">
+		DELETE FROM result WHERE memId = #{memId}
+	</delete>
 	
 </mapper>

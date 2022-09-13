@@ -45,5 +45,9 @@
 		FROM job j, my_history my
 		WHERE j.jobNo = my.jobNo and NOT my.jobNo is NULL and my.memId = #{memId}
 	</select>
+	
+	<delete id="deleteMyHistory" parameterType="String">
+		DELETE FROM my_history WHERE memId = #{memId}
+	</delete>
 
 </mapper>

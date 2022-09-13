@@ -374,6 +374,9 @@ public class MemberController {
 	@RequestMapping("/delete_memberInfo")
 	public String delete_memberInfo(@RequestParam String chk, HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
+		
+		myService.deleteMyHistory(memId);
+		resultService.deleteResult(memId);
 		memService.deleteMember(memId);
 		model.addAttribute("chk", chk);
 		session.invalidate();

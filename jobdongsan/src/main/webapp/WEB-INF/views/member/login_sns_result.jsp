@@ -15,10 +15,10 @@
 		<c:import url="/WEB-INF/views/layout/top.jsp" />
 		<section class="section">
             <div class="section_wrap">					
-                <h3 class="semibold txt_30" id="title">SNS 회원가입</h3>
+                <h3 class="semibold txt_30" id="title">SNS 로그인</h3>
                 <div id="result_box">
                     <div id="result_sns_signup">
-                        <b>SNS 회원가입</b>이 완료되었습니다.<br>
+                        <b>SNS 로그인</b>이 완료되었습니다.<br>
                         회원님의 아이디는 해당 이메일 주소이며,<br>
                         임시 비밀번호는 "1234" 입니다.<br>
                         보안을 위해 비밀번호를 변경해주세요.

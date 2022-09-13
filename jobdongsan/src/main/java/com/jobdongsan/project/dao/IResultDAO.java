@@ -20,4 +20,5 @@ public interface IResultDAO {
 	public ArrayList<MapVO> ctgMap(); // 유형별 체험 장소 가져오기
 	public void insertPromise(ResultVO vo);	// 나의 다짐 넣기
 	public ResultVO getMyPromise(String memId);
+	public void deleteResult(String memId); // 회원 탈퇴를 위한 결과 삭제
 }

@@ -53,8 +53,8 @@ public class MyHistoryService implements IMyHistoryService {
 		return dao.getMyJob(memId);
 	}
 
-	
-
-	
-
+	@Override
+	public void deleteMyHistory(String memId) {
+		dao.deleteMyHistory(memId);
+	}
 }

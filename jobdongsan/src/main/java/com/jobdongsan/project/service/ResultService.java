@@ -77,5 +77,8 @@ public class ResultService implements IResultService {
 		return dao.getMyPromise(memId);
 	}
 
-
+	@Override
+	public void deleteResult(String memId) {
+		dao.deleteResult(memId);
+	}
 }

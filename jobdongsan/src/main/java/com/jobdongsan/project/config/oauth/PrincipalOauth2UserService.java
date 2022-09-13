@@ -55,7 +55,6 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 			oAuth2UserInfo = new KakaoUserInfo(oAuth2User.getAttributes());
 		} else if (userRequest.getClientRegistration().getRegistrationId().equals("naver")){
 			oAuth2UserInfo = new NaverUserInfo(oAuth2User.getAttributes());
-			System.out.println(oAuth2User.getAttributes());
 		} else {
 			System.out.println("잡동산은 구글, 카카오, 네이버만 지원합니다");
 		}
