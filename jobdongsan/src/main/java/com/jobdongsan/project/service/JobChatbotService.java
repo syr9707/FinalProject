@@ -33,7 +33,7 @@ public class JobChatbotService {
             URL url = new URL(apiURL);
 
             String message = getReqMessage(voiceMessage);
-            System.out.println("##" + message);
+            // System.out.println("##" + message);
 
             String encodeBase64String = makeSignature(message, secretKey);
 
@@ -53,7 +53,7 @@ public class JobChatbotService {
             // BufferedReader br;
 
             if(responseCode==200) { // Normal call
-                System.out.println(con.getResponseMessage());
+                // System.out.println(con.getResponseMessage());
 
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
@@ -72,7 +72,7 @@ public class JobChatbotService {
             System.out.println(e);
         }
         chatbotMessage = chatbotjsonToString(chatbotMessage);
-        System.out.println(chatbotMessage);
+        // System.out.println(chatbotMessage);
         return chatbotMessage;
     }
 
@@ -111,7 +111,7 @@ public class JobChatbotService {
 
             long timestamp = new Date().getTime();
 
-            System.out.println("##"+timestamp);
+            // System.out.println("##"+timestamp);
 
             obj.put("version", "v2");
             obj.put("userId", "U47b00b58c90f8e47428af8b7bddc1231heo2");
@@ -202,7 +202,7 @@ public class JobChatbotService {
                     response.append(inputLine);
                 }
                 br.close();
-                System.out.println(response.toString());
+                // System.out.println(response.toString());
             }
         } catch (Exception e) {
             System.out.println(e);
@@ -257,7 +257,7 @@ public class JobChatbotService {
                     response.append(inputLine);
                 }
                 br.close();
-                System.out.println(response.toString());
+                // System.out.println(response.toString());
                 result = sttjsonToString(response.toString());
                 
                 voiceFile.delete();
