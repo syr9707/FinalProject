@@ -75,5 +75,16 @@ $(document).ready(function(){
 		}, 400);
 		return false;
 	});
+	
+	    $('.chatbot').on("click", function(){
+		$('.chat_box').toggle();
+	});
+	
+		$(document).mouseup(function (e){
+	 var LayerPopup = $(".chat_box");
+	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
+	    LayerPopup.css('display','none');
+	  }
+	});
 
 });
