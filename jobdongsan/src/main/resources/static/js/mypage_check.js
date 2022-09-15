@@ -1,6 +1,11 @@
 // mypage_index.js
 
 $(document).ready(function(){
+	// 엔터키 눌렀을 때 무조건 submit되지 않도록
+    $(document).on('keydown', function (e) {
+        if (e.keyCode == 13) return false;
+    });
+
     // 입력칸에 포커스 시 테두리 변경
     // 포커스 되었을 때
     $('input[type!=button]').focus(

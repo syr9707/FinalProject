@@ -76,15 +76,46 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	    $('.chatbot').on("click", function(){
-		$('.chat_box').toggle();
+	// 챗봇 버튼 눌렀을 떄 애니메이션
+	var cnt = 0;
+	$('.chatbot').on("click", function(){
+		if(cnt % 2 == 0) {
+			$('.chat_box').css('display', 'block');
+			$('.chat_box').addClass('animate__animated animate__bounceInUp');
+
+            setTimeout(function(){
+                $('.chat_box').removeClass('animate__animated animate__bounceInUp');
+            },1000);
+		} else {
+			$('.chat_box').css('display', 'block');
+			$('.chat_box').addClass('animate__animated animate__bounceOutDown');
+
+            setTimeout(function(){
+                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
+                $('.chat_box').css('display', 'none');
+            },1000);
+		}
+		cnt++;
 	});
 	
-		$(document).mouseup(function (e){
-	 var LayerPopup = $(".chat_box");
-	 if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0){
-	    LayerPopup.css('display','none');
-	  }
+	// 챗봇 버튼과 챗봇 영역 밖 클릭 했을 때 닫기
+	$(document).mouseup(function (e){
+		var LayerPopup = $('.chat_box');
+		var Chatbot = $('.chatbot');
+		if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0 && !Chatbot.is(e.target)) {
+			if($('.chat_box').css('display') == 'block') {
+				$('.chat_box').css('display', 'block');
+				$('.chat_box').addClass('animate__animated animate__bounceOutDown');
+	
+	            setTimeout(function(){
+	                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
+	                $('.chat_box').css('display', 'none');
+	            },1000);
+	            cnt++;
+			}
+		}
 	});
-
+	
+	// 메인 챗봇 ajax 추가 예정
+	
 });

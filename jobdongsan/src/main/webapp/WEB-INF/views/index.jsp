@@ -7,7 +7,6 @@
 		<c:import url="/WEB-INF/views/layout/head.jsp" />
 		<!-- css -->
 		<link rel="stylesheet" href="<c:url value='/css/index.css' />"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- js -->
 		<script src="<c:url value='/js/index.js' />"></script>
 	</head>

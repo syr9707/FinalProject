@@ -17,4 +17,5 @@
 		<script src="<c:url value='https://cdn.jsdelivr.net/jquery/latest/jquery.min.js' />"></script>
 		<link rel="stylesheet" href="<c:url value='/css/common.css' />"/>
 		<script src="<c:url value='/js/common.js' />"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		
