@@ -134,19 +134,24 @@
 }
 
 #videolistbtn {
-	width: 100px;
-	height: 40px;
-	background: #F8EFA6;
+	width: 120px;
+	height: 50px;
+	background: #FFFACD;
 	border-radius: 20px;
 	
 	font-family: 'CookieRun';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 24px;
 	line-height: 26px;
-	border:0;
+	border: 1px solid #FFFACD;
 	
 	cursor:pointer;
+}
+
+#videolistbtn:hover {
+	border:3px solid #fde48a;
+	color:black;
 }
 
 .video_ctg_detail2 {
@@ -269,7 +274,7 @@
 	width: 320px;
 	height: 80px;
 	
-	border: 1px solid #777777;
+	border: 1px solid #FFFACD;
 	border-radius: 40px;
 	
 	font-family: 'CookieRun';
@@ -279,15 +284,14 @@
 	line-height: 26px;
 	letter-spacing: 3px;
 	
-	color: #777777;
-	background-color: white;
+	color: black;
+	background-color: #FFFACD;
 	
 	cursor:pointer;
 }
 
 #videoctgbtn:hover {
-	border:3px solid #05B4FF;
-	background-color:#D3F2FF;
+	border:3px solid #fde48a;
 	color:black;
 }
 
