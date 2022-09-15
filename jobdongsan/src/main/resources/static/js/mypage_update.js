@@ -5,6 +5,58 @@ $(document).ready(function(){
     $(document).on('keydown', function (e) {
         if (e.keyCode == 13) return false;
     });
+    
+	// 수정페이지에서 프로필 사진 미리보여주기
+    let fileTag = document.querySelector("#img_file_upload");
+	let profilePreview = document.querySelector("#profile_preview");
+	
+	fileTag.onchange = function(){
+		
+		//파일 올렸을 때 : fileTag.files.length > 0
+		if(fileTag.files.length>0){
+			for(let i=0; i<fileTag.files.length; i++){
+				let reader = new FileReader();
+				reader.onload = function(data){
+					let src = data.target.result;
+					
+					//1. 이미지 태그 만들기
+					let imgTag = document.createElement('img');
+					
+					//2. 이미지 태그 속성들 세팅하기
+					imgTag.setAttribute('src', src);
+					imgTag.setAttribute('width', '200');
+					imgTag.setAttribute('height', '200');
+					imgTag.setAttribute('style', 'border-radius: 100px');
+					imgTag.setAttribute('class', 'new_profile');
+					
+					
+					if($('.profile_img').attr('src') != ""){
+						$('.profile_img').hide();
+					}else{
+						$('.profile_img_add').hide();
+					}	
+					profilePreview.appendChild(imgTag);
+				}
+				reader.readAsDataURL(fileTag.files[i]);
+			}
+			
+		}else{
+		//취소 버튼을 눌렀을 때
+			$('.new_profile').hide();
+			if($('.profile_img').attr('src') != ""){
+				$('.profile_img').show();
+			}else{
+				$('.profile_img_add').show();
+			}	
+			
+		}
+	}
+		
+	// 프로필 사진 있을때 
+	if($('.profile_img').attr('src') != ""){
+		$('.profile_img').show();
+		$('.profile_img_add').hide();
+	}	
 
     // 각 입력칸에 입력하려고 누르면 테두리 변경
     // 포커스 되었을 때

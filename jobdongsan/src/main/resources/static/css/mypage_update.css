@@ -23,6 +23,36 @@ input {
     cursor: pointer;
 }
 
+.profile_img_add {
+	cursor: pointer;
+}
+
+.profile_img {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	display: none;
+	cursor: pointer;
+}
+
+.new_profile {
+	cursor: pointer;
+}
+
+.profile_img_box {
+	position: relative;
+}
+
+.profile_deco {
+	position: absolute;
+	top: 150px;
+    left: 250px;
+}
+
+#img_file_upload {
+	display: none;
+}
+
 input[type=text],
 input[type=password] {
     padding-left: 10px;

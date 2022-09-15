@@ -18,8 +18,18 @@
 		<!-- section.jsp -->
 		<section class="section">
 			<div class="section_wrap">
-				<form id="mypage_update_form" method="post" action="<c:url value='/update_memberInfo'/>">
+				<form id="mypage_update_form" method="post" action="<c:url value='/update_memberInfo'/>" enctype="multipart/form-data">
                     <h3 class="semibold txt_30">기본정보수정</h3>
+                    <div class="update_profile_img">
+                    	<div class="profile_img_box">
+                    		<img class="profile_deco" src="<c:url value='/images/mypage_profile_deco.png'/>">
+                    		<label id="profile_preview" for="img_file_upload">
+	                    		<img class="profile_img_add" src="<c:url value='/images/mypage_circle.png'/>">
+	                    		<img class="profile_img" src="<c:url value='${myProfileImg}'/>">
+                    		</label>
+                    		<input type="file" id="img_file_upload" name="img_file_upload" accept="image/png, image/jpeg">
+                    	</div>
+                    </div>
 					<div class="input_id">
                         <p>아이디</p>
                         <input type="text" name="id" class="id bg_gray" value="${mem.memId }" readonly>

@@ -23,7 +23,7 @@
 
 		<div class="section_wrap">
 			<div class="interest_title">
-				<p>어린이 진로 흥미 탐색</p>
+				<p>내가 작성한 다짐</p>
 			</div>
 			<img src="images/interest_man.png" class="interest_man">
 			<!-- form 태그 -->

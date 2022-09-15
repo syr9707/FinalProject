@@ -11,6 +11,12 @@ $(document).ready(function(){
         location.href='/logout';
     });
     
+    // 프로필 사진이 있을때
+    if($('.my_profile_img').attr('src') != ""){
+		$('.my_profile_img').show();
+		$('.my_jobdongsan_pic').hide();
+	}
+    
     // 체험 장소 보여지는 수량
     for(var i=1; i<=7; i++){
  	$('.my_interest_type_job:nth-child('+ i +')').show();

@@ -22,6 +22,7 @@
                         <div class="my_jobdongsan_contents">
                             <div class="my_jobdongsan_info">
                                 <img src="<c:url value='/images/mypage_circle.png' />" class="my_jobdongsan_pic">
+                                <img src="<c:url value='${myProfileImg}' />" class="my_profile_img">
                                 <div>
                                     <p class="txt_30">${mem.memName }</p>
                                     <p class="txt_30">${mem.memId }</p>

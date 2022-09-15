@@ -35,6 +35,12 @@ $(document).ready(function(){
         location.href='/map_index';
     });
     
+    // 프로필 사진이 있을때
+    if($('.my_profile_img').attr('src') != ""){
+		$('.my_profile_img').show();
+		$('.my_jobdongsan_pic').hide();
+	}
+    
      // 흥미 유형이 있을 때
     if($('#interest_chk').text() != "") {
         $('.my_interest_add').hide();

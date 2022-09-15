@@ -57,4 +57,9 @@ public class MyHistoryService implements IMyHistoryService {
 	public void deleteMyHistory(String memId) {
 		dao.deleteMyHistory(memId);
 	}
+
+	@Override
+	public String getMyProfileImg(String memId) {
+		return dao.getMyProfileImg(memId);
+	}
 }

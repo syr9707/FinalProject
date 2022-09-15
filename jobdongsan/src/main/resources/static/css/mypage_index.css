@@ -33,9 +33,16 @@
     border-radius: 80px;
 }
 
-.my_jobdongsan_info img {
+.my_jobdongsan_pic {
     width: 120px;
     height: 120px;
+}
+
+.my_profile_img {
+	width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    display: none;
 }
 
 .my_jobdongsan_info div:nth-child(2) {
@@ -134,7 +141,7 @@
 
 
 
-
+/* 찜한 직업 */
 
 .my_job_info {
     width: 500px;
@@ -199,6 +206,9 @@
     cursor: pointer;
 }
 
+
+/* 찜한 비디오 */
+
 .my_video {
     margin-top: 100px;
     height: 460px;
@@ -255,6 +265,9 @@
 	cursor: pointer;
 }
 
+
+/* 찜한 체험 장소 */
+
 .my_map {
     margin-top: 100px;
     height: 460px;
@@ -301,7 +314,7 @@
     margin: 0 50px 0 0;
     display: flex;
     align-items: center;
-    background-color: #FFFACD;
+    background-color: #FFFFFF;
     box-shadow: 2px 2px 5px black;
 }
 

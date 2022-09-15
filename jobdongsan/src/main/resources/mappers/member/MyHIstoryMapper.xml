@@ -49,5 +49,11 @@
 	<delete id="deleteMyHistory" parameterType="String">
 		DELETE FROM my_history WHERE memId = #{memId}
 	</delete>
-
+	
+	<select id="getMyProfileImg" parameterType="String" resultType="String">
+		SELECT profileImg
+		FROM member
+		WHERE memId = #{memId}
+	</select>
+	
 </mapper>

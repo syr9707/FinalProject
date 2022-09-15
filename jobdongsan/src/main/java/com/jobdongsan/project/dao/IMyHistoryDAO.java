@@ -16,4 +16,5 @@ public interface IMyHistoryDAO {
 	public String checkMyPromise(String memId);			// 나의 다짐 유무 체크
 	public JobVO getMyJob(String memId);				// 마이페이지로 찜직업 가져오기
 	public void deleteMyHistory(String memId);			// 회원 탈퇴를 위한 마이페이지 내역 삭제
+	public String getMyProfileImg(String memId);		// 마이페이지로 프로필사진 가져오기
 }

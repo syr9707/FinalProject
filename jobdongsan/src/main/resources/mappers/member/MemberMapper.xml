@@ -60,7 +60,7 @@
 	<update id="updateMemberInfo" parameterType="com.jobdongsan.project.model.MemberVO">
 		UPDATE member SET memPw = #{memPw}, memName = #{memName}, memEmail = #{memEmail},
 		memChildBirth = #{memChildBirth}, memHP = #{memHP}, memZipcode = #{memZipcode}, memAddress1 = #{memAddress1},
-		memAddress2 = #{memAddress2} WHERE memId = #{memId}
+		memAddress2 = #{memAddress2}, profileImg = #{profileImg} WHERE memId = #{memId}
 	</update>
 	
 	<!-- 회원 아이디 이메일 체크 -->

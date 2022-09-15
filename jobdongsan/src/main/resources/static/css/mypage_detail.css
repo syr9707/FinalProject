@@ -33,9 +33,16 @@
     border-radius: 80px;
 }
 
-.my_jobdongsan_info img {
+.my_jobdongsan_pic {
     width: 120px;
     height: 120px;
+}
+
+.my_profile_img {
+	width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    display: none;
 }
 
 .my_jobdongsan_info div:nth-child(2) {

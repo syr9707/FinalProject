@@ -1,5 +1,7 @@
 package com.jobdongsan.project.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.jobdongsan.project.model.CategoryVO;
 import com.jobdongsan.project.model.JobVO;
@@ -246,24 +249,18 @@ public class MemberController {
 		String memId = (String) session.getAttribute("sid");
 		MemberVO mem = memService.getMemberInfo(memId);
 		
-		Integer check = myService.checkResultNo(memId);
-		
 		ArrayList<VideoVO> myVideoList = myService.getMyVideo(memId);
 		ArrayList<MapVO> myMapList = myService.getMyMap(memId);
 		CategoryVO myCtgInfo = myService.getMyCtg(memId);
 		JobVO myJobInfo = myService.getMyJob(memId);
-		
-		if(check == null) {
-			// insert 작업
-		} else {
-			// update 작업
-		}
+		String myProfileImg = myService.getMyProfileImg(memId);
 		
 		model.addAttribute("mem", mem);
 		model.addAttribute("myVideoList", myVideoList);
 		model.addAttribute("myMapList", myMapList);
 		model.addAttribute("myCtgInfo", myCtgInfo);
 		model.addAttribute("myJobInfo", myJobInfo);
+		model.addAttribute("myProfileImg", myProfileImg);
 		
 		return "member/mypage_index";
 	}
@@ -280,6 +277,7 @@ public class MemberController {
 		ArrayList<JobVO> myCtgJob = resultService.ctgJob();
 		ArrayList<MapVO> myCtgMap = resultService.ctgMap();
 		String checkMyPromise = myService.checkMyPromise(memId);
+		String myProfileImg = myService.getMyProfileImg(memId);
 		
 		model.addAttribute("mem", mem);
 		model.addAttribute("myCtgNum", myCtgNum);
@@ -288,6 +286,7 @@ public class MemberController {
 		model.addAttribute("myCtgJob", myCtgJob);
 		model.addAttribute("myCtgMap", myCtgMap);
 		model.addAttribute("checkMyPromise", checkMyPromise);
+		model.addAttribute("myProfileImg", myProfileImg);
 		
 		return "member/mypage_detail";
 	}
@@ -316,9 +315,10 @@ public class MemberController {
 	// 마이페이지 비밀번호 확인 작업
 	@ResponseBody
 	@RequestMapping("/checkPw")
-	public String mypage_checkPw(@RequestParam String input_pw, HttpSession session) {
+	public String mypage_checkPw(@RequestParam String input_pw, HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
 		HashMap<String, Object> param = new HashMap<String, Object>();
+		
 		param.put("memId", memId);
 		param.put("memPw", input_pw);
 		
@@ -332,27 +332,47 @@ public class MemberController {
 	public String mypage_update(@RequestParam String chk, HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
 		MemberVO mem = memService.getMemberInfo(memId);
+		String myProfileImg = myService.getMyProfileImg(memId);
 
 		model.addAttribute("mem", mem);
 		model.addAttribute("chk", chk);
+		model.addAttribute("myProfileImg", myProfileImg);
 		
 		return "member/mypage_update";
 	}
 	
 	// 내 정보 수정 기능
 	@RequestMapping("/update_memberInfo")
-	public String update_memberInfo(@RequestParam HashMap<String, Object> map, HttpSession session, MemberVO vo, Model model) {
+	public String update_memberInfo(@RequestParam HashMap<String, Object> map, @RequestParam("img_file_upload") MultipartFile file, HttpSession session, MemberVO vo, Model model) throws IOException {
 		String memId = (String) session.getAttribute("sid");
 
 		String childBirth = (String) map.get("birth_year") + "." + (String) map.get("birth_month") + "." + (String) map.get("birth_date");
 		String email = (String) map.get("email1") + "@" + (String) map.get("email2");
 		
+		// 1. 파일 저장 경로 설정 : 실제 서비스되는 위치 (프로젝트 외부에 저장)
+		String uploadPath = "C:/springWorkspace/upload/";
+		String uploadPath2 = "/upload/";
+		
+		// 2. 원본 파일 이름 알아오기
+		String originalFileName = file.getOriginalFilename();
+		
+		// 3. 파일 생성
+		File newFile = new File(uploadPath + originalFileName);
+		File newFile2 = new File(uploadPath2 + originalFileName);
+		String insertProfileImg = newFile2.toString();
+		
+		// 4. 서버로 전송
+		file.transferTo(newFile);
+		
+		
+
 		vo.setMemId(memId);
 		vo.setMemPw((String) map.get("pw"));
 		vo.setMemName((String) map.get("name"));
 		vo.setMemEmail(email);
 		vo.setMemChildBirth(childBirth);
 		vo.setMemHP((String) map.get("phone"));
+		vo.setProfileImg(insertProfileImg);
 		vo.setMemZipcode((String) map.get("zipcode"));
 		vo.setMemAddress1((String) map.get("address1"));
 		vo.setMemAddress2((String) map.get("address2"));
