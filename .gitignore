@@ -14,9 +14,6 @@ local.properties
 .loadpath
 .recommenders
 
-# ignore properties file
-application.properties
-
 # External tool builders
 .externalToolBuilders/
 
