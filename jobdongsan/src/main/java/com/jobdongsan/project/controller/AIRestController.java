@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.jobdongsan.project.service.DoctorChatbotService;
 import com.jobdongsan.project.service.JobChatbotService;
 
 @RestController
@@ -16,9 +17,17 @@ public class AIRestController {
 	@Autowired
 	JobChatbotService jService;
 	
+	@Autowired
+	DoctorChatbotService docService;
+	
 	@RequestMapping("/jobChatbot")
 	public String jobChatbot(@RequestParam String message) throws IOException {
 		return JobChatbotService.main(message);
+	}
+	
+	@RequestMapping("/doctorChatbot")
+	public String doctorChatbot(@RequestParam String message) throws IOException {
+		return DoctorChatbotService.main(message);
 	}
 	
 	@RequestMapping("/stt")
@@ -40,5 +49,10 @@ public class AIRestController {
 	@RequestMapping("/tts")
 	public String tts(@RequestParam String message) {
 		return jService.tts(message);
+	}
+	
+	@RequestMapping("/tts2")
+	public String tts2(@RequestParam String message) {
+		return docService.tts(message);
 	}
 }

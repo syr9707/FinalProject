@@ -20,6 +20,9 @@
 			<div class="job_background">
 				<%-- <img src="<c:url value='/images/background.png'/>"> --%>
 			</div>
+			<div class="job_num">
+				${job.jobNo}
+			</div>
 			<div id="wrap">
 				<div class="job_head">
 					<div class="job_headname">

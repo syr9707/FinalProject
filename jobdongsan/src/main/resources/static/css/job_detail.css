@@ -78,6 +78,10 @@
     flex-direction: row;
 }
 
+.job_num {
+	display: none;
+}
+
 .job_mintdoughnut {
 	width: 280px;
 	height: 250px;
