@@ -350,22 +350,18 @@ public class MemberController {
 		String email = (String) map.get("email1") + "@" + (String) map.get("email2");
 		
 		// 1. 파일 저장 경로 설정 : 실제 서비스되는 위치 (프로젝트 외부에 저장)
-		// String uploadPath = "C:/springWorkspace/upload/";
-		String uploadPath2 = "/upload/";
+		String uploadPath = "/upload/";
 		
 		// 2. 원본 파일 이름 알아오기
 		String originalFileName = file.getOriginalFilename();
 		
 		// 3. 파일 생성
-		// File newFile = new File(uploadPath + originalFileName);
-		File newFile2 = new File(uploadPath2 + originalFileName);
-		String insertProfileImg = newFile2.toString();
+		File newFile = new File(uploadPath + originalFileName);
+		String insertProfileImg = newFile.toString();
 		
 		// 4. 서버로 전송
-		file.transferTo(newFile2);
+		file.transferTo(newFile);
 		
-		
-
 		vo.setMemId(memId);
 		vo.setMemPw((String) map.get("pw"));
 		vo.setMemName((String) map.get("name"));
