@@ -47,7 +47,7 @@
 											<p>volume</p>
 											<input type="range" class="volume_bar" min="0" max="1" step="0.01" value="1">
 										</div>
-										<img class="fullscreen_btn" src="<c:url value='/images/video_fullscreen.png'/>">
+										<img class="fullscreen_btn" src="<c:url value='/images/video_fullScreen.png'/>">
 									</div>
 								</div>
 							</div>
