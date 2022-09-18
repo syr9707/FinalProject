@@ -350,7 +350,8 @@ public class MemberController {
 		String email = (String) map.get("email1") + "@" + (String) map.get("email2");
 		
 		// 1. 파일 저장 경로 설정 : 실제 서비스되는 위치 (프로젝트 외부에 저장)
-		String uploadPath = "/upload/";
+		String uploadPath = "C:/springWorkspace/upload/";
+		// String uploadPath = "/upload/";
 		
 		// 2. 원본 파일 이름 알아오기
 		String originalFileName = file.getOriginalFilename();
