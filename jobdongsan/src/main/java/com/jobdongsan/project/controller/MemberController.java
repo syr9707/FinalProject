@@ -363,11 +363,11 @@ public class MemberController {
 			
 			File newFile = new File(uploadPath + originalFileName);
 			insertProfileImg = newFile.toString();
-			
+			System.out.println(insertProfileImg);
 			// 4. 서버로 전송
 			file.transferTo(newFile);
 		}
-		
+		System.out.println(originalFileName);
 		
 		
 		

@@ -3,7 +3,6 @@ package com.jobdongsan.project.controller;
 import java.io.File;
 import java.io.IOException;
 
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,8 +40,7 @@ public class AIRestController {
 	
 	@RequestMapping("/stt")
 	public String stt(@RequestParam("uploadFile") MultipartFile file) throws IOException {
-		String uploadPath = "C:/springWorkspace/upload/";
-		
+		String uploadPath = "/upload/";
 		String originalFileName = file.getOriginalFilename();
 		String filePathName = uploadPath + originalFileName;
 		
