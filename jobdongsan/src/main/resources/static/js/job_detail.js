@@ -138,7 +138,7 @@
  			data:{"message": result},
  			dataType:"text",
  			success: function(result){
-		 		$('#audio').attr('src', '/usr/local/project/upload/' + result);
+		 		$('#audio').attr('src', '/upload/' + result);
 		 		$('#audio').attr('autoplay', 'autoplay');
  			},
  			error: function(){
