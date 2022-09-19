@@ -167,19 +167,18 @@ $(document).ready(function(){
 						
 															   
 					}else if(bubbles[b].type == 'template'){//이미지 답변 또는 멀티링크 답변 시작
-					
 						if(bubbles[b].data.cover.type == "image"){//이미지 이면
 						
 							if(bubbles[b] == bubbles[0]){
 								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
-																		 "' alt='이미지 없음' width='200' height='100' style='border-radius: 30px'><br><div class='chatbot_url'></div></div></span>");
+																		 "' alt='이미지 없음' style='border-radius: 30px'><br><div class='chatbot_url'></div></div></span>");
 							}else{
 								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
-																		 "' alt='이미지 없음' width='200' height='100'><br><div class='chatbot_url'></div></div></span>");
+																		 "' alt='이미지 없음' style='border-radius: 30px'><br><div class='chatbot_url'></div></div></span>");
 							}
 							
 							if(bubbles[b].data.contentTable !=null){
-								$(".chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[b].data.cover.data.description + "</a>")
+								$(".chatbot_url:last-child").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[b].data.cover.data.description + "</a>")
 							}
 																		 
 						}else if(bubbles[b].data.cover.type == "text"){//멀티링크 답변이면
@@ -193,7 +192,7 @@ $(document).ready(function(){
 							}
 							
 							if(bubbles[b].data.contentTable !=null){
-								$(".chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
+								$(".chatbot_url:last-child").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
 							}
 						}
 						
