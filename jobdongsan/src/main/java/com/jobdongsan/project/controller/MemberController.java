@@ -355,13 +355,10 @@ public class MemberController {
 		// 2. 원본 파일 이름 알아오기
 		String originalFileName = file.getOriginalFilename();
 		
-		String insertProfileImg = "";
-		
 		if(originalFileName != "") {
 			// 3. 파일 생성
 			File newFile = new File(uploadPath + originalFileName);
 			
-			insertProfileImg = newFile.toString();
 			// 4. 서버로 전송
 			file.transferTo(newFile);
 		}
@@ -372,7 +369,7 @@ public class MemberController {
 		vo.setMemEmail(email);
 		vo.setMemChildBirth(childBirth);
 		vo.setMemHP((String) map.get("phone"));
-		vo.setProfileImg(insertProfileImg);
+		vo.setProfileImg(originalFileName);
 		vo.setMemZipcode((String) map.get("zipcode"));
 		vo.setMemAddress1((String) map.get("address1"));
 		vo.setMemAddress2((String) map.get("address2"));
