@@ -40,7 +40,7 @@ public class AIRestController {
 	
 	@RequestMapping("/stt")
 	public String stt(@RequestParam("uploadFile") MultipartFile file) throws IOException {
-		String uploadPath = "/usr/local/project/upload/";
+		String uploadPath = "/upload/";
 		String originalFileName = file.getOriginalFilename();
 		String filePathName = uploadPath + originalFileName;
 		
