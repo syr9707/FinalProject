@@ -7,15 +7,15 @@
 		<p>위로</p>
 		<img class="btn_top" src="<c:url value='/images/btn_top.png' />">
 		<!-- 챗봇 -->
-		<img class="chatbot" src="<c:url value='/images/chatbot.png' />">
-		<div class="chat_box">	
-			<div id="chat_box_title">잡동산 챗봇</div>		
-			<div class="chat_detail">	
+		<img class="main_chatbot" src="<c:url value='/images/chatbot.png' />">
+		<div class="main_chat_box">	
+			<div id="main_chat_box_title">잡동산 챗봇</div>		
+			<div class="main_chat_detail">	
 				<div class="main_chatbot_box">
 				</div>	
-				<div class="user_box">
+				<div class="main_user_box">
 					<form id="chatForm" name="chatForm">
-						<input type="text" id="message" name="message" placeholder="궁금한게 있으면 질문해 주세요.">
+						<input type="text" id="main_message" name="message" placeholder="궁금한게 있으면 질문해 주세요.">
 						<input type="submit" id="main_chat_submit" value="보내기">
 					</form>
 				</div>		

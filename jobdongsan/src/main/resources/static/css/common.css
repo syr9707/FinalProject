@@ -284,7 +284,7 @@ footer {
 	margin-bottom: 5px;
 }
 
-.btns .chatbot {
+.btns .main_chatbot {
 	width: 100px;
 	display: block;
 	margin: 0;
@@ -295,12 +295,15 @@ header p, footer p {
 }
 
 /******************* 챗봇 ***********************/
-#chat_box_title {
+#main_chat_box_title {
 	font-size: 25px;
 	font-family: 'CookieRun';
+	background-color: #FFFACD;
+	border-radius: 40px 40px 0px 0px;
+	padding: 20px;
 }
 
-.msgBox {
+.main_msgBox {
 	margin-bottom: 20px;
 }
 
@@ -309,13 +312,13 @@ header p, footer p {
     align-items: center;
 }
 
-#chatbot {
+#main_chatbot {
 	width: 100px;
     margin: 20px 0 0 20px;
     text-align: center;
 }
 
-#chatbot img {
+#main_chatbot img {
 	width: 50px;
 	height: 50px;
 	border-radius: 15px;
@@ -326,18 +329,19 @@ header p, footer p {
 	font-family: 'CookieRun';
 }
 
-#chatbot_text {
+#main_chatbot_text {
 	width: 500px;
+	text-align: left;
     margin: 0 10px 0 -10px;
-    padding: 10px 15px;
+    padding: 10px 0 10px 50px;
     background: #FFFACD;
     border-radius: 80px;
     font-size: 17px;
 	font-family: 'CookieRun';
 }
 
-#user_text {
-	height: 50px;
+#main_user_text {
+	max-width: 400px;
     margin-right: 20px;
     padding: 10px 20px;
     background: #F0E3FF;
@@ -347,7 +351,7 @@ header p, footer p {
 }
 
 
-.chat_box {
+.main_chat_box {
 	display: none;
 	z-index: 10;
 	right: 130px;
@@ -360,13 +364,9 @@ header p, footer p {
 	filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
 }
 
-#chat_box_title {
-	background-color: #FFFACD;
-	border-radius: 40px 40px 0px 0px;
-	padding: 20px;
-}
 
-.chat_detail {
+
+.main_chat_detail {
 	background-color: white;
 	border-radius: 0px 0px 40px 40px;
 }
@@ -392,13 +392,13 @@ header p, footer p {
   background-color: rgba(23, 203, 192, 0); /*스크롤바 뒷 배경 색상*/
 }
 
-.user_box {
+.main_user_box {
 	background-color: #FFFACD;
 	border-radius: 0px 0px 40px 40px;
 	padding: 20px;
 }
 
-#message {
+#main_message {
 	font-family: 'CookieRun';
 	font-size: 17px;
 	padding: 5px;

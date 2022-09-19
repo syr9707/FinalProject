@@ -78,23 +78,23 @@ $(document).ready(function(){
 	
 	// 챗봇 버튼 눌렀을 떄 애니메이션
 	var cnt = 0;
-	$('.chatbot').on("click", function(){
+	$('.main_chatbot').on("click", function(){
 		if(cnt % 2 == 0) {
-			$('.chat_box').css('display', 'block');
-			$('.chat_box').addClass('animate__animated animate__bounceInUp');
+			$('.main_chat_box').css('display', 'block');
+			$('.main_chat_box').addClass('animate__animated animate__bounceInUp');
 			
 			callAjax();
 			
             setTimeout(function(){
-                $('.chat_box').removeClass('animate__animated animate__bounceInUp');
+                $('.main_chat_box').removeClass('animate__animated animate__bounceInUp');
             },1000);
 		} else {
-			$('.chat_box').css('display', 'block');
-			$('.chat_box').addClass('animate__animated animate__bounceOutDown');
+			$('.main_chat_box').css('display', 'block');
+			$('.main_chat_box').addClass('animate__animated animate__bounceOutDown');
 			$('.main_chatbot_box').text("");
             setTimeout(function(){
-                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
-                $('.chat_box').css('display', 'none');
+                $('.main_chat_box').removeClass('animate__animated animate__bounceOutDown');
+                $('.main_chat_box').css('display', 'none');
             },1000);
 		}
 		cnt++;
@@ -102,12 +102,12 @@ $(document).ready(function(){
 	
 	// 챗봇 버튼과 챗봇 영역 밖 클릭 했을 때 닫기
 	$(document).mouseup(function (e){
-		var LayerPopup = $('.chat_box');
-		var Chatbot = $('.chatbot');
+		var LayerPopup = $('.main_chat_box');
+		var Chatbot = $('.main_chatbot');
 		if(!LayerPopup.is(e.target) && LayerPopup.has(e.target).length == 0 && !Chatbot.is(e.target)) {
-			if($('.chat_box').css('display') == 'block') {
-				$('.chat_box').css('display', 'block');
-				$('.chat_box').addClass('animate__animated animate__bounceOutDown');
+			if($('.main_chat_box').css('display') == 'block') {
+				$('.main_chat_box').css('display', 'block');
+				$('.main_chat_box').addClass('animate__animated animate__bounceOutDown');
 				$('.main_chatbot_box').text("");
 	            setTimeout(function(){
 	                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
@@ -133,7 +133,7 @@ $(document).ready(function(){
 		} 		
  		
  		// chatBox에 보낸 메시지 추가
-		$('.main_chatbot_box').append('<div class="msgBox send"><div id="in"><div id="user_text">' + $('#message').val() + '</div></div></div>');
+		$('.main_chatbot_box').append('<div class="main_msgBox send"><div id="in"><div id="main_user_text">' + $('#message').val() + '</div></div></div>');
  		
    			callAjax();
  		
@@ -158,10 +158,10 @@ $(document).ready(function(){
 						
 						/* chatBox에 받은 메시지 추가 */
 						if(bubbles[b] == bubbles[0]){
-							$('.main_chatbot_box').append('<div class="msgBox receive"><span id="in"><div id="chatbot"><div><img src="/images/mainChatbot_gingerbread_man.png"></div><div class="main_chatbot_name">잡동산</div></div><div id="chatbot_text">' + 
+							$('.main_chatbot_box').append('<div class="main_msgBox receive"><span id="in"><div id="main_chatbot"><div><img src="/images/mainChatbot_gingerbread_man.png"></div><div class="main_chatbot_name">잡동산</div></div><div id="chatbot_text">' + 
 															 bubbles[b].data.description + '</div></span>'); 
 						}else{
-							$('.main_chatbot_box').append('<div class="msgBox receive"><span id="in"><div id="chatbot"></div><div id="chatbot_text">' + 
+							$('.main_chatbot_box').append('<div class="main_msgBox receive"><span id="in"><div id="main_chatbot"></div><div id="main_chatbot_text">' + 
 														   bubbles[b].data.description +'</div></span>'); 
 						}
 						
@@ -171,10 +171,10 @@ $(document).ready(function(){
 						if(bubbles[b].data.cover.type == "image"){//이미지 이면
 						
 							if(bubbles[b] == bubbles[0]){
-								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
+								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
 																		 "' alt='이미지 없음' width='200' height='100' style='border-radius: 30px'><br><div class='chatbot_url'></div></div></span>");
 							}else{
-								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
+								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
 																		 "' alt='이미지 없음' width='200' height='100'><br><div class='chatbot_url'></div></div></span>");
 							}
 							
@@ -185,10 +185,10 @@ $(document).ready(function(){
 						}else if(bubbles[b].data.cover.type == "text"){//멀티링크 답변이면
 							
 							if(bubbles[b] == bubbles[0]){
-								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div id='chatbot_text'>" + 
+								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div id='main_chatbot_text'>" + 
 															bubbles[b].data.cover.data.description + "</div></span>");
 							}else{
-									$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'></div><div id='chatbot_text'>" + 
+									$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'></div><div id='main_chatbot_text'>" + 
 															bubbles[b].data.cover.data.description + "</div></span>");
 							}
 							
