@@ -332,7 +332,7 @@ header p, footer p {
 #main_chatbot_text {
 	width: 500px;
 	text-align: left;
-    margin: 0 10px 0 -10px;
+    margin: 10px 10px 0 -10px;
     padding: 20px 50px;
     background: #FFFACD;
     border-radius: 80px;
