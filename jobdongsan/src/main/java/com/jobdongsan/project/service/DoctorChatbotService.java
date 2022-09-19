@@ -186,7 +186,7 @@ public class DoctorChatbotService {
                 // 랜덤한 이름으로 mp3 파일 생성
                 String tempname = Long.valueOf(new Date().getTime()).toString();
                 voiceFileName = "tts_"+ tempname + ".mp3";
-                File f = new File("C:/springWorkspace/upload/" + voiceFileName);
+                File f = new File("/usr/local/project/upload/" + voiceFileName);
                 f.createNewFile();
                 OutputStream outputStream = new FileOutputStream(f);
                 while ((read =is.read(bytes)) != -1) {

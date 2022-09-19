@@ -92,6 +92,8 @@
             .catch(err => {
                 console.log('The following error occurred: ' + err)
             })
+	} else {
+		alert("ㅇㅇㅇㅇㅇ");
 	}
 	
 	// 서버에 파일을 업로드 하는 함수
