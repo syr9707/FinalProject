@@ -26,7 +26,7 @@
                     		<label id="profile_preview" for="img_file_upload">
 	                    		<img class="profile_img_add" src="<c:url value='/images/mypage_circle.png'/>">
 	                    		<c:choose>
-	                    			<c:when test="${fn:contains(myProfileImg, 'https') }">
+	                    			<c:when test="${fn:contains(myProfileImg, 'http') }">
 		                    			<img class="profile_img" src="<c:url value='${myProfileImg}'/>">
 		                    		</c:when>
 		                    		<c:otherwise>

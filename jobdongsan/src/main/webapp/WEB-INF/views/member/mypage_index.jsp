@@ -24,7 +24,7 @@
                             <div class="my_jobdongsan_info">
                                 <img src="<c:url value='/images/mypage_circle.png' />" class="my_jobdongsan_pic">
                                 <c:choose>
-	                    			<c:when test="${fn:contains(myProfileImg, 'https') }">
+	                    			<c:when test="${fn:contains(myProfileImg, 'http') }">
 		                    			<img class="my_profile_img" src="<c:url value='${myProfileImg}'/>">
 		                    		</c:when>
 		                    		<c:otherwise>
