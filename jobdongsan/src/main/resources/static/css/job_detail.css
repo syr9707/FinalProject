@@ -602,7 +602,7 @@
 }
 
 #user_text {
-	height: 50px;
+	max-width: 500px;
     margin-right: 20px;
     padding: 10px 20px;
     background: #FFFACD;
