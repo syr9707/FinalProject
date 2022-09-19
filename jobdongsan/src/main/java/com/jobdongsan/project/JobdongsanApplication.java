@@ -9,8 +9,8 @@ import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
 @PropertySources({
-	@PropertySource(value="file:c/springWorkspace/configure.properites", ignoreResourceNotFound=true),
-	@PropertySource(value="file:/usr/local/project/properties/configure.properites", ignoreResourceNotFound=true)
+	@PropertySource(value="file:c/springWorkspace/configure.properties", ignoreResourceNotFound=true),
+	@PropertySource(value="file:/usr/local/project/properties/configure.properties", ignoreResourceNotFound=true)
 })
 @ComponentScan(basePackages = {"com.jobdongsan.project"})
 @MapperScan(basePackages = {"com.jobdongsan.project"})
