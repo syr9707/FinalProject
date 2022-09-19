@@ -11,11 +11,11 @@
 		<div class="chat_box">	
 			<div id="chat_box_title">잡동산 챗봇</div>		
 			<div class="chat_detail">	
-				<div class="chatbot_box">
+				<div class="main_chatbot_box">
 				</div>	
 				<div class="user_box">
 					<form id="chatForm" name="chatForm">
-						<input type="text" id="main_chat_message" name="message" placeholder="궁금한게 있으면 질문해 주세요.">
+						<input type="text" id="message" name="message" placeholder="궁금한게 있으면 질문해 주세요.">
 						<input type="submit" id="main_chat_submit" value="보내기">
 					</form>
 				</div>		

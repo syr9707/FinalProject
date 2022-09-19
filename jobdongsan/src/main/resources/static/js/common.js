@@ -82,14 +82,16 @@ $(document).ready(function(){
 		if(cnt % 2 == 0) {
 			$('.chat_box').css('display', 'block');
 			$('.chat_box').addClass('animate__animated animate__bounceInUp');
-
+			
+			callAjax();
+			
             setTimeout(function(){
                 $('.chat_box').removeClass('animate__animated animate__bounceInUp');
             },1000);
 		} else {
 			$('.chat_box').css('display', 'block');
 			$('.chat_box').addClass('animate__animated animate__bounceOutDown');
-
+			$('.main_chatbot_box').text("");
             setTimeout(function(){
                 $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
                 $('.chat_box').css('display', 'none');
@@ -106,7 +108,7 @@ $(document).ready(function(){
 			if($('.chat_box').css('display') == 'block') {
 				$('.chat_box').css('display', 'block');
 				$('.chat_box').addClass('animate__animated animate__bounceOutDown');
-	
+				$('.main_chatbot_box').text("");
 	            setTimeout(function(){
 	                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
 	                $('.chat_box').css('display', 'none');
@@ -118,4 +120,104 @@ $(document).ready(function(){
 	
 	// 메인 챗봇 ajax 추가 예정
 	
+	
+	$('#chatForm').on('submit', function(){
+ 		// submit 이벤트 기본 기능 : 페이지 새로 고침
+ 		// 기본 기능 중단
+ 		event.preventDefault();
+ 		
+ 		if($('#message').val() == ""){
+			alert("질문을 입력해주세요");
+			$('#message').focus();
+			return false;
+		} 		
+ 		
+ 		// chatBox에 보낸 메시지 추가
+		$('.main_chatbot_box').append('<div class="msgBox send"><div id="in"><div id="user_text">' + $('#message').val() + '</div></div></div>');
+ 		
+   			callAjax();
+ 		
+ 		$('#message').val('');
+ 	}); // submit 끝
+ 	
+ 	// ajax() 부분을 별도의 함수로 분리
+ 	function callAjax(){
+ 		$.ajax({
+ 			type:"post",
+ 			url:"/mainChatbot",
+ 			data:{"message":$('#message').val()},
+ 			dataType:"json",
+			success:function(result){
+			
+				// 파싱 시작
+				var bubbles = result.bubbles;
+				//console.log(bubbles[0].data.contentTable);
+				//console.log(bubbles[1].data.contentTable[0][0].data.data.action.data.url);
+				for(var b in bubbles){
+					if(bubbles[b].type == 'text'){ // 기본 답변인 경우
+						
+						/* chatBox에 받은 메시지 추가 */
+						if(bubbles[b] == bubbles[0]){
+							$('.main_chatbot_box').append('<div class="msgBox receive"><span id="in"><div id="chatbot"><div><img src="/images/mainChatbot_gingerbread_man.png"></div><div class="main_chatbot_name">잡동산</div></div><div id="chatbot_text">' + 
+															 bubbles[b].data.description + '</div></span>'); 
+						}else{
+							$('.main_chatbot_box').append('<div class="msgBox receive"><span id="in"><div id="chatbot"></div><div id="chatbot_text">' + 
+														   bubbles[b].data.description +'</div></span>'); 
+						}
+						
+															   
+					}else if(bubbles[b].type == 'template'){//이미지 답변 또는 멀티링크 답변 시작
+					
+						if(bubbles[b].data.cover.type == "image"){//이미지 이면
+						
+							if(bubbles[b] == bubbles[0]){
+								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
+																		 "' alt='이미지 없음' width='200' height='100' style='border-radius: 30px'><br><div class='chatbot_url'></div></div></span>");
+							}else{
+								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='" + bubbles[b].data.cover.data.imageUrl + 
+																		 "' alt='이미지 없음' width='200' height='100'><br><div class='chatbot_url'></div></div></span>");
+							}
+							
+							if(bubbles[b].data.contentTable !=null){
+								$(".chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[b].data.cover.data.description + "</a>")
+							}
+																		 
+						}else if(bubbles[b].data.cover.type == "text"){//멀티링크 답변이면
+							
+							if(bubbles[b] == bubbles[0]){
+								$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div id='chatbot_text'>" + 
+															bubbles[b].data.cover.data.description + "</div></span>");
+							}else{
+									$(".main_chatbot_box").append("<div class='msgBox receive'><span id='in'><div id='chatbot'></div><div id='chatbot_text'>" + 
+															bubbles[b].data.cover.data.description + "</div></span>");
+							}
+							
+							if(bubbles[b].data.contentTable !=null){
+								$(".chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
+							}
+						}
+						
+						// 이미지 / 멀티링크 답변 공통 (contentTable 포함)
+					/*	for(var ct in bubbles[b].data.contentTable){
+							var ct_data = bubbles[ct].data.contentTable[ct][ct];
+							for(var ct_d in ct_data){
+								$(".main_chatbot_box").append
+								("<a href='"+ct_data[ct_d].data.data.action.data.url+"' target='_blank'>" + 
+									ct_data[ct_d].data.data.action.data.url+ "</a>");
+						    }
+					    } */ // contentTable for문 끝
+				    }//template 끝
+				}//bubbles for문 종료
+				
+				// 스크롤해서 올리기
+				$(".main_chatbot_box").scrollTop($(".main_chatbot_box").prop("scrollHeight"));
+				
+			},
+			error:function(){
+				// 오류있을 경우 수행 되는 함수
+				alert("전송 실패");
+			},
+ 		}); // ajax 끝
+ 	}
+ 	
 });

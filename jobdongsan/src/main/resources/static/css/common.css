@@ -295,10 +295,57 @@ header p, footer p {
 }
 
 /******************* 챗봇 ***********************/
-.chat_box div {
+#chat_box_title {
 	font-size: 25px;
 	font-family: 'CookieRun';
 }
+
+.msgBox {
+	margin-bottom: 20px;
+}
+
+#in {
+	display: flex;
+    align-items: center;
+}
+
+#chatbot {
+	width: 100px;
+    margin: 20px 0 0 20px;
+    text-align: center;
+}
+
+#chatbot img {
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+}
+
+.main_chatbot_name {
+	font-size: 20px;
+	font-family: 'CookieRun';
+}
+
+#chatbot_text {
+	width: 500px;
+    margin: 0 10px 0 -10px;
+    padding: 10px 15px;
+    background: #FFFACD;
+    border-radius: 80px;
+    font-size: 17px;
+	font-family: 'CookieRun';
+}
+
+#user_text {
+	height: 50px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background: #F0E3FF;
+    border-radius: 80px;
+    font-size: 17px;
+	font-family: 'CookieRun';
+}
+
 
 .chat_box {
 	display: none;
@@ -324,8 +371,25 @@ header p, footer p {
 	border-radius: 0px 0px 40px 40px;
 }
 
-.chatbot_box {
+.main_chatbot_box {
 	height: 580px;
+	overflow-y: scroll;
+}
+
+
+.main_chatbot_box::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+}
+
+.main_chatbot_box::-webkit-scrollbar-thumb {
+  height: 5%; /* 스크롤바의 길이 */
+  background: #F0E3FF; /* 스크롤바의 색상 */
+  border: none;
+  border-radius: 10px;
+}
+
+.main_chatbot_box::-webkit-scrollbar-track {
+  background-color: rgba(23, 203, 192, 0); /*스크롤바 뒷 배경 색상*/
 }
 
 .user_box {
@@ -334,7 +398,7 @@ header p, footer p {
 	padding: 20px;
 }
 
-#main_chat_message {
+#message {
 	font-family: 'CookieRun';
 	font-size: 17px;
 	padding: 5px;

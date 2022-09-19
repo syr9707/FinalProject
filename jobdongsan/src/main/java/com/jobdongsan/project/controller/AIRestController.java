@@ -3,6 +3,7 @@ package com.jobdongsan.project.controller;
 import java.io.File;
 import java.io.IOException;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.jobdongsan.project.service.DoctorChatbotService;
 import com.jobdongsan.project.service.JobChatbotService;
+import com.jobdongsan.project.service.MainChatbotService;
 
 @RestController
 public class AIRestController {
@@ -27,7 +29,14 @@ public class AIRestController {
 	
 	@RequestMapping("/doctorChatbot")
 	public String doctorChatbot(@RequestParam String message) throws IOException {
+		
+		System.out.println(DoctorChatbotService.main(message));
 		return DoctorChatbotService.main(message);
+	}
+	
+	@RequestMapping("/mainChatbot")
+	public String mainChatbot(@RequestParam String message) throws IOException {
+		return MainChatbotService.main(message);
 	}
 	
 	@RequestMapping("/stt")
