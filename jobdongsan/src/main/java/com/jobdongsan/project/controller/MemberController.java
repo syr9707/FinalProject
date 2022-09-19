@@ -355,7 +355,7 @@ public class MemberController {
 		// 2. 원본 파일 이름 알아오기
 		String originalFileName = file.getOriginalFilename();
 		
-		if(originalFileName != "") {
+		if(!originalFileName.equals("")) {
 			// 3. 파일 생성
 			File newFile = new File(uploadPath + originalFileName);
 			
