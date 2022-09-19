@@ -356,6 +356,8 @@ public class MemberController {
 		
 		String originalFileName = file.getOriginalFilename();
 		
+		System.out.println(originalFileName);
+		
 		String insertProfileImg = "";
 		
 		if(originalFileName != "") {
@@ -365,9 +367,9 @@ public class MemberController {
 			insertProfileImg = newFile.toString();
 			System.out.println(insertProfileImg);
 			// 4. 서버로 전송
-			file.transferTo(newFile);
+			// file.transferTo(newFile);
 		}
-		System.out.println(originalFileName);
+		
 		
 		
 		
