@@ -25,10 +25,10 @@
                                 <img src="<c:url value='/images/mypage_circle.png' />" class="my_jobdongsan_pic">
                                 <c:choose>
 	                    			<c:when test="${fn:contains(myProfileImg, 'https://') }">
-		                    			<img class="profile_img" src="<c:url value='${myProfileImg}'/>">
+		                    			<img class="my_profile_img" src="<c:url value='${myProfileImg}'/>">
 		                    		</c:when>
 		                    		<c:otherwise>
-		                    			<img class="profile_img" src="<c:url value='/upload/${myProfileImg}'/>">
+		                    			<img class="my_profile_img" src="<c:url value='/upload/${myProfileImg}'/>">
 		                    		</c:otherwise>
 	                    		</c:choose>
                                 <div>
