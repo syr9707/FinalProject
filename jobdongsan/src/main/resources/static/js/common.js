@@ -133,7 +133,7 @@ $(document).ready(function(){
 		} 		
  		
  		// chatBox에 보낸 메시지 추가
-		$('.main_chatbot_box').append('<div class="main_msgBox send"><div id="in"><div id="main_user_text">' + $('#message').val() + '</div></div></div>');
+		$('.main_chatbot_box').append('<div class="main_msgBox send"><div id="in"><div id="main_user_text">' + $('#main_message').val() + '</div></div></div>');
  		
    			callAjax();
  		
@@ -158,7 +158,7 @@ $(document).ready(function(){
 						
 						/* chatBox에 받은 메시지 추가 */
 						if(bubbles[b] == bubbles[0]){
-							$('.main_chatbot_box').append('<div class="main_msgBox receive"><span id="in"><div id="main_chatbot"><div><img src="/images/mainChatbot_gingerbread_man.png"></div><div class="main_chatbot_name">잡동산</div></div><div id="chatbot_text">' + 
+							$('.main_chatbot_box').append('<div class="main_msgBox receive"><span id="in"><div id="main_chatbot"><div><img src="/images/mainChatbot_gingerbread_man.png"></div><div class="main_chatbot_name">잡동산</div></div><div id="main_chatbot_text">' + 
 															 bubbles[b].data.description + '</div></span>'); 
 						}else{
 							$('.main_chatbot_box').append('<div class="main_msgBox receive"><span id="in"><div id="main_chatbot"></div><div id="main_chatbot_text">' + 
