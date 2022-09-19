@@ -187,12 +187,12 @@ $(document).ready(function(){
 								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'><div><img src='/images/mainChatbot_gingerbread_man.png'></div><div class='main_chatbot_name'>잡동산</div></div><div id='main_chatbot_text'>" + 
 															bubbles[b].data.cover.data.description + "</div></span>");
 							}else{
-									$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'></div><div id='main_chatbot_text'>" + 
+								$(".main_chatbot_box").append("<div class='main_msgBox receive'><span id='in'><div id='main_chatbot'></div><div id='main_chatbot_text'>" + 
 															bubbles[b].data.cover.data.description + "</div></span>");
 							}
 							
 							if(bubbles[b].data.contentTable !=null){
-								$(".chatbot_url:last-child").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
+								$(".main_msgBox receive:nth-last-child(2) .chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
 							}
 						}
 						
