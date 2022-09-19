@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 		<!-- head.jsp -->
@@ -22,7 +23,14 @@
                         <div class="my_jobdongsan_contents">
                             <div class="my_jobdongsan_info">
                                 <img src="<c:url value='/images/mypage_circle.png' />" class="my_jobdongsan_pic">
-                                <img src="<c:url value='/upload/${myProfileImg}' />" class="my_profile_img">
+                                <c:choose>
+	                    			<c:when test="${fn:contains(myProfileImg, 'https://') }">
+		                    			<img class="profile_img" src="<c:url value='${myProfileImg}'/>">
+		                    		</c:when>
+		                    		<c:otherwise>
+		                    			<img class="profile_img" src="<c:url value='/upload/${myProfileImg}'/>">
+		                    		</c:otherwise>
+	                    		</c:choose>
                                 <div>
                                     <p class="txt_30">${mem.memName }</p>
                                     <p class="txt_30">${mem.memId }</p>

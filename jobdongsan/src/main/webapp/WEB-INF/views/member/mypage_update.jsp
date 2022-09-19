@@ -25,7 +25,14 @@
                     		<img class="profile_deco" src="<c:url value='/images/mypage_profile_deco.png'/>">
                     		<label id="profile_preview" for="img_file_upload">
 	                    		<img class="profile_img_add" src="<c:url value='/images/mypage_circle.png'/>">
-	                    		<img class="profile_img" src="<c:url value='/upload/${myProfileImg}'/>">
+	                    		<c:choose>
+	                    			<c:when test="${fn:contains(myProfileImg, 'https://') }">
+		                    			<img class="profile_img" src="<c:url value='${myProfileImg}'/>">
+		                    		</c:when>
+		                    		<c:otherwise>
+		                    			<img class="profile_img" src="<c:url value='/upload/${myProfileImg}'/>">
+		                    		</c:otherwise>
+	                    		</c:choose>
                     		</label>
                     		<input type="file" id="img_file_upload" name="img_file_upload" accept="image/png, image/jpeg">
                     	</div>
