@@ -19,6 +19,8 @@ $(document).ready(function(){
 				reader.onload = function(data){
 					let src = data.target.result;
 					
+					$('.new_profile').remove();
+					
 					//1. 이미지 태그 만들기
 					let imgTag = document.createElement('img');
 					
@@ -30,7 +32,7 @@ $(document).ready(function(){
 					imgTag.setAttribute('class', 'new_profile');
 					
 					
-					if($('.profile_img').attr('src') != ""){
+					if($('.profile_img').attr('src') != "/upload/"){
 						$('.profile_img').hide();
 					}else{
 						$('.profile_img_add').hide();
@@ -43,7 +45,7 @@ $(document).ready(function(){
 		}else{
 		//취소 버튼을 눌렀을 때
 			$('.new_profile').hide();
-			if($('.profile_img').attr('src') != ""){
+			if($('.profile_img').attr('src') != "/upload/"){
 				$('.profile_img').show();
 			}else{
 				$('.profile_img_add').show();
@@ -53,7 +55,7 @@ $(document).ready(function(){
 	}
 		
 	// 프로필 사진 있을때 
-	if($('.profile_img').attr('src') != ""){
+	if($('.profile_img').attr('src') != "/upload/"){
 		$('.profile_img').show();
 		$('.profile_img_add').hide();
 	}	
