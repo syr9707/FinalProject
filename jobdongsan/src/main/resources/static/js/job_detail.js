@@ -37,7 +37,7 @@
   
 	const audioCtx = new(window.AudioContext || window.webkitAudioContext)(); // 오디오 컨텍스트 정의
   
-	
+	if (navigator.mediaDevices) {
 		var constraints = {
             audio: true
         }
@@ -92,7 +92,7 @@
             .catch(err => {
                 console.log('The following error occurred: ' + err)
             })
-	
+	}
 	
 	// 서버에 파일을 업로드 하는 함수
 	function fileUpload(blob, clipName) {
