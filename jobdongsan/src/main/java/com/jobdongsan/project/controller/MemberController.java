@@ -353,25 +353,18 @@ public class MemberController {
 		String uploadPath = "/usr/local/project/upload/";
 		
 		// 2. 원본 파일 이름 알아오기
-		
 		String originalFileName = file.getOriginalFilename();
-		
-		System.out.println(originalFileName);
 		
 		String insertProfileImg = "";
 		
 		if(originalFileName != "") {
 			// 3. 파일 생성
-			
 			File newFile = new File(uploadPath + originalFileName);
+			
 			insertProfileImg = newFile.toString();
-			System.out.println(insertProfileImg);
 			// 4. 서버로 전송
-			// file.transferTo(newFile);
+			file.transferTo(newFile);
 		}
-		
-		
-		
 		
 		vo.setMemId(memId);
 		vo.setMemPw((String) map.get("pw"));
