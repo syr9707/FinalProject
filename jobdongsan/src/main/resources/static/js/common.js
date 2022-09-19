@@ -110,8 +110,8 @@ $(document).ready(function(){
 				$('.main_chat_box').addClass('animate__animated animate__bounceOutDown');
 				$('.main_chatbot_box').text("");
 	            setTimeout(function(){
-	                $('.chat_box').removeClass('animate__animated animate__bounceOutDown');
-	                $('.chat_box').css('display', 'none');
+	                $('.main_chat_box').removeClass('animate__animated animate__bounceOutDown');
+	                $('.main_chat_box').css('display', 'none');
 	            },1000);
 	            cnt++;
 			}
@@ -126,9 +126,9 @@ $(document).ready(function(){
  		// 기본 기능 중단
  		event.preventDefault();
  		
- 		if($('#message').val() == ""){
+ 		if($('#main_message').val() == ""){
 			alert("질문을 입력해주세요");
-			$('#message').focus();
+			$('#main_message').focus();
 			return false;
 		} 		
  		
@@ -137,7 +137,7 @@ $(document).ready(function(){
  		
    			callAjax();
  		
- 		$('#message').val('');
+ 		$('#main_message').val('');
  	}); // submit 끝
  	
  	// ajax() 부분을 별도의 함수로 분리
@@ -145,7 +145,7 @@ $(document).ready(function(){
  		$.ajax({
  			type:"post",
  			url:"/mainChatbot",
- 			data:{"message":$('#message').val()},
+ 			data:{"message":$('#main_message').val()},
  			dataType:"json",
 			success:function(result){
 			
