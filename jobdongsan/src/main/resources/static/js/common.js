@@ -178,7 +178,7 @@ $(document).ready(function(){
 							}
 							
 							if(bubbles[b].data.contentTable !=null){
-								$(".main_msgBox receive:nth-last-child(2) .chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[b].data.cover.data.description + "</a>")
+								$(".main_msgBox.receive:nth-last-child(2) .chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[b].data.cover.data.description + "</a>")
 							}
 																		 
 						}else if(bubbles[b].data.cover.type == "text"){//멀티링크 답변이면
@@ -192,7 +192,7 @@ $(document).ready(function(){
 							}
 							
 							if(bubbles[b].data.contentTable !=null){
-								$(".main_msgBox receive:nth-last-child(2) .chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
+								$(".main_msgBox.receive:nth-last-child(2) .chatbot_url").append("<a href='" + bubbles[1].data.contentTable[0][0].data.data.action.data.url + "' target='_blank'>" + bubbles[0].data.cover.data.description + "</a>")
 							}
 						}
 						
