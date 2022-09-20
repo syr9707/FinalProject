@@ -10,13 +10,13 @@
 	</select>
 	
 	<select id="getMyVideo" parameterType="String" resultType="com.jobdongsan.project.model.VideoVO">
-		SELECT v.videoNo, v.videoThumbnail 
+		SELECT v.videoNo, v.videoThumbnail, v.videoName
 		FROM video v, my_history my
 		WHERE v.videoNo = my.videoNo and NOT my.videoNo is NULL and my.memId = #{memId}
 	</select>
 	
 	<select id="getMyMap" parameterType="String" resultType="com.jobdongsan.project.model.MapVO">
-		SELECT map.mapJobNo, map.mapJobLogo 
+		SELECT map.mapJobNo, map.mapJobLogo, map.mapJobName 
 		FROM map_job map, my_history my
 		WHERE map.mapJobNo = my.mapJobNo and NOT my.mapJobNo is NULL and my.memId = #{memId}
 	</select>
