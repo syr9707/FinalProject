@@ -279,17 +279,31 @@ section div {
 }
 
 .today_video_img {
+	display: flex;
     margin-top: 40px;
+    padding: 0px 170px;
     text-align: center;
+}
+
+.today_video_img p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: CookieRun;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #main_video1 {
     position: relative;
-    margin-right: 200px;
     z-index: 1;
     cursor: pointer;
     width:560px;
-    height:310px;
+}
+
+#main_video1_img {
+	width: 560px;
+	height:290px;
     border-radius: 40px;
     box-shadow: 1px 1px 5px black;
 }
@@ -303,7 +317,11 @@ section div {
     z-index: 1;
     cursor: pointer;
     width:560px;
-    height:310px;
+}
+
+#main_video2_img {
+	width: 560px;
+    height:290px;
     border-radius: 40px;
     box-shadow: 1px 1px 5px black;
 }
@@ -314,7 +332,7 @@ section div {
 
 #main_biscuit {
     position: relative;
-    top: -380px;
+    top: -400px;
     left: 300px;
     width: 100px;
     height: 100px;
@@ -323,7 +341,7 @@ section div {
 
 #main_mould {
     position: relative;
-    top: -360px;
+    top: -390px;
     left: 1450px;
     width: 100px;
     height: 100px;

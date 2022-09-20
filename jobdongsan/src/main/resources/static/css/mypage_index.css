@@ -334,7 +334,7 @@
 }
 
 .my_map_content {
-	display: block;
+	display: block !important;
 	width: 300px;
 	height: 250px;
 	cursor: pointer;

@@ -64,8 +64,14 @@
                     <h3>오늘의 <b>영상</b></h3>
                     <div class="today_video_text"><b>잡</b><b>동</b><b>산</b>의 <b>다양한 직업</b> 영상부터<br>과자 친구들이 자유롭게 나누고 싶은 달콤 가득한 영상까지,<br>이곳에서 만나보세요!</div>
                     <div class="today_video_img">
-                        <img src="<c:url value='${video.videoThumbnail }'/>" id="main_video1" onclick="location.href='<c:url value='/video_detail/${video.videoNo }'/>'">
-                        <img src="<c:url value='${video2.videoThumbnail }'/>" id="main_video2" onclick="location.href='<c:url value='/video_detail/${video2.videoNo }'/>'">
+                    	<div id="main_video1" onclick="location.href='<c:url value='/video_detail/${video.videoNo }'/>'">
+                    		<img src="<c:url value='${video.videoThumbnail }'/>" id="main_video1_img">
+                    		<p>${video.videoName }</p>
+                    	</div>
+                    	<div id="main_video2" onclick="location.href='<c:url value='/video_detail/${video2.videoNo }'/>'">
+                        	<img src="<c:url value='${video2.videoThumbnail }'/>" id="main_video2_img">
+                        	<p>${video2.videoName }</p>
+                        </div>
                     </div>
                     <img src="<c:url value='/images/main_biscuit.png' />" id="main_biscuit">
                     <img src="<c:url value='/images/main_mould.png' />" id="main_mould">
