@@ -4,7 +4,7 @@
  
  $(document).ready(function(){
  	
- 	$('.video_ctg_test, .video_ctg_test2').hover(function(){
+ 	$('.video_ctg_test').hover(function(){
 		$(this).children('a').children('.video_thumbnail').css({'opacity':'0.5', 'border':'5px solid #05B4FF'});
  		$(this).children('a').children('.video_play').show();
 	},function(){

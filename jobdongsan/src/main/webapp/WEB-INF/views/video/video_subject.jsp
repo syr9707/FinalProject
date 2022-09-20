@@ -101,10 +101,10 @@
 								<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
 									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
 									<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+									<div class="video_test_name">
+										${video.videoName }
+									</div>
 								</a>
-								<div class="video_test_name">
-									${video.videoName }
-								</div>
 							</div>
 						</c:forEach>
 					</div>
