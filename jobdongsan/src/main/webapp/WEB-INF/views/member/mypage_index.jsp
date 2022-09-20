@@ -110,8 +110,9 @@
                             </div>
                             <div class="my_video_list">
                             	<c:forEach var="myVideo" items="${myVideoList}">
-                            		<div class="my_video_pic">
-                            			<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
+                            		<div class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
+                            			<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic">
+                            			<p>${myVideo.videoName }</p>
                             		</div>
                             	</c:forEach>
                             </div>
@@ -128,8 +129,11 @@
                             </div>
                             <div class="my_map_list">
                                <c:forEach var="myMap" items="${myMapList}">
-                               		<div class="my_video_pic" onClick = "location.href='<c:url value='map_detail/${myMap.mapJobNo}'/>'">
-                            			<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic">
+                               		<div class="my_map_content" onClick = "location.href='<c:url value='map_detail/${myMap.mapJobNo}'/>'">
+	                               		<div class="my_video_pic">
+	                            			<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic">
+	                            		</div>
+	                            		<p>${myMap.mapJobName }</p>
                             		</div>
                             	</c:forEach>
                             </div>

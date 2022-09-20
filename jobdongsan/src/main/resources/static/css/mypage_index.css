@@ -248,14 +248,10 @@
     /* display: flex; */
     display: none;
     width: 1050px;
-    height: 210px;
+    height: 250px;
+    margin-top: 25px;
     padding: 0 25px;
     overflow: hidden;
-}
-
-.my_video_list div {
-    margin: 0 50px 0 0 ;
-    box-shadow: 2px 2px 5px black;
 }
 
 .my_video_pic {
@@ -263,6 +259,21 @@
 	height: 200px;
 	border-radius: 20px;
 	cursor: pointer;
+	box-shadow: 2px 2px 5px black;
+}
+
+.my_video_list div {
+	height: 250px;
+    margin: 0 50px 0 0 ;
+    box-shadow: none;
+}
+
+.my_video_list div p {
+	margin-top: 10px;
+	font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -305,9 +316,21 @@
     /* display: flex; */
     display: none;
     width: 1050px;
-    height: 210px;
+	height: 250px;
+    margin-top: 25px;
     padding: 0 25px;
     overflow: hidden;
+}
+
+.my_map_content {
+	display: block;
+	width: 300px;
+	height: 250px;
+	cursor: pointer;
+}
+
+.my_map_pic {
+	width: 300px;
 }
 
 .my_map_list div {
@@ -315,12 +338,15 @@
     display: flex;
     align-items: center;
     background-color: #FFFFFF;
-    box-shadow: 2px 2px 5px black;
 }
 
-.my_map_pic {
+.my_map_content p {
 	width: 300px;
-	cursor: pointer;
+	margin: 10px 0 0;
+	font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .background {
