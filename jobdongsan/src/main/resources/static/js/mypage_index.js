@@ -113,7 +113,7 @@ $(document).ready(function(){
     var my_map_list = $('.my_map_list img').length;
 
     $('#my_map_right').click(function(){
-        $('.my_map_list div:nth-child(1)').animate({marginLeft:  '-=350px' }, '1000');
+        $('.my_map_list').children('.my_map_content').first().animate({marginLeft:  '-=350px' }, '1000');
         $('#my_map_left').css('visibility', 'visible');
         map_idx++;
         if(map_idx == (my_map_list - 3))
@@ -121,7 +121,7 @@ $(document).ready(function(){
     });
 
     $('#my_map_left').click(function(){
-        $('.my_map_list div:nth-child(1)').animate({marginLeft:  '+=350px' }, '1000');
+        $('.my_map_list').children('.my_map_content').first().animate({marginLeft:  '+=350px' }, '1000');
         $('#my_map_right').css('visibility', 'visible');
         map_idx--;
         if(map_idx == 0)
