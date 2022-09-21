@@ -28,9 +28,6 @@
 					<div class="job_headname">
 						다양한 직업 알아보기
 					</div>
-					<%-- <div class="job_doughnut">
-						<img src="<c:url value='/images/job_doughnut1.png'/>">
-					</div> --%>
 				</div>
 				<div class="job_mint">
 					<div class="job_mintdoughnut">
@@ -194,20 +191,15 @@
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
-	
 	<script>
 	$(document).ready(function(){
-	
 		$('.job_star').click(function() {
-			
 		   	if(${empty sessionScope.sid}){
 	    	   if(confirm("로그인이 필요한 서비스 입니다.\n로그인 하시겠습니까?")) {
 	    			location.href="<c:url value='/login'/>";
 	    		}
-	    	}
-		   	else {
+	    	} else {
 		   		if(confirm("나의 관심 직업으로 선택하시겠습니까?")) {
-		   			
 		   			$.ajax({
 		   				type:"post",
 		   				url:"/insert_job",
@@ -215,22 +207,7 @@
 		   				success:function(result) {
 		   					if(result == "0") {
 		   						alert("관심 직업에 저장되었습니다.\n나의 잡동산 페이지에서 확인하실 수 있습니다.");
-		   						
-		   					}
-		   					else if(result == "1") {
-		   						
-		   						if(confirm("나의 관심 직업에 존재합니다. 삭제하시겠습니까?")) {
-		   							$.ajax({
-			   							type:"post",
-			   			   				url:"/delete_job",
-			   			   				data:{"jobNo":${jobNo}},
-			   			   				success:function(result) {
-			   			   					alert("나의 관심 직업에서 삭제되었습니다.");
-			   			   				}
-			   						});
-		   						}
-		   					}
-		   					else {
+		   					} else {
 		   						if(confirm("나의 관심 직업이 존재합니다. 삭제 또는 변경하시겠습니까?")) {
 		   							$.ajax({
 			   							type:"post",
@@ -242,14 +219,10 @@
 			   			   					}else{
 			   			   					 alert("나의 관심 직업이 변경되었습니다.");
 			   			   					}
-			   			   					
 			   			   				}
 			   						});
-		   							
 		   						}
-		   					
 		   					}
-		   					
 		   				},
 		   				error:function() {
 		   					alert("전송 실패");
@@ -257,12 +230,9 @@
 		   			});
 		   		}
 		   	}
-		   	
 	    });
-		
 	});
 	</script>
-	
 </html>
 
 

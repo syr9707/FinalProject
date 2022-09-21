@@ -83,11 +83,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${test.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${test.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${test.videoName }
+										<img class="video_thumbnail" src="<c:url value='${test.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${test.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 						<%
@@ -127,11 +128,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 						<%
@@ -170,11 +172,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 							<%
@@ -213,11 +216,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 							<%
@@ -256,11 +260,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 							<%
@@ -299,11 +304,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 							<%
@@ -342,11 +348,12 @@
 							<div class="video_jinro_cont2">
 								<div class="video_test">
 									<a href="<c:url value='/video_detail/${video.videoNo }'/>" >
-									<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
-									<img class="video_play" src="<c:url value='/images/video_play.png'/>"></a>
-								</div>
-								<div class="video_test_name">
-									${video.videoName }
+										<img class="video_thumbnail" src="<c:url value='${video.videoThumbnail }'/>">
+										<img class="video_play" src="<c:url value='/images/video_play.png'/>">
+										<div class="video_test_name">
+											${video.videoName }
+										</div>
+									</a>
 								</div>
 							</div>
 							<%

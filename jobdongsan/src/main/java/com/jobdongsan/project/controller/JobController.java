@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jobdongsan.project.model.JobVO;
-import com.jobdongsan.project.model.MyHistoryVO;
 import com.jobdongsan.project.service.JobService;
 
 @Controller
@@ -73,17 +72,6 @@ public class JobController {
 		return result;
 	}
 	
-	// 관심 직업(찜직업) 삭제 (보류)
-	@ResponseBody
-	@RequestMapping("/delete_job")
-	public String deleteJob(@RequestParam HashMap<String, Object> param, HttpSession session) {
-		String memId = (String)session.getAttribute("sid");
-		//int jobNo = Integer.parseInt((String)param.get("jobNo"));
-		//jobService.deleteJob(memId);
-		
-		return "1";
-	}
-	
 	// 관심 직업(찜직업) 존재 여부 확인
 	@ResponseBody
 	@RequestMapping("/update_job")
@@ -118,9 +106,4 @@ public class JobController {
 		
 		return "job/job_category";
 	}
-	
-
 }
-
-
-

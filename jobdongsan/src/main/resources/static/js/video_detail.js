@@ -21,6 +21,13 @@
  		$(this).children('.video_play').hide();
  	});
     
+    $('.video_similar_name').hover(function(){
+    	$(this).prev().children('.video_thumbnail').css({'opacity':'0.5', 'border':'5px solid #05B4FF'});
+    	$(this).prev().children('.video_play').show();
+	},function(){
+		$(this).prev().children('.video_thumbnail').css({'opacity':'1', 'border':'2px solid #9C9C9C'});
+ 		$(this).prev().children('.video_play').hide();
+    });
     
     
     // 비디오 버튼 조작 ***************************
