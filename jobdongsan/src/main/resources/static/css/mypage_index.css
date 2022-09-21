@@ -324,6 +324,7 @@
 
 .my_map_pic {
 	width: 300px;
+	max-height: 170px;
 }
 
 .my_map_list div {
