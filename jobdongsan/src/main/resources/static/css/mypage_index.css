@@ -263,6 +263,7 @@
 }
 
 .my_video_list div {
+	position: relative;
 	height: 250px;
     margin: 0 50px 0 0 ;
     box-shadow: none;
@@ -275,7 +276,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 
 /* 찜한 체험 장소 */
 
@@ -335,6 +335,7 @@
 }
 
 .my_map_content {
+	position: relative;
 	display: block !important;
 	width: 300px;
 	height: 250px;
@@ -348,6 +349,13 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.mymap_delete, .myvideo_delete {
+	position: absolute;
+    top: 5px;
+    right: 10px;
+    width:20px;
 }
 
 .background {

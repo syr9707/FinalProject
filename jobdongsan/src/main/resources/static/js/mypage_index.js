@@ -58,7 +58,7 @@ $(document).ready(function(){
     }
 
     // 찜한 진로 직업 영상 있을 때
-    var my_video_list = $('.my_video_list img').length;
+    var my_video_list = $('.my_video_list p').length;
 
     if(my_video_list != 0) {
         $('.my_video_list_text').hide();
@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
 
     // 찜한 직업 체험 장소 있을 때
-    var my_map_list = $('.my_map_list img').length;
+    var my_map_list = $('.my_map_list p').length;
 
     if(my_map_list != 0) {
         $('.my_map_list_text').hide();
@@ -110,7 +110,7 @@ $(document).ready(function(){
     
     // 직업 체험 장소 리스트 좌 우 클릭 시 슬라이드
     var map_idx = 0;
-    var my_map_list = $('.my_map_list img').length;
+    var my_map_list = $('.my_map_list p').length;
 
     $('#my_map_right').click(function(){
         $('.my_map_list').children('.my_map_content').first().animate({marginLeft:  '-=350px' }, '1000');

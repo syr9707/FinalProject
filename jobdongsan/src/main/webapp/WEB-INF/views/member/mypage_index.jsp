@@ -113,6 +113,8 @@
                             		<div class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
                             			<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic">
                             			<p>${myVideo.videoName }</p>
+                            			<img src="<c:url value='/images/delete.png'/>" class="myvideo_delete">
+                            			<input type="hidden" class="my_videoNo" value="${myVideo.videoNo }">
                             		</div>
                             	</c:forEach>
                             </div>
@@ -134,6 +136,8 @@
 	                            			<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic">
 	                            		</div>
 	                            		<p>${myMap.mapJobName }</p>
+	                            		<img src="<c:url value='/images/delete.png'/>" class="mymap_delete">
+	                            		<input type="hidden" class="my_mapJobNo" value="${myMap.mapJobNo }">
                             		</div>
                             	</c:forEach>
                             </div>
@@ -149,4 +153,49 @@
 		<!-- bottom.jsp -->
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.myvideo_delete').on('click', function(e){
+			var videoNo = $(this).next().val();
+			e.stopPropagation();
+			if(confirm("해당 영상을 나의 관심 영상에서 삭제하시겠습니까?")) {
+				$.ajax({
+					type: "post",
+					url: "/delete_video",
+					data: {"videoNo": videoNo},
+					success: function(result){
+						if(result == "1") {
+					 		alert("나의 관심 영상에서 삭제되었습니다.")
+					 		location.reload();
+						}
+		 			},
+		 			error: function(){
+		 				alert("전송 실패");
+		 			}
+				});	
+			}
+		});
+		
+		$('.mymap_delete').on('click', function(e){
+			var mapJobNo = $(this).next().val();
+			e.stopPropagation();
+			if(confirm("해당 체험 장소를 나의 관심 체험 장소에서 삭제하시겠습니까?")) {
+				$.ajax({
+					type: "post",
+					url: "/delete_map",
+					data: {"mapJobNo": mapJobNo},
+					success: function(result){
+						if(result == "1") {
+							alert("나의 관심 체험 장소에서 삭제되었습니다.")
+							location.reload();
+						}
+		 			},
+		 			error: function(){
+		 				alert("전송 실패");
+		 			}
+				});	
+			}
+		});
+	});
+	</script>
 </html>
