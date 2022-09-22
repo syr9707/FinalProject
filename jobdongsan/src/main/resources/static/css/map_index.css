@@ -91,11 +91,19 @@ TEXT {
 	height: 130px;
 }
 
-#map_category_c:hover {
+#map_category_c_1:hover, #map_category_c_2:hover,
+#map_category_c_3:hover, #map_category_c_4:hover,
+#map_category_c_5:hover, #map_category_c_6:hover {
 	opacity: 0.5;
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
 }
+
+#map_category_c_1, #map_category_c_2,
+#map_category_c_3, #map_category_c_4, 
+#map_category_c_5, #map_category_c_6 {
+	cursor: pointer;
+} 
 
 #map_category_t {
 	position: relative;
@@ -107,7 +115,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -115,7 +122,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
@@ -123,7 +129,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -131,7 +136,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
@@ -139,7 +143,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -147,7 +150,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
@@ -155,7 +157,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -163,7 +164,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
@@ -171,7 +171,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -179,7 +178,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
@@ -187,7 +185,6 @@ TEXT {
 	border-top: 3px solid #fde48a;
 	border-bottom: 3px solid #fde48a;
 	font-size: 23px;
-	/*  */
 	width: 950px;
 	position: relative;
 	align-items: center;
@@ -195,7 +192,6 @@ TEXT {
 	padding: 30px;
 	margin-top: 50px;
 	margin-bottom: 20px;
-	/*  */
 	display: none;
 }
 
