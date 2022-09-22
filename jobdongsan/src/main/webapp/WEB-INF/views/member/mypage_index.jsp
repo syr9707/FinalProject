@@ -113,7 +113,7 @@
                             		<div class="my_video_pic" onClick = "location.href='<c:url value='video_detail/${myVideo.videoNo}'/>'">
                             			<img src="<c:url value='${myVideo.videoThumbnail}'/>" class="my_video_pic">
                             			<p>${myVideo.videoName }</p>
-                            			<img src="<c:url value='/images/delete.png'/>" class="myvideo_delete">
+                            			<img src="<c:url value='/images/cancel.png'/>" class="myvideo_delete">
                             			<input type="hidden" class="my_videoNo" value="${myVideo.videoNo }">
                             		</div>
                             	</c:forEach>
@@ -136,7 +136,7 @@
 	                            			<img src="<c:url value='${myMap.mapJobLogo}'/>" class="my_map_pic">
 	                            		</div>
 	                            		<p>${myMap.mapJobName }</p>
-	                            		<img src="<c:url value='/images/delete.png'/>" class="mymap_delete">
+	                            		<img src="<c:url value='/images/cancel.png'/>" class="mymap_delete">
 	                            		<input type="hidden" class="my_mapJobNo" value="${myMap.mapJobNo }">
                             		</div>
                             	</c:forEach>
