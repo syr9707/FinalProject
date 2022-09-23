@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<title>잡동산</title>
 		<!-- ico -->
+		<link rel="icon" href="<c:url value='/images/jobdongsan_icon.png'/>">
 		<!-- fontawesome -->
 		<script src="<c:url value='https://kit.fontawesome.com/fa5522895a.js' />"></script>
 		<script src="<c:url value='https://kit.fontawesome.com/c1d526d71a.js' />"></script>
